@@ -29,15 +29,15 @@ Partial Class Main
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button7 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnHistory = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnCurrentUser = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLogout = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSettings = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnUsers = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnFiles = New Guna.UI2.WinForms.Guna2Button()
         Me.btnDashboard = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
@@ -54,13 +54,32 @@ Partial Class Main
         Me.currentUser = New System.Windows.Forms.TabPage()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.panelFiles = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.panelTopLogo.SuspendLayout()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
+        Me.dashboard.SuspendLayout()
+        Me.files.SuspendLayout()
+        Me.users.SuspendLayout()
+        Me.history.SuspendLayout()
+        Me.settings.SuspendLayout()
+        Me.currentUser.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -93,15 +112,15 @@ Partial Class Main
         'panelLeft
         '
         Me.panelLeft.BackColor = System.Drawing.Color.White
-        Me.panelLeft.Controls.Add(Me.Guna2Button7)
+        Me.panelLeft.Controls.Add(Me.btnHistory)
         Me.panelLeft.Controls.Add(Me.Guna2Separator2)
-        Me.panelLeft.Controls.Add(Me.Guna2Button6)
-        Me.panelLeft.Controls.Add(Me.Guna2Button5)
+        Me.panelLeft.Controls.Add(Me.btnCurrentUser)
+        Me.panelLeft.Controls.Add(Me.btnLogout)
         Me.panelLeft.Controls.Add(Me.Guna2Separator1)
-        Me.panelLeft.Controls.Add(Me.Guna2Button4)
+        Me.panelLeft.Controls.Add(Me.btnSettings)
         Me.panelLeft.Controls.Add(Me.Label1)
-        Me.panelLeft.Controls.Add(Me.Guna2Button3)
-        Me.panelLeft.Controls.Add(Me.Guna2Button2)
+        Me.panelLeft.Controls.Add(Me.btnUsers)
+        Me.panelLeft.Controls.Add(Me.btnFiles)
         Me.panelLeft.Controls.Add(Me.btnDashboard)
         Me.panelLeft.Controls.Add(Me.panelTopLogo)
         Me.panelLeft.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
@@ -112,36 +131,36 @@ Partial Class Main
         Me.panelLeft.Size = New System.Drawing.Size(300, 919)
         Me.panelLeft.TabIndex = 1
         '
-        'Guna2Button7
+        'btnHistory
         '
-        Me.Guna2Button7.Animated = True
-        Me.Guna2Button7.BorderRadius = 8
-        Me.Guna2Button7.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2Button7.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button7.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button7.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.history_checked
-        Me.Guna2Button7.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.history_checked
-        Me.Guna2Button7.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.history_default
-        Me.Guna2Button7.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button7.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2Button7.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.Guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button7.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button7.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Guna2Button7.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button7.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button7.Location = New System.Drawing.Point(23, 356)
-        Me.Guna2Button7.Name = "Guna2Button7"
-        Me.Guna2Button7.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Button7.Size = New System.Drawing.Size(254, 61)
-        Me.Guna2Button7.TabIndex = 8
-        Me.Guna2Button7.Text = "History"
-        Me.Guna2Button7.TextOffset = New System.Drawing.Point(-13, 2)
+        Me.btnHistory.Animated = True
+        Me.btnHistory.BorderRadius = 8
+        Me.btnHistory.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnHistory.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnHistory.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnHistory.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.history_checked
+        Me.btnHistory.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.history_checked
+        Me.btnHistory.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.history_default
+        Me.btnHistory.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnHistory.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnHistory.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnHistory.FillColor = System.Drawing.Color.Transparent
+        Me.btnHistory.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnHistory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnHistory.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnHistory.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnHistory.Location = New System.Drawing.Point(23, 356)
+        Me.btnHistory.Name = "btnHistory"
+        Me.btnHistory.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnHistory.Size = New System.Drawing.Size(254, 61)
+        Me.btnHistory.TabIndex = 8
+        Me.btnHistory.Text = "History"
+        Me.btnHistory.TextOffset = New System.Drawing.Point(-13, 2)
         '
         'Guna2Separator2
         '
@@ -152,66 +171,66 @@ Partial Class Main
         Me.Guna2Separator2.Size = New System.Drawing.Size(262, 10)
         Me.Guna2Separator2.TabIndex = 7
         '
-        'Guna2Button6
+        'btnCurrentUser
         '
-        Me.Guna2Button6.Animated = True
-        Me.Guna2Button6.BorderRadius = 8
-        Me.Guna2Button6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2Button6.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button6.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button6.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_checked
-        Me.Guna2Button6.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_checked
-        Me.Guna2Button6.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_default
-        Me.Guna2Button6.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button6.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2Button6.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.Guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button6.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button6.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2Button6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Guna2Button6.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button6.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button6.Location = New System.Drawing.Point(19, 759)
-        Me.Guna2Button6.Name = "Guna2Button6"
-        Me.Guna2Button6.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Button6.Size = New System.Drawing.Size(254, 61)
-        Me.Guna2Button6.TabIndex = 6
-        Me.Guna2Button6.Text = "test12"
-        Me.Guna2Button6.TextOffset = New System.Drawing.Point(-26, 2)
+        Me.btnCurrentUser.Animated = True
+        Me.btnCurrentUser.BorderRadius = 8
+        Me.btnCurrentUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnCurrentUser.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnCurrentUser.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnCurrentUser.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCurrentUser.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_checked
+        Me.btnCurrentUser.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_checked
+        Me.btnCurrentUser.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_default
+        Me.btnCurrentUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnCurrentUser.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnCurrentUser.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnCurrentUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnCurrentUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnCurrentUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnCurrentUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnCurrentUser.FillColor = System.Drawing.Color.Transparent
+        Me.btnCurrentUser.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnCurrentUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnCurrentUser.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnCurrentUser.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnCurrentUser.Location = New System.Drawing.Point(19, 759)
+        Me.btnCurrentUser.Name = "btnCurrentUser"
+        Me.btnCurrentUser.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnCurrentUser.Size = New System.Drawing.Size(254, 61)
+        Me.btnCurrentUser.TabIndex = 6
+        Me.btnCurrentUser.Text = "test12"
+        Me.btnCurrentUser.TextOffset = New System.Drawing.Point(-26, 2)
         '
-        'Guna2Button5
+        'btnLogout
         '
-        Me.Guna2Button5.Animated = True
-        Me.Guna2Button5.BorderRadius = 8
-        Me.Guna2Button5.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button5.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button5.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.logout_checked
-        Me.Guna2Button5.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.logout_checked
-        Me.Guna2Button5.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.logout_default
-        Me.Guna2Button5.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button5.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2Button5.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.Guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button5.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button5.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2Button5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button5.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button5.Location = New System.Drawing.Point(19, 828)
-        Me.Guna2Button5.Name = "Guna2Button5"
-        Me.Guna2Button5.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Button5.Size = New System.Drawing.Size(254, 61)
-        Me.Guna2Button5.TabIndex = 5
-        Me.Guna2Button5.Text = "Logout"
-        Me.Guna2Button5.TextOffset = New System.Drawing.Point(-18, 2)
+        Me.btnLogout.Animated = True
+        Me.btnLogout.BorderRadius = 8
+        Me.btnLogout.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnLogout.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLogout.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.logout_checked
+        Me.btnLogout.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.logout_checked
+        Me.btnLogout.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.logout_default
+        Me.btnLogout.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnLogout.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnLogout.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogout.FillColor = System.Drawing.Color.Transparent
+        Me.btnLogout.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnLogout.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnLogout.Location = New System.Drawing.Point(19, 828)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnLogout.Size = New System.Drawing.Size(254, 61)
+        Me.btnLogout.TabIndex = 5
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.TextOffset = New System.Drawing.Point(-18, 2)
         '
         'Guna2Separator1
         '
@@ -222,36 +241,36 @@ Partial Class Main
         Me.Guna2Separator1.Size = New System.Drawing.Size(262, 10)
         Me.Guna2Separator1.TabIndex = 4
         '
-        'Guna2Button4
+        'btnSettings
         '
-        Me.Guna2Button4.Animated = True
-        Me.Guna2Button4.BorderRadius = 8
-        Me.Guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button4.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button4.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.settings_checked
-        Me.Guna2Button4.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.settings_checked
-        Me.Guna2Button4.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.settings_default
-        Me.Guna2Button4.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button4.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2Button4.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button4.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button4.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2Button4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button4.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button4.Location = New System.Drawing.Point(23, 617)
-        Me.Guna2Button4.Name = "Guna2Button4"
-        Me.Guna2Button4.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Button4.Size = New System.Drawing.Size(254, 61)
-        Me.Guna2Button4.TabIndex = 3
-        Me.Guna2Button4.Text = "Settings"
-        Me.Guna2Button4.TextOffset = New System.Drawing.Point(-10, 2)
+        Me.btnSettings.Animated = True
+        Me.btnSettings.BorderRadius = 8
+        Me.btnSettings.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnSettings.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnSettings.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSettings.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.settings_checked
+        Me.btnSettings.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.settings_checked
+        Me.btnSettings.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.settings_default
+        Me.btnSettings.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnSettings.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnSettings.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSettings.FillColor = System.Drawing.Color.Transparent
+        Me.btnSettings.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnSettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnSettings.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnSettings.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnSettings.Location = New System.Drawing.Point(23, 617)
+        Me.btnSettings.Name = "btnSettings"
+        Me.btnSettings.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnSettings.Size = New System.Drawing.Size(254, 61)
+        Me.btnSettings.TabIndex = 3
+        Me.btnSettings.Text = "Settings"
+        Me.btnSettings.TextOffset = New System.Drawing.Point(-10, 2)
         '
         'Label1
         '
@@ -264,67 +283,67 @@ Partial Class Main
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "MENU"
         '
-        'Guna2Button3
+        'btnUsers
         '
-        Me.Guna2Button3.Animated = True
-        Me.Guna2Button3.BorderRadius = 8
-        Me.Guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button3.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button3.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked
-        Me.Guna2Button3.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked
-        Me.Guna2Button3.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_mng_default
-        Me.Guna2Button3.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button3.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2Button3.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button3.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button3.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button3.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button3.Location = New System.Drawing.Point(23, 288)
-        Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Button3.Size = New System.Drawing.Size(254, 61)
-        Me.Guna2Button3.TabIndex = 2
-        Me.Guna2Button3.Text = "Users"
-        Me.Guna2Button3.TextOffset = New System.Drawing.Point(-20, 2)
+        Me.btnUsers.Animated = True
+        Me.btnUsers.BorderRadius = 8
+        Me.btnUsers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnUsers.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnUsers.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnUsers.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked
+        Me.btnUsers.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked
+        Me.btnUsers.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_mng_default
+        Me.btnUsers.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnUsers.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnUsers.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnUsers.FillColor = System.Drawing.Color.Transparent
+        Me.btnUsers.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnUsers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnUsers.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnUsers.Location = New System.Drawing.Point(23, 288)
+        Me.btnUsers.Name = "btnUsers"
+        Me.btnUsers.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnUsers.Size = New System.Drawing.Size(254, 61)
+        Me.btnUsers.TabIndex = 2
+        Me.btnUsers.Text = "Users"
+        Me.btnUsers.TextOffset = New System.Drawing.Point(-20, 2)
         '
-        'Guna2Button2
+        'btnFiles
         '
-        Me.Guna2Button2.Animated = True
-        Me.Guna2Button2.BorderRadius = 8
-        Me.Guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button2.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button2.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.folder_checked
-        Me.Guna2Button2.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.folder_checked1
-        Me.Guna2Button2.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.folder_default
-        Me.Guna2Button2.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button2.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2Button2.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button2.Location = New System.Drawing.Point(23, 220)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Button2.Size = New System.Drawing.Size(254, 61)
-        Me.Guna2Button2.TabIndex = 1
-        Me.Guna2Button2.Text = "Files"
-        Me.Guna2Button2.TextOffset = New System.Drawing.Point(-26, 2)
+        Me.btnFiles.Animated = True
+        Me.btnFiles.BorderRadius = 8
+        Me.btnFiles.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnFiles.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnFiles.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnFiles.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnFiles.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.folder_checked
+        Me.btnFiles.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.folder_checked1
+        Me.btnFiles.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.folder_default
+        Me.btnFiles.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnFiles.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnFiles.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnFiles.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnFiles.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnFiles.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnFiles.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnFiles.FillColor = System.Drawing.Color.Transparent
+        Me.btnFiles.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnFiles.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnFiles.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnFiles.Location = New System.Drawing.Point(23, 220)
+        Me.btnFiles.Name = "btnFiles"
+        Me.btnFiles.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnFiles.Size = New System.Drawing.Size(254, 61)
+        Me.btnFiles.TabIndex = 1
+        Me.btnFiles.Text = "Files"
+        Me.btnFiles.TextOffset = New System.Drawing.Point(-26, 2)
         '
         'btnDashboard
         '
@@ -424,7 +443,7 @@ Partial Class Main
         'bunifuPagesMain
         '
         Me.bunifuPagesMain.Alignment = System.Windows.Forms.TabAlignment.Bottom
-        Me.bunifuPagesMain.AllowTransitions = True
+        Me.bunifuPagesMain.AllowTransitions = False
         Me.bunifuPagesMain.Controls.Add(Me.dashboard)
         Me.bunifuPagesMain.Controls.Add(Me.files)
         Me.bunifuPagesMain.Controls.Add(Me.users)
@@ -435,6 +454,7 @@ Partial Class Main
         Me.bunifuPagesMain.Location = New System.Drawing.Point(0, 0)
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
+        Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
         Me.bunifuPagesMain.Page = Me.dashboard
         Me.bunifuPagesMain.PageIndex = 0
         Me.bunifuPagesMain.PageName = "dashboard"
@@ -442,15 +462,15 @@ Partial Class Main
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
-        Animation1.AnimateOnlyDifferences = False
+        Animation1.AnimateOnlyDifferences = True
         Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
         Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
+        Animation1.MaxTime = 0!
         Animation1.MinTime = 0!
         Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
         Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
         Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Animation1.RotateCoeff = 0!
         Animation1.RotateLimit = 0!
         Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
@@ -463,6 +483,8 @@ Partial Class Main
         'dashboard
         '
         Me.dashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.dashboard.Controls.Add(Me.Label8)
+        Me.dashboard.Controls.Add(Me.Panel1)
         Me.dashboard.Location = New System.Drawing.Point(4, 4)
         Me.dashboard.Name = "dashboard"
         Me.dashboard.Padding = New System.Windows.Forms.Padding(3)
@@ -473,6 +495,8 @@ Partial Class Main
         'files
         '
         Me.files.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.files.Controls.Add(Me.Label7)
+        Me.files.Controls.Add(Me.panelFiles)
         Me.files.Location = New System.Drawing.Point(4, 4)
         Me.files.Name = "files"
         Me.files.Padding = New System.Windows.Forms.Padding(3)
@@ -482,41 +506,48 @@ Partial Class Main
         '
         'users
         '
+        Me.users.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.users.Controls.Add(Me.Label6)
+        Me.users.Controls.Add(Me.Panel2)
         Me.users.Location = New System.Drawing.Point(4, 4)
         Me.users.Name = "users"
         Me.users.Padding = New System.Windows.Forms.Padding(3)
         Me.users.Size = New System.Drawing.Size(1392, 858)
         Me.users.TabIndex = 3
         Me.users.Text = "users"
-        Me.users.UseVisualStyleBackColor = True
         '
         'history
         '
+        Me.history.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.history.Controls.Add(Me.Panel3)
         Me.history.Location = New System.Drawing.Point(4, 4)
         Me.history.Name = "history"
         Me.history.Padding = New System.Windows.Forms.Padding(3)
         Me.history.Size = New System.Drawing.Size(1392, 858)
         Me.history.TabIndex = 2
         Me.history.Text = "history"
-        Me.history.UseVisualStyleBackColor = True
         '
         'settings
         '
+        Me.settings.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.settings.Controls.Add(Me.Label4)
+        Me.settings.Controls.Add(Me.Panel4)
         Me.settings.Location = New System.Drawing.Point(4, 4)
         Me.settings.Name = "settings"
         Me.settings.Size = New System.Drawing.Size(1392, 858)
         Me.settings.TabIndex = 4
         Me.settings.Text = "settings"
-        Me.settings.UseVisualStyleBackColor = True
         '
         'currentUser
         '
+        Me.currentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.currentUser.Controls.Add(Me.Label3)
+        Me.currentUser.Controls.Add(Me.Panel5)
         Me.currentUser.Location = New System.Drawing.Point(4, 4)
         Me.currentUser.Name = "currentUser"
         Me.currentUser.Size = New System.Drawing.Size(1392, 858)
         Me.currentUser.TabIndex = 5
         Me.currentUser.Text = "currentUser"
-        Me.currentUser.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -537,6 +568,115 @@ Partial Class Main
         Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'panelFiles
+        '
+        Me.panelFiles.Location = New System.Drawing.Point(678, 284)
+        Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelFiles.Name = "panelFiles"
+        Me.panelFiles.Size = New System.Drawing.Size(200, 100)
+        Me.panelFiles.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(596, 379)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(200, 100)
+        Me.Panel1.TabIndex = 1
+        '
+        'Panel2
+        '
+        Me.Panel2.Location = New System.Drawing.Point(596, 379)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 100)
+        Me.Panel2.TabIndex = 1
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Location = New System.Drawing.Point(596, 379)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(200, 100)
+        Me.Panel3.TabIndex = 1
+        '
+        'Panel4
+        '
+        Me.Panel4.Location = New System.Drawing.Point(596, 379)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(200, 100)
+        Me.Panel4.TabIndex = 1
+        '
+        'Panel5
+        '
+        Me.Panel5.Location = New System.Drawing.Point(596, 379)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(200, 100)
+        Me.Panel5.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label3.Location = New System.Drawing.Point(549, 259)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(136, 26)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "currentUser"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label4.Location = New System.Drawing.Point(576, 274)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(96, 26)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "settings"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label5.Location = New System.Drawing.Point(36, 39)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 26)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "history"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label6.Location = New System.Drawing.Point(628, 416)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(70, 26)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "users"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label7.Location = New System.Drawing.Point(628, 416)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(55, 26)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "files"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label8.Location = New System.Drawing.Point(628, 416)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(124, 26)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "dashboard"
         '
         'Main
         '
@@ -563,8 +703,21 @@ Partial Class Main
         Me.Guna2Panel1.PerformLayout()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
+        Me.dashboard.ResumeLayout(False)
+        Me.dashboard.PerformLayout()
+        Me.files.ResumeLayout(False)
+        Me.files.PerformLayout()
+        Me.users.ResumeLayout(False)
+        Me.users.PerformLayout()
+        Me.history.ResumeLayout(False)
+        Me.settings.ResumeLayout(False)
+        Me.settings.PerformLayout()
+        Me.currentUser.ResumeLayout(False)
+        Me.currentUser.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -575,21 +728,21 @@ Partial Class Main
     Friend WithEvents panelTopLogo As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents btnDashboard As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnUsers As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnFiles As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSettings As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents panelTop As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnCurrentUser As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Separator2 As Guna.UI2.WinForms.Guna2Separator
-    Friend WithEvents Guna2Button7 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnHistory As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents panelMain As Panel
     Friend WithEvents bunifuPagesMain As Bunifu.UI.WinForms.BunifuPages
     Friend WithEvents dashboard As TabPage
@@ -598,4 +751,16 @@ Partial Class Main
     Friend WithEvents users As TabPage
     Friend WithEvents settings As TabPage
     Friend WithEvents currentUser As TabPage
+    Friend WithEvents panelFiles As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class
