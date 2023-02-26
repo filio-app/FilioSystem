@@ -118,11 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="home-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\home-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frmSignIn-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmSignIn-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\home-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,13 +133,13 @@
   <data name="folder-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\home-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="folder-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="frmSignIn-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="filio-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Logo\filio-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

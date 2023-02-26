@@ -32,8 +32,11 @@ Partial Class Main
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelTop.SuspendLayout()
+        Me.panelTopLogo.SuspendLayout()
         Me.panelLeft.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -56,6 +59,7 @@ Partial Class Main
         '
         'panelTopLogo
         '
+        Me.panelTopLogo.Controls.Add(Me.PictureBox1)
         Me.panelTopLogo.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.panelTopLogo.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.panelTopLogo.Dock = System.Windows.Forms.DockStyle.Left
@@ -184,6 +188,16 @@ Partial Class Main
         Me.Guna2DragControl1.TargetControl = Me.panelTop
         Me.Guna2DragControl1.UseTransparentDrag = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(37, 21)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(161, 52)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
@@ -199,7 +213,9 @@ Partial Class Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTop.ResumeLayout(False)
+        Me.panelTopLogo.ResumeLayout(False)
         Me.panelLeft.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -213,4 +229,5 @@ Partial Class Main
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
