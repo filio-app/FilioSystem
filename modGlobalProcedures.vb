@@ -44,4 +44,31 @@ Module modGlobalProcedures
     End Sub
 
 
+
+    Sub displayForm(ByVal frmParent As System.Windows.Forms.Form, ByVal frmChild As System.Windows.Forms.Form)
+
+        frmModal.ShowInTaskbar = False
+        frmModal.StartPosition = FormStartPosition.Manual
+        frmModal.Location = frmParent.Location
+        frmModal.Size = frmParent.Size
+        frmModal.TopMost = False
+        frmModal.Owner = frmParent
+        frmModal.Show()
+        With frmChild
+            '.txtUserName.PlaceholderText = "Username"
+            '.txtPassword.PlaceholderText = "Password"
+            .ShowInTaskbar = False
+            .TopMost = False
+            .Owner = frmParent
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+        End With
+        'btnUser.Text = StrConv(userName, VbStrConv.ProperCase)
+        'frmLogin.Close()
+        frmModal.Dispose()
+
+    End Sub
+
+
+
 End Module
