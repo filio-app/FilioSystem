@@ -29,16 +29,19 @@ Partial Class frmSignIn
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.Font = New System.Drawing.Font("Inter", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(100, 154)
+        Me.Label1.Location = New System.Drawing.Point(80, 232)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(289, 29)
+        Me.Label1.Size = New System.Drawing.Size(357, 36)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Sign In to your Account"
         '
@@ -52,9 +55,9 @@ Partial Class frmSignIn
         Me.btnSignIn.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnSignIn.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnSignIn.ForeColor = System.Drawing.Color.White
-        Me.btnSignIn.Location = New System.Drawing.Point(105, 422)
+        Me.btnSignIn.Location = New System.Drawing.Point(86, 498)
         Me.btnSignIn.Name = "btnSignIn"
-        Me.btnSignIn.Size = New System.Drawing.Size(317, 58)
+        Me.btnSignIn.Size = New System.Drawing.Size(380, 58)
         Me.btnSignIn.TabIndex = 8
         Me.btnSignIn.Text = "Sign in"
         '
@@ -88,13 +91,13 @@ Partial Class frmSignIn
         Me.Guna2TextBox2.IconLeft = Global.FilioSystem.My.Resources.Resources.frmSignIn_password
         Me.Guna2TextBox2.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.Guna2TextBox2.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(105, 340)
+        Me.Guna2TextBox2.Location = New System.Drawing.Point(86, 416)
         Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(5)
         Me.Guna2TextBox2.Name = "Guna2TextBox2"
         Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Guna2TextBox2.PlaceholderText = "Password"
         Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(317, 55)
+        Me.Guna2TextBox2.Size = New System.Drawing.Size(380, 55)
         Me.Guna2TextBox2.TabIndex = 9
         '
         'Guna2TextBox1
@@ -112,21 +115,44 @@ Partial Class frmSignIn
         Me.Guna2TextBox1.IconLeft = Global.FilioSystem.My.Resources.Resources.frmSignIn_user
         Me.Guna2TextBox1.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.Guna2TextBox1.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(105, 263)
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(86, 339)
         Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(5)
         Me.Guna2TextBox1.Name = "Guna2TextBox1"
         Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox1.PlaceholderText = "Username"
         Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(317, 55)
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(380, 55)
         Me.Guna2TextBox1.TabIndex = 3
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(88, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(365, 227)
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(84, 277)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(308, 19)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Welcome back! please enter your detail"
         '
         'frmSignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(550, 626)
+        Me.ClientSize = New System.Drawing.Size(550, 605)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Guna2TextBox2)
         Me.Controls.Add(Me.btnSignIn)
@@ -138,6 +164,7 @@ Partial Class frmSignIn
         Me.Name = "frmSignIn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmSignIn"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +175,6 @@ Partial Class frmSignIn
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label2 As Label
 End Class

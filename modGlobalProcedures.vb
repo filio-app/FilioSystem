@@ -48,6 +48,9 @@ Module modGlobalProcedures
     Sub displayForm(ByVal frmParent As System.Windows.Forms.Form, ByVal frmChild As System.Windows.Forms.Form)
 
         frmModal.ShowInTaskbar = False
+        'frmModal.BackColor = Color.Magenta
+        'frmModal.TransparencyKey = Color.Magenta
+        'frmModal.FormBorderStyle = FormBorderStyle.None
         frmModal.StartPosition = FormStartPosition.Manual
         frmModal.Location = frmParent.Location
         frmModal.Size = frmParent.Size

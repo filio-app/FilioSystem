@@ -36,10 +36,12 @@ Partial Class frmModal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ForeColor = System.Drawing.Color.Transparent
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmModal"
-        Me.Opacity = 0.5R
+        Me.Opacity = 0.55R
         Me.Text = "frmModal"
+        Me.TransparencyKey = System.Drawing.Color.Transparent
         Me.ResumeLayout(False)
 
     End Sub

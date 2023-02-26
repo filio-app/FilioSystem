@@ -121,11 +121,17 @@
   <data name="folder-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frmSignIn-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frmSignIn-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filio-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Logo\filio-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashboard-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\dashboard-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\home-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,10 +142,10 @@
   <data name="home-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\home-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frmSignIn-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filio-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Logo\filio-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboard-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\dashboard-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
