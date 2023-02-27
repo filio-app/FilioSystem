@@ -23,11 +23,10 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
+        Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnHistory = New Guna.UI2.WinForms.Guna2Button()
@@ -44,7 +43,6 @@ Partial Class frmMain
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.bunifuPagesMain = New Bunifu.UI.WinForms.BunifuPages()
@@ -65,12 +63,12 @@ Partial Class frmMain
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.currentUser = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.panelCurrentUser = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelTopLogo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
@@ -80,6 +78,8 @@ Partial Class frmMain
         Me.Panel3.SuspendLayout()
         Me.settings.SuspendLayout()
         Me.currentUser.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -97,16 +97,6 @@ Partial Class frmMain
         Me.panelTopLogo.Name = "panelTopLogo"
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Guna2ControlBox1
         '
@@ -431,16 +421,6 @@ Partial Class frmMain
         Me.Guna2Panel1.Size = New System.Drawing.Size(1400, 34)
         Me.Guna2Panel1.TabIndex = 4
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -477,29 +457,29 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.dashboard
-        Me.bunifuPagesMain.PageIndex = 0
-        Me.bunifuPagesMain.PageName = "dashboard"
-        Me.bunifuPagesMain.PageTitle = "dashboard"
+        Me.bunifuPagesMain.Page = Me.currentUser
+        Me.bunifuPagesMain.PageIndex = 5
+        Me.bunifuPagesMain.PageName = "currentUser"
+        Me.bunifuPagesMain.PageTitle = "currentUser"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.bunifuPagesMain.Transition = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.bunifuPagesMain.Transition = Animation1
         Me.bunifuPagesMain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom
         '
         'dashboard
@@ -655,7 +635,7 @@ Partial Class frmMain
         '
         Me.currentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.currentUser.Controls.Add(Me.Label3)
-        Me.currentUser.Controls.Add(Me.Panel5)
+        Me.currentUser.Controls.Add(Me.panelCurrentUser)
         Me.currentUser.Location = New System.Drawing.Point(4, 4)
         Me.currentUser.Name = "currentUser"
         Me.currentUser.Size = New System.Drawing.Size(1392, 858)
@@ -666,19 +646,40 @@ Partial Class frmMain
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label3.Location = New System.Drawing.Point(549, 259)
+        Me.Label3.Location = New System.Drawing.Point(44, 39)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(136, 26)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "currentUser"
         '
-        'Panel5
+        'panelCurrentUser
         '
-        Me.Panel5.Location = New System.Drawing.Point(596, 379)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(200, 100)
-        Me.Panel5.TabIndex = 1
+        Me.panelCurrentUser.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
+        Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelCurrentUser.Name = "panelCurrentUser"
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
+        Me.panelCurrentUser.TabIndex = 1
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'frmMain
         '
@@ -699,12 +700,10 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTopLogo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
         Me.dashboard.ResumeLayout(False)
@@ -720,6 +719,8 @@ Partial Class frmMain
         Me.settings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
         Me.currentUser.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -758,7 +759,7 @@ Partial Class frmMain
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel5 As Panel
+    Friend WithEvents panelCurrentUser As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label

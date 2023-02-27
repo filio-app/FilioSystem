@@ -179,6 +179,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCurrentUser.Designer.vb">
+      <DependentUpon>frmCurrentUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurrentUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmModal.Designer.vb">
       <DependentUpon>frmModal.vb</DependentUpon>
     </Compile>
@@ -218,6 +224,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCurrentUser.resx">
+      <DependentUpon>frmCurrentUser.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModal.resx">
       <DependentUpon>frmModal.vb</DependentUpon>
     </EmbeddedResource>

@@ -5,7 +5,12 @@
 
         Me.Show()
 
-        displayForm(Me, frmSignIn)
+        'TODO: (frmMain) Remove and Uncomment this for frmSignIn
+
+        btnCurrentUser.Visible = True
+        btnLogout.Visible = True
+
+        'displayForm(Me, frmSignIn)
 
 
 
@@ -64,12 +69,13 @@
 
     Private Sub btnCurrentUser_Click(sender As Object, e As EventArgs) Handles btnCurrentUser.Click
         bunifuPagesMain.SetPage(5)
-        'With frmBrgyOfficial
-        '    .TopLevel = False
-        '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
-        '    .BringToFront()
-        '    .Show()
-        'End With
+        With frmCurrentUser
+            .TopLevel = False
+            ' TODO: (REMINDER) adding pages directly -> bunifuPagesMain.SelectedTab().Controls.Add(frmCurrentUser)
+            panelCurrentUser.Controls.Add(frmCurrentUser)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -77,7 +83,7 @@
         btnLogout.Visible = False
         btnCurrentUser.Visible = False
 
-        ' TODO: set other button checked to false
+        ' TODO: (frmMain) set other button checked to false
         btnDashboard.Checked = False
 
 
