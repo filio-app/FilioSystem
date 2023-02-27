@@ -1,16 +1,13 @@
-﻿Public Class Main
+﻿Public Class frmMain
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         chkDatabaseConnection()
 
         Me.Show()
 
-
-
-        With frmSignIn
-            .Guna2TextBox1.PlaceholderText = "test"
-        End With
         displayForm(Me, frmSignIn)
+
+
 
 
     End Sub
@@ -73,5 +70,18 @@
         '    .BringToFront()
         '    .Show()
         'End With
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+
+        btnLogout.Visible = False
+        btnCurrentUser.Visible = False
+
+        ' TODO: set other button checked to false
+        btnDashboard.Checked = False
+
+
+
+        displayForm(Me, frmSignIn)
     End Sub
 End Class

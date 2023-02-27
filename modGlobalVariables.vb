@@ -12,14 +12,16 @@ Module ModGlobalVariable
     Public strConnectionString As String
 
 
-    Public residentPhotoPath As String      ' image location / path
-    Public logoPhotoPath As String
-
-    Public datBrgy As New DataTable
+    Public datFilio As New DataTable
     Public sqlAdapterFilio As New MySqlDataAdapter
+
+
 
     Public row As Integer
     Public action As String
 
+
+    Public residentPhotoPath As String      ' image location / path
+    Public logoPhotoPath As String
 
 End Module
