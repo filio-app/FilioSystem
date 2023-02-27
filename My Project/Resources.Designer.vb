@@ -133,6 +133,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property folder_default1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("folder-default1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property frmSignIn_password() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("frmSignIn-password", resourceCulture)

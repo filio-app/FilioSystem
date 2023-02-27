@@ -27,6 +27,7 @@ Partial Class Main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnHistory = New Guna.UI2.WinForms.Guna2Button()
@@ -43,43 +44,42 @@ Partial Class Main
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.bunifuPagesMain = New Bunifu.UI.WinForms.BunifuPages()
         Me.dashboard = New System.Windows.Forms.TabPage()
-        Me.files = New System.Windows.Forms.TabPage()
-        Me.users = New System.Windows.Forms.TabPage()
-        Me.history = New System.Windows.Forms.TabPage()
-        Me.settings = New System.Windows.Forms.TabPage()
-        Me.currentUser = New System.Windows.Forms.TabPage()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.panelFiles = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.files = New System.Windows.Forms.TabPage()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.panelFiles = New System.Windows.Forms.Panel()
+        Me.users = New System.Windows.Forms.TabPage()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.history = New System.Windows.Forms.TabPage()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.settings = New System.Windows.Forms.TabPage()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.currentUser = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.panelTopLogo.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
         Me.files.SuspendLayout()
         Me.users.SuspendLayout()
         Me.history.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.settings.SuspendLayout()
         Me.currentUser.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -97,6 +97,16 @@ Partial Class Main
         Me.panelTopLogo.Name = "panelTopLogo"
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Guna2ControlBox1
         '
@@ -324,7 +334,7 @@ Partial Class Main
         Me.btnFiles.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnFiles.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.folder_checked
         Me.btnFiles.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.folder_checked1
-        Me.btnFiles.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.folder_default
+        Me.btnFiles.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.folder_default1
         Me.btnFiles.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnFiles.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnFiles.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -419,6 +429,16 @@ Partial Class Main
         Me.Guna2Panel1.Size = New System.Drawing.Size(1400, 34)
         Me.Guna2Panel1.TabIndex = 4
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -470,7 +490,7 @@ Partial Class Main
         Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
         Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
         Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
         Animation1.RotateCoeff = 0!
         Animation1.RotateLimit = 0!
         Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
@@ -492,6 +512,24 @@ Partial Class Main
         Me.dashboard.TabIndex = 0
         Me.dashboard.Text = "dashboard"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label8.Location = New System.Drawing.Point(628, 416)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(124, 26)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "dashboard"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(596, 379)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(200, 100)
+        Me.Panel1.TabIndex = 1
+        '
         'files
         '
         Me.files.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -503,6 +541,24 @@ Partial Class Main
         Me.files.Size = New System.Drawing.Size(1392, 858)
         Me.files.TabIndex = 1
         Me.files.Text = "files"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label7.Location = New System.Drawing.Point(628, 416)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(55, 26)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "files"
+        '
+        'panelFiles
+        '
+        Me.panelFiles.Location = New System.Drawing.Point(678, 284)
+        Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelFiles.Name = "panelFiles"
+        Me.panelFiles.Size = New System.Drawing.Size(200, 100)
+        Me.panelFiles.TabIndex = 0
         '
         'users
         '
@@ -516,6 +572,24 @@ Partial Class Main
         Me.users.TabIndex = 3
         Me.users.Text = "users"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label6.Location = New System.Drawing.Point(628, 416)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(70, 26)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "users"
+        '
+        'Panel2
+        '
+        Me.Panel2.Location = New System.Drawing.Point(596, 379)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 100)
+        Me.Panel2.TabIndex = 1
+        '
         'history
         '
         Me.history.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -526,6 +600,25 @@ Partial Class Main
         Me.history.Size = New System.Drawing.Size(1392, 858)
         Me.history.TabIndex = 2
         Me.history.Text = "history"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Location = New System.Drawing.Point(596, 379)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(200, 100)
+        Me.Panel3.TabIndex = 1
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label5.Location = New System.Drawing.Point(36, 39)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 26)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "history"
         '
         'settings
         '
@@ -538,6 +631,24 @@ Partial Class Main
         Me.settings.TabIndex = 4
         Me.settings.Text = "settings"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label4.Location = New System.Drawing.Point(576, 274)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(96, 26)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "settings"
+        '
+        'Panel4
+        '
+        Me.Panel4.Location = New System.Drawing.Point(596, 379)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(200, 100)
+        Me.Panel4.TabIndex = 1
+        '
         'currentUser
         '
         Me.currentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -549,75 +660,6 @@ Partial Class Main
         Me.currentUser.TabIndex = 5
         Me.currentUser.Text = "currentUser"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'panelFiles
-        '
-        Me.panelFiles.Location = New System.Drawing.Point(678, 284)
-        Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
-        Me.panelFiles.Name = "panelFiles"
-        Me.panelFiles.Size = New System.Drawing.Size(200, 100)
-        Me.panelFiles.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(596, 379)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 100)
-        Me.Panel1.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.Location = New System.Drawing.Point(596, 379)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 100)
-        Me.Panel2.TabIndex = 1
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Location = New System.Drawing.Point(596, 379)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(200, 100)
-        Me.Panel3.TabIndex = 1
-        '
-        'Panel4
-        '
-        Me.Panel4.Location = New System.Drawing.Point(596, 379)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(200, 100)
-        Me.Panel4.TabIndex = 1
-        '
-        'Panel5
-        '
-        Me.Panel5.Location = New System.Drawing.Point(596, 379)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(200, 100)
-        Me.Panel5.TabIndex = 1
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -628,55 +670,13 @@ Partial Class Main
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "currentUser"
         '
-        'Label4
+        'Panel5
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label4.Location = New System.Drawing.Point(576, 274)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 26)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "settings"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label5.Location = New System.Drawing.Point(36, 39)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 26)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "history"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label6.Location = New System.Drawing.Point(628, 416)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(70, 26)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "users"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label7.Location = New System.Drawing.Point(628, 416)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 26)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "files"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label8.Location = New System.Drawing.Point(628, 416)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(124, 26)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "dashboard"
+        Me.Panel5.Location = New System.Drawing.Point(596, 379)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(200, 100)
+        Me.Panel5.TabIndex = 1
         '
         'Main
         '
@@ -697,10 +697,12 @@ Partial Class Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTopLogo.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
         Me.dashboard.ResumeLayout(False)
@@ -710,14 +712,12 @@ Partial Class Main
         Me.users.ResumeLayout(False)
         Me.users.PerformLayout()
         Me.history.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.settings.ResumeLayout(False)
         Me.settings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
         Me.currentUser.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
