@@ -64,9 +64,11 @@ Partial Class frmMain
         Me.currentUser = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.transaction = New System.Windows.Forms.TabPage()
+        Me.hiddenPage = New System.Windows.Forms.TabPage()
         Me.panelTopLogo.SuspendLayout()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
@@ -113,7 +115,7 @@ Partial Class frmMain
         'panelLeft
         '
         Me.panelLeft.BackColor = System.Drawing.Color.White
-        Me.panelLeft.Controls.Add(Me.Guna2Button1)
+        Me.panelLeft.Controls.Add(Me.btnTransaction)
         Me.panelLeft.Controls.Add(Me.btnHistory)
         Me.panelLeft.Controls.Add(Me.Guna2Separator2)
         Me.panelLeft.Controls.Add(Me.btnCurrentUser)
@@ -233,7 +235,7 @@ Partial Class frmMain
         Me.btnLogout.Size = New System.Drawing.Size(254, 61)
         Me.btnLogout.TabIndex = 5
         Me.btnLogout.Text = "Logout"
-        Me.btnLogout.TextOffset = New System.Drawing.Point(-18, 2)
+        Me.btnLogout.TextOffset = New System.Drawing.Point(-22, 2)
         Me.btnLogout.Visible = False
         '
         'Guna2Separator1
@@ -451,18 +453,20 @@ Partial Class frmMain
         Me.bunifuPagesMain.Controls.Add(Me.dashboard)
         Me.bunifuPagesMain.Controls.Add(Me.files)
         Me.bunifuPagesMain.Controls.Add(Me.users)
+        Me.bunifuPagesMain.Controls.Add(Me.transaction)
         Me.bunifuPagesMain.Controls.Add(Me.history)
         Me.bunifuPagesMain.Controls.Add(Me.settings)
         Me.bunifuPagesMain.Controls.Add(Me.currentUser)
+        Me.bunifuPagesMain.Controls.Add(Me.hiddenPage)
         Me.bunifuPagesMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.bunifuPagesMain.Location = New System.Drawing.Point(0, 0)
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.currentUser
-        Me.bunifuPagesMain.PageIndex = 5
-        Me.bunifuPagesMain.PageName = "currentUser"
-        Me.bunifuPagesMain.PageTitle = "currentUser"
+        Me.bunifuPagesMain.Page = Me.hiddenPage
+        Me.bunifuPagesMain.PageIndex = 7
+        Me.bunifuPagesMain.PageName = "hiddenPage"
+        Me.bunifuPagesMain.PageTitle = "hiddenPage"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -663,36 +667,36 @@ Partial Class frmMain
         Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
         Me.panelCurrentUser.TabIndex = 1
         '
-        'Guna2Button1
+        'btnTransaction
         '
-        Me.Guna2Button1.Animated = True
-        Me.Guna2Button1.BorderRadius = 8
-        Me.Guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2Button1.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.transaction_checked
-        Me.Guna2Button1.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.transaction_checked
-        Me.Guna2Button1.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.transaction_default
-        Me.Guna2Button1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2Button1.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2Button1.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.Guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2Button1.Location = New System.Drawing.Point(23, 288)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2Button1.Size = New System.Drawing.Size(254, 61)
-        Me.Guna2Button1.TabIndex = 9
-        Me.Guna2Button1.Text = "Transaction"
-        Me.Guna2Button1.TextOffset = New System.Drawing.Point(4, 2)
+        Me.btnTransaction.Animated = True
+        Me.btnTransaction.BorderRadius = 8
+        Me.btnTransaction.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnTransaction.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnTransaction.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnTransaction.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTransaction.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.transaction_checked
+        Me.btnTransaction.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.transaction_checked
+        Me.btnTransaction.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.transaction_default
+        Me.btnTransaction.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnTransaction.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnTransaction.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnTransaction.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnTransaction.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnTransaction.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnTransaction.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnTransaction.FillColor = System.Drawing.Color.Transparent
+        Me.btnTransaction.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnTransaction.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnTransaction.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnTransaction.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnTransaction.Location = New System.Drawing.Point(23, 288)
+        Me.btnTransaction.Name = "btnTransaction"
+        Me.btnTransaction.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnTransaction.Size = New System.Drawing.Size(254, 61)
+        Me.btnTransaction.TabIndex = 9
+        Me.btnTransaction.Text = "Transaction"
+        Me.btnTransaction.TextOffset = New System.Drawing.Point(4, 2)
         '
         'PictureBox2
         '
@@ -713,6 +717,24 @@ Partial Class frmMain
         Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'transaction
+        '
+        Me.transaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.transaction.Location = New System.Drawing.Point(4, 4)
+        Me.transaction.Name = "transaction"
+        Me.transaction.Size = New System.Drawing.Size(1392, 858)
+        Me.transaction.TabIndex = 6
+        Me.transaction.Text = "transaction"
+        '
+        'hiddenPage
+        '
+        Me.hiddenPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.hiddenPage.Location = New System.Drawing.Point(4, 4)
+        Me.hiddenPage.Name = "hiddenPage"
+        Me.hiddenPage.Size = New System.Drawing.Size(1392, 858)
+        Me.hiddenPage.TabIndex = 7
+        Me.hiddenPage.Text = "hiddenPage"
         '
         'frmMain
         '
@@ -799,5 +821,7 @@ Partial Class frmMain
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnTransaction As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents transaction As TabPage
+    Friend WithEvents hiddenPage As TabPage
 End Class

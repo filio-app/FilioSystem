@@ -7,10 +7,10 @@
 
         'TODO: (frmMain) Remove and Uncomment this for frmSignIn
 
-        btnCurrentUser.Visible = True
-        btnLogout.Visible = True
+        'btnCurrentUser.Visible = True
+        'btnLogout.Visible = True
 
-        'displayForm(Me, frmSignIn)
+        displayForm(Me, frmSignIn)
 
 
 
