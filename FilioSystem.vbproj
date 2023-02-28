@@ -258,7 +258,32 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\app-version.png" />
+    <Content Include="Assets\dashboard-checked.png" />
+    <Content Include="Assets\dashboard-default.png" />
+    <Content Include="Assets\filio-logo.png" />
+    <Content Include="Assets\folder-checked.png" />
+    <Content Include="Assets\folder-checked1.png" />
+    <Content Include="Assets\folder-default.png" />
+    <Content Include="Assets\folder-default1.png" />
+    <Content Include="Assets\frmSignIn-password.png" />
+    <Content Include="Assets\frmSignIn-user.png" />
+    <Content Include="Assets\history-checked.png" />
+    <Content Include="Assets\history-default.png" />
+    <Content Include="Assets\home-checked.png" />
+    <Content Include="Assets\home-default.png" />
+    <Content Include="Assets\logout-checked.png" />
+    <Content Include="Assets\logout-default.png" />
+    <Content Include="Assets\settings-checked.png" />
+    <Content Include="Assets\settings-default.png" />
+    <Content Include="Assets\transaction-checked.png" />
+    <Content Include="Assets\transaction-default.png" />
+    <Content Include="Assets\user-checked.png" />
+    <Content Include="Assets\user-default.png" />
+    <Content Include="Assets\user-mng-checked.png" />
+    <Content Include="Assets\user-mng-default.png" />
     <Content Include="TextFile1.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

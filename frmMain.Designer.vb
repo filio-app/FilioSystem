@@ -29,6 +29,7 @@ Partial Class frmMain
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
         Me.btnHistory = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
         Me.btnCurrentUser = New Guna.UI2.WinForms.Guna2Button()
@@ -52,6 +53,8 @@ Partial Class frmMain
         Me.files = New System.Windows.Forms.TabPage()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.panelFiles = New System.Windows.Forms.Panel()
+        Me.transaction = New System.Windows.Forms.TabPage()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.users = New System.Windows.Forms.TabPage()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -64,12 +67,9 @@ Partial Class frmMain
         Me.currentUser = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
-        Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
+        Me.hiddenPage = New System.Windows.Forms.TabPage()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.transaction = New System.Windows.Forms.TabPage()
-        Me.hiddenPage = New System.Windows.Forms.TabPage()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.panelTopLogo.SuspendLayout()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
@@ -77,6 +77,7 @@ Partial Class frmMain
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
         Me.files.SuspendLayout()
+        Me.transaction.SuspendLayout()
         Me.users.SuspendLayout()
         Me.history.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -84,7 +85,6 @@ Partial Class frmMain
         Me.currentUser.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.transaction.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -137,6 +137,37 @@ Partial Class frmMain
         Me.panelLeft.Size = New System.Drawing.Size(300, 919)
         Me.panelLeft.TabIndex = 1
         '
+        'btnTransaction
+        '
+        Me.btnTransaction.Animated = True
+        Me.btnTransaction.BorderRadius = 8
+        Me.btnTransaction.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnTransaction.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnTransaction.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnTransaction.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTransaction.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.transaction_checked1
+        Me.btnTransaction.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.transaction_checked1
+        Me.btnTransaction.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.transaction_default2
+        Me.btnTransaction.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnTransaction.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnTransaction.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnTransaction.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnTransaction.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnTransaction.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnTransaction.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnTransaction.FillColor = System.Drawing.Color.Transparent
+        Me.btnTransaction.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnTransaction.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnTransaction.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnTransaction.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnTransaction.Location = New System.Drawing.Point(23, 288)
+        Me.btnTransaction.Name = "btnTransaction"
+        Me.btnTransaction.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnTransaction.Size = New System.Drawing.Size(254, 61)
+        Me.btnTransaction.TabIndex = 9
+        Me.btnTransaction.Text = "Transaction"
+        Me.btnTransaction.TextOffset = New System.Drawing.Point(4, 2)
+        '
         'btnHistory
         '
         Me.btnHistory.Animated = True
@@ -145,9 +176,9 @@ Partial Class frmMain
         Me.btnHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnHistory.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnHistory.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnHistory.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.history_checked
-        Me.btnHistory.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.history_checked
-        Me.btnHistory.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.history_default
+        Me.btnHistory.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.history_checked1
+        Me.btnHistory.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.history_checked1
+        Me.btnHistory.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.history_default1
         Me.btnHistory.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnHistory.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnHistory.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -185,9 +216,9 @@ Partial Class frmMain
         Me.btnCurrentUser.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnCurrentUser.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnCurrentUser.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCurrentUser.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_checked
-        Me.btnCurrentUser.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_checked
-        Me.btnCurrentUser.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_default
+        Me.btnCurrentUser.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_checked1
+        Me.btnCurrentUser.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_checked1
+        Me.btnCurrentUser.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_default1
         Me.btnCurrentUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnCurrentUser.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnCurrentUser.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -216,9 +247,9 @@ Partial Class frmMain
         Me.btnLogout.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLogout.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLogout.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.logout_checked
-        Me.btnLogout.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.logout_checked
-        Me.btnLogout.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.logout_default
+        Me.btnLogout.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.logout_checked1
+        Me.btnLogout.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.logout_checked1
+        Me.btnLogout.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.logout_default1
         Me.btnLogout.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnLogout.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnLogout.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -257,9 +288,9 @@ Partial Class frmMain
         Me.btnSettings.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnSettings.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSettings.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.settings_checked
-        Me.btnSettings.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.settings_checked
-        Me.btnSettings.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.settings_default
+        Me.btnSettings.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.settings_checked1
+        Me.btnSettings.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.settings_checked1
+        Me.btnSettings.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.settings_default1
         Me.btnSettings.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnSettings.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnSettings.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -299,9 +330,9 @@ Partial Class frmMain
         Me.btnUsers.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnUsers.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnUsers.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked
-        Me.btnUsers.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked
-        Me.btnUsers.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_mng_default
+        Me.btnUsers.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked1
+        Me.btnUsers.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.user_mng_checked1
+        Me.btnUsers.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.user_mng_default1
         Me.btnUsers.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnUsers.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnUsers.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -330,9 +361,9 @@ Partial Class frmMain
         Me.btnFiles.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnFiles.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnFiles.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnFiles.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.folder_checked
-        Me.btnFiles.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.folder_checked1
-        Me.btnFiles.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.folder_default1
+        Me.btnFiles.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.folder_checked2
+        Me.btnFiles.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.folder_checked2
+        Me.btnFiles.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.folder_default2
         Me.btnFiles.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnFiles.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnFiles.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -361,9 +392,9 @@ Partial Class frmMain
         Me.btnDashboard.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnDashboard.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDashboard.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.dashboard_checked
-        Me.btnDashboard.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.dashboard_checked
-        Me.btnDashboard.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.dashboard_default
+        Me.btnDashboard.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.dashboard_checked1
+        Me.btnDashboard.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.dashboard_checked1
+        Me.btnDashboard.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.dashboard_default2
         Me.btnDashboard.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnDashboard.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
         Me.btnDashboard.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
@@ -550,6 +581,26 @@ Partial Class frmMain
         Me.panelFiles.Size = New System.Drawing.Size(200, 100)
         Me.panelFiles.TabIndex = 0
         '
+        'transaction
+        '
+        Me.transaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.transaction.Controls.Add(Me.Label9)
+        Me.transaction.Location = New System.Drawing.Point(4, 4)
+        Me.transaction.Name = "transaction"
+        Me.transaction.Size = New System.Drawing.Size(1392, 858)
+        Me.transaction.TabIndex = 6
+        Me.transaction.Text = "transaction"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label9.Location = New System.Drawing.Point(247, 197)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(128, 26)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "transaction"
+        '
         'users
         '
         Me.users.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -666,69 +717,8 @@ Partial Class frmMain
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
         Me.panelCurrentUser.Name = "panelCurrentUser"
-        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 859)
         Me.panelCurrentUser.TabIndex = 1
-        '
-        'btnTransaction
-        '
-        Me.btnTransaction.Animated = True
-        Me.btnTransaction.BorderRadius = 8
-        Me.btnTransaction.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.btnTransaction.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.btnTransaction.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnTransaction.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnTransaction.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.transaction_checked
-        Me.btnTransaction.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.transaction_checked
-        Me.btnTransaction.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.transaction_default
-        Me.btnTransaction.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnTransaction.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.btnTransaction.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.btnTransaction.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnTransaction.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnTransaction.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnTransaction.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnTransaction.FillColor = System.Drawing.Color.Transparent
-        Me.btnTransaction.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.btnTransaction.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.btnTransaction.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.btnTransaction.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnTransaction.Location = New System.Drawing.Point(23, 288)
-        Me.btnTransaction.Name = "btnTransaction"
-        Me.btnTransaction.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.btnTransaction.Size = New System.Drawing.Size(254, 61)
-        Me.btnTransaction.TabIndex = 9
-        Me.btnTransaction.Text = "Transaction"
-        Me.btnTransaction.TextOffset = New System.Drawing.Point(4, 2)
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'transaction
-        '
-        Me.transaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.transaction.Controls.Add(Me.Label9)
-        Me.transaction.Location = New System.Drawing.Point(4, 4)
-        Me.transaction.Name = "transaction"
-        Me.transaction.Size = New System.Drawing.Size(1392, 858)
-        Me.transaction.TabIndex = 6
-        Me.transaction.Text = "transaction"
         '
         'hiddenPage
         '
@@ -739,15 +729,25 @@ Partial Class frmMain
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
         '
-        'Label9
+        'PictureBox2
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label9.Location = New System.Drawing.Point(247, 197)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(128, 26)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "transaction"
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'frmMain
         '
@@ -778,6 +778,8 @@ Partial Class frmMain
         Me.dashboard.PerformLayout()
         Me.files.ResumeLayout(False)
         Me.files.PerformLayout()
+        Me.transaction.ResumeLayout(False)
+        Me.transaction.PerformLayout()
         Me.users.ResumeLayout(False)
         Me.users.PerformLayout()
         Me.history.ResumeLayout(False)
@@ -789,8 +791,6 @@ Partial Class frmMain
         Me.currentUser.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.transaction.ResumeLayout(False)
-        Me.transaction.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
