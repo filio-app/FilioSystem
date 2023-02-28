@@ -118,41 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="folder-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\dashboard-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\user-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\home-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logout-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\logout-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="dashboard-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\dashboard-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frmSignIn-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="app-version1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\app-version.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="history-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\history-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\settings-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaction-default2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\transaction-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,12 +148,6 @@
   <data name="folder-checked2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-mng-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\user-mng-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="app-version" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Images\app-version.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="user-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\user-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,14 +157,8 @@
   <data name="transaction-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\transaction-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frmSignIn-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="settings-checked2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\settings-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-mng-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\user-mng-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,17 +166,8 @@
   <data name="user-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\user-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-mng-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\user-mng-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\home-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="history-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\history-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="transaction-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\transaction-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filio-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\filio-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,32 +175,11 @@
   <data name="dashboard-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\dashboard-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transaction-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\transaction-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filio-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Logo\filio-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\user-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="history-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\history-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\settings-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logout-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\logout-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboard-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\dashboard-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="settings-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\settings-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logout-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\logout-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboard-default2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\dashboard-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
