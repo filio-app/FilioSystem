@@ -10,7 +10,10 @@
         'btnCurrentUser.Visible = True
         'btnLogout.Visible = True
 
-        displayForm(Me, frmSignIn)
+
+        bunifuPagesMain.SetPage(7)
+
+        displayFormAsModal(Me, frmSignIn)
 
 
 
@@ -37,7 +40,8 @@
         'End With
     End Sub
 
-    Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+
+    Private Sub btnTransaction_Click(sender As Object, e As EventArgs) Handles btnTransaction.Click
         bunifuPagesMain.SetPage(2)
         'With frmBrgyOfficial
         '    .TopLevel = False
@@ -47,7 +51,7 @@
         'End With
     End Sub
 
-    Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
+    Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
         bunifuPagesMain.SetPage(3)
         'With frmBrgyOfficial
         '    .TopLevel = False
@@ -57,7 +61,7 @@
         'End With
     End Sub
 
-    Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
+    Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
         bunifuPagesMain.SetPage(4)
         'With frmBrgyOfficial
         '    .TopLevel = False
@@ -67,8 +71,18 @@
         'End With
     End Sub
 
-    Private Sub btnCurrentUser_Click(sender As Object, e As EventArgs) Handles btnCurrentUser.Click
+    Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         bunifuPagesMain.SetPage(5)
+        'With frmBrgyOfficial
+        '    .TopLevel = False
+        '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
+        '    .BringToFront()
+        '    .Show()
+        'End With
+    End Sub
+
+    Private Sub btnCurrentUser_Click(sender As Object, e As EventArgs) Handles btnCurrentUser.Click
+        bunifuPagesMain.SetPage(6)
         With frmCurrentUser
             .TopLevel = False
             ' TODO: (REMINDER) adding pages directly -> bunifuPagesMain.SelectedTab().Controls.Add(frmCurrentUser)
@@ -87,7 +101,10 @@
         btnDashboard.Checked = False
 
 
+        bunifuPagesMain.SetPage(7)
 
-        displayForm(Me, frmSignIn)
+        displayFormAsModal(Me, frmSignIn)
     End Sub
+
+
 End Class

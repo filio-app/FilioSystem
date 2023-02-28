@@ -45,7 +45,7 @@ Module modGlobalProcedures
 
 
 
-    Sub displayForm(ByVal frmParent As System.Windows.Forms.Form, ByVal frmChild As System.Windows.Forms.Form)
+    Sub displayFormAsModal(ByVal frmParent As System.Windows.Forms.Form, ByVal frmChild As System.Windows.Forms.Form)
 
         frmModal.ShowInTaskbar = False
         'frmModal.BackColor = Color.Magenta

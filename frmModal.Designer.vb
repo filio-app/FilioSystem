@@ -39,7 +39,7 @@ Partial Class frmModal
         Me.ForeColor = System.Drawing.Color.Transparent
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmModal"
-        Me.Opacity = 0.55R
+        Me.Opacity = 0.6R
         Me.Text = "frmModal"
         Me.TransparencyKey = System.Drawing.Color.Transparent
         Me.ResumeLayout(False)

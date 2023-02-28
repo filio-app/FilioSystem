@@ -69,6 +69,7 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.transaction = New System.Windows.Forms.TabPage()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.panelTopLogo.SuspendLayout()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
@@ -83,6 +84,7 @@ Partial Class frmMain
         Me.currentUser.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.transaction.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -452,8 +454,8 @@ Partial Class frmMain
         Me.bunifuPagesMain.AllowTransitions = False
         Me.bunifuPagesMain.Controls.Add(Me.dashboard)
         Me.bunifuPagesMain.Controls.Add(Me.files)
-        Me.bunifuPagesMain.Controls.Add(Me.users)
         Me.bunifuPagesMain.Controls.Add(Me.transaction)
+        Me.bunifuPagesMain.Controls.Add(Me.users)
         Me.bunifuPagesMain.Controls.Add(Me.history)
         Me.bunifuPagesMain.Controls.Add(Me.settings)
         Me.bunifuPagesMain.Controls.Add(Me.currentUser)
@@ -504,7 +506,7 @@ Partial Class frmMain
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label8.Location = New System.Drawing.Point(628, 416)
+        Me.Label8.Location = New System.Drawing.Point(52, 39)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(124, 26)
         Me.Label8.TabIndex = 3
@@ -534,7 +536,7 @@ Partial Class frmMain
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label7.Location = New System.Drawing.Point(628, 416)
+        Me.Label7.Location = New System.Drawing.Point(312, 216)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(55, 26)
         Me.Label7.TabIndex = 3
@@ -721,6 +723,7 @@ Partial Class frmMain
         'transaction
         '
         Me.transaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.transaction.Controls.Add(Me.Label9)
         Me.transaction.Location = New System.Drawing.Point(4, 4)
         Me.transaction.Name = "transaction"
         Me.transaction.Size = New System.Drawing.Size(1392, 858)
@@ -735,6 +738,16 @@ Partial Class frmMain
         Me.hiddenPage.Size = New System.Drawing.Size(1392, 858)
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label9.Location = New System.Drawing.Point(247, 197)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(128, 26)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "transaction"
         '
         'frmMain
         '
@@ -776,6 +789,8 @@ Partial Class frmMain
         Me.currentUser.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.transaction.ResumeLayout(False)
+        Me.transaction.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -824,4 +839,5 @@ Partial Class frmMain
     Friend WithEvents btnTransaction As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents transaction As TabPage
     Friend WithEvents hiddenPage As TabPage
+    Friend WithEvents Label9 As Label
 End Class
