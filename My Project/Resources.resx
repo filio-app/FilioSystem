@@ -121,6 +121,9 @@
   <data name="folder-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\folder-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dashboard-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\dashboard-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\user-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +145,8 @@
   <data name="frmSignIn-password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboard-checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\dashboard-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="app-version1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\app-version.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="history-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\OneDrive\Documents\code\Assets\Icons\history-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,6 +168,9 @@
   </data>
   <data name="history-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\history-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmSignIn-user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\frmSignIn-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-mng-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\user-mng-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,7 +256,7 @@
   <data name="dashboard-default2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\dashboard-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="app-version1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\app-version.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frmSignIn-password1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

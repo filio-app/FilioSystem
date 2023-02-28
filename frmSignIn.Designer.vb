@@ -27,10 +27,10 @@ Partial Class frmSignIn
         Me.btnSignIn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -76,6 +76,27 @@ Partial Class frmSignIn
         Me.Guna2Elipse1.BorderRadius = 10
         Me.Guna2Elipse1.TargetControl = Me
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(84, 277)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(308, 19)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Welcome back! please enter your detail"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(88, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(365, 227)
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        '
         'txtPassword
         '
         Me.txtPassword.BorderRadius = 8
@@ -88,7 +109,7 @@ Partial Class frmSignIn
         Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.IconLeft = Global.FilioSystem.My.Resources.Resources.frmSignIn_password
+        Me.txtPassword.IconLeft = Global.FilioSystem.My.Resources.Resources.frmSignIn_password1
         Me.txtPassword.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPassword.IconLeftSize = New System.Drawing.Size(28, 28)
         Me.txtPassword.Location = New System.Drawing.Point(86, 416)
@@ -112,7 +133,7 @@ Partial Class frmSignIn
         Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtUsername.IconLeft = Global.FilioSystem.My.Resources.Resources.frmSignIn_user
+        Me.txtUsername.IconLeft = Global.FilioSystem.My.Resources.Resources.frmSignIn_user1
         Me.txtUsername.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtUsername.IconLeftSize = New System.Drawing.Size(28, 28)
         Me.txtUsername.Location = New System.Drawing.Point(86, 339)
@@ -123,27 +144,6 @@ Partial Class frmSignIn
         Me.txtUsername.SelectedText = ""
         Me.txtUsername.Size = New System.Drawing.Size(380, 55)
         Me.txtUsername.TabIndex = 3
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(88, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(365, 227)
-        Me.PictureBox1.TabIndex = 11
-        Me.PictureBox1.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(84, 277)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(308, 19)
-        Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Welcome back! please enter your detail"
         '
         'frmSignIn
         '
