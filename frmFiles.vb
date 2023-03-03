@@ -52,9 +52,7 @@ Public Class frmFiles
 
 
 
-    Private Sub grdFiles_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdFiles.CellContentClick
 
-    End Sub
 
 
 End Class
