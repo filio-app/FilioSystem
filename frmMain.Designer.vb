@@ -51,7 +51,6 @@ Partial Class frmMain
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.files = New System.Windows.Forms.TabPage()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.panelFiles = New System.Windows.Forms.Panel()
         Me.transaction = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -496,10 +495,10 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.hiddenPage
-        Me.bunifuPagesMain.PageIndex = 7
-        Me.bunifuPagesMain.PageName = "hiddenPage"
-        Me.bunifuPagesMain.PageTitle = "hiddenPage"
+        Me.bunifuPagesMain.Page = Me.files
+        Me.bunifuPagesMain.PageIndex = 1
+        Me.bunifuPagesMain.PageName = "files"
+        Me.bunifuPagesMain.PageTitle = "files"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -554,7 +553,6 @@ Partial Class frmMain
         'files
         '
         Me.files.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.files.Controls.Add(Me.Label7)
         Me.files.Controls.Add(Me.panelFiles)
         Me.files.Location = New System.Drawing.Point(4, 4)
         Me.files.Name = "files"
@@ -563,22 +561,13 @@ Partial Class frmMain
         Me.files.TabIndex = 1
         Me.files.Text = "files"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label7.Location = New System.Drawing.Point(312, 216)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 26)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "files"
-        '
         'panelFiles
         '
-        Me.panelFiles.Location = New System.Drawing.Point(678, 284)
+        Me.panelFiles.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelFiles.Location = New System.Drawing.Point(3, 3)
         Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
         Me.panelFiles.Name = "panelFiles"
-        Me.panelFiles.Size = New System.Drawing.Size(200, 100)
+        Me.panelFiles.Size = New System.Drawing.Size(1386, 852)
         Me.panelFiles.TabIndex = 0
         '
         'transaction
@@ -717,7 +706,7 @@ Partial Class frmMain
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
         Me.panelCurrentUser.Name = "panelCurrentUser"
-        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 859)
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
         Me.panelCurrentUser.TabIndex = 1
         '
         'hiddenPage
@@ -777,7 +766,6 @@ Partial Class frmMain
         Me.dashboard.ResumeLayout(False)
         Me.dashboard.PerformLayout()
         Me.files.ResumeLayout(False)
-        Me.files.PerformLayout()
         Me.transaction.ResumeLayout(False)
         Me.transaction.PerformLayout()
         Me.users.ResumeLayout(False)
@@ -831,7 +819,6 @@ Partial Class frmMain
     Friend WithEvents Panel4 As Panel
     Friend WithEvents panelCurrentUser As Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
