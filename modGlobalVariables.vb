@@ -15,13 +15,18 @@ Module ModGlobalVariable
     Public datFilio As New DataTable
     Public sqlAdapterFilio As New MySqlDataAdapter
 
-
-
     Public row As Integer
-    Public action As String
+
+    Public colName As String
+    Public fileID As Integer
 
 
-    Public residentPhotoPath As String      ' image location / path
-    Public logoPhotoPath As String
+
+
+    'Public action As String
+
+
+    'Public residentPhotoPath As String      ' image location / path
+    'Public logoPhotoPath As String
 
 End Module

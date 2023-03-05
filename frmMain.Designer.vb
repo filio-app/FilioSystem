@@ -27,6 +27,7 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
@@ -44,6 +45,7 @@ Partial Class frmMain
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.bunifuPagesMain = New Bunifu.UI.WinForms.BunifuPages()
@@ -67,11 +69,11 @@ Partial Class frmMain
         Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelTopLogo.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
@@ -82,8 +84,6 @@ Partial Class frmMain
         Me.Panel3.SuspendLayout()
         Me.settings.SuspendLayout()
         Me.currentUser.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -101,6 +101,16 @@ Partial Class frmMain
         Me.panelTopLogo.Name = "panelTopLogo"
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Guna2ControlBox1
         '
@@ -457,6 +467,16 @@ Partial Class frmMain
         Me.Guna2Panel1.Size = New System.Drawing.Size(1400, 34)
         Me.Guna2Panel1.TabIndex = 4
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -718,26 +738,6 @@ Partial Class frmMain
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
@@ -757,10 +757,12 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTopLogo.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
         Me.dashboard.ResumeLayout(False)
@@ -777,8 +779,6 @@ Partial Class frmMain
         Me.settings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
         Me.currentUser.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

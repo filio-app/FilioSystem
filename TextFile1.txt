@@ -1,1 +1,12 @@
 ﻿
+#  Confirmation Message
+
+If MessageBox.Show("Are you sure you want to delete the selected record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    ' Perform the deletion
+                    MessageBox.Show("Yes")
+                Else
+                    MessageBox.Show("No")
+                End If
+
+
+# 
