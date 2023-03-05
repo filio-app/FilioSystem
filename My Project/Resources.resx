@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="view-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\view-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="view-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\view-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="view-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\view-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\user-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dashboard-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\dashboard-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,11 +139,14 @@
   <data name="transaction-default2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\transaction-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\logout-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\edit-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transaction-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\transaction-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\edit-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\settings-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +154,11 @@
   <data name="history-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\history-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frmSignIn-user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\frmSignIn-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\delete-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmSignIn-password1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-mng-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\user-mng-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,23 +166,32 @@
   <data name="folder-checked2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\folder-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\user-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="folder-default2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\folder-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmSignIn-user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\frmSignIn-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaction-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\transaction-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\user-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="settings-checked2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\settings-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transaction-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\transaction-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-mng-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\user-mng-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\user-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logout-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\logout-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="history-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\history-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,6 +202,9 @@
   <data name="dashboard-default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\dashboard-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout-checked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\logout-checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,7 +214,7 @@
   <data name="dashboard-default2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\dashboard-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frmSignIn-password1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\frmSignIn-password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\delete-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

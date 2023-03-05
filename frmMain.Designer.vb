@@ -27,6 +27,7 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
@@ -44,6 +45,7 @@ Partial Class frmMain
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.bunifuPagesMain = New Bunifu.UI.WinForms.BunifuPages()
@@ -51,7 +53,6 @@ Partial Class frmMain
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.files = New System.Windows.Forms.TabPage()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.panelFiles = New System.Windows.Forms.Panel()
         Me.transaction = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -68,11 +69,11 @@ Partial Class frmMain
         Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelTopLogo.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
@@ -83,8 +84,6 @@ Partial Class frmMain
         Me.Panel3.SuspendLayout()
         Me.settings.SuspendLayout()
         Me.currentUser.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -102,6 +101,16 @@ Partial Class frmMain
         Me.panelTopLogo.Name = "panelTopLogo"
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Guna2ControlBox1
         '
@@ -458,6 +467,16 @@ Partial Class frmMain
         Me.Guna2Panel1.Size = New System.Drawing.Size(1400, 34)
         Me.Guna2Panel1.TabIndex = 4
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -496,10 +515,10 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.hiddenPage
-        Me.bunifuPagesMain.PageIndex = 7
-        Me.bunifuPagesMain.PageName = "hiddenPage"
-        Me.bunifuPagesMain.PageTitle = "hiddenPage"
+        Me.bunifuPagesMain.Page = Me.files
+        Me.bunifuPagesMain.PageIndex = 1
+        Me.bunifuPagesMain.PageName = "files"
+        Me.bunifuPagesMain.PageTitle = "files"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -554,7 +573,6 @@ Partial Class frmMain
         'files
         '
         Me.files.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.files.Controls.Add(Me.Label7)
         Me.files.Controls.Add(Me.panelFiles)
         Me.files.Location = New System.Drawing.Point(4, 4)
         Me.files.Name = "files"
@@ -563,22 +581,13 @@ Partial Class frmMain
         Me.files.TabIndex = 1
         Me.files.Text = "files"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label7.Location = New System.Drawing.Point(312, 216)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 26)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "files"
-        '
         'panelFiles
         '
-        Me.panelFiles.Location = New System.Drawing.Point(678, 284)
+        Me.panelFiles.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelFiles.Location = New System.Drawing.Point(3, 3)
         Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
         Me.panelFiles.Name = "panelFiles"
-        Me.panelFiles.Size = New System.Drawing.Size(200, 100)
+        Me.panelFiles.Size = New System.Drawing.Size(1386, 852)
         Me.panelFiles.TabIndex = 0
         '
         'transaction
@@ -717,7 +726,7 @@ Partial Class frmMain
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
         Me.panelCurrentUser.Name = "panelCurrentUser"
-        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 859)
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
         Me.panelCurrentUser.TabIndex = 1
         '
         'hiddenPage
@@ -728,26 +737,6 @@ Partial Class frmMain
         Me.hiddenPage.Size = New System.Drawing.Size(1392, 858)
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'frmMain
         '
@@ -768,16 +757,17 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTopLogo.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
         Me.dashboard.ResumeLayout(False)
         Me.dashboard.PerformLayout()
         Me.files.ResumeLayout(False)
-        Me.files.PerformLayout()
         Me.transaction.ResumeLayout(False)
         Me.transaction.PerformLayout()
         Me.users.ResumeLayout(False)
@@ -789,8 +779,6 @@ Partial Class frmMain
         Me.settings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
         Me.currentUser.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -831,7 +819,6 @@ Partial Class frmMain
     Friend WithEvents Panel4 As Panel
     Friend WithEvents panelCurrentUser As Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label

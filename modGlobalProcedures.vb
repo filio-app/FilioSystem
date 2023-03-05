@@ -44,6 +44,18 @@ Module modGlobalProcedures
     End Sub
 
 
+    Sub clearControls(ByVal frm As System.Windows.Forms.Form)
+        For Each ctrl As Control In frm.Controls
+            If TypeOf ctrl Is Guna.UI2.WinForms.Guna2TextBox Then
+                CType(ctrl, Guna.UI2.WinForms.Guna2TextBox).Clear()
+            ElseIf TypeOf ctrl Is Guna.UI2.WinForms.Guna2ComboBox Then
+                CType(ctrl, Guna.UI2.WinForms.Guna2ComboBox).SelectedIndex = -1
+            ElseIf TypeOf ctrl Is CheckBox Then
+                CType(ctrl, CheckBox).Checked = False
+                ' Add more control types as needed
+            End If
+        Next
+    End Sub
 
     Sub displayFormAsModal(ByVal frmParent As System.Windows.Forms.Form, ByVal frmChild As System.Windows.Forms.Form)
 
@@ -58,8 +70,6 @@ Module modGlobalProcedures
         frmModal.Owner = frmParent
         frmModal.Show()
         With frmChild
-            '.txtUserName.PlaceholderText = "Username"
-            '.txtPassword.PlaceholderText = "Password"
             .ShowInTaskbar = False
             .TopMost = False
             .Owner = frmParent

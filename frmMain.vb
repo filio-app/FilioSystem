@@ -7,13 +7,13 @@
 
         'TODO: (frmMain) Remove and Uncomment this for frmSignIn
 
-        'btnCurrentUser.Visible = True
-        'btnLogout.Visible = True
+        btnCurrentUser.Visible = True
+        btnLogout.Visible = True
 
 
-        bunifuPagesMain.SetPage(7)
+        'bunifuPagesMain.SetPage(7)
 
-        displayFormAsModal(Me, frmSignIn)
+        'displayFormAsModal(Me, frmSignIn)
 
 
 
@@ -32,12 +32,12 @@
 
     Private Sub btnFiles_Click(sender As Object, e As EventArgs) Handles btnFiles.Click
         bunifuPagesMain.SetPage(1)
-        'With frmBrgyOfficial
-        '    .TopLevel = False
-        '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
-        '    .BringToFront()
-        '    .Show()
-        'End With
+        With frmFiles
+            .TopLevel = False
+            panelFiles.Controls.Add(frmFiles)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
 
