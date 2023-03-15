@@ -27,7 +27,6 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
@@ -45,7 +44,6 @@ Partial Class frmMain
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.bunifuPagesMain = New Bunifu.UI.WinForms.BunifuPages()
@@ -55,13 +53,10 @@ Partial Class frmMain
         Me.files = New System.Windows.Forms.TabPage()
         Me.panelFiles = New System.Windows.Forms.Panel()
         Me.transaction = New System.Windows.Forms.TabPage()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.users = New System.Windows.Forms.TabPage()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.panelUsers = New System.Windows.Forms.Panel()
         Me.history = New System.Windows.Forms.TabPage()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.panelHistory = New System.Windows.Forms.Panel()
         Me.settings = New System.Windows.Forms.TabPage()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -69,11 +64,12 @@ Partial Class frmMain
         Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
+        Me.panelTransaction = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelTopLogo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
@@ -81,9 +77,10 @@ Partial Class frmMain
         Me.transaction.SuspendLayout()
         Me.users.SuspendLayout()
         Me.history.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.settings.SuspendLayout()
         Me.currentUser.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -101,16 +98,6 @@ Partial Class frmMain
         Me.panelTopLogo.Name = "panelTopLogo"
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Guna2ControlBox1
         '
@@ -467,16 +454,6 @@ Partial Class frmMain
         Me.Guna2Panel1.Size = New System.Drawing.Size(1400, 34)
         Me.Guna2Panel1.TabIndex = 4
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -515,10 +492,10 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.files
-        Me.bunifuPagesMain.PageIndex = 1
-        Me.bunifuPagesMain.PageName = "files"
-        Me.bunifuPagesMain.PageTitle = "files"
+        Me.bunifuPagesMain.Page = Me.history
+        Me.bunifuPagesMain.PageIndex = 4
+        Me.bunifuPagesMain.PageName = "history"
+        Me.bunifuPagesMain.PageTitle = "history"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -587,34 +564,23 @@ Partial Class frmMain
         Me.panelFiles.Location = New System.Drawing.Point(3, 3)
         Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
         Me.panelFiles.Name = "panelFiles"
-        Me.panelFiles.Size = New System.Drawing.Size(1386, 852)
+        Me.panelFiles.Size = New System.Drawing.Size(1386, 853)
         Me.panelFiles.TabIndex = 0
         '
         'transaction
         '
         Me.transaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.transaction.Controls.Add(Me.Label9)
+        Me.transaction.Controls.Add(Me.panelTransaction)
         Me.transaction.Location = New System.Drawing.Point(4, 4)
         Me.transaction.Name = "transaction"
         Me.transaction.Size = New System.Drawing.Size(1392, 858)
         Me.transaction.TabIndex = 6
         Me.transaction.Text = "transaction"
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label9.Location = New System.Drawing.Point(247, 197)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(128, 26)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "transaction"
-        '
         'users
         '
         Me.users.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.users.Controls.Add(Me.Label6)
-        Me.users.Controls.Add(Me.Panel2)
+        Me.users.Controls.Add(Me.panelUsers)
         Me.users.Location = New System.Drawing.Point(4, 4)
         Me.users.Name = "users"
         Me.users.Padding = New System.Windows.Forms.Padding(3)
@@ -622,28 +588,19 @@ Partial Class frmMain
         Me.users.TabIndex = 3
         Me.users.Text = "users"
         '
-        'Label6
+        'panelUsers
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label6.Location = New System.Drawing.Point(628, 416)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(70, 26)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "users"
-        '
-        'Panel2
-        '
-        Me.Panel2.Location = New System.Drawing.Point(596, 379)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 100)
-        Me.Panel2.TabIndex = 1
+        Me.panelUsers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelUsers.Location = New System.Drawing.Point(3, 3)
+        Me.panelUsers.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelUsers.Name = "panelUsers"
+        Me.panelUsers.Size = New System.Drawing.Size(1386, 853)
+        Me.panelUsers.TabIndex = 1
         '
         'history
         '
         Me.history.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.history.Controls.Add(Me.Panel3)
+        Me.history.Controls.Add(Me.panelHistory)
         Me.history.Location = New System.Drawing.Point(4, 4)
         Me.history.Name = "history"
         Me.history.Padding = New System.Windows.Forms.Padding(3)
@@ -651,24 +608,14 @@ Partial Class frmMain
         Me.history.TabIndex = 2
         Me.history.Text = "history"
         '
-        'Panel3
+        'panelHistory
         '
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Location = New System.Drawing.Point(596, 379)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(200, 100)
-        Me.Panel3.TabIndex = 1
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label5.Location = New System.Drawing.Point(36, 39)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 26)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "history"
+        Me.panelHistory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelHistory.Location = New System.Drawing.Point(3, 3)
+        Me.panelHistory.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelHistory.Name = "panelHistory"
+        Me.panelHistory.Size = New System.Drawing.Size(1386, 852)
+        Me.panelHistory.TabIndex = 1
         '
         'settings
         '
@@ -726,7 +673,7 @@ Partial Class frmMain
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
         Me.panelCurrentUser.Name = "panelCurrentUser"
-        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 859)
         Me.panelCurrentUser.TabIndex = 1
         '
         'hiddenPage
@@ -737,6 +684,35 @@ Partial Class frmMain
         Me.hiddenPage.Size = New System.Drawing.Size(1392, 858)
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
+        '
+        'panelTransaction
+        '
+        Me.panelTransaction.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelTransaction.Location = New System.Drawing.Point(0, 0)
+        Me.panelTransaction.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelTransaction.Name = "panelTransaction"
+        Me.panelTransaction.Size = New System.Drawing.Size(1392, 859)
+        Me.panelTransaction.TabIndex = 2
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'frmMain
         '
@@ -757,28 +733,24 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTopLogo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
         Me.dashboard.ResumeLayout(False)
         Me.dashboard.PerformLayout()
         Me.files.ResumeLayout(False)
         Me.transaction.ResumeLayout(False)
-        Me.transaction.PerformLayout()
         Me.users.ResumeLayout(False)
-        Me.users.PerformLayout()
         Me.history.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.settings.ResumeLayout(False)
         Me.settings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
         Me.currentUser.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -814,17 +786,15 @@ Partial Class frmMain
     Friend WithEvents currentUser As TabPage
     Friend WithEvents panelFiles As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents panelUsers As Panel
+    Friend WithEvents panelHistory As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents panelCurrentUser As Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnTransaction As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents transaction As TabPage
     Friend WithEvents hiddenPage As TabPage
-    Friend WithEvents Label9 As Label
+    Friend WithEvents panelTransaction As Panel
 End Class
