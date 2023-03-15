@@ -11,7 +11,7 @@
         btnLogout.Visible = True
 
 
-        'bunifuPagesMain.SetPage(7)
+        bunifuPagesMain.SetPage(7)
 
         'displayFormAsModal(Me, frmSignIn)
 
@@ -43,32 +43,32 @@
 
     Private Sub btnTransaction_Click(sender As Object, e As EventArgs) Handles btnTransaction.Click
         bunifuPagesMain.SetPage(2)
-        'With frmBrgyOfficial
-        '    .TopLevel = False
-        '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
-        '    .BringToFront()
-        '    .Show()
-        'End With
+        With frmTransaction
+            .TopLevel = False
+            panelTransaction.Controls.Add(frmTransaction)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
         bunifuPagesMain.SetPage(3)
-        'With frmBrgyOfficial
-        '    .TopLevel = False
-        '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
-        '    .BringToFront()
-        '    .Show()
-        'End With
+        With frmUsers
+            .TopLevel = False
+            panelUsers.Controls.Add(frmUsers)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
         bunifuPagesMain.SetPage(4)
-        'With frmBrgyOfficial
-        '    .TopLevel = False
-        '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
-        '    .BringToFront()
-        '    .Show()
-        'End With
+        With frmHistory
+            .TopLevel = False
+            panelHistory.Controls.Add(frmHistory)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
