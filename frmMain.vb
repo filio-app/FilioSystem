@@ -11,7 +11,7 @@
         btnLogout.Visible = True
 
 
-        'bunifuPagesMain.SetPage(7)
+        bunifuPagesMain.SetPage(7)
 
         'displayFormAsModal(Me, frmSignIn)
 

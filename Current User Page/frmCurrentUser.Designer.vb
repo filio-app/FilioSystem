@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmCurrentUser
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmCurrentUser
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -193,9 +193,9 @@ Partial Class frmCurrentUser
         Me.Label1.Location = New System.Drawing.Point(31, 144)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 19)
+        Me.Label1.Size = New System.Drawing.Size(148, 19)
         Me.Label1.TabIndex = 73
-        Me.Label1.Text = "CurrentPassword"
+        Me.Label1.Text = "Current Password"
         '
         'txtCurrentPass
         '
@@ -283,9 +283,9 @@ Partial Class frmCurrentUser
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(168, 69)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(200, 13)
+        Me.Label4.Size = New System.Drawing.Size(188, 13)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Personal Information / Change Password"
+        Me.Label4.Text = "Profile Information / Change Password"
         '
         'frmCurrentUser
         '

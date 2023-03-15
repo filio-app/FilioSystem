@@ -83,9 +83,9 @@ Partial Class frmSignIn
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(84, 277)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(308, 19)
+        Me.Label2.Size = New System.Drawing.Size(124, 19)
         Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Welcome back! please enter your detail"
+        Me.Label2.Text = "Welcome back!"
         '
         'PictureBox1
         '
