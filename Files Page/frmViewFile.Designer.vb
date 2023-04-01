@@ -34,8 +34,8 @@ Partial Class frmViewFile
         Me.txtLocation = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtDescription = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbl = New System.Windows.Forms.Label()
         Me.txtDateAdded = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -55,22 +55,22 @@ Partial Class frmViewFile
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(41, 109)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 19)
+        Me.Label2.Size = New System.Drawing.Size(51, 20)
         Me.Label2.TabIndex = 33
         Me.Label2.Text = "Name"
         '
         'lblHeader
         '
         Me.lblHeader.AutoSize = True
-        Me.lblHeader.Font = New System.Drawing.Font("Inter", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 28.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.lblHeader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.lblHeader.Location = New System.Drawing.Point(39, 21)
         Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Size = New System.Drawing.Size(229, 34)
+        Me.lblHeader.Size = New System.Drawing.Size(226, 32)
         Me.lblHeader.TabIndex = 16
         Me.lblHeader.Text = "File Information"
         '
@@ -84,7 +84,7 @@ Partial Class frmViewFile
         Me.cmbStatus.Enabled = False
         Me.cmbStatus.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbStatus.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.cmbStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbStatus.ItemHeight = 49
         Me.cmbStatus.Items.AddRange(New Object() {"Available", "Checked Out"})
@@ -97,33 +97,33 @@ Partial Class frmViewFile
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(342, 530)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 19)
+        Me.Label5.Size = New System.Drawing.Size(56, 20)
         Me.Label5.TabIndex = 40
         Me.Label5.Text = "Status"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(41, 528)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(75, 19)
+        Me.Label4.Size = New System.Drawing.Size(70, 20)
         Me.Label4.TabIndex = 39
         Me.Label4.Text = "Location"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(41, 223)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 19)
+        Me.Label3.Size = New System.Drawing.Size(89, 20)
         Me.Label3.TabIndex = 38
         Me.Label3.Text = "Description"
         '
@@ -139,7 +139,7 @@ Partial Class frmViewFile
         Me.txtLocation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtLocation.Enabled = False
         Me.txtLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLocation.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtLocation.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLocation.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtLocation.IconLeftSize = New System.Drawing.Size(28, 28)
@@ -164,7 +164,7 @@ Partial Class frmViewFile
         Me.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDescription.Enabled = False
         Me.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtDescription.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDescription.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtDescription.IconLeftSize = New System.Drawing.Size(28, 28)
@@ -190,6 +190,17 @@ Partial Class frmViewFile
         Me.Guna2Panel1.Size = New System.Drawing.Size(647, 71)
         Me.Guna2Panel1.TabIndex = 34
         '
+        'Guna2ControlBox1
+        '
+        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox1.BorderRadius = 8
+        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Gainsboro
+        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.Black
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(578, 21)
+        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox1.TabIndex = 17
+        '
         'txtName
         '
         Me.txtName.Animated = True
@@ -202,7 +213,7 @@ Partial Class frmViewFile
         Me.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtName.Enabled = False
         Me.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtName.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtName.IconLeftSize = New System.Drawing.Size(28, 28)
@@ -215,25 +226,14 @@ Partial Class frmViewFile
         Me.txtName.Size = New System.Drawing.Size(557, 55)
         Me.txtName.TabIndex = 31
         '
-        'Guna2ControlBox1
-        '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.BorderRadius = 8
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Gainsboro
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.Black
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(578, 21)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
-        Me.Guna2ControlBox1.TabIndex = 17
-        '
         'lbl
         '
         Me.lbl.AutoSize = True
-        Me.lbl.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.lbl.Location = New System.Drawing.Point(41, 647)
         Me.lbl.Name = "lbl"
-        Me.lbl.Size = New System.Drawing.Size(100, 19)
+        Me.lbl.Size = New System.Drawing.Size(95, 20)
         Me.lbl.TabIndex = 43
         Me.lbl.Text = "Date Added"
         '
@@ -249,7 +249,7 @@ Partial Class frmViewFile
         Me.txtDateAdded.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDateAdded.Enabled = False
         Me.txtDateAdded.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtDateAdded.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtDateAdded.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtDateAdded.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDateAdded.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtDateAdded.IconLeftSize = New System.Drawing.Size(28, 28)
@@ -265,11 +265,11 @@ Partial Class frmViewFile
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(342, 647)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(117, 19)
+        Me.Label6.Size = New System.Drawing.Size(108, 20)
         Me.Label6.TabIndex = 45
         Me.Label6.Text = "Date Modified"
         '
@@ -285,7 +285,7 @@ Partial Class frmViewFile
         Me.txtDateModified.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDateModified.Enabled = False
         Me.txtDateModified.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtDateModified.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtDateModified.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtDateModified.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDateModified.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtDateModified.IconLeftSize = New System.Drawing.Size(28, 28)
