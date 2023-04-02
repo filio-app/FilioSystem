@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 
 Module modGlobalProcedures
 
@@ -21,7 +22,7 @@ Module modGlobalProcedures
 
                 conFilioSys.ConnectionString = strConnectionString
                 conFilioSys.Open()
-                Command.Connection = conFilioSys
+                command.Connection = conFilioSys
                 Return True
             Else
                 conFilioSys.Close()
@@ -81,6 +82,21 @@ Module modGlobalProcedures
         frmModal.Dispose()
 
     End Sub
+
+    Private Function CheckPasswordStrength(password As String) As Boolean
+        Dim regex As Regex
+        ' Check minimum length of 8 characters and combination of letters and numbers
+        regex = New Regex("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")
+        Return regex.IsMatch(password)
+
+        'If regex.IsMatch(password) Then
+        'Return True;
+        'strength &= "Minimum length of 8 characters and combination of letters and numbers" & vbCrLf
+        'Password must be 8+ characters and include letters and numbers.
+        'End If
+        ' Return the password strength
+        'Return False
+    End Function
 
 
 
