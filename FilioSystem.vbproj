@@ -258,6 +258,12 @@
     <Compile Include="Transaction Page\frmTransaction.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Users Page\frmAddUser.Designer.vb">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users Page\frmAddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Users Page\frmUsers.Designer.vb">
       <DependentUpon>frmUsers.vb</DependentUpon>
     </Compile>
@@ -302,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction Page\frmTransaction.resx">
       <DependentUpon>frmTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Page\frmAddUser.resx">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users Page\frmUsers.resx">
       <DependentUpon>frmUsers.vb</DependentUpon>
