@@ -2,6 +2,10 @@
 
 Public Class frmAddUser
 
+    Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         clearControls(Me)
         Me.Close()
@@ -16,7 +20,7 @@ Public Class frmAddUser
                 .CommandText = "procInsertFile"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_name", txtName.Text)
-                .Parameters.AddWithValue("@p_description", txtDescription.Text)
+                '.Parameters.AddWithValue("@p_description", txtDescription.Text)
                 .Parameters.AddWithValue("@p_location", txtLocation.Text)
                 .Parameters.AddWithValue("@p_status", cmbStatus.Text)
                 .ExecuteNonQuery()
@@ -42,7 +46,7 @@ Public Class frmAddUser
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_id", fileID)
                 .Parameters.AddWithValue("@p_name", txtName.Text)
-                .Parameters.AddWithValue("@p_description", txtDescription.Text)
+                '.Parameters.AddWithValue("@p_description", txtDescription.Text)
                 .Parameters.AddWithValue("@p_location", txtLocation.Text)
                 .Parameters.AddWithValue("@p_status", cmbStatus.Text)
                 .ExecuteNonQuery()
@@ -55,4 +59,6 @@ Public Class frmAddUser
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
+
 End Class

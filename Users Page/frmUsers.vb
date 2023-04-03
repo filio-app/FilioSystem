@@ -49,4 +49,21 @@ Public Class frmUsers
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Try
+            clearControls(frmAddUser)
+
+            With frmAddUser
+                .btnUpdate.Visible = False
+                .btnSubmit.Visible = True
+                .lblHeader.Text = "Add New User"
+            End With
+
+            displayFormAsModal(frmMain, frmAddUser)
+            procDisplayAllUsers()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
 End Class
