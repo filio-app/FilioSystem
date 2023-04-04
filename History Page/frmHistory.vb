@@ -29,7 +29,10 @@ Public Class frmHistory
                         '.Rows(row).Cells(5).Value = datFilio.Rows(row).Item("last_name").ToString
                         .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("action").ToString
                         .Rows(row).Cells(8).Value = datFilio.Rows(row).Item("target").ToString
-                        .Rows(row).Cells(9).Value = datFilio.Rows(row).Item("timestamp").ToString
+                        .Rows(row).Cells(9).Value = DateTime.Parse(datFilio.Rows(row).Item("timestamp")).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
+                        '.Rows(row).Cells(9).Value = datFilio.Rows(row).Item("timestamp").ToString
+
+
                     End With
                     row += 1
                 End While
