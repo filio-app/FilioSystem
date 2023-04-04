@@ -5,15 +5,15 @@
 
         Me.Show()
 
-        'TODO: (frmMain) Remove and Uncomment this for frmSignIn
+        'TODO: (frmMain) Remove and Uncomment the following 2 statements for frmSignIn
 
-        'btnCurrentUser.Visible = True
-        'btnLogout.Visible = True
+        btnCurrentUser.Visible = True
+        btnLogout.Visible = True
 
 
         bunifuPagesMain.SetPage(7)
 
-        displayFormAsModal(Me, frmSignIn)
+        'displayFormAsModal(Me, frmSignIn)
 
 
 

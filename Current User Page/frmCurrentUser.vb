@@ -1,8 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class frmCurrentUser
+
+    Private isFormLoaded As Boolean = True
+    Private isStrongPass As Boolean = False
+
+
     Private Sub frmCurrentUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: (frmCurrentUser) Automatically add username to txtUsername
+        'TODO: (frmCurrentUser) Automatically add username to txtUsername and !! ROLE ID
+        txtUsername.Text = currUsername
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
@@ -13,10 +19,16 @@ Public Class frmCurrentUser
         btnEdit.Visible = False
         btnCancel.Visible = True
         btnUpdate.Visible = True
+
+        isFormLoaded = False
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         'EPNewPass.Clear()
+
+        txtCurrentPass.Clear()
+        txtNewPass.Clear()
+        txtConfirmNewPass.Clear()
 
         txtCurrentPass.Enabled = False
         txtNewPass.Enabled = False
@@ -26,10 +38,9 @@ Public Class frmCurrentUser
         btnCancel.Visible = False
         btnUpdate.Visible = False
         lblPassErr.Visible = False
+        lblPassStr.Visible = False
 
-        txtCurrentPass.Text = ""
-        txtNewPass.Text = ""
-        txtConfirmNewPass.Text = ""
+
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -48,43 +59,105 @@ Public Class frmCurrentUser
     End Sub
 
     Private Sub txtConfirmNewPass_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmNewPass.TextChanged
-        If txtNewPass.Text <> txtConfirmNewPass.Text Then
-            txtConfirmNewPass.FocusedState.BorderColor = Color.Red
-            lblPassErr.Visible = True
-            btnUpdate.Enabled = False
 
-        Else
-            lblPassErr.Visible = False
-            txtConfirmNewPass.FocusedState.BorderColor = Color.Green
-            btnUpdate.Enabled = True
-            txtConfirmNewPass.BorderColor = Color.Green
+        If Not isFormLoaded Then
+
+
+            If txtNewPass.Text = txtConfirmNewPass.Text And isStrongPass Then
+                ' Two conditions are true - enable update button
+                lblPassStr.Visible = False
+                lblPassErr.Visible = False
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Green
+                txtConfirmNewPass.BorderColor = Color.Green
+                btnUpdate.Enabled = True
+            ElseIf Not isStrongPass And txtNewPass.Text <> txtConfirmNewPass.Text Then
+                ' show two err
+                lblPassStr.Visible = True
+                lblPassErr.Visible = True
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
+                txtConfirmNewPass.BorderColor = Color.Red
+                btnUpdate.Enabled = False
+            ElseIf txtNewPass.Text <> txtConfirmNewPass.Text And isStrongPass Then
+                ' show not match err
+                lblPassErr.Visible = True
+                lblPassStr.Visible = False
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
+                txtConfirmNewPass.BorderColor = Color.Red
+                btnUpdate.Enabled = False
+            ElseIf Not isStrongPass And txtNewPass.Text = txtConfirmNewPass.Text Then
+                'show pass str er
+                lblPassErr.Visible = False
+                lblPassStr.Visible = True
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
+                txtConfirmNewPass.BorderColor = Color.Red
+                btnUpdate.Enabled = False
+            End If
 
 
         End If
+
     End Sub
 
     Private Sub txtConfirmNewPass_Leave(sender As Object, e As EventArgs) Handles txtConfirmNewPass.Leave
-        If txtNewPass.Text <> txtConfirmNewPass.Text Then
-            txtConfirmNewPass.BorderColor = Color.Red
-            lblPassErr.Visible = True
-        Else
-            txtConfirmNewPass.BorderColor = Color.Green
-            lblPassErr.Visible = False
-        End If
+        'If txtNewPass.Text <> txtConfirmNewPass.Text Then
+        '    txtConfirmNewPass.BorderColor = Color.Red
+        '    lblPassErr.Visible = True
+        'Else
+        '    txtConfirmNewPass.BorderColor = Color.Green
+        '    lblPassErr.Visible = False
+        'End If
     End Sub
 
     Private Sub txtNewPass_TextChanged(sender As Object, e As EventArgs) Handles txtNewPass.TextChanged
-        If txtNewPass.Text <> txtConfirmNewPass.Text Then
-            txtConfirmNewPass.FocusedState.BorderColor = Color.Red
-            lblPassErr.Visible = True
-            txtConfirmNewPass.BorderColor = Color.Red
-            btnUpdate.Enabled = False
-        ElseIf txtNewPass.Text = txtConfirmNewPass.Text Then
-            lblPassErr.Visible = False
-            txtConfirmNewPass.FocusedState.BorderColor = Color.Green
-            txtConfirmNewPass.BorderColor = Color.Green
-            btnUpdate.Enabled = True
+
+        'If Not checkPasswordStrength(txtNewPass.Text) Then
+        '    lblPassStr.Visible = True
+        'Else
+        '    lblPassStr.Visible = False
+        'End If
+
+        If Not isFormLoaded Then
+
+            isStrongPass = CheckPasswordStrength(txtNewPass.Text)
+
+
+
+            If txtNewPass.Text = txtConfirmNewPass.Text And isStrongPass Then
+                ' Two conditions are true - enable update button
+                lblPassStr.Visible = False
+                lblPassErr.Visible = False
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Green
+                txtConfirmNewPass.BorderColor = Color.Green
+                btnUpdate.Enabled = True
+            ElseIf Not isStrongPass And txtNewPass.Text <> txtConfirmNewPass.Text Then
+                ' show two err
+                lblPassStr.Visible = True
+                lblPassErr.Visible = True
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
+                txtConfirmNewPass.BorderColor = Color.Red
+                btnUpdate.Enabled = False
+            ElseIf txtNewPass.Text <> txtConfirmNewPass.Text And isStrongPass Then
+                ' show not match err
+                lblPassErr.Visible = True
+                lblPassStr.Visible = False
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
+                txtConfirmNewPass.BorderColor = Color.Red
+                btnUpdate.Enabled = False
+            ElseIf Not isStrongPass And txtNewPass.Text = txtConfirmNewPass.Text Then
+                'show pass str er
+                lblPassErr.Visible = False
+                lblPassStr.Visible = True
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
+                txtConfirmNewPass.BorderColor = Color.Red
+                btnUpdate.Enabled = False
+            End If
+
+
+
         End If
+
+
+
     End Sub
 
     Private Sub procUpdateUserPassword()

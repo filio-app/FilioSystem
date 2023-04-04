@@ -25,6 +25,7 @@ Partial Class frmCurrentUser
         Me.components = New System.ComponentModel.Container()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelChangePass = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblPassStr = New System.Windows.Forms.Label()
         Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
         Me.btnEdit = New Guna.UI2.WinForms.Guna2Button()
         Me.lblPassErr = New System.Windows.Forms.Label()
@@ -39,7 +40,6 @@ Partial Class frmCurrentUser
         Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.panelChangePass.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,7 +50,7 @@ Partial Class frmCurrentUser
         'panelChangePass
         '
         Me.panelChangePass.BackColor = System.Drawing.Color.White
-        Me.panelChangePass.Controls.Add(Me.Label5)
+        Me.panelChangePass.Controls.Add(Me.lblPassStr)
         Me.panelChangePass.Controls.Add(Me.btnUpdate)
         Me.panelChangePass.Controls.Add(Me.btnEdit)
         Me.panelChangePass.Controls.Add(Me.lblPassErr)
@@ -67,6 +67,18 @@ Partial Class frmCurrentUser
         Me.panelChangePass.Name = "panelChangePass"
         Me.panelChangePass.Size = New System.Drawing.Size(610, 435)
         Me.panelChangePass.TabIndex = 0
+        '
+        'lblPassStr
+        '
+        Me.lblPassStr.AutoSize = True
+        Me.lblPassStr.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblPassStr.ForeColor = System.Drawing.Color.Red
+        Me.lblPassStr.Location = New System.Drawing.Point(207, 257)
+        Me.lblPassStr.Name = "lblPassStr"
+        Me.lblPassStr.Size = New System.Drawing.Size(391, 17)
+        Me.lblPassStr.TabIndex = 81
+        Me.lblPassStr.Text = "Password must be 8+ characters with letters and numbers"
+        Me.lblPassStr.Visible = False
         '
         'btnUpdate
         '
@@ -114,6 +126,7 @@ Partial Class frmCurrentUser
         Me.lblPassErr.Size = New System.Drawing.Size(174, 17)
         Me.lblPassErr.TabIndex = 2
         Me.lblPassErr.Text = "Passwords do not match!"
+        Me.lblPassErr.Visible = False
         '
         'Label3
         '
@@ -244,6 +257,7 @@ Partial Class frmCurrentUser
         Me.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.Enabled = False
         Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -289,18 +303,6 @@ Partial Class frmCurrentUser
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Profile Information / Change Password"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(207, 257)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(391, 17)
-        Me.Label5.TabIndex = 81
-        Me.Label5.Text = "Password must be 8+ characters with letters and numbers"
-        Me.Label5.Visible = False
-        '
         'frmCurrentUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -335,5 +337,5 @@ Partial Class frmCurrentUser
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnCancel As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblPassStr As Label
 End Class
