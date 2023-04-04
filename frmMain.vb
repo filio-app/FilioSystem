@@ -5,7 +5,7 @@
 
         Me.Show()
 
-        'TODO: (frmMain) Remove and Uncomment this for frmSignIn
+        'TODO: (frmMain) Remove and Uncomment the following 2 statements for frmSignIn
 
         btnCurrentUser.Visible = True
         btnLogout.Visible = True

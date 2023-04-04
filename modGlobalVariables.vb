@@ -20,7 +20,7 @@ Module ModGlobalVariable
     Public colName As String
     Public fileID As Integer
 
-
+    Public currUsername As String
 
 
     'Public action As String
