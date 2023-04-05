@@ -21,33 +21,8 @@ Public Class frmAddUser
         Me.Close()
         'Me.Dispose()
     End Sub
-    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
-
-
-        Try
-            With command
-                .Parameters.Clear()
-                .CommandText = "procInsertNewUser"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_name", txtFirstName.Text)
-                '.Parameters.AddWithValue("@p_description", txtDescription.Text)
-                .Parameters.AddWithValue("@p_location", txtConfirmPass.Text)
-                .Parameters.AddWithValue("@p_status", cmbRole.Text)
-                .ExecuteNonQuery()
-            End With
-
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            Me.Close()
-
-
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-
-    End Sub
-
+    '=============================================== Submit & Update ========================================
 
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -72,6 +47,108 @@ Public Class frmAddUser
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+
+
+        Try
+
+
+            If Not checkUserNameAvailability() Then
+                MessageBox.Show("Username Already Registered", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
+            procInsertUser()
+
+            procInsertEmployee()
+
+            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            Me.Close()
+
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+
+    End Sub
+
+
+
+    Private Sub procInsertUser()
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "procInsertUser"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_username", txtUsername.Text)
+                .Parameters.AddWithValue("@p_password", txtPass.Text)
+                .Parameters.AddWithValue("@p_role_name", cmbRole.Text)
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+
+    Private Sub procInsertEmployee()
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "procInsertAdminOrEmployee"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_first_name", txtFirstName.Text)
+                .Parameters.AddWithValue("@p_last_name", txtLastName.Text)
+                .Parameters.AddWithValue("@p_phone_no", txtPhoneNo.Text)
+                .Parameters.AddWithValue("@p_email_add", txtEmailAdd.Text)
+                .Parameters.AddWithValue("@p_role_name", cmbRole.Text)
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+
+    Public Function checkUserNameAvailability() As Boolean
+
+        Dim result As Boolean = True
+
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "procCheckUsernameAvailability"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_username", txtUsername.Text)
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+
+            End With
+            If datFilio.Rows.Count > 0 Then
+                result = False
+            End If
+
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+        Return result
+    End Function
+
+
+    '=============================================== Password TextChanged Event =================================
 
     Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
         If Not isFormLoaded Then
