@@ -63,6 +63,7 @@ Partial Class frmCurrentUser
         Me.panelChangePass.Controls.Add(Me.Label16)
         Me.panelChangePass.Controls.Add(Me.txtUsername)
         Me.panelChangePass.Controls.Add(Me.btnCancel)
+        Me.panelChangePass.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.panelChangePass.Location = New System.Drawing.Point(327, 162)
         Me.panelChangePass.Name = "panelChangePass"
         Me.panelChangePass.Size = New System.Drawing.Size(610, 435)

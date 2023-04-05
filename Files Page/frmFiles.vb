@@ -224,4 +224,21 @@ Public Class frmFiles
 
     End Sub
 
+    Private Sub grdFiles_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles grdFiles.CellFormatting
+        colName = grdFiles.Columns(e.ColumnIndex).Name
+        If colName = "delete" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdFiles(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "Delete" ' Set the tooltip tex
+        End If
+
+        If colName = "edit" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdFiles(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "Edit/Update" ' Set the tooltip text
+        End If
+
+        If colName = "view" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdFiles(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "View" ' Set the tooltip text
+        End If
+    End Sub
 End Class

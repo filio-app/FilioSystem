@@ -3,7 +3,8 @@
 Public Class frmAddUser
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        lblPassStr.Height = 40
+        lblPassStr.Text = "Password must be 8+ characters with letters and" & vbCrLf & "numbers"
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -17,7 +18,7 @@ Public Class frmAddUser
         Try
             With command
                 .Parameters.Clear()
-                .CommandText = "procInsertFile"
+                .CommandText = "procInsertNewUser"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_name", txtName.Text)
                 '.Parameters.AddWithValue("@p_description", txtDescription.Text)
