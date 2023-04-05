@@ -60,6 +60,8 @@ Public Class frmCurrentUser
 
     Private Sub txtConfirmNewPass_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmNewPass.TextChanged
 
+        'TODO: Need to edit border color
+
         If Not isFormLoaded Then
 
 

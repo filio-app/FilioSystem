@@ -52,7 +52,8 @@ Public Class frmUsers
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
-            clearControls(frmAddUser)
+            clearControlsInGroupBox(frmAddUser.gBPersonalInfo)
+            clearControlsInGroupBox(frmAddUser.gBUserAcc)
 
             With frmAddUser
                 .btnUpdate.Visible = False
@@ -66,4 +67,27 @@ Public Class frmUsers
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
+    Private Sub grdUsers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdUsers.CellContentClick
+
+    End Sub
+
+    Private Sub grdUsers_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles grdUsers.CellFormatting
+        colName = grdUsers.Columns(e.ColumnIndex).Name
+        If colName = "delete" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdUsers(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "Delete" ' Set the tooltip tex
+        End If
+
+        If colName = "edit" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdUsers(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "Edit/Update" ' Set the tooltip text
+        End If
+
+        If colName = "view" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdUsers(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "View" ' Set the tooltip text
+        End If
+    End Sub
+
 End Class

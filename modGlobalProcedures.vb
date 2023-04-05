@@ -50,7 +50,20 @@ Module modGlobalProcedures
             If TypeOf ctrl Is Guna.UI2.WinForms.Guna2TextBox Then
                 CType(ctrl, Guna.UI2.WinForms.Guna2TextBox).Clear()
             ElseIf TypeOf ctrl Is Guna.UI2.WinForms.Guna2ComboBox Then
-                CType(ctrl, Guna.UI2.WinForms.Guna2ComboBox).SelectedIndex = -1
+                CType(ctrl, Guna.UI2.WinForms.Guna2ComboBox).SelectedIndex = 0
+            ElseIf TypeOf ctrl Is CheckBox Then
+                CType(ctrl, CheckBox).Checked = False
+                ' Add more control types as needed
+            End If
+        Next
+    End Sub
+
+    Sub clearControlsInGroupBox(ByVal groupBox As Guna.UI2.WinForms.Guna2GroupBox)
+        For Each ctrl As Control In groupBox.Controls
+            If TypeOf ctrl Is Guna.UI2.WinForms.Guna2TextBox Then
+                CType(ctrl, Guna.UI2.WinForms.Guna2TextBox).Clear()
+            ElseIf TypeOf ctrl Is Guna.UI2.WinForms.Guna2ComboBox Then
+                CType(ctrl, Guna.UI2.WinForms.Guna2ComboBox).SelectedIndex = 0
             ElseIf TypeOf ctrl Is CheckBox Then
                 CType(ctrl, CheckBox).Checked = False
                 ' Add more control types as needed

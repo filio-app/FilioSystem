@@ -27,31 +27,31 @@ Partial Class frmAddUser
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.btnSubmit = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtFirstName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtLocation = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.cmbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cmbRole = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Guna2TextBox3 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.gBPersonalInfo = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.txtEmailAdd = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtPhoneNo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtLastName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Guna2TextBox5 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.gBUserAcc = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.txtPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblPassStr = New System.Windows.Forms.Label()
         Me.lblPassErr = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
-        Me.Guna2GroupBox1.SuspendLayout()
-        Me.Guna2GroupBox2.SuspendLayout()
+        Me.gBPersonalInfo.SuspendLayout()
+        Me.gBUserAcc.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -89,6 +89,7 @@ Partial Class frmAddUser
         Me.btnSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSubmit.Enabled = False
         Me.btnSubmit.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnSubmit.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnSubmit.ForeColor = System.Drawing.Color.White
@@ -98,29 +99,29 @@ Partial Class frmAddUser
         Me.btnSubmit.TabIndex = 14
         Me.btnSubmit.Text = "Submit"
         '
-        'txtName
+        'txtFirstName
         '
-        Me.txtName.Animated = True
-        Me.txtName.BorderRadius = 8
-        Me.txtName.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtName.DefaultText = ""
-        Me.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtName.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.txtName.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtName.Location = New System.Drawing.Point(36, 94)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(5)
-        Me.txtName.Name = "txtName"
-        Me.txtName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtName.PlaceholderText = "Please fill in"
-        Me.txtName.SelectedText = ""
-        Me.txtName.Size = New System.Drawing.Size(322, 55)
-        Me.txtName.TabIndex = 13
+        Me.txtFirstName.Animated = True
+        Me.txtFirstName.BorderRadius = 8
+        Me.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtFirstName.DefaultText = ""
+        Me.txtFirstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtFirstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtFirstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtFirstName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtFirstName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtFirstName.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtFirstName.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtFirstName.Location = New System.Drawing.Point(36, 94)
+        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtFirstName.PlaceholderText = "Please fill in"
+        Me.txtFirstName.SelectedText = ""
+        Me.txtFirstName.Size = New System.Drawing.Size(322, 55)
+        Me.txtFirstName.TabIndex = 13
         '
         'Guna2Panel1
         '
@@ -153,29 +154,29 @@ Partial Class frmAddUser
         Me.btnCancel.TabIndex = 19
         Me.btnCancel.Text = "Cancel"
         '
-        'txtLocation
+        'txtConfirmPass
         '
-        Me.txtLocation.Animated = True
-        Me.txtLocation.BorderRadius = 8
-        Me.txtLocation.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtLocation.DefaultText = ""
-        Me.txtLocation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtLocation.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtLocation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtLocation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLocation.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.txtLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLocation.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.txtLocation.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtLocation.Location = New System.Drawing.Point(25, 342)
-        Me.txtLocation.Margin = New System.Windows.Forms.Padding(5)
-        Me.txtLocation.Name = "txtLocation"
-        Me.txtLocation.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtLocation.PlaceholderText = "Please fill in"
-        Me.txtLocation.SelectedText = ""
-        Me.txtLocation.Size = New System.Drawing.Size(344, 55)
-        Me.txtLocation.TabIndex = 21
+        Me.txtConfirmPass.Animated = True
+        Me.txtConfirmPass.BorderRadius = 8
+        Me.txtConfirmPass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtConfirmPass.DefaultText = ""
+        Me.txtConfirmPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtConfirmPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtConfirmPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtConfirmPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtConfirmPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtConfirmPass.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtConfirmPass.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtConfirmPass.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtConfirmPass.Location = New System.Drawing.Point(25, 342)
+        Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtConfirmPass.Name = "txtConfirmPass"
+        Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtConfirmPass.PlaceholderText = "Please fill in"
+        Me.txtConfirmPass.SelectedText = ""
+        Me.txtConfirmPass.Size = New System.Drawing.Size(344, 55)
+        Me.txtConfirmPass.TabIndex = 21
         '
         'Label4
         '
@@ -199,24 +200,24 @@ Partial Class frmAddUser
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Role"
         '
-        'cmbStatus
+        'cmbRole
         '
-        Me.cmbStatus.AutoCompleteCustomSource.AddRange(New String() {"Issued"})
-        Me.cmbStatus.BackColor = System.Drawing.Color.Transparent
-        Me.cmbStatus.BorderRadius = 8
-        Me.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbStatus.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbStatus.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmbStatus.ItemHeight = 49
-        Me.cmbStatus.Items.AddRange(New Object() {"Employee", "Admin"})
-        Me.cmbStatus.Location = New System.Drawing.Point(25, 466)
-        Me.cmbStatus.Name = "cmbStatus"
-        Me.cmbStatus.Size = New System.Drawing.Size(344, 55)
-        Me.cmbStatus.StartIndex = 0
-        Me.cmbStatus.TabIndex = 29
+        Me.cmbRole.AutoCompleteCustomSource.AddRange(New String() {"Issued"})
+        Me.cmbRole.BackColor = System.Drawing.Color.Transparent
+        Me.cmbRole.BorderRadius = 8
+        Me.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbRole.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbRole.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.cmbRole.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmbRole.ItemHeight = 49
+        Me.cmbRole.Items.AddRange(New Object() {"Employee", "Admin"})
+        Me.cmbRole.Location = New System.Drawing.Point(25, 466)
+        Me.cmbRole.Name = "cmbRole"
+        Me.cmbRole.Size = New System.Drawing.Size(344, 55)
+        Me.cmbRole.StartIndex = 0
+        Me.cmbRole.TabIndex = 29
         '
         'btnUpdate
         '
@@ -226,6 +227,7 @@ Partial Class frmAddUser
         Me.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnUpdate.Enabled = False
         Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
@@ -236,48 +238,48 @@ Partial Class frmAddUser
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.Visible = False
         '
-        'Guna2GroupBox1
+        'gBPersonalInfo
         '
-        Me.Guna2GroupBox1.BorderRadius = 6
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2TextBox3)
-        Me.Guna2GroupBox1.Controls.Add(Me.Label6)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2TextBox2)
-        Me.Guna2GroupBox1.Controls.Add(Me.Label3)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2TextBox1)
-        Me.Guna2GroupBox1.Controls.Add(Me.Label1)
-        Me.Guna2GroupBox1.Controls.Add(Me.txtName)
-        Me.Guna2GroupBox1.Controls.Add(Me.Label2)
-        Me.Guna2GroupBox1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2GroupBox1.Location = New System.Drawing.Point(33, 99)
-        Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(397, 553)
-        Me.Guna2GroupBox1.TabIndex = 31
-        Me.Guna2GroupBox1.Text = "Personal Information"
+        Me.gBPersonalInfo.BorderRadius = 6
+        Me.gBPersonalInfo.Controls.Add(Me.txtEmailAdd)
+        Me.gBPersonalInfo.Controls.Add(Me.Label6)
+        Me.gBPersonalInfo.Controls.Add(Me.txtPhoneNo)
+        Me.gBPersonalInfo.Controls.Add(Me.Label3)
+        Me.gBPersonalInfo.Controls.Add(Me.txtLastName)
+        Me.gBPersonalInfo.Controls.Add(Me.Label1)
+        Me.gBPersonalInfo.Controls.Add(Me.txtFirstName)
+        Me.gBPersonalInfo.Controls.Add(Me.Label2)
+        Me.gBPersonalInfo.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.gBPersonalInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.gBPersonalInfo.Location = New System.Drawing.Point(33, 99)
+        Me.gBPersonalInfo.Name = "gBPersonalInfo"
+        Me.gBPersonalInfo.Size = New System.Drawing.Size(397, 553)
+        Me.gBPersonalInfo.TabIndex = 31
+        Me.gBPersonalInfo.Text = "Personal Information"
         '
-        'Guna2TextBox3
+        'txtEmailAdd
         '
-        Me.Guna2TextBox3.Animated = True
-        Me.Guna2TextBox3.BorderRadius = 8
-        Me.Guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox3.DefaultText = ""
-        Me.Guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TextBox3.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.Guna2TextBox3.Location = New System.Drawing.Point(36, 466)
-        Me.Guna2TextBox3.Margin = New System.Windows.Forms.Padding(5)
-        Me.Guna2TextBox3.Name = "Guna2TextBox3"
-        Me.Guna2TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox3.PlaceholderText = "Please fill in"
-        Me.Guna2TextBox3.SelectedText = ""
-        Me.Guna2TextBox3.Size = New System.Drawing.Size(322, 55)
-        Me.Guna2TextBox3.TabIndex = 34
+        Me.txtEmailAdd.Animated = True
+        Me.txtEmailAdd.BorderRadius = 8
+        Me.txtEmailAdd.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtEmailAdd.DefaultText = ""
+        Me.txtEmailAdd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtEmailAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtEmailAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEmailAdd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEmailAdd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtEmailAdd.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtEmailAdd.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtEmailAdd.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtEmailAdd.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtEmailAdd.Location = New System.Drawing.Point(36, 466)
+        Me.txtEmailAdd.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtEmailAdd.Name = "txtEmailAdd"
+        Me.txtEmailAdd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEmailAdd.PlaceholderText = "Please fill in"
+        Me.txtEmailAdd.SelectedText = ""
+        Me.txtEmailAdd.Size = New System.Drawing.Size(322, 55)
+        Me.txtEmailAdd.TabIndex = 34
         '
         'Label6
         '
@@ -290,29 +292,29 @@ Partial Class frmAddUser
         Me.Label6.TabIndex = 35
         Me.Label6.Text = "Email Address"
         '
-        'Guna2TextBox2
+        'txtPhoneNo
         '
-        Me.Guna2TextBox2.Animated = True
-        Me.Guna2TextBox2.BorderRadius = 8
-        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox2.DefaultText = ""
-        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TextBox2.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(36, 342)
-        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(5)
-        Me.Guna2TextBox2.Name = "Guna2TextBox2"
-        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox2.PlaceholderText = "Please fill in"
-        Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(322, 55)
-        Me.Guna2TextBox2.TabIndex = 32
+        Me.txtPhoneNo.Animated = True
+        Me.txtPhoneNo.BorderRadius = 8
+        Me.txtPhoneNo.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPhoneNo.DefaultText = ""
+        Me.txtPhoneNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPhoneNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPhoneNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPhoneNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPhoneNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPhoneNo.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtPhoneNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPhoneNo.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtPhoneNo.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtPhoneNo.Location = New System.Drawing.Point(36, 342)
+        Me.txtPhoneNo.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtPhoneNo.Name = "txtPhoneNo"
+        Me.txtPhoneNo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPhoneNo.PlaceholderText = "Please fill in"
+        Me.txtPhoneNo.SelectedText = ""
+        Me.txtPhoneNo.Size = New System.Drawing.Size(322, 55)
+        Me.txtPhoneNo.TabIndex = 32
         '
         'Label3
         '
@@ -325,29 +327,29 @@ Partial Class frmAddUser
         Me.Label3.TabIndex = 33
         Me.Label3.Text = "Phone No."
         '
-        'Guna2TextBox1
+        'txtLastName
         '
-        Me.Guna2TextBox1.Animated = True
-        Me.Guna2TextBox1.BorderRadius = 8
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TextBox1.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(36, 218)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(5)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = "Please fill in"
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(322, 55)
-        Me.Guna2TextBox1.TabIndex = 30
+        Me.txtLastName.Animated = True
+        Me.txtLastName.BorderRadius = 8
+        Me.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtLastName.DefaultText = ""
+        Me.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtLastName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtLastName.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtLastName.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtLastName.Location = New System.Drawing.Point(36, 218)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtLastName.PlaceholderText = "Please fill in"
+        Me.txtLastName.SelectedText = ""
+        Me.txtLastName.Size = New System.Drawing.Size(322, 55)
+        Me.txtLastName.TabIndex = 30
         '
         'Label1
         '
@@ -360,50 +362,50 @@ Partial Class frmAddUser
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "Last Name"
         '
-        'Guna2GroupBox2
+        'gBUserAcc
         '
-        Me.Guna2GroupBox2.BorderRadius = 6
-        Me.Guna2GroupBox2.Controls.Add(Me.lblPassErr)
-        Me.Guna2GroupBox2.Controls.Add(Me.lblPassStr)
-        Me.Guna2GroupBox2.Controls.Add(Me.Guna2TextBox5)
-        Me.Guna2GroupBox2.Controls.Add(Me.txtLocation)
-        Me.Guna2GroupBox2.Controls.Add(Me.Label4)
-        Me.Guna2GroupBox2.Controls.Add(Me.Label8)
-        Me.Guna2GroupBox2.Controls.Add(Me.Guna2TextBox4)
-        Me.Guna2GroupBox2.Controls.Add(Me.Label7)
-        Me.Guna2GroupBox2.Controls.Add(Me.cmbStatus)
-        Me.Guna2GroupBox2.Controls.Add(Me.Label5)
-        Me.Guna2GroupBox2.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Guna2GroupBox2.Location = New System.Drawing.Point(480, 99)
-        Me.Guna2GroupBox2.Name = "Guna2GroupBox2"
-        Me.Guna2GroupBox2.Size = New System.Drawing.Size(411, 553)
-        Me.Guna2GroupBox2.TabIndex = 32
-        Me.Guna2GroupBox2.Text = "User Account"
+        Me.gBUserAcc.BorderRadius = 6
+        Me.gBUserAcc.Controls.Add(Me.lblPassErr)
+        Me.gBUserAcc.Controls.Add(Me.lblPassStr)
+        Me.gBUserAcc.Controls.Add(Me.txtPass)
+        Me.gBUserAcc.Controls.Add(Me.txtConfirmPass)
+        Me.gBUserAcc.Controls.Add(Me.Label4)
+        Me.gBUserAcc.Controls.Add(Me.Label8)
+        Me.gBUserAcc.Controls.Add(Me.txtUsername)
+        Me.gBUserAcc.Controls.Add(Me.Label7)
+        Me.gBUserAcc.Controls.Add(Me.cmbRole)
+        Me.gBUserAcc.Controls.Add(Me.Label5)
+        Me.gBUserAcc.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.gBUserAcc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.gBUserAcc.Location = New System.Drawing.Point(480, 99)
+        Me.gBUserAcc.Name = "gBUserAcc"
+        Me.gBUserAcc.Size = New System.Drawing.Size(411, 553)
+        Me.gBUserAcc.TabIndex = 32
+        Me.gBUserAcc.Text = "User Account"
         '
-        'Guna2TextBox5
+        'txtPass
         '
-        Me.Guna2TextBox5.Animated = True
-        Me.Guna2TextBox5.BorderRadius = 8
-        Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox5.DefaultText = ""
-        Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TextBox5.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.Guna2TextBox5.Location = New System.Drawing.Point(25, 218)
-        Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(5)
-        Me.Guna2TextBox5.Name = "Guna2TextBox5"
-        Me.Guna2TextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox5.PlaceholderText = "Please fill in"
-        Me.Guna2TextBox5.SelectedText = ""
-        Me.Guna2TextBox5.Size = New System.Drawing.Size(344, 55)
-        Me.Guna2TextBox5.TabIndex = 32
+        Me.txtPass.Animated = True
+        Me.txtPass.BorderRadius = 8
+        Me.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPass.DefaultText = ""
+        Me.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPass.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPass.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtPass.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtPass.Location = New System.Drawing.Point(25, 218)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPass.PlaceholderText = "Please fill in"
+        Me.txtPass.SelectedText = ""
+        Me.txtPass.Size = New System.Drawing.Size(344, 55)
+        Me.txtPass.TabIndex = 32
         '
         'Label8
         '
@@ -416,29 +418,29 @@ Partial Class frmAddUser
         Me.Label8.TabIndex = 33
         Me.Label8.Text = "Password"
         '
-        'Guna2TextBox4
+        'txtUsername
         '
-        Me.Guna2TextBox4.Animated = True
-        Me.Guna2TextBox4.BorderRadius = 8
-        Me.Guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox4.DefaultText = ""
-        Me.Guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.Guna2TextBox4.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(25, 94)
-        Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(5)
-        Me.Guna2TextBox4.Name = "Guna2TextBox4"
-        Me.Guna2TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox4.PlaceholderText = "Please fill in"
-        Me.Guna2TextBox4.SelectedText = ""
-        Me.Guna2TextBox4.Size = New System.Drawing.Size(344, 55)
-        Me.Guna2TextBox4.TabIndex = 30
+        Me.txtUsername.Animated = True
+        Me.txtUsername.BorderRadius = 8
+        Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUsername.DefaultText = ""
+        Me.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtUsername.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtUsername.Location = New System.Drawing.Point(25, 94)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtUsername.PlaceholderText = "Please fill in"
+        Me.txtUsername.SelectedText = ""
+        Me.txtUsername.Size = New System.Drawing.Size(344, 55)
+        Me.txtUsername.TabIndex = 30
         '
         'Label7
         '
@@ -460,6 +462,7 @@ Partial Class frmAddUser
         Me.lblPassStr.Size = New System.Drawing.Size(347, 17)
         Me.lblPassStr.TabIndex = 82
         Me.lblPassStr.Text = "Password must be 8+ characters & vbCrLf & with letters and numbers"
+        Me.lblPassStr.Visible = False
         '
         'lblPassErr
         '
@@ -471,6 +474,7 @@ Partial Class frmAddUser
         Me.lblPassErr.Size = New System.Drawing.Size(174, 17)
         Me.lblPassErr.TabIndex = 33
         Me.lblPassErr.Text = "Passwords do not match!"
+        Me.lblPassErr.Visible = False
         '
         'frmAddUser
         '
@@ -478,21 +482,21 @@ Partial Class frmAddUser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(924, 762)
-        Me.Controls.Add(Me.Guna2GroupBox2)
+        Me.Controls.Add(Me.gBUserAcc)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.btnSubmit)
-        Me.Controls.Add(Me.Guna2GroupBox1)
+        Me.Controls.Add(Me.gBPersonalInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAddUser"
         Me.Text = "frmAddFile"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        Me.Guna2GroupBox1.ResumeLayout(False)
-        Me.Guna2GroupBox1.PerformLayout()
-        Me.Guna2GroupBox2.ResumeLayout(False)
-        Me.Guna2GroupBox2.PerformLayout()
+        Me.gBPersonalInfo.ResumeLayout(False)
+        Me.gBPersonalInfo.PerformLayout()
+        Me.gBUserAcc.ResumeLayout(False)
+        Me.gBUserAcc.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -502,24 +506,24 @@ Partial Class frmAddUser
     Friend WithEvents Label2 As Label
     Friend WithEvents lblHeader As Label
     Friend WithEvents btnSubmit As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents txtName As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtFirstName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnCancel As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents txtLocation As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtConfirmPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents cmbStatus As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents cmbRole As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2GroupBox2 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents gBUserAcc As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents gBPersonalInfo As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents txtEmailAdd As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtPhoneNo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtLastName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Guna2TextBox5 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents lblPassStr As Label
     Friend WithEvents lblPassErr As Label
