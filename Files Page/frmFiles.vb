@@ -126,6 +126,9 @@ Public Class frmFiles
                         .Parameters.AddWithValue("@p_id", fileID)
                         .ExecuteNonQuery()
                         MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                        procInsertLogEvent("Delete File", grdFiles.CurrentRow.Cells(2).Value.ToString)
+
                     End With
                     ' refresh/reload customer records in data grid view
                     procDisplayAllFiles()

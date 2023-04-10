@@ -21,12 +21,15 @@ Module ModGlobalVariable
     Public fileID As Integer
 
     Public currUsername As String
-    Public currUserID As Integer 'TODO: get user ID 
+    Public currUserID As Integer = 1 'TODO: get user ID 
 
     'Public action As String
 
 
-    'Public residentPhotoPath As String      ' image location / path
-    'Public logoPhotoPath As String
+
+
+    '=================================================='
+
+    'TODO: Should reload the pages if there are changes 
 
 End Module
