@@ -21,7 +21,7 @@ Module ModGlobalVariable
     Public fileID As Integer
 
     Public currUsername As String
-
+    Public currUserID As Integer 'TODO: get user ID 
 
     'Public action As String
 

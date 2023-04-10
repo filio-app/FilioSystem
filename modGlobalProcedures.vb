@@ -108,4 +108,23 @@ Module modGlobalProcedures
 
 
 
+    Public Sub procInsertLogEvent(ByVal action As String, ByVal target As String)
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procInsertLogEvent"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_user_id", currUserID)
+                .Parameters.AddWithValue("@p_action", action)
+                .Parameters.AddWithValue("@p_target", target)
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+
+
 End Module
