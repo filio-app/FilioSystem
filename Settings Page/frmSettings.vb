@@ -18,8 +18,8 @@ Public Class frmSettings
             Dim mb As MySqlBackup = New MySqlBackup(command)
             mb.ExportToFile(backup.FileName)
             MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        ElseIf backup.ShowDialog = Windows.Forms.DialogResult.Cancel Then
-            Return
+        Else
+            Exit Sub
         End If
 
     End Sub
