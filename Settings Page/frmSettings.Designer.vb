@@ -26,7 +26,6 @@ Partial Class frmSettings
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnBackup = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnRestore = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -46,35 +45,22 @@ Partial Class frmSettings
         '
         Me.btnBackup.Animated = True
         Me.btnBackup.BorderRadius = 8
+        Me.btnBackup.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.database_export_custom
+        Me.btnBackup.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnBackup.CustomImages.ImageSize = New System.Drawing.Size(30, 30)
         Me.btnBackup.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnBackup.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnBackup.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnBackup.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnBackup.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnBackup.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnBackup.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnBackup.ForeColor = System.Drawing.Color.White
-        Me.btnBackup.Location = New System.Drawing.Point(479, 411)
+        Me.btnBackup.Location = New System.Drawing.Point(467, 203)
         Me.btnBackup.Name = "btnBackup"
-        Me.btnBackup.Size = New System.Drawing.Size(113, 48)
+        Me.btnBackup.Size = New System.Drawing.Size(160, 54)
         Me.btnBackup.TabIndex = 2
         Me.btnBackup.Text = "Backup"
-        '
-        'btnRestore
-        '
-        Me.btnRestore.Animated = True
-        Me.btnRestore.BorderRadius = 8
-        Me.btnRestore.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnRestore.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnRestore.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnRestore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnRestore.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnRestore.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.btnRestore.ForeColor = System.Drawing.Color.White
-        Me.btnRestore.Location = New System.Drawing.Point(625, 411)
-        Me.btnRestore.Name = "btnRestore"
-        Me.btnRestore.Size = New System.Drawing.Size(113, 48)
-        Me.btnRestore.TabIndex = 3
-        Me.btnRestore.Text = "Restore"
+        Me.btnBackup.TextOffset = New System.Drawing.Point(12, 0)
         '
         'frmSettings
         '
@@ -82,7 +68,6 @@ Partial Class frmSettings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
-        Me.Controls.Add(Me.btnRestore)
         Me.Controls.Add(Me.btnBackup)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Inter", 8.25!)
@@ -98,6 +83,5 @@ Partial Class frmSettings
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnRestore As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnBackup As Guna.UI2.WinForms.Guna2Button
 End Class
