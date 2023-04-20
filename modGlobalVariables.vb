@@ -30,6 +30,6 @@ Module ModGlobalVariable
 
     '=================================================='
 
-    'TODO: Should reload the pages if there are changes 
+    'TODO: DONE -- Should reload the history page if there are events
 
 End Module

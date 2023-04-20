@@ -119,6 +119,8 @@ Module modGlobalProcedures
                 .Parameters.AddWithValue("@p_target", target)
                 .ExecuteNonQuery()
             End With
+            frmHistory.Dispose()
+
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
