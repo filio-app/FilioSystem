@@ -53,18 +53,18 @@ Partial Class frmMain
         Me.files = New System.Windows.Forms.TabPage()
         Me.panelFiles = New System.Windows.Forms.Panel()
         Me.transaction = New System.Windows.Forms.TabPage()
+        Me.panelTransaction = New System.Windows.Forms.Panel()
         Me.users = New System.Windows.Forms.TabPage()
         Me.panelUsers = New System.Windows.Forms.Panel()
         Me.history = New System.Windows.Forms.TabPage()
         Me.panelHistory = New System.Windows.Forms.Panel()
         Me.settings = New System.Windows.Forms.TabPage()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.panelSettings = New System.Windows.Forms.Panel()
         Me.currentUser = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
-        Me.panelTransaction = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelTopLogo.SuspendLayout()
@@ -78,6 +78,7 @@ Partial Class frmMain
         Me.users.SuspendLayout()
         Me.history.SuspendLayout()
         Me.settings.SuspendLayout()
+        Me.panelSettings.SuspendLayout()
         Me.currentUser.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -492,10 +493,10 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.history
-        Me.bunifuPagesMain.PageIndex = 4
-        Me.bunifuPagesMain.PageName = "history"
-        Me.bunifuPagesMain.PageTitle = "history"
+        Me.bunifuPagesMain.Page = Me.settings
+        Me.bunifuPagesMain.PageIndex = 5
+        Me.bunifuPagesMain.PageName = "settings"
+        Me.bunifuPagesMain.PageTitle = "settings"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -577,6 +578,15 @@ Partial Class frmMain
         Me.transaction.TabIndex = 6
         Me.transaction.Text = "transaction"
         '
+        'panelTransaction
+        '
+        Me.panelTransaction.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelTransaction.Location = New System.Drawing.Point(0, 0)
+        Me.panelTransaction.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelTransaction.Name = "panelTransaction"
+        Me.panelTransaction.Size = New System.Drawing.Size(1392, 859)
+        Me.panelTransaction.TabIndex = 2
+        '
         'users
         '
         Me.users.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -620,8 +630,7 @@ Partial Class frmMain
         'settings
         '
         Me.settings.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.settings.Controls.Add(Me.Label4)
-        Me.settings.Controls.Add(Me.Panel4)
+        Me.settings.Controls.Add(Me.panelSettings)
         Me.settings.Location = New System.Drawing.Point(4, 4)
         Me.settings.Name = "settings"
         Me.settings.Size = New System.Drawing.Size(1392, 858)
@@ -632,19 +641,21 @@ Partial Class frmMain
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label4.Location = New System.Drawing.Point(576, 274)
+        Me.Label4.Location = New System.Drawing.Point(284, 225)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(96, 26)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "settings"
         '
-        'Panel4
+        'panelSettings
         '
-        Me.Panel4.Location = New System.Drawing.Point(596, 379)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(200, 100)
-        Me.Panel4.TabIndex = 1
+        Me.panelSettings.Controls.Add(Me.Label4)
+        Me.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelSettings.Location = New System.Drawing.Point(0, 0)
+        Me.panelSettings.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelSettings.Name = "panelSettings"
+        Me.panelSettings.Size = New System.Drawing.Size(1392, 858)
+        Me.panelSettings.TabIndex = 1
         '
         'currentUser
         '
@@ -673,7 +684,7 @@ Partial Class frmMain
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
         Me.panelCurrentUser.Name = "panelCurrentUser"
-        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 859)
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
         Me.panelCurrentUser.TabIndex = 1
         '
         'hiddenPage
@@ -684,15 +695,6 @@ Partial Class frmMain
         Me.hiddenPage.Size = New System.Drawing.Size(1392, 858)
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
-        '
-        'panelTransaction
-        '
-        Me.panelTransaction.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelTransaction.Location = New System.Drawing.Point(0, 0)
-        Me.panelTransaction.Margin = New System.Windows.Forms.Padding(0)
-        Me.panelTransaction.Name = "panelTransaction"
-        Me.panelTransaction.Size = New System.Drawing.Size(1392, 859)
-        Me.panelTransaction.TabIndex = 2
         '
         'PictureBox2
         '
@@ -746,7 +748,8 @@ Partial Class frmMain
         Me.users.ResumeLayout(False)
         Me.history.ResumeLayout(False)
         Me.settings.ResumeLayout(False)
-        Me.settings.PerformLayout()
+        Me.panelSettings.ResumeLayout(False)
+        Me.panelSettings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
         Me.currentUser.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -788,7 +791,7 @@ Partial Class frmMain
     Friend WithEvents Panel1 As Panel
     Friend WithEvents panelUsers As Panel
     Friend WithEvents panelHistory As Panel
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents panelSettings As Panel
     Friend WithEvents panelCurrentUser As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label4 As Label

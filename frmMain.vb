@@ -73,12 +73,12 @@
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         bunifuPagesMain.SetPage(5)
-        'With frmBrgyOfficial
-        '    .TopLevel = False
-        '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
-        '    .BringToFront()
-        '    .Show()
-        'End With
+        With frmSettings
+            .TopLevel = False
+            panelSettings.Controls.Add(frmSettings)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnCurrentUser_Click(sender As Object, e As EventArgs) Handles btnCurrentUser.Click
