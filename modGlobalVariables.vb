@@ -25,6 +25,10 @@ Module ModGlobalVariable
 
     'Public action As String
 
+    ' For selecting files in add transaction
+    Public tempFileID As String
+    Public tempFileName As String
+
 
 
 

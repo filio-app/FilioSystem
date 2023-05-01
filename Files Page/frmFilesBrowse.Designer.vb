@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmFiles
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmFilesBrowse
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,12 @@ Partial Class frmFiles
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.grdFiles = New Bunifu.UI.WinForms.BunifuDataGridView()
@@ -38,19 +38,17 @@ Partial Class frmFiles
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.cmbSearchType = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.view = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSelect = New Guna.UI2.WinForms.Guna2Button()
+        Me.cmbSearchType = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtSearchNew = New Guna.UI2.WinForms.Guna2TextBox()
         CType(Me.grdFiles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +58,7 @@ Partial Class frmFiles
         '
         'Guna2Elipse2
         '
-        Me.Guna2Elipse2.BorderRadius = 7
+        Me.Guna2Elipse2.BorderRadius = 8
         Me.Guna2Elipse2.TargetControl = Me.grdFiles
         '
         'grdFiles
@@ -70,22 +68,22 @@ Partial Class frmFiles
         Me.grdFiles.AllowUserToDeleteRows = False
         Me.grdFiles.AllowUserToResizeColumns = False
         Me.grdFiles.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdFiles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdFiles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.grdFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdFiles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.grdFiles.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdFiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdFiles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdFiles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.grdFiles.ColumnHeadersHeight = 50
         Me.grdFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grdFiles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
@@ -108,20 +106,20 @@ Partial Class frmFiles
         Me.grdFiles.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdFiles.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdFiles.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdFiles.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdFiles.DefaultCellStyle = DataGridViewCellStyle9
         Me.grdFiles.EnableHeadersVisualStyles = False
         Me.grdFiles.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdFiles.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdFiles.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdFiles.HeaderForeColor = System.Drawing.Color.White
-        Me.grdFiles.Location = New System.Drawing.Point(24, 201)
+        Me.grdFiles.Location = New System.Drawing.Point(32, 113)
         Me.grdFiles.MultiSelect = False
         Me.grdFiles.Name = "grdFiles"
         Me.grdFiles.ReadOnly = True
@@ -129,8 +127,8 @@ Partial Class frmFiles
         Me.grdFiles.RowHeadersWidth = 50
         Me.grdFiles.RowTemplate.Height = 50
         Me.grdFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdFiles.Size = New System.Drawing.Size(1153, 589)
-        Me.grdFiles.TabIndex = 0
+        Me.grdFiles.Size = New System.Drawing.Size(860, 531)
+        Me.grdFiles.TabIndex = 46
         Me.grdFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
         'Column8
@@ -199,6 +197,17 @@ Partial Class frmFiles
         Me.Column9.ReadOnly = True
         Me.Column9.Width = 10
         '
+        'view
+        '
+        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.view.FillWeight = 101.398!
+        Me.view.HeaderText = ""
+        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.view.Name = "view"
+        Me.view.ReadOnly = True
+        Me.view.Visible = False
+        Me.view.Width = 25
+        '
         'Column15
         '
         Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -206,7 +215,19 @@ Partial Class frmFiles
         Me.Column15.HeaderText = "Column15"
         Me.Column15.Name = "Column15"
         Me.Column15.ReadOnly = True
+        Me.Column15.Visible = False
         Me.Column15.Width = 10
+        '
+        'edit
+        '
+        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.edit.FillWeight = 137.0792!
+        Me.edit.HeaderText = ""
+        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Visible = False
+        Me.edit.Width = 25
         '
         'Column14
         '
@@ -215,7 +236,18 @@ Partial Class frmFiles
         Me.Column14.HeaderText = "Column14"
         Me.Column14.Name = "Column14"
         Me.Column14.ReadOnly = True
+        Me.Column14.Visible = False
         Me.Column14.Width = 10
+        '
+        'delete
+        '
+        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.delete.HeaderText = ""
+        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.delete.Name = "delete"
+        Me.delete.ReadOnly = True
+        Me.delete.Visible = False
+        Me.delete.Width = 25
         '
         'Column13
         '
@@ -223,59 +255,45 @@ Partial Class frmFiles
         Me.Column13.HeaderText = ""
         Me.Column13.Name = "Column13"
         Me.Column13.ReadOnly = True
+        Me.Column13.Visible = False
         Me.Column13.Width = 10
         '
-        'btnAdd
+        'btnCancel
         '
-        Me.btnAdd.Animated = True
-        Me.btnAdd.BorderRadius = 8
-        Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(1064, 123)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(113, 48)
-        Me.btnAdd.TabIndex = 1
-        Me.btnAdd.Text = "Add"
+        Me.btnCancel.Animated = True
+        Me.btnCancel.BorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.btnCancel.BorderRadius = 8
+        Me.btnCancel.BorderThickness = 1
+        Me.btnCancel.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnCancel.FillColor = System.Drawing.Color.White
+        Me.btnCancel.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.btnCancel.Location = New System.Drawing.Point(459, 667)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(190, 56)
+        Me.btnCancel.TabIndex = 44
+        Me.btnCancel.Text = "Cancel"
         '
-        'txtSearch
+        'btnSelect
         '
-        Me.txtSearch.Animated = True
-        Me.txtSearch.BorderRadius = 8
-        Me.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtSearch.DefaultText = ""
-        Me.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSearch.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSearch.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.txtSearch.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtSearch.Location = New System.Drawing.Point(427, 123)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(5)
-        Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtSearch.PlaceholderText = "Search.."
-        Me.txtSearch.SelectedText = ""
-        Me.txtSearch.Size = New System.Drawing.Size(339, 53)
-        Me.txtSearch.TabIndex = 31
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(126, 139)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(121, 21)
-        Me.Label7.TabIndex = 32
-        Me.Label7.Text = "Search Type:"
+        Me.btnSelect.Animated = True
+        Me.btnSelect.BorderRadius = 8
+        Me.btnSelect.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSelect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSelect.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSelect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSelect.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnSelect.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnSelect.ForeColor = System.Drawing.Color.White
+        Me.btnSelect.Location = New System.Drawing.Point(702, 667)
+        Me.btnSelect.Name = "btnSelect"
+        Me.btnSelect.Size = New System.Drawing.Size(190, 56)
+        Me.btnSelect.TabIndex = 43
+        Me.btnSelect.Text = "Select"
         '
         'cmbSearchType
         '
@@ -290,84 +308,62 @@ Partial Class frmFiles
         Me.cmbSearchType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbSearchType.ItemHeight = 47
         Me.cmbSearchType.Items.AddRange(New Object() {"Name", "Location"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(254, 123)
+        Me.cmbSearchType.Location = New System.Drawing.Point(380, 36)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(154, 53)
         Me.cmbSearchType.StartIndex = 0
-        Me.cmbSearchType.TabIndex = 33
+        Me.cmbSearchType.TabIndex = 50
         '
-        'DataGridViewImageColumn1
+        'Label7
         '
-        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn1.FillWeight = 101.398!
-        Me.DataGridViewImageColumn1.HeaderText = ""
-        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.ReadOnly = True
-        Me.DataGridViewImageColumn1.Width = 25
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(252, 52)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(121, 21)
+        Me.Label7.TabIndex = 49
+        Me.Label7.Text = "Search Type:"
         '
-        'DataGridViewImageColumn2
+        'txtSearchNew
         '
-        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
-        Me.DataGridViewImageColumn2.HeaderText = ""
-        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit
-        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        Me.DataGridViewImageColumn2.ReadOnly = True
-        Me.DataGridViewImageColumn2.Width = 25
+        Me.txtSearchNew.Animated = True
+        Me.txtSearchNew.BorderRadius = 8
+        Me.txtSearchNew.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtSearchNew.DefaultText = ""
+        Me.txtSearchNew.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtSearchNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtSearchNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSearchNew.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSearchNew.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtSearchNew.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtSearchNew.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtSearchNew.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtSearchNew.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtSearchNew.Location = New System.Drawing.Point(553, 36)
+        Me.txtSearchNew.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtSearchNew.Name = "txtSearchNew"
+        Me.txtSearchNew.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtSearchNew.PlaceholderText = "Search.."
+        Me.txtSearchNew.SelectedText = ""
+        Me.txtSearchNew.Size = New System.Drawing.Size(339, 53)
+        Me.txtSearchNew.TabIndex = 48
         '
-        'DataGridViewImageColumn3
-        '
-        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn3.HeaderText = ""
-        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete
-        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
-        Me.DataGridViewImageColumn3.ReadOnly = True
-        Me.DataGridViewImageColumn3.Width = 25
-        '
-        'view
-        '
-        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.view.FillWeight = 101.398!
-        Me.view.HeaderText = ""
-        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.view.Name = "view"
-        Me.view.ReadOnly = True
-        Me.view.Width = 25
-        '
-        'edit
-        '
-        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.edit.FillWeight = 137.0792!
-        Me.edit.HeaderText = ""
-        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.edit.Name = "edit"
-        Me.edit.ReadOnly = True
-        Me.edit.Width = 25
-        '
-        'delete
-        '
-        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.delete.HeaderText = ""
-        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.delete.Name = "delete"
-        Me.delete.ReadOnly = True
-        Me.delete.Width = 25
-        '
-        'frmFiles
+        'frmFilesBrowse
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1200, 822)
+        Me.ClientSize = New System.Drawing.Size(931, 744)
         Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txtSearch)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.txtSearchNew)
         Me.Controls.Add(Me.grdFiles)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnSelect)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmFiles"
-        Me.Text = "frmFiles"
+        Me.Name = "frmFilesBrowse"
+        Me.Text = "frmFilesBrowse"
         CType(Me.grdFiles, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -376,11 +372,12 @@ Partial Class frmFiles
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents btnCancel As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSelect As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cmbSearchType As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtSearchNew As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents grdFiles As Bunifu.UI.WinForms.BunifuDataGridView
-    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
-    Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
@@ -396,7 +393,4 @@ Partial Class frmFiles
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents delete As DataGridViewImageColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents txtSearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents cmbSearchType As Guna.UI2.WinForms.Guna2ComboBox
 End Class

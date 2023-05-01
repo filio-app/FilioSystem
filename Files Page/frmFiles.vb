@@ -244,4 +244,6 @@ Public Class frmFiles
             cell.ToolTipText = "View" ' Set the tooltip text
         End If
     End Sub
+
+
 End Class

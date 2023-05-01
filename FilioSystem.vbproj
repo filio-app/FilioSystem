@@ -242,6 +242,12 @@
     <Compile Include="Files Page\frmFiles.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Files Page\frmFilesBrowse.Designer.vb">
+      <DependentUpon>frmFilesBrowse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Files Page\frmFilesBrowse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Files Page\frmViewFile.Designer.vb">
       <DependentUpon>frmViewFile.vb</DependentUpon>
     </Compile>
@@ -297,6 +303,12 @@
     <Compile Include="Settings Page\frmSettings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Transaction Page\frmAddTransaction.Designer.vb">
+      <DependentUpon>frmAddTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Page\frmAddTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Transaction Page\frmTransaction.Designer.vb">
       <DependentUpon>frmTransaction.vb</DependentUpon>
     </Compile>
@@ -329,6 +341,9 @@
     <EmbeddedResource Include="Files Page\frmFiles.resx">
       <DependentUpon>frmFiles.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Files Page\frmFilesBrowse.resx">
+      <DependentUpon>frmFilesBrowse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Files Page\frmViewFile.resx">
       <DependentUpon>frmViewFile.vb</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings Page\frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Page\frmAddTransaction.resx">
+      <DependentUpon>frmAddTransaction.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction Page\frmTransaction.resx">
       <DependentUpon>frmTransaction.vb</DependentUpon>
