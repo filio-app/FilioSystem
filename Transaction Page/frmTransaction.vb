@@ -56,7 +56,7 @@ Public Class frmTransaction
 
     Private Sub grdTransaction_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdTransaction.CellContentClick
         colName = grdTransaction.Columns(e.ColumnIndex).Name
-        transactionID = CInt(grdTransaction.CurrentRow.Cells(1).Value.ToString)
+        userID = CInt(grdTransaction.CurrentRow.Cells(1).Value.ToString)
 
 
 
@@ -74,7 +74,7 @@ Public Class frmTransaction
                         .Parameters.Clear()
                         .CommandText = "procDeleteTransaction"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", transactionID)
+                        .Parameters.AddWithValue("@p_id", userID)
                         .ExecuteNonQuery()
                         MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 

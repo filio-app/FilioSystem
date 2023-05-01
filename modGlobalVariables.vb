@@ -18,7 +18,7 @@ Module ModGlobalVariable
     Public row As Integer
 
     Public colName As String
-    Public transactionID As Integer
+    Public userID As Integer
 
     Public currUsername As String
     Public currUserID As Integer = 1 'TODO: get user ID 

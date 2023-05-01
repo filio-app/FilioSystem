@@ -43,12 +43,13 @@ Partial Class frmAddUser
         Me.txtLastName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gBUserAcc = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.lblPassErr = New System.Windows.Forms.Label()
+        Me.lblPassStr = New System.Windows.Forms.Label()
         Me.txtPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.lblPassStr = New System.Windows.Forms.Label()
-        Me.lblPassErr = New System.Windows.Forms.Label()
+        Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.gBPersonalInfo.SuspendLayout()
         Me.gBUserAcc.SuspendLayout()
@@ -125,6 +126,7 @@ Partial Class frmAddUser
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.btnClose)
         Me.Guna2Panel1.Controls.Add(Me.lblHeader)
         Me.Guna2Panel1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.Guna2Panel1.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 0, 2)
@@ -383,6 +385,29 @@ Partial Class frmAddUser
         Me.gBUserAcc.TabIndex = 32
         Me.gBUserAcc.Text = "User Account"
         '
+        'lblPassErr
+        '
+        Me.lblPassErr.AutoSize = True
+        Me.lblPassErr.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblPassErr.ForeColor = System.Drawing.Color.Red
+        Me.lblPassErr.Location = New System.Drawing.Point(22, 402)
+        Me.lblPassErr.Name = "lblPassErr"
+        Me.lblPassErr.Size = New System.Drawing.Size(174, 17)
+        Me.lblPassErr.TabIndex = 33
+        Me.lblPassErr.Text = "Passwords do not match!"
+        Me.lblPassErr.Visible = False
+        '
+        'lblPassStr
+        '
+        Me.lblPassStr.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblPassStr.ForeColor = System.Drawing.Color.Red
+        Me.lblPassStr.Location = New System.Drawing.Point(22, 278)
+        Me.lblPassStr.Name = "lblPassStr"
+        Me.lblPassStr.Size = New System.Drawing.Size(347, 17)
+        Me.lblPassStr.TabIndex = 82
+        Me.lblPassStr.Text = "Password must be 8+ characters & vbCrLf & with letters and numbers"
+        Me.lblPassStr.Visible = False
+        '
         'txtPass
         '
         Me.txtPass.Animated = True
@@ -453,28 +478,15 @@ Partial Class frmAddUser
         Me.Label7.TabIndex = 31
         Me.Label7.Text = "Username"
         '
-        'lblPassStr
+        'btnClose
         '
-        Me.lblPassStr.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblPassStr.ForeColor = System.Drawing.Color.Red
-        Me.lblPassStr.Location = New System.Drawing.Point(22, 278)
-        Me.lblPassStr.Name = "lblPassStr"
-        Me.lblPassStr.Size = New System.Drawing.Size(347, 17)
-        Me.lblPassStr.TabIndex = 82
-        Me.lblPassStr.Text = "Password must be 8+ characters & vbCrLf & with letters and numbers"
-        Me.lblPassStr.Visible = False
-        '
-        'lblPassErr
-        '
-        Me.lblPassErr.AutoSize = True
-        Me.lblPassErr.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblPassErr.ForeColor = System.Drawing.Color.Red
-        Me.lblPassErr.Location = New System.Drawing.Point(22, 402)
-        Me.lblPassErr.Name = "lblPassErr"
-        Me.lblPassErr.Size = New System.Drawing.Size(174, 17)
-        Me.lblPassErr.TabIndex = 33
-        Me.lblPassErr.Text = "Passwords do not match!"
-        Me.lblPassErr.Visible = False
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClose.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnClose.IconColor = System.Drawing.Color.White
+        Me.btnClose.Location = New System.Drawing.Point(385, 26)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(45, 29)
+        Me.btnClose.TabIndex = 17
         '
         'frmAddUser
         '
@@ -482,10 +494,10 @@ Partial Class frmAddUser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(924, 762)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.gBUserAcc)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.gBPersonalInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -527,4 +539,5 @@ Partial Class frmAddUser
     Friend WithEvents Label7 As Label
     Friend WithEvents lblPassStr As Label
     Friend WithEvents lblPassErr As Label
+    Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2ControlBox
 End Class

@@ -177,7 +177,7 @@ Partial Class frmViewTransaction
         Me.Guna2ControlBox1.BorderRadius = 8
         Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Gainsboro
         Me.Guna2ControlBox1.IconColor = System.Drawing.Color.Black
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(578, 21)
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(568, 21)
         Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
         Me.Guna2ControlBox1.TabIndex = 17
@@ -205,7 +205,7 @@ Partial Class frmViewTransaction
         Me.txtNotes.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNotes.PlaceholderText = "Please fill in"
         Me.txtNotes.SelectedText = ""
-        Me.txtNotes.Size = New System.Drawing.Size(557, 289)
+        Me.txtNotes.Size = New System.Drawing.Size(568, 289)
         Me.txtNotes.TabIndex = 49
         '
         'txtFileName

@@ -32,7 +32,7 @@ Public Class frmAddUser
                 .Parameters.Clear()
                 .CommandText = "procUpdateFile"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_id", transactionID)
+                .Parameters.AddWithValue("@p_id", userID)
                 .Parameters.AddWithValue("@p_name", txtFirstName.Text)
                 '.Parameters.AddWithValue("@p_description", txtDescription.Text)
                 .Parameters.AddWithValue("@p_location", txtConfirmPass.Text)
@@ -254,4 +254,6 @@ Public Class frmAddUser
 
 
     End Sub
+
+
 End Class

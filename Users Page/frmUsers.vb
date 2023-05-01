@@ -69,7 +69,119 @@ Public Class frmUsers
     End Sub
 
     Private Sub grdUsers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdUsers.CellContentClick
+        colName = grdUsers.Columns(e.ColumnIndex).Name
+        userID = CInt(grdUsers.CurrentRow.Cells(1).Value.ToString)
 
+        '-- EDIT
+
+        If colName = "edit" Then
+
+            Try
+                'procGetSelectedResident()
+                clearControls(frmAddFile)
+
+                With frmAddFile
+                    .btnUpdate.Visible = True
+                    .btnSubmit.Visible = False
+                    .lblHeader.Text = "Update File"
+
+                    .txtName.Text = grdUsers.CurrentRow.Cells(2).Value.ToString()
+                    .txtDescription.Text = grdUsers.CurrentRow.Cells(3).Value.ToString()
+                    .txtLocation.Text = grdUsers.CurrentRow.Cells(4).Value.ToString()
+
+                    Dim idx As Integer
+
+                    If grdUsers.CurrentRow.Cells(5).Value.ToString().Equals("Available") Then
+                        idx = 0
+                    Else
+                        idx = 1
+                    End If
+
+                    .cmbStatus.SelectedIndex = idx
+
+                End With
+                displayFormAsModal(frmMain, frmAddFile)
+                procDisplayAllUsers()
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
+            'If txtSearch.Text.Length > 0 And chkAuto.Checked = False Then
+            '    btnSearch.PerformClick()
+            'End If
+        End If
+
+
+
+        '-- DELETE 
+
+        If colName = "delete" Then
+
+
+            Try
+                If MessageBox.Show("Are you sure you want to delete the selected record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    ' Perform the deletion
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "procDeleteFile-"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_id", userID)
+                        .ExecuteNonQuery()
+                        MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                        procInsertLogEvent("Delete File", grdUsers.CurrentRow.Cells(2).Value.ToString)
+
+                    End With
+                    ' refresh/reload customer records in data grid view
+                    procDisplayAllUsers()
+                End If
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
+
+
+        End If
+
+        '-- VIEW
+
+        If colName = "view" Then
+            Try
+
+
+                With frmAddUser
+
+                    .Size = New Size(466, 742)
+                    .btnCancel.Visible = False
+                    .btnClose.Visible = True
+                    .lblHeader.Text = "User "
+
+
+                    .txtFirstName.Text = grdUsers.CurrentRow.Cells(4).Value.ToString()
+                    .txtLastName.Text = grdUsers.CurrentRow.Cells(5).Value.ToString()
+                    .txtPhoneNo.Text = grdUsers.CurrentRow.Cells(8).Value.ToString()
+                    .txtEmailAdd.Text = grdUsers.CurrentRow.Cells(9).Value.ToString()
+
+                End With
+
+                displayFormAsModal(frmMain, frmAddUser)
+
+                With frmAddUser
+                    .Size = New Size(924, 762)
+                    .btnCancel.Visible = True
+                    .lblHeader.Text = "Add New User"
+                    .btnClose.Visible = False
+                End With
+
+
+
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
+
+
+            'If txtSearch.Text.Length > 0 And chkAuto.Checked = False And colName <> "Delete" Then
+            '    btnSearch.PerformClick()
+            'End If
+        End If
     End Sub
 
     Private Sub grdUsers_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles grdUsers.CellFormatting
