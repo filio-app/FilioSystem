@@ -78,29 +78,34 @@ Public Class frmUsers
 
             Try
                 'procGetSelectedResident()
-                clearControls(frmAddFile)
+                clearControls(frmAddUser)
 
-                With frmAddFile
+                With frmAddUser
                     .btnUpdate.Visible = True
                     .btnSubmit.Visible = False
-                    .lblHeader.Text = "Update File"
+                    .lblHeader.Text = "Update User"
 
-                    .txtName.Text = grdUsers.CurrentRow.Cells(2).Value.ToString()
-                    .txtDescription.Text = grdUsers.CurrentRow.Cells(3).Value.ToString()
-                    .txtLocation.Text = grdUsers.CurrentRow.Cells(4).Value.ToString()
+                    .txtFirstName.Text = grdUsers.CurrentRow.Cells(4).Value.ToString()
+                    .txtLastName.Text = grdUsers.CurrentRow.Cells(5).Value.ToString()
+                    .txtPhoneNo.Text = grdUsers.CurrentRow.Cells(8).Value.ToString()
+                    .txtEmailAdd.Text = grdUsers.CurrentRow.Cells(9).Value.ToString()
 
-                    Dim idx As Integer
+                    .txtUsername.Text = grdUsers.CurrentRow.Cells(3).Value.ToString()
 
-                    If grdUsers.CurrentRow.Cells(5).Value.ToString().Equals("Available") Then
-                        idx = 0
+                    If (grdUsers.CurrentRow.Cells(6).Value = 1) Then
+                        .cmbRole.SelectedIndex = 0
                     Else
-                        idx = 1
+                        .cmbRole.SelectedIndex = 1
                     End If
 
-                    .cmbStatus.SelectedIndex = idx
+                    ' 23 67
+
+
+
+
 
                 End With
-                displayFormAsModal(frmMain, frmAddFile)
+                displayFormAsModal(frmMain, frmAddUser)
                 procDisplayAllUsers()
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
@@ -147,13 +152,7 @@ Public Class frmUsers
             Try
 
 
-                With frmAddUser
-
-                    .Size = New Size(466, 742)
-                    .btnCancel.Visible = False
-                    .btnClose.Visible = True
-                    .lblHeader.Text = "User "
-
+                With frmViewUser
 
                     .txtFirstName.Text = grdUsers.CurrentRow.Cells(4).Value.ToString()
                     .txtLastName.Text = grdUsers.CurrentRow.Cells(5).Value.ToString()
@@ -162,14 +161,9 @@ Public Class frmUsers
 
                 End With
 
-                displayFormAsModal(frmMain, frmAddUser)
+                displayFormAsModal(frmMain, frmViewUser)
 
-                With frmAddUser
-                    .Size = New Size(924, 762)
-                    .btnCancel.Visible = True
-                    .lblHeader.Text = "Add New User"
-                    .btnClose.Visible = False
-                End With
+
 
 
 
