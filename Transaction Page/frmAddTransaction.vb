@@ -37,6 +37,7 @@
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             'TODO: (frmAddTransaction) add log event
+            'TODO: (frmAddTransaction) should update the file and set it to issued or available
             'procInsertLogEvent("Add File", txtName.Text)
 
             Me.Close()

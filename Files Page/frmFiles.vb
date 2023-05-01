@@ -69,7 +69,7 @@ Public Class frmFiles
 
     Private Sub grdFiles_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdFiles.CellContentClick
         colName = grdFiles.Columns(e.ColumnIndex).Name
-        fileID = CInt(grdFiles.CurrentRow.Cells(1).Value.ToString)
+        transactionID = CInt(grdFiles.CurrentRow.Cells(1).Value.ToString)
 
         '-- EDIT
 
@@ -123,7 +123,7 @@ Public Class frmFiles
                         .Parameters.Clear()
                         .CommandText = "procDeleteFile"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", fileID)
+                        .Parameters.AddWithValue("@p_id", transactionID)
                         .ExecuteNonQuery()
                         MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 

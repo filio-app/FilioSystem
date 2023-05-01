@@ -315,6 +315,12 @@
     <Compile Include="Transaction Page\frmTransaction.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Transaction Page\frmViewTransaction.Designer.vb">
+      <DependentUpon>frmViewTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Page\frmViewTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Users Page\frmAddUser.Designer.vb">
       <DependentUpon>frmAddUser.vb</DependentUpon>
     </Compile>
@@ -375,6 +381,9 @@
     <EmbeddedResource Include="Transaction Page\frmTransaction.resx">
       <DependentUpon>frmTransaction.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Page\frmViewTransaction.resx">
+      <DependentUpon>frmViewTransaction.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users Page\frmAddUser.resx">
       <DependentUpon>frmAddUser.vb</DependentUpon>
     </EmbeddedResource>
@@ -420,7 +429,7 @@
     <Content Include="Assets\user-default.png" />
     <Content Include="Assets\user-mng-checked.png" />
     <Content Include="Assets\user-mng-default.png" />
-    <Content Include="TextFile1.txt" />
+    <Content Include="Notes.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
