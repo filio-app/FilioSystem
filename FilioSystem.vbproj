@@ -333,6 +333,12 @@
     <Compile Include="Users Page\frmUsers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Users Page\frmViewUser.Designer.vb">
+      <DependentUpon>frmViewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users Page\frmViewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Components\DataGridView.resx">
@@ -389,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users Page\frmUsers.resx">
       <DependentUpon>frmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Page\frmViewUser.resx">
+      <DependentUpon>frmViewUser.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
