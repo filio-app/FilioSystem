@@ -29,6 +29,9 @@ Module ModGlobalVariable
     Public tempFileID As String
     Public tempFileName As String
 
+    ' For showing specific files
+    Public transactionType As String
+
 
 
 

@@ -5,9 +5,7 @@
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        Dim type As String = cmbType.Text
-
-
+        transactionType = cmbType.Text
 
         With frmFilesBrowse
             .ShowInTaskbar = False
@@ -32,6 +30,10 @@
                 .Parameters.AddWithValue("@p_type", cmbType.Text)
                 .Parameters.AddWithValue("@p_notes", txtNotes.Text)
                 .ExecuteNonQuery()
+
+                'UPDATE File to Issued or Available
+                procUpdateFileStatus(cmbType.Text)
+
             End With
 
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -45,4 +47,29 @@
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
+    Private Sub procUpdateFileStatus(ByVal type As String)
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "procUpdateFileStatus"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_id", tempFileID)
+
+                If type.Equals("Issue") Then
+                    .Parameters.AddWithValue("@p_status", "Issued")
+                Else
+                    .Parameters.AddWithValue("@p_status", "Available")
+                End If
+
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+
 End Class

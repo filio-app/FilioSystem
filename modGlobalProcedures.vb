@@ -96,7 +96,7 @@ Module modGlobalProcedures
 
     End Sub
 
-    Public Function CheckPasswordStrength(password As String) As Boolean
+    Public Function CheckPasswordStrength(ByVal password As String) As Boolean
         Dim regex As Regex
         ' Check minimum length of 8 characters and combination of letters and numbers
         regex = New Regex("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")
