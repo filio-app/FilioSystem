@@ -49,7 +49,6 @@ Partial Class frmAddUser
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.gBPersonalInfo.SuspendLayout()
         Me.gBUserAcc.SuspendLayout()
@@ -57,7 +56,7 @@ Partial Class frmAddUser
         '
         'Guna2Elipse1
         '
-        Me.Guna2Elipse1.BorderRadius = 40
+        Me.Guna2Elipse1.BorderRadius = 33
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Label2
@@ -126,7 +125,6 @@ Partial Class frmAddUser
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Controls.Add(Me.btnClose)
         Me.Guna2Panel1.Controls.Add(Me.lblHeader)
         Me.Guna2Panel1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.Guna2Panel1.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 0, 2)
@@ -478,16 +476,6 @@ Partial Class frmAddUser
         Me.Label7.TabIndex = 31
         Me.Label7.Text = "Username"
         '
-        'btnClose
-        '
-        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClose.FillColor = System.Drawing.Color.FromArgb(CType(CType(139, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnClose.IconColor = System.Drawing.Color.White
-        Me.btnClose.Location = New System.Drawing.Point(385, 26)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(45, 29)
-        Me.btnClose.TabIndex = 17
-        '
         'frmAddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -539,5 +527,4 @@ Partial Class frmAddUser
     Friend WithEvents Label7 As Label
     Friend WithEvents lblPassStr As Label
     Friend WithEvents lblPassErr As Label
-    Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2ControlBox
 End Class

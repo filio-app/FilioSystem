@@ -327,6 +327,24 @@
     <Compile Include="Users Page\frmAddUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Users Page\frmUpdateUserAccount.Designer.vb">
+      <DependentUpon>frmUpdateUserAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users Page\frmUpdateUserAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Page\frmUpdateUserInformation.Designer.vb">
+      <DependentUpon>frmUpdateUserInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users Page\frmUpdateUserInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Page\frmUpdateUser.Designer.vb">
+      <DependentUpon>frmUpdateUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users Page\frmUpdateUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Users Page\frmUsers.Designer.vb">
       <DependentUpon>frmUsers.vb</DependentUpon>
     </Compile>
@@ -392,6 +410,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users Page\frmAddUser.resx">
       <DependentUpon>frmAddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Page\frmUpdateUserAccount.resx">
+      <DependentUpon>frmUpdateUserAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Page\frmUpdateUserInformation.resx">
+      <DependentUpon>frmUpdateUserInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Page\frmUpdateUser.resx">
+      <DependentUpon>frmUpdateUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users Page\frmUsers.resx">
       <DependentUpon>frmUsers.vb</DependentUpon>

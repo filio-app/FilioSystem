@@ -17,6 +17,7 @@ Module ModGlobalVariable
 
     Public row As Integer
 
+    ' For Data Grid View
     Public colName As String
     Public userID As Integer
 
@@ -31,6 +32,9 @@ Module ModGlobalVariable
 
     ' For showing specific files
     Public transactionType As String
+
+    ' For updating user information
+    Public tempRole As String
 
 
 

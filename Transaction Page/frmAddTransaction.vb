@@ -34,6 +34,7 @@
                 'UPDATE File to Issued or Available
                 procUpdateFileStatus(cmbType.Text)
 
+                frmFiles.Dispose()
             End With
 
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -61,7 +61,7 @@ Public Class frmAddUser
 
             procInsertUser()
 
-            procInsertEmployee()
+            procInsertAdminOrEmployee()
 
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -96,7 +96,7 @@ Public Class frmAddUser
     End Sub
 
 
-    Private Sub procInsertEmployee()
+    Private Sub procInsertAdminOrEmployee()
         Try
 
             With command

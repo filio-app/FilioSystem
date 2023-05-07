@@ -71,6 +71,8 @@ Public Class frmUsers
     Private Sub grdUsers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdUsers.CellContentClick
         colName = grdUsers.Columns(e.ColumnIndex).Name
         userID = CInt(grdUsers.CurrentRow.Cells(1).Value.ToString)
+        tempRole = grdUsers.CurrentRow.Cells(7).Value.ToString
+
 
         '-- EDIT
 
@@ -78,18 +80,18 @@ Public Class frmUsers
 
             Try
                 'procGetSelectedResident()
-                clearControls(frmAddUser)
+                clearControls(frmUpdateUserInformation)
 
-                With frmAddUser
-                    .btnUpdate.Visible = True
-                    .btnSubmit.Visible = False
-                    .lblHeader.Text = "Update User"
+                With frmUpdateUserInformation
 
                     .txtFirstName.Text = grdUsers.CurrentRow.Cells(4).Value.ToString()
                     .txtLastName.Text = grdUsers.CurrentRow.Cells(5).Value.ToString()
                     .txtPhoneNo.Text = grdUsers.CurrentRow.Cells(8).Value.ToString()
                     .txtEmailAdd.Text = grdUsers.CurrentRow.Cells(9).Value.ToString()
 
+                End With
+
+                With frmUpdateUserAccount
                     .txtUsername.Text = grdUsers.CurrentRow.Cells(3).Value.ToString()
 
                     If (grdUsers.CurrentRow.Cells(6).Value = 1) Then
@@ -97,19 +99,16 @@ Public Class frmUsers
                     Else
                         .cmbRole.SelectedIndex = 1
                     End If
-
-                    ' 23 67
-
-
-
-
-
                 End With
-                displayFormAsModal(frmMain, frmAddUser)
+
+
+                displayFormAsModal(frmMain, frmUpdateUser)
+                frmUpdateUser.Close()
                 procDisplayAllUsers()
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
             End Try
+
             'If txtSearch.Text.Length > 0 And chkAuto.Checked = False Then
             '    btnSearch.PerformClick()
             'End If
