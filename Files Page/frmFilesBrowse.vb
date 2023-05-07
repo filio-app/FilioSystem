@@ -74,32 +74,50 @@ Public Class frmFilesBrowse
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
             End With
-            If datFilio.Rows.Count > 0 Then
-                grdFiles.RowCount = datFilio.Rows.Count
+
+            '' Filter the DataTable based on the status column
+            Dim filteredDatFilio As DataTable
+            If transactionType.Equals("Issue") Then
+                filteredDatFilio = datFilio.Select("status = 'Available'").CopyToDataTable()
+            Else
+                filteredDatFilio = datFilio.Select("status = 'Issued'").CopyToDataTable()
+            End If
+
+            Try
+                ' your code to fill the DataTable here '
+            Catch ex As System.Data.StrongTypingException
+                ' If the DataTable has no rows, display a custom message '
+                MessageBox.Show("There are no records to display.", "No Records Found", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
+
+
+            If filteredDatFilio.Rows.Count > 0 Then
+                grdFiles.RowCount = filteredDatFilio.Rows.Count
                 row = 0
-                While Not datFilio.Rows.Count - 1 < row
+                While Not filteredDatFilio.Rows.Count - 1 < row
                     With grdFiles
-                        .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
-                        .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("name").ToString
-                        .Rows(row).Cells(3).Value = datFilio.Rows(row).Item("description").ToString
-                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("location").ToString
-                        .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("status").ToString
-                        .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("date_added").ToString
-                        .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("date_modified").ToString
+                        .Rows(row).Cells(1).Value = filteredDatFilio.Rows(row).Item("id").ToString
+                        .Rows(row).Cells(2).Value = filteredDatFilio.Rows(row).Item("name").ToString
+                        .Rows(row).Cells(3).Value = filteredDatFilio.Rows(row).Item("description").ToString
+                        .Rows(row).Cells(4).Value = filteredDatFilio.Rows(row).Item("location").ToString
+                        .Rows(row).Cells(5).Value = filteredDatFilio.Rows(row).Item("status").ToString
+                        .Rows(row).Cells(6).Value = filteredDatFilio.Rows(row).Item("date_added").ToString
+                        .Rows(row).Cells(7).Value = filteredDatFilio.Rows(row).Item("date_modified").ToString
                     End With
                     row += 1
                 End While
-
             Else
                 grdFiles.Rows.Clear()
                 MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-
             End If
+
+
+            filteredDatFilio.Dispose()
             datFilio.Dispose()
             sqlAdapterFilio.Dispose()
 
         Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
+            MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
 
     End Sub

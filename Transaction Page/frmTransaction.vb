@@ -50,6 +50,7 @@ Public Class frmTransaction
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        clearControls(frmAddTransaction)
         displayFormAsModal(frmMain, frmAddTransaction)
         procDisplayAllTransactions()
     End Sub
