@@ -20,6 +20,7 @@ Module ModGlobalVariable
     ' For Data Grid View
     Public colName As String
     Public userID As Integer
+    Public locationID As Integer 'For updating location
 
     Public currUsername As String
     Public currUserID As Integer = 1 'TODO: get user ID 

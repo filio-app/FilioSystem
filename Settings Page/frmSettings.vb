@@ -64,4 +64,22 @@ Public Class frmSettings
             End Try
         End If
     End Sub
+
+    Private Sub btnBackupAndRestore_Click(sender As Object, e As EventArgs) Handles btnBackupAndRestore.Click
+        BunifuPagesSettings.SetPage(1)
+    End Sub
+
+    Private Sub btnLocation_Click(sender As Object, e As EventArgs) Handles btnLocation.Click
+        BunifuPagesSettings.SetPage(0)
+        With frmLocation
+            .TopLevel = False
+            panelLocation.Controls.Add(frmLocation)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
+    Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnLocation.PerformClick()
+    End Sub
 End Class

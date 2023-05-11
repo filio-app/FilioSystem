@@ -297,6 +297,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Settings Page\frmAddLocation.Designer.vb">
+      <DependentUpon>frmAddLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Page\frmAddLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings Page\frmLocation.Designer.vb">
+      <DependentUpon>frmLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Page\frmLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Settings Page\frmSettings.Designer.vb">
       <DependentUpon>frmSettings.vb</DependentUpon>
     </Compile>
@@ -395,6 +407,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Page\frmAddLocation.resx">
+      <DependentUpon>frmAddLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Page\frmLocation.resx">
+      <DependentUpon>frmLocation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings Page\frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>
