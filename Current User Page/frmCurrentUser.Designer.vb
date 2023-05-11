@@ -39,7 +39,6 @@ Partial Class frmCurrentUser
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.panelChangePass.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -64,7 +63,7 @@ Partial Class frmCurrentUser
         Me.panelChangePass.Controls.Add(Me.txtUsername)
         Me.panelChangePass.Controls.Add(Me.btnCancel)
         Me.panelChangePass.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.panelChangePass.Location = New System.Drawing.Point(327, 162)
+        Me.panelChangePass.Location = New System.Drawing.Point(295, 193)
         Me.panelChangePass.Name = "panelChangePass"
         Me.panelChangePass.Size = New System.Drawing.Size(610, 435)
         Me.panelChangePass.TabIndex = 0
@@ -295,22 +294,12 @@ Partial Class frmCurrentUser
         Me.Guna2Elipse2.BorderRadius = 10
         Me.Guna2Elipse2.TargetControl = Me.panelChangePass
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(168, 69)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(188, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Profile Information / Change Password"
-        '
         'frmCurrentUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.panelChangePass)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCurrentUser"
@@ -318,7 +307,6 @@ Partial Class frmCurrentUser
         Me.panelChangePass.ResumeLayout(False)
         Me.panelChangePass.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -333,7 +321,6 @@ Partial Class frmCurrentUser
     Friend WithEvents txtCurrentPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtConfirmNewPass As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents lblPassErr As Label
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button

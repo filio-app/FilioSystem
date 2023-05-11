@@ -64,7 +64,6 @@ Partial Class frmMain
         Me.panelSettings = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.currentUser = New System.Windows.Forms.TabPage()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
         Me.panelTopLogo.SuspendLayout()
@@ -513,10 +512,10 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.settings
-        Me.bunifuPagesMain.PageIndex = 5
-        Me.bunifuPagesMain.PageName = "settings"
-        Me.bunifuPagesMain.PageTitle = "settings"
+        Me.bunifuPagesMain.Page = Me.currentUser
+        Me.bunifuPagesMain.PageIndex = 6
+        Me.bunifuPagesMain.PageName = "currentUser"
+        Me.bunifuPagesMain.PageTitle = "currentUser"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -680,23 +679,12 @@ Partial Class frmMain
         'currentUser
         '
         Me.currentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.currentUser.Controls.Add(Me.Label3)
         Me.currentUser.Controls.Add(Me.panelCurrentUser)
         Me.currentUser.Location = New System.Drawing.Point(4, 4)
         Me.currentUser.Name = "currentUser"
         Me.currentUser.Size = New System.Drawing.Size(1392, 858)
         Me.currentUser.TabIndex = 5
         Me.currentUser.Text = "currentUser"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label3.Location = New System.Drawing.Point(44, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 26)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "currentUser"
         '
         'panelCurrentUser
         '
@@ -753,7 +741,6 @@ Partial Class frmMain
         Me.panelSettings.ResumeLayout(False)
         Me.panelSettings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
-        Me.currentUser.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -795,7 +782,6 @@ Partial Class frmMain
     Friend WithEvents panelCurrentUser As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents btnTransaction As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents transaction As TabPage
     Friend WithEvents hiddenPage As TabPage
