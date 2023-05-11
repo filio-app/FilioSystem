@@ -62,6 +62,8 @@ Public Class frmAddFile
 
     Private Sub frmAddFile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbLocation.Items.Clear()
+        locationTable.Clear()
+
         fillDataComboLocation()
         If lblHeader.Text = "Update File" Then
             cmbLocation.SelectedIndex = cmbLocation.Items.IndexOf(locationName)
@@ -85,6 +87,9 @@ Public Class frmAddFile
                     row = 0
                     While Not datFilio.Rows.Count - 1 < row
                         cmbLocation.Items.Add("" & datFilio.Rows(row).Item("name").ToString)
+
+                        locationTable.Add(datFilio.Rows(row).Item("name").ToString, CInt(datFilio.Rows(row).Item("id")))
+
                         row = row + 1
                     End While
                 End If
@@ -93,5 +98,11 @@ Public Class frmAddFile
         Catch ex As Exception
             MessageBox.Show("" + ex.Message)
         End Try
+    End Sub
+
+    Private Sub cmbLocation_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbLocation.SelectedIndexChanged
+        ' Get the ID of the selected location from the HashTable
+        Dim selectedName As String = cmbLocation.SelectedItem.ToString()
+        Dim selectedId As Integer = locationTable(selectedName)
     End Sub
 End Class

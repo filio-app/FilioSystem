@@ -40,6 +40,9 @@ Module ModGlobalVariable
     'For Selecting purok name in view and update
     Public locationName As String
 
+    'For adding and editing a location we use hashtable to get the id
+    Public locationTable As New Hashtable()
+
 
     '=================================================='
 
