@@ -69,7 +69,7 @@ Public Class frmFiles
 
     Private Sub grdFiles_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdFiles.CellContentClick
         colName = grdFiles.Columns(e.ColumnIndex).Name
-        fileID = CInt(grdFiles.CurrentRow.Cells(1).Value.ToString)
+        userID = CInt(grdFiles.CurrentRow.Cells(1).Value.ToString)
 
         '-- EDIT
 
@@ -123,9 +123,12 @@ Public Class frmFiles
                         .Parameters.Clear()
                         .CommandText = "procDeleteFile"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", fileID)
+                        .Parameters.AddWithValue("@p_id", userID)
                         .ExecuteNonQuery()
                         MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                        procInsertLogEvent("Delete File", grdFiles.CurrentRow.Cells(2).Value.ToString)
+
                     End With
                     ' refresh/reload customer records in data grid view
                     procDisplayAllFiles()
@@ -176,4 +179,71 @@ Public Class frmFiles
             'End If
         End If
     End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        procAutoDisplayFilesBySearchType(cmbSearchType.Text, txtSearch.Text)
+    End Sub
+
+    '=========================== Search Functionality
+    Private Sub procAutoDisplayFilesBySearchType(ByVal p_searchType As String, ByVal p_searchText As String)
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procAutoDisplayFilesBySearchType"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_search_type", p_searchType)
+                .Parameters.AddWithValue("@p_value", p_searchText)
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+            End With
+            If datFilio.Rows.Count > 0 Then
+                grdFiles.RowCount = datFilio.Rows.Count
+                row = 0
+                While Not datFilio.Rows.Count - 1 < row
+                    With grdFiles
+                        .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
+                        .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("name").ToString
+                        .Rows(row).Cells(3).Value = datFilio.Rows(row).Item("description").ToString
+                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("location").ToString
+                        .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("status").ToString
+                        .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("date_added").ToString
+                        .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("date_modified").ToString
+                    End With
+                    row += 1
+                End While
+
+            Else
+                grdFiles.Rows.Clear()
+                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+            End If
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub grdFiles_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles grdFiles.CellFormatting
+        colName = grdFiles.Columns(e.ColumnIndex).Name
+        If colName = "delete" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdFiles(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "Delete" ' Set the tooltip tex
+        End If
+
+        If colName = "edit" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdFiles(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "Edit/Update" ' Set the tooltip text
+        End If
+
+        If colName = "view" Then ' Check if the cell is an image cell
+            Dim cell As DataGridViewImageCell = grdFiles(e.ColumnIndex, e.RowIndex)
+            cell.ToolTipText = "View" ' Set the tooltip text
+        End If
+    End Sub
+
+
 End Class

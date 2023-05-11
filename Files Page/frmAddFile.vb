@@ -24,6 +24,8 @@ Public Class frmAddFile
 
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+            procInsertLogEvent("Add File", txtName.Text)
+
             Me.Close()
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
@@ -40,7 +42,7 @@ Public Class frmAddFile
                 .Parameters.Clear()
                 .CommandText = "procUpdateFile"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_id", fileID)
+                .Parameters.AddWithValue("@p_id", userID)
                 .Parameters.AddWithValue("@p_name", txtName.Text)
                 .Parameters.AddWithValue("@p_description", txtDescription.Text)
                 .Parameters.AddWithValue("@p_location", txtLocation.Text)
@@ -49,6 +51,8 @@ Public Class frmAddFile
             End With
 
             MessageBox.Show("Record Successfully Updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            procInsertLogEvent("Edit File", txtName.Text)
 
             Me.Close()
         Catch ex As Exception

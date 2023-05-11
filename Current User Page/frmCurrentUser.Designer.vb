@@ -25,6 +25,7 @@ Partial Class frmCurrentUser
         Me.components = New System.ComponentModel.Container()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelChangePass = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblPassStr = New System.Windows.Forms.Label()
         Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
         Me.btnEdit = New Guna.UI2.WinForms.Guna2Button()
         Me.lblPassErr = New System.Windows.Forms.Label()
@@ -49,6 +50,7 @@ Partial Class frmCurrentUser
         'panelChangePass
         '
         Me.panelChangePass.BackColor = System.Drawing.Color.White
+        Me.panelChangePass.Controls.Add(Me.lblPassStr)
         Me.panelChangePass.Controls.Add(Me.btnUpdate)
         Me.panelChangePass.Controls.Add(Me.btnEdit)
         Me.panelChangePass.Controls.Add(Me.lblPassErr)
@@ -61,10 +63,23 @@ Partial Class frmCurrentUser
         Me.panelChangePass.Controls.Add(Me.Label16)
         Me.panelChangePass.Controls.Add(Me.txtUsername)
         Me.panelChangePass.Controls.Add(Me.btnCancel)
+        Me.panelChangePass.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.panelChangePass.Location = New System.Drawing.Point(327, 162)
         Me.panelChangePass.Name = "panelChangePass"
-        Me.panelChangePass.Size = New System.Drawing.Size(463, 435)
+        Me.panelChangePass.Size = New System.Drawing.Size(610, 435)
         Me.panelChangePass.TabIndex = 0
+        '
+        'lblPassStr
+        '
+        Me.lblPassStr.AutoSize = True
+        Me.lblPassStr.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblPassStr.ForeColor = System.Drawing.Color.Red
+        Me.lblPassStr.Location = New System.Drawing.Point(207, 257)
+        Me.lblPassStr.Name = "lblPassStr"
+        Me.lblPassStr.Size = New System.Drawing.Size(391, 17)
+        Me.lblPassStr.TabIndex = 81
+        Me.lblPassStr.Text = "Password must be 8+ characters with letters and numbers"
+        Me.lblPassStr.Visible = False
         '
         'btnUpdate
         '
@@ -78,7 +93,7 @@ Partial Class frmCurrentUser
         Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Inter SemiBold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(210, 362)
+        Me.btnUpdate.Location = New System.Drawing.Point(341, 379)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(95, 41)
         Me.btnUpdate.TabIndex = 79
@@ -96,7 +111,7 @@ Partial Class frmCurrentUser
         Me.btnEdit.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnEdit.Font = New System.Drawing.Font("Inter SemiBold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(337, 362)
+        Me.btnEdit.Location = New System.Drawing.Point(468, 379)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(95, 41)
         Me.btnEdit.TabIndex = 78
@@ -107,18 +122,19 @@ Partial Class frmCurrentUser
         Me.lblPassErr.AutoSize = True
         Me.lblPassErr.Font = New System.Drawing.Font("Inter", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblPassErr.ForeColor = System.Drawing.Color.Red
-        Me.lblPassErr.Location = New System.Drawing.Point(207, 301)
+        Me.lblPassErr.Location = New System.Drawing.Point(207, 335)
         Me.lblPassErr.Name = "lblPassErr"
         Me.lblPassErr.Size = New System.Drawing.Size(174, 17)
         Me.lblPassErr.TabIndex = 2
         Me.lblPassErr.Text = "Passwords do not match!"
+        Me.lblPassErr.Visible = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter SemiBold", 12.0!)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(129, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(31, 266)
+        Me.Label3.Location = New System.Drawing.Point(31, 300)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(151, 19)
@@ -140,13 +156,13 @@ Partial Class frmCurrentUser
         Me.txtConfirmNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmNewPass.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtConfirmNewPass.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtConfirmNewPass.Location = New System.Drawing.Point(204, 255)
+        Me.txtConfirmNewPass.Location = New System.Drawing.Point(204, 287)
         Me.txtConfirmNewPass.Margin = New System.Windows.Forms.Padding(5)
         Me.txtConfirmNewPass.Name = "txtConfirmNewPass"
         Me.txtConfirmNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmNewPass.PlaceholderText = ""
         Me.txtConfirmNewPass.SelectedText = ""
-        Me.txtConfirmNewPass.Size = New System.Drawing.Size(228, 41)
+        Me.txtConfirmNewPass.Size = New System.Drawing.Size(359, 41)
         Me.txtConfirmNewPass.TabIndex = 76
         '
         'Label2
@@ -154,7 +170,7 @@ Partial Class frmCurrentUser
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter SemiBold", 12.0!)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(129, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(31, 205)
+        Me.Label2.Location = New System.Drawing.Point(31, 221)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(123, 19)
@@ -176,13 +192,13 @@ Partial Class frmCurrentUser
         Me.txtNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNewPass.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtNewPass.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtNewPass.Location = New System.Drawing.Point(204, 194)
+        Me.txtNewPass.Location = New System.Drawing.Point(204, 211)
         Me.txtNewPass.Margin = New System.Windows.Forms.Padding(5)
         Me.txtNewPass.Name = "txtNewPass"
         Me.txtNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNewPass.PlaceholderText = ""
         Me.txtNewPass.SelectedText = ""
-        Me.txtNewPass.Size = New System.Drawing.Size(228, 41)
+        Me.txtNewPass.Size = New System.Drawing.Size(359, 41)
         Me.txtNewPass.TabIndex = 74
         '
         'Label1
@@ -212,13 +228,13 @@ Partial Class frmCurrentUser
         Me.txtCurrentPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtCurrentPass.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtCurrentPass.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtCurrentPass.Location = New System.Drawing.Point(204, 133)
+        Me.txtCurrentPass.Location = New System.Drawing.Point(204, 135)
         Me.txtCurrentPass.Margin = New System.Windows.Forms.Padding(5)
         Me.txtCurrentPass.Name = "txtCurrentPass"
         Me.txtCurrentPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCurrentPass.PlaceholderText = ""
         Me.txtCurrentPass.SelectedText = ""
-        Me.txtCurrentPass.Size = New System.Drawing.Size(228, 41)
+        Me.txtCurrentPass.Size = New System.Drawing.Size(359, 41)
         Me.txtCurrentPass.TabIndex = 72
         '
         'Label16
@@ -226,7 +242,7 @@ Partial Class frmCurrentUser
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Inter SemiBold", 12.0!)
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(129, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(31, 84)
+        Me.Label16.Location = New System.Drawing.Point(31, 70)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(87, 19)
@@ -242,18 +258,19 @@ Partial Class frmCurrentUser
         Me.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.Enabled = False
         Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtUsername.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtUsername.Location = New System.Drawing.Point(204, 73)
+        Me.txtUsername.Location = New System.Drawing.Point(204, 59)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(5)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUsername.PlaceholderText = ""
         Me.txtUsername.SelectedText = ""
-        Me.txtUsername.Size = New System.Drawing.Size(228, 41)
+        Me.txtUsername.Size = New System.Drawing.Size(359, 41)
         Me.txtUsername.TabIndex = 4
         '
         'btnCancel
@@ -267,7 +284,7 @@ Partial Class frmCurrentUser
         Me.btnCancel.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnCancel.Font = New System.Drawing.Font("Inter SemiBold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(337, 362)
+        Me.btnCancel.Location = New System.Drawing.Point(468, 379)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(95, 41)
         Me.btnCancel.TabIndex = 80
@@ -321,4 +338,5 @@ Partial Class frmCurrentUser
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnCancel As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblPassStr As Label
 End Class

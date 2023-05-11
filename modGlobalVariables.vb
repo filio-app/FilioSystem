@@ -17,16 +17,30 @@ Module ModGlobalVariable
 
     Public row As Integer
 
+    ' For Data Grid View
     Public colName As String
-    Public fileID As Integer
+    Public userID As Integer
 
-
-
+    Public currUsername As String
+    Public currUserID As Integer = 1 'TODO: get user ID 
 
     'Public action As String
 
+    ' For selecting files in add transaction
+    Public tempFileID As String
+    Public tempFileName As String
 
-    'Public residentPhotoPath As String      ' image location / path
-    'Public logoPhotoPath As String
+    ' For showing specific files
+    Public transactionType As String
+
+    ' For updating user information
+    Public tempRole As String
+
+
+
+
+    '=================================================='
+
+    'TODO: DONE -- Should reload the history page if there are events
 
 End Module

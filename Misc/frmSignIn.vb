@@ -18,6 +18,8 @@ Public Class frmSignIn
                 If datFilio.Rows.Count > 0 Then
                     'userName = txtUserName.Text
                     'userType = datBrgy.Rows(0).Item("position").ToString
+                    currUsername = datFilio.Rows(row).Item("username").ToString
+
                     Me.Close()
 
                     txtUsername.Clear()
@@ -37,6 +39,7 @@ Public Class frmSignIn
 
                         .btnLogout.Visible = True
                         .btnCurrentUser.Visible = True
+                        .btnCurrentUser.Text = currUsername
                         .btnDashboard.PerformClick()
 
                     End With

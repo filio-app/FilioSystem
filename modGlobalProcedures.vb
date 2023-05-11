@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 
 Module modGlobalProcedures
 
@@ -21,7 +23,7 @@ Module modGlobalProcedures
 
                 conFilioSys.ConnectionString = strConnectionString
                 conFilioSys.Open()
-                Command.Connection = conFilioSys
+                command.Connection = conFilioSys
                 Return True
             Else
                 conFilioSys.Close()
@@ -49,7 +51,20 @@ Module modGlobalProcedures
             If TypeOf ctrl Is Guna.UI2.WinForms.Guna2TextBox Then
                 CType(ctrl, Guna.UI2.WinForms.Guna2TextBox).Clear()
             ElseIf TypeOf ctrl Is Guna.UI2.WinForms.Guna2ComboBox Then
-                CType(ctrl, Guna.UI2.WinForms.Guna2ComboBox).SelectedIndex = -1
+                CType(ctrl, Guna.UI2.WinForms.Guna2ComboBox).SelectedIndex = 0
+            ElseIf TypeOf ctrl Is CheckBox Then
+                CType(ctrl, CheckBox).Checked = False
+                ' Add more control types as needed
+            End If
+        Next
+    End Sub
+
+    Sub clearControlsInGroupBox(ByVal groupBox As Guna.UI2.WinForms.Guna2GroupBox)
+        For Each ctrl As Control In groupBox.Controls
+            If TypeOf ctrl Is Guna.UI2.WinForms.Guna2TextBox Then
+                CType(ctrl, Guna.UI2.WinForms.Guna2TextBox).Clear()
+            ElseIf TypeOf ctrl Is Guna.UI2.WinForms.Guna2ComboBox Then
+                CType(ctrl, Guna.UI2.WinForms.Guna2ComboBox).SelectedIndex = 0
             ElseIf TypeOf ctrl Is CheckBox Then
                 CType(ctrl, CheckBox).Checked = False
                 ' Add more control types as needed
@@ -81,6 +96,57 @@ Module modGlobalProcedures
         frmModal.Dispose()
 
     End Sub
+
+    Public Function CheckPasswordStrength(ByVal password As String) As Boolean
+        Dim regex As Regex
+        ' Check minimum length of 8 characters and combination of letters and numbers
+        regex = New Regex("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")
+        If regex.IsMatch(password) Then
+            Return True
+        End If
+        Return False
+    End Function
+
+
+
+    Public Sub procInsertLogEvent(ByVal action As String, ByVal target As String)
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procInsertLogEvent"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_user_id", currUserID)
+                .Parameters.AddWithValue("@p_action", action)
+                .Parameters.AddWithValue("@p_target", target)
+                .ExecuteNonQuery()
+            End With
+            frmHistory.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+    Public Sub BackupDatabase(ByVal databaseName As String, ByVal backupPath As String)
+        Try
+            Dim fileName As String = String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", databaseName, DateTime.Now)
+            Dim filePath As String = Path.Combine(backupPath, fileName)
+
+            Using process As New Process()
+                process.StartInfo.FileName = "mysqldump.exe"
+                process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} {3} > ""{4}""", "root", "password", "localhost", databaseName, filePath)
+                process.StartInfo.UseShellExecute = False
+                process.StartInfo.RedirectStandardOutput = True
+                process.Start()
+                process.WaitForExit()
+                MessageBox.Show("Database backup created successfully!")
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error creating database backup: " & ex.Message)
+        End Try
+    End Sub
+
 
 
 
