@@ -47,6 +47,8 @@ Partial Class frmLocation
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblTotalLocations = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.grdLocation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -290,12 +292,36 @@ Partial Class frmLocation
         Me.btnAdd.TabIndex = 4
         Me.btnAdd.Text = "Add"
         '
+        'lblTotalLocations
+        '
+        Me.lblTotalLocations.AutoSize = True
+        Me.lblTotalLocations.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalLocations.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalLocations.Location = New System.Drawing.Point(301, 627)
+        Me.lblTotalLocations.Name = "lblTotalLocations"
+        Me.lblTotalLocations.Size = New System.Drawing.Size(89, 21)
+        Me.lblTotalLocations.TabIndex = 39
+        Me.lblTotalLocations.Text = "60 Users"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(227, 626)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "Showing:"
+        '
         'frmLocation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1378, 678)
+        Me.Controls.Add(Me.lblTotalLocations)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.grdLocation)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -303,6 +329,7 @@ Partial Class frmLocation
         Me.Text = "frmLocation"
         CType(Me.grdLocation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -327,4 +354,6 @@ Partial Class frmLocation
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents delete As DataGridViewImageColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents lblTotalLocations As Label
+    Friend WithEvents Label1 As Label
 End Class

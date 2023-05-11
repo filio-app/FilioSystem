@@ -17,8 +17,8 @@ Public Class frmTransaction
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
-                'TODO: (frmFiles) Add total files as labels
-                'lblTotal.Text = "Total Records : " & datHotel.Rows.Count
+
+                lblTotalTransactions.Text = datFilio.Rows.Count & " Transactions"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdTransaction.RowCount = datFilio.Rows.Count

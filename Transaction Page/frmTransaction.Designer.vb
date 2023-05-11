@@ -47,7 +47,7 @@ Partial Class frmTransaction
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.lblTotalTransactions = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.grdTransaction, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -293,16 +293,16 @@ Partial Class frmTransaction
         Me.DataGridViewImageColumn3.ReadOnly = True
         Me.DataGridViewImageColumn3.Width = 25
         '
-        'lblTotalFiles
+        'lblTotalTransactions
         '
-        Me.lblTotalFiles.AutoSize = True
-        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalFiles.Location = New System.Drawing.Point(91, 777)
-        Me.lblTotalFiles.Name = "lblTotalFiles"
-        Me.lblTotalFiles.Size = New System.Drawing.Size(151, 21)
-        Me.lblTotalFiles.TabIndex = 37
-        Me.lblTotalFiles.Text = "60 Transactions"
+        Me.lblTotalTransactions.AutoSize = True
+        Me.lblTotalTransactions.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalTransactions.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalTransactions.Location = New System.Drawing.Point(91, 777)
+        Me.lblTotalTransactions.Name = "lblTotalTransactions"
+        Me.lblTotalTransactions.Size = New System.Drawing.Size(151, 21)
+        Me.lblTotalTransactions.TabIndex = 37
+        Me.lblTotalTransactions.Text = "60 Transactions"
         '
         'Label1
         '
@@ -321,7 +321,7 @@ Partial Class frmTransaction
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
-        Me.Controls.Add(Me.lblTotalFiles)
+        Me.Controls.Add(Me.lblTotalTransactions)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.grdTransaction)
@@ -355,6 +355,6 @@ Partial Class frmTransaction
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
-    Friend WithEvents lblTotalFiles As Label
+    Friend WithEvents lblTotalTransactions As Label
     Friend WithEvents Label1 As Label
 End Class

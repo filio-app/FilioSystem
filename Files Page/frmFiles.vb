@@ -19,7 +19,7 @@ Public Class frmFiles
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
                 'TODO: (frmFiles) Add total files as labels
-                'lblTotal.Text = "Total Records : " & datHotel.Rows.Count
+                lblTotalFiles.Text = datFilio.Rows.Count & " Files"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdFiles.RowCount = datFilio.Rows.Count
@@ -197,9 +197,11 @@ Public Class frmFiles
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
+                lblTotalFiles.Text = datFilio.Rows.Count & " Files"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdFiles.RowCount = datFilio.Rows.Count
+                lblTotalFiles.Text = datFilio.Rows.Count & " Files"
                 row = 0
                 While Not datFilio.Rows.Count - 1 < row
                     With grdFiles

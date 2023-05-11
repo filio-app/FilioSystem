@@ -16,8 +16,8 @@ Public Class frmUsers
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
-                'TODO: (frmFiles) Add total files as labels
-                'lblTotal.Text = "Total Records : " & datHotel.Rows.Count
+
+                lblTotalUsers.Text = datFilio.Rows.Count & " Users"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdUsers.RowCount = datFilio.Rows.Count
