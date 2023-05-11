@@ -50,6 +50,8 @@ Partial Class frmUsers
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.grdUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +62,7 @@ Partial Class frmUsers
         'btnAdd
         '
         Me.btnAdd.Animated = True
-        Me.btnAdd.BorderRadius = 8
+        Me.btnAdd.BorderRadius = 10
         Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -68,11 +70,11 @@ Partial Class frmUsers
         Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(1064, 92)
+        Me.btnAdd.Location = New System.Drawing.Point(23, 24)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(113, 48)
+        Me.btnAdd.Size = New System.Drawing.Size(161, 48)
         Me.btnAdd.TabIndex = 3
-        Me.btnAdd.Text = "Add"
+        Me.btnAdd.Text = "Add New User"
         '
         'grdUsers
         '
@@ -132,7 +134,7 @@ Partial Class frmUsers
         Me.grdUsers.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdUsers.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdUsers.HeaderForeColor = System.Drawing.Color.White
-        Me.grdUsers.Location = New System.Drawing.Point(24, 170)
+        Me.grdUsers.Location = New System.Drawing.Point(23, 90)
         Me.grdUsers.MultiSelect = False
         Me.grdUsers.Name = "grdUsers"
         Me.grdUsers.ReadOnly = True
@@ -140,7 +142,7 @@ Partial Class frmUsers
         Me.grdUsers.RowHeadersWidth = 50
         Me.grdUsers.RowTemplate.Height = 50
         Me.grdUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdUsers.Size = New System.Drawing.Size(1153, 561)
+        Me.grdUsers.Size = New System.Drawing.Size(1153, 674)
         Me.grdUsers.TabIndex = 2
         Me.grdUsers.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -311,12 +313,36 @@ Partial Class frmUsers
         Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
         Me.DataGridViewImageColumn3.Width = 25
         '
+        'lblTotalFiles
+        '
+        Me.lblTotalFiles.AutoSize = True
+        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalFiles.Location = New System.Drawing.Point(93, 783)
+        Me.lblTotalFiles.Name = "lblTotalFiles"
+        Me.lblTotalFiles.Size = New System.Drawing.Size(89, 21)
+        Me.lblTotalFiles.TabIndex = 37
+        Me.lblTotalFiles.Text = "60 Users"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(19, 782)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "Showing:"
+        '
         'frmUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
+        Me.Controls.Add(Me.lblTotalFiles)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.grdUsers)
         Me.ForeColor = System.Drawing.Color.Red
@@ -325,6 +351,7 @@ Partial Class frmUsers
         Me.Text = "frmUsers"
         CType(Me.grdUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -352,4 +379,6 @@ Partial Class frmUsers
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
+    Friend WithEvents lblTotalFiles As Label
+    Friend WithEvents Label1 As Label
 End Class
