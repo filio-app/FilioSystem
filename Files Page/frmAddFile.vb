@@ -2,6 +2,9 @@
 
 Public Class frmAddFile
 
+    Dim selectedName As String
+    Dim selectedId As Integer
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         clearControls(Me)
         Me.Close()
@@ -17,7 +20,7 @@ Public Class frmAddFile
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_name", txtName.Text)
                 .Parameters.AddWithValue("@p_description", txtDescription.Text)
-                .Parameters.AddWithValue("@p_location", cmbLocation.Text)
+                .Parameters.AddWithValue("@p_location_id", selectedId)
                 .Parameters.AddWithValue("@p_status", cmbStatus.Text)
                 .ExecuteNonQuery()
             End With
@@ -45,7 +48,7 @@ Public Class frmAddFile
                 .Parameters.AddWithValue("@p_id", userID)
                 .Parameters.AddWithValue("@p_name", txtName.Text)
                 .Parameters.AddWithValue("@p_description", txtDescription.Text)
-                .Parameters.AddWithValue("@p_location", cmbLocation.Text)
+                .Parameters.AddWithValue("@p_location_id", selectedId)
                 .Parameters.AddWithValue("@p_status", cmbStatus.Text)
                 .ExecuteNonQuery()
             End With
@@ -102,7 +105,7 @@ Public Class frmAddFile
 
     Private Sub cmbLocation_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbLocation.SelectedIndexChanged
         ' Get the ID of the selected location from the HashTable
-        Dim selectedName As String = cmbLocation.SelectedItem.ToString()
-        Dim selectedId As Integer = locationTable(selectedName)
+        selectedName = cmbLocation.SelectedItem.ToString()
+        selectedId = locationTable(selectedName)
     End Sub
 End Class

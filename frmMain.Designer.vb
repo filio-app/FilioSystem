@@ -512,10 +512,10 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.currentUser
-        Me.bunifuPagesMain.PageIndex = 6
-        Me.bunifuPagesMain.PageName = "currentUser"
-        Me.bunifuPagesMain.PageTitle = "currentUser"
+        Me.bunifuPagesMain.Page = Me.settings
+        Me.bunifuPagesMain.PageIndex = 5
+        Me.bunifuPagesMain.PageName = "settings"
+        Me.bunifuPagesMain.PageTitle = "settings"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -648,7 +648,7 @@ Partial Class frmMain
         '
         'settings
         '
-        Me.settings.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.settings.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.settings.Controls.Add(Me.panelSettings)
         Me.settings.Location = New System.Drawing.Point(4, 4)
         Me.settings.Name = "settings"
@@ -658,6 +658,7 @@ Partial Class frmMain
         '
         'panelSettings
         '
+        Me.panelSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.panelSettings.Controls.Add(Me.Label4)
         Me.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelSettings.Location = New System.Drawing.Point(0, 0)
@@ -688,6 +689,7 @@ Partial Class frmMain
         '
         'panelCurrentUser
         '
+        Me.panelCurrentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.panelCurrentUser.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)

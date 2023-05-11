@@ -129,7 +129,7 @@ Partial Class frmSettings
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.TabPage2.Controls.Add(Me.panelLocation)
         Me.TabPage2.Location = New System.Drawing.Point(4, 4)
         Me.TabPage2.Name = "TabPage2"
@@ -140,6 +140,7 @@ Partial Class frmSettings
         '
         'panelLocation
         '
+        Me.panelLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.panelLocation.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelLocation.Location = New System.Drawing.Point(3, 3)
         Me.panelLocation.Margin = New System.Windows.Forms.Padding(0)
@@ -160,7 +161,7 @@ Partial Class frmSettings
         '
         'panelBackupAndRestore
         '
-        Me.panelBackupAndRestore.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.panelBackupAndRestore.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.panelBackupAndRestore.Controls.Add(Me.btnRestore)
         Me.panelBackupAndRestore.Controls.Add(Me.btnBackup)
         Me.panelBackupAndRestore.Dock = System.Windows.Forms.DockStyle.Fill
@@ -226,7 +227,7 @@ Partial Class frmSettings
         '
         'panelBack
         '
-        Me.panelBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.panelBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.panelBack.Location = New System.Drawing.Point(383, 35)
         Me.panelBack.Name = "panelBack"
         Me.panelBack.Size = New System.Drawing.Size(631, 84)
