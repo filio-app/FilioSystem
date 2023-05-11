@@ -1,4 +1,5 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.IO
+Imports System.Text.RegularExpressions
 Imports MySql.Data.MySqlClient
 
 Module modGlobalProcedures
@@ -126,6 +127,26 @@ Module modGlobalProcedures
         End Try
 
     End Sub
+
+    Public Sub BackupDatabase(ByVal databaseName As String, ByVal backupPath As String)
+        Try
+            Dim fileName As String = String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", databaseName, DateTime.Now)
+            Dim filePath As String = Path.Combine(backupPath, fileName)
+
+            Using process As New Process()
+                process.StartInfo.FileName = "mysqldump.exe"
+                process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} {3} > ""{4}""", "root", "password", "localhost", databaseName, filePath)
+                process.StartInfo.UseShellExecute = False
+                process.StartInfo.RedirectStandardOutput = True
+                process.Start()
+                process.WaitForExit()
+                MessageBox.Show("Database backup created successfully!")
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error creating database backup: " & ex.Message)
+        End Try
+    End Sub
+
 
 
 
