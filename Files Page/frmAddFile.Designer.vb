@@ -37,6 +37,7 @@ Partial Class frmAddFile
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
+        Me.cmbLocation = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -258,12 +259,31 @@ Partial Class frmAddFile
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.Visible = False
         '
+        'cmbLocation
+        '
+        Me.cmbLocation.AutoCompleteCustomSource.AddRange(New String() {"Issued"})
+        Me.cmbLocation.BackColor = System.Drawing.Color.Transparent
+        Me.cmbLocation.BorderRadius = 8
+        Me.cmbLocation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbLocation.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbLocation.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.cmbLocation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmbLocation.ItemHeight = 49
+        Me.cmbLocation.Items.AddRange(New Object() {"test"})
+        Me.cmbLocation.Location = New System.Drawing.Point(45, 570)
+        Me.cmbLocation.Name = "cmbLocation"
+        Me.cmbLocation.Size = New System.Drawing.Size(256, 55)
+        Me.cmbLocation.TabIndex = 31
+        '
         'frmAddFile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(647, 772)
+        Me.Controls.Add(Me.cmbLocation)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.cmbStatus)
         Me.Controls.Add(Me.Label5)
@@ -300,4 +320,5 @@ Partial Class frmAddFile
     Friend WithEvents Label3 As Label
     Friend WithEvents cmbStatus As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cmbLocation As Guna.UI2.WinForms.Guna2ComboBox
 End Class

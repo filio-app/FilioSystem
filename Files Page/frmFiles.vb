@@ -87,6 +87,7 @@ Public Class frmFiles
                     .txtName.Text = grdFiles.CurrentRow.Cells(2).Value.ToString()
                     .txtDescription.Text = grdFiles.CurrentRow.Cells(3).Value.ToString()
                     .txtLocation.Text = grdFiles.CurrentRow.Cells(4).Value.ToString()
+                    locationName = grdFiles.CurrentRow.Cells(4).Value.ToString()
 
                     Dim idx As Integer
 

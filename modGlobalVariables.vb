@@ -37,7 +37,8 @@ Module ModGlobalVariable
     ' For updating user information
     Public tempRole As String
 
-
+    'For Selecting purok name in view and update
+    Public locationName As String
 
 
     '=================================================='
