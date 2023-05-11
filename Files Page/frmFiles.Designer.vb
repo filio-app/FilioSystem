@@ -38,19 +38,21 @@ Partial Class frmFiles
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
         Me.txtSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.cmbSearchType = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.grdFiles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +62,6 @@ Partial Class frmFiles
         '
         'Guna2Elipse2
         '
-        Me.Guna2Elipse2.BorderRadius = 7
         Me.Guna2Elipse2.TargetControl = Me.grdFiles
         '
         'grdFiles
@@ -74,7 +75,7 @@ Partial Class frmFiles
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdFiles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grdFiles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.grdFiles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.grdFiles.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdFiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -121,7 +122,7 @@ Partial Class frmFiles
         Me.grdFiles.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdFiles.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdFiles.HeaderForeColor = System.Drawing.Color.White
-        Me.grdFiles.Location = New System.Drawing.Point(24, 201)
+        Me.grdFiles.Location = New System.Drawing.Point(21, 98)
         Me.grdFiles.MultiSelect = False
         Me.grdFiles.Name = "grdFiles"
         Me.grdFiles.ReadOnly = True
@@ -129,7 +130,7 @@ Partial Class frmFiles
         Me.grdFiles.RowHeadersWidth = 50
         Me.grdFiles.RowTemplate.Height = 50
         Me.grdFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdFiles.Size = New System.Drawing.Size(1153, 589)
+        Me.grdFiles.Size = New System.Drawing.Size(1153, 667)
         Me.grdFiles.TabIndex = 0
         Me.grdFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -199,6 +200,16 @@ Partial Class frmFiles
         Me.Column9.ReadOnly = True
         Me.Column9.Width = 10
         '
+        'view
+        '
+        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.view.FillWeight = 101.398!
+        Me.view.HeaderText = ""
+        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.view.Name = "view"
+        Me.view.ReadOnly = True
+        Me.view.Width = 25
+        '
         'Column15
         '
         Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -208,6 +219,16 @@ Partial Class frmFiles
         Me.Column15.ReadOnly = True
         Me.Column15.Width = 10
         '
+        'edit
+        '
+        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.edit.FillWeight = 137.0792!
+        Me.edit.HeaderText = ""
+        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Width = 25
+        '
         'Column14
         '
         Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -216,6 +237,15 @@ Partial Class frmFiles
         Me.Column14.Name = "Column14"
         Me.Column14.ReadOnly = True
         Me.Column14.Width = 10
+        '
+        'delete
+        '
+        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.delete.HeaderText = ""
+        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.delete.Name = "delete"
+        Me.delete.ReadOnly = True
+        Me.delete.Width = 25
         '
         'Column13
         '
@@ -228,7 +258,7 @@ Partial Class frmFiles
         'btnAdd
         '
         Me.btnAdd.Animated = True
-        Me.btnAdd.BorderRadius = 8
+        Me.btnAdd.BorderRadius = 10
         Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -236,15 +266,17 @@ Partial Class frmFiles
         Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(1064, 123)
+        Me.btnAdd.Location = New System.Drawing.Point(21, 32)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(113, 48)
+        Me.btnAdd.Size = New System.Drawing.Size(151, 48)
         Me.btnAdd.TabIndex = 1
-        Me.btnAdd.Text = "Add"
+        Me.btnAdd.Text = "Add New File"
         '
         'txtSearch
         '
         Me.txtSearch.Animated = True
+        Me.txtSearch.BackColor = System.Drawing.Color.White
+        Me.txtSearch.BorderColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.txtSearch.BorderRadius = 8
         Me.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtSearch.DefaultText = ""
@@ -257,30 +289,20 @@ Partial Class frmFiles
         Me.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSearch.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtSearch.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtSearch.Location = New System.Drawing.Point(427, 123)
+        Me.txtSearch.Location = New System.Drawing.Point(835, 27)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(5)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtSearch.PlaceholderText = "Search.."
+        Me.txtSearch.PlaceholderText = "Search file..."
         Me.txtSearch.SelectedText = ""
         Me.txtSearch.Size = New System.Drawing.Size(339, 53)
         Me.txtSearch.TabIndex = 31
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(126, 139)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(121, 21)
-        Me.Label7.TabIndex = 32
-        Me.Label7.Text = "Search Type:"
         '
         'cmbSearchType
         '
         Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Issued"})
         Me.cmbSearchType.BackColor = System.Drawing.Color.Transparent
+        Me.cmbSearchType.BorderColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.cmbSearchType.BorderRadius = 8
         Me.cmbSearchType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cmbSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -290,7 +312,7 @@ Partial Class frmFiles
         Me.cmbSearchType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbSearchType.ItemHeight = 47
         Me.cmbSearchType.Items.AddRange(New Object() {"Name", "Location"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(254, 123)
+        Me.cmbSearchType.Location = New System.Drawing.Point(662, 27)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(154, 53)
         Me.cmbSearchType.StartIndex = 0
@@ -325,43 +347,49 @@ Partial Class frmFiles
         Me.DataGridViewImageColumn3.ReadOnly = True
         Me.DataGridViewImageColumn3.Width = 25
         '
-        'view
+        'Label1
         '
-        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.view.FillWeight = 101.398!
-        Me.view.HeaderText = ""
-        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.view.Name = "view"
-        Me.view.ReadOnly = True
-        Me.view.Width = 25
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(17, 782)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "Showing:"
         '
-        'edit
+        'lblTotalFiles
         '
-        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.edit.FillWeight = 137.0792!
-        Me.edit.HeaderText = ""
-        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.edit.Name = "edit"
-        Me.edit.ReadOnly = True
-        Me.edit.Width = 25
+        Me.lblTotalFiles.AutoSize = True
+        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalFiles.Location = New System.Drawing.Point(91, 783)
+        Me.lblTotalFiles.Name = "lblTotalFiles"
+        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
+        Me.lblTotalFiles.TabIndex = 35
+        Me.lblTotalFiles.Text = "60 Files"
         '
-        'delete
+        'Label3
         '
-        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.delete.HeaderText = ""
-        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.delete.Name = "delete"
-        Me.delete.ReadOnly = True
-        Me.delete.Width = 25
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(544, 43)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 21)
+        Me.Label3.TabIndex = 36
+        Me.Label3.Text = "Search Type:"
         '
         'frmFiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblTotalFiles)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmbSearchType)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.grdFiles)
@@ -397,6 +425,8 @@ Partial Class frmFiles
     Friend WithEvents delete As DataGridViewImageColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents txtSearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents cmbSearchType As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTotalFiles As Label
+    Friend WithEvents Label3 As Label
 End Class

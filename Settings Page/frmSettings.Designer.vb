@@ -30,12 +30,14 @@ Partial Class frmSettings
         Me.btnRestore = New Guna.UI2.WinForms.Guna2Button()
         Me.BunifuPagesSettings = New Bunifu.UI.WinForms.BunifuPages()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.panelLocation = New System.Windows.Forms.Panel()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.panelBackupAndRestore = New System.Windows.Forms.Panel()
         Me.btnLocation = New Guna.UI2.WinForms.Guna2Button()
         Me.btnBackupAndRestore = New Guna.UI2.WinForms.Guna2Button()
-        Me.panelBackupAndRestore = New System.Windows.Forms.Panel()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.panelLocation = New System.Windows.Forms.Panel()
+        Me.panelBack = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.BunifuPagesSettings.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -136,21 +138,42 @@ Partial Class frmSettings
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Location"
         '
+        'panelLocation
+        '
+        Me.panelLocation.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelLocation.Location = New System.Drawing.Point(3, 3)
+        Me.panelLocation.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelLocation.Name = "panelLocation"
+        Me.panelLocation.Size = New System.Drawing.Size(1378, 678)
+        Me.panelLocation.TabIndex = 0
+        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.panelBackupAndRestore)
         Me.TabPage3.Location = New System.Drawing.Point(4, 4)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1384, 622)
+        Me.TabPage3.Size = New System.Drawing.Size(1384, 684)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Backup and Restore"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'panelBackupAndRestore
+        '
+        Me.panelBackupAndRestore.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.panelBackupAndRestore.Controls.Add(Me.btnRestore)
+        Me.panelBackupAndRestore.Controls.Add(Me.btnBackup)
+        Me.panelBackupAndRestore.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelBackupAndRestore.Location = New System.Drawing.Point(0, 0)
+        Me.panelBackupAndRestore.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelBackupAndRestore.Name = "panelBackupAndRestore"
+        Me.panelBackupAndRestore.Size = New System.Drawing.Size(1384, 684)
+        Me.panelBackupAndRestore.TabIndex = 0
+        '
         'btnLocation
         '
         Me.btnLocation.Animated = True
-        Me.btnLocation.BorderRadius = 8
+        Me.btnLocation.BorderRadius = 12
         Me.btnLocation.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         Me.btnLocation.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLocation.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
@@ -167,7 +190,7 @@ Partial Class frmSettings
         Me.btnLocation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.btnLocation.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLocation.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnLocation.Location = New System.Drawing.Point(381, 46)
+        Me.btnLocation.Location = New System.Drawing.Point(398, 46)
         Me.btnLocation.Name = "btnLocation"
         Me.btnLocation.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.btnLocation.Size = New System.Drawing.Size(280, 61)
@@ -177,7 +200,7 @@ Partial Class frmSettings
         'btnBackupAndRestore
         '
         Me.btnBackupAndRestore.Animated = True
-        Me.btnBackupAndRestore.BorderRadius = 8
+        Me.btnBackupAndRestore.BorderRadius = 12
         Me.btnBackupAndRestore.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         Me.btnBackupAndRestore.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBackupAndRestore.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
@@ -194,33 +217,25 @@ Partial Class frmSettings
         Me.btnBackupAndRestore.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.btnBackupAndRestore.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBackupAndRestore.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnBackupAndRestore.Location = New System.Drawing.Point(701, 46)
+        Me.btnBackupAndRestore.Location = New System.Drawing.Point(718, 46)
         Me.btnBackupAndRestore.Name = "btnBackupAndRestore"
         Me.btnBackupAndRestore.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.btnBackupAndRestore.Size = New System.Drawing.Size(280, 61)
         Me.btnBackupAndRestore.TabIndex = 48
         Me.btnBackupAndRestore.Text = "Backup && Restore"
         '
-        'panelBackupAndRestore
+        'panelBack
         '
-        Me.panelBackupAndRestore.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.panelBackupAndRestore.Controls.Add(Me.btnRestore)
-        Me.panelBackupAndRestore.Controls.Add(Me.btnBackup)
-        Me.panelBackupAndRestore.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelBackupAndRestore.Location = New System.Drawing.Point(0, 0)
-        Me.panelBackupAndRestore.Margin = New System.Windows.Forms.Padding(0)
-        Me.panelBackupAndRestore.Name = "panelBackupAndRestore"
-        Me.panelBackupAndRestore.Size = New System.Drawing.Size(1384, 622)
-        Me.panelBackupAndRestore.TabIndex = 0
+        Me.panelBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.panelBack.Location = New System.Drawing.Point(383, 35)
+        Me.panelBack.Name = "panelBack"
+        Me.panelBack.Size = New System.Drawing.Size(631, 84)
+        Me.panelBack.TabIndex = 49
         '
-        'panelLocation
+        'Guna2Elipse3
         '
-        Me.panelLocation.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelLocation.Location = New System.Drawing.Point(3, 3)
-        Me.panelLocation.Margin = New System.Windows.Forms.Padding(0)
-        Me.panelLocation.Name = "panelLocation"
-        Me.panelLocation.Size = New System.Drawing.Size(1378, 678)
-        Me.panelLocation.TabIndex = 0
+        Me.Guna2Elipse3.BorderRadius = 25
+        Me.Guna2Elipse3.TargetControl = Me.panelBack
         '
         'frmSettings
         '
@@ -231,6 +246,7 @@ Partial Class frmSettings
         Me.Controls.Add(Me.btnBackupAndRestore)
         Me.Controls.Add(Me.btnLocation)
         Me.Controls.Add(Me.BunifuPagesSettings)
+        Me.Controls.Add(Me.panelBack)
         Me.Font = New System.Drawing.Font("Inter", 8.25!)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -256,4 +272,6 @@ Partial Class frmSettings
     Friend WithEvents panelBackupAndRestore As Panel
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents panelLocation As Panel
+    Friend WithEvents panelBack As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
 End Class
