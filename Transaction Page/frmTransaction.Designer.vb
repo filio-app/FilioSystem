@@ -49,7 +49,9 @@ Partial Class frmTransaction
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblTotalTransactions = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.grdTransaction, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -67,7 +69,7 @@ Partial Class frmTransaction
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdTransaction.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grdTransaction.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.grdTransaction.BackgroundColor = System.Drawing.Color.White
         Me.grdTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -114,7 +116,7 @@ Partial Class frmTransaction
         Me.grdTransaction.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdTransaction.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdTransaction.HeaderForeColor = System.Drawing.Color.White
-        Me.grdTransaction.Location = New System.Drawing.Point(21, 91)
+        Me.grdTransaction.Location = New System.Drawing.Point(19, 17)
         Me.grdTransaction.MultiSelect = False
         Me.grdTransaction.Name = "grdTransaction"
         Me.grdTransaction.ReadOnly = True
@@ -122,7 +124,7 @@ Partial Class frmTransaction
         Me.grdTransaction.RowHeadersWidth = 50
         Me.grdTransaction.RowTemplate.Height = 50
         Me.grdTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdTransaction.Size = New System.Drawing.Size(1153, 662)
+        Me.grdTransaction.Size = New System.Drawing.Size(1140, 652)
         Me.grdTransaction.TabIndex = 1
         Me.grdTransaction.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -257,7 +259,7 @@ Partial Class frmTransaction
         Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(21, 27)
+        Me.btnAdd.Location = New System.Drawing.Point(12, 28)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(221, 48)
         Me.btnAdd.TabIndex = 2
@@ -298,7 +300,7 @@ Partial Class frmTransaction
         Me.lblTotalTransactions.AutoSize = True
         Me.lblTotalTransactions.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblTotalTransactions.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalTransactions.Location = New System.Drawing.Point(91, 777)
+        Me.lblTotalTransactions.Location = New System.Drawing.Point(90, 686)
         Me.lblTotalTransactions.Name = "lblTotalTransactions"
         Me.lblTotalTransactions.Size = New System.Drawing.Size(151, 21)
         Me.lblTotalTransactions.TabIndex = 37
@@ -309,11 +311,26 @@ Partial Class frmTransaction
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(17, 776)
+        Me.Label1.Location = New System.Drawing.Point(16, 685)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 21)
         Me.Label1.TabIndex = 36
         Me.Label1.Text = "Showing:"
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.lblTotalTransactions)
+        Me.Guna2Panel5.Controls.Add(Me.grdTransaction)
+        Me.Guna2Panel5.Controls.Add(Me.Label1)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(12, 88)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(1176, 722)
+        Me.Guna2Panel5.TabIndex = 39
         '
         'frmTransaction
         '
@@ -321,16 +338,15 @@ Partial Class frmTransaction
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
-        Me.Controls.Add(Me.lblTotalTransactions)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.grdTransaction)
+        Me.Controls.Add(Me.Guna2Panel5)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTransaction"
         Me.Text = "frmTransaction"
         CType(Me.grdTransaction, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -357,4 +373,5 @@ Partial Class frmTransaction
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
     Friend WithEvents lblTotalTransactions As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
 End Class

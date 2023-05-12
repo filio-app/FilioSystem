@@ -28,13 +28,6 @@ Partial Class frmLocation
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.grdLocation = New Bunifu.UI.WinForms.BunifuDataGridView()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
-        Me.lblTotalLocations = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,7 +42,16 @@ Partial Class frmLocation
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.btnAdd = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblTotalLocations = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.grdLocation, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -67,7 +69,7 @@ Partial Class frmLocation
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdLocation.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdLocation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grdLocation.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.grdLocation.BackgroundColor = System.Drawing.Color.White
         Me.grdLocation.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdLocation.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdLocation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -114,7 +116,7 @@ Partial Class frmLocation
         Me.grdLocation.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdLocation.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdLocation.HeaderForeColor = System.Drawing.Color.White
-        Me.grdLocation.Location = New System.Drawing.Point(231, 12)
+        Me.grdLocation.Location = New System.Drawing.Point(17, 14)
         Me.grdLocation.MultiSelect = False
         Me.grdLocation.Name = "grdLocation"
         Me.grdLocation.ReadOnly = True
@@ -122,79 +124,9 @@ Partial Class frmLocation
         Me.grdLocation.RowHeadersWidth = 50
         Me.grdLocation.RowTemplate.Height = 50
         Me.grdLocation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdLocation.Size = New System.Drawing.Size(733, 561)
+        Me.grdLocation.Size = New System.Drawing.Size(696, 543)
         Me.grdLocation.TabIndex = 3
         Me.grdLocation.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn1.FillWeight = 101.398!
-        Me.DataGridViewImageColumn1.HeaderText = ""
-        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Visible = False
-        Me.DataGridViewImageColumn1.Width = 25
-        '
-        'DataGridViewImageColumn2
-        '
-        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
-        Me.DataGridViewImageColumn2.HeaderText = ""
-        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        Me.DataGridViewImageColumn2.Width = 25
-        '
-        'DataGridViewImageColumn3
-        '
-        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn3.HeaderText = ""
-        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
-        Me.DataGridViewImageColumn3.Width = 25
-        '
-        'Guna2Elipse2
-        '
-        Me.Guna2Elipse2.TargetControl = Me.grdLocation
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Animated = True
-        Me.btnAdd.BorderRadius = 8
-        Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(851, 599)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(113, 48)
-        Me.btnAdd.TabIndex = 4
-        Me.btnAdd.Text = "Add"
-        '
-        'lblTotalLocations
-        '
-        Me.lblTotalLocations.AutoSize = True
-        Me.lblTotalLocations.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblTotalLocations.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalLocations.Location = New System.Drawing.Point(301, 627)
-        Me.lblTotalLocations.Name = "lblTotalLocations"
-        Me.lblTotalLocations.Size = New System.Drawing.Size(89, 21)
-        Me.lblTotalLocations.TabIndex = 39
-        Me.lblTotalLocations.Text = "60 Users"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(227, 626)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
-        Me.Label1.TabIndex = 38
-        Me.Label1.Text = "Showing:"
         '
         'Column8
         '
@@ -314,22 +246,106 @@ Partial Class frmLocation
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 10
         '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn1.FillWeight = 101.398!
+        Me.DataGridViewImageColumn1.HeaderText = ""
+        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Visible = False
+        Me.DataGridViewImageColumn1.Width = 25
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
+        Me.DataGridViewImageColumn2.HeaderText = ""
+        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.Width = 25
+        '
+        'DataGridViewImageColumn3
+        '
+        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn3.HeaderText = ""
+        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.Width = 25
+        '
+        'Guna2Elipse2
+        '
+        Me.Guna2Elipse2.TargetControl = Me.grdLocation
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Animated = True
+        Me.btnAdd.BorderRadius = 8
+        Me.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnAdd.ForeColor = System.Drawing.Color.White
+        Me.btnAdd.Location = New System.Drawing.Point(600, 577)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(113, 48)
+        Me.btnAdd.TabIndex = 4
+        Me.btnAdd.Text = "Add"
+        '
+        'lblTotalLocations
+        '
+        Me.lblTotalLocations.AutoSize = True
+        Me.lblTotalLocations.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalLocations.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalLocations.Location = New System.Drawing.Point(87, 605)
+        Me.lblTotalLocations.Name = "lblTotalLocations"
+        Me.lblTotalLocations.Size = New System.Drawing.Size(89, 21)
+        Me.lblTotalLocations.TabIndex = 39
+        Me.lblTotalLocations.Text = "60 Users"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(13, 604)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "Showing:"
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.btnAdd)
+        Me.Guna2Panel5.Controls.Add(Me.lblTotalLocations)
+        Me.Guna2Panel5.Controls.Add(Me.grdLocation)
+        Me.Guna2Panel5.Controls.Add(Me.Label1)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(231, 12)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(733, 638)
+        Me.Guna2Panel5.TabIndex = 40
+        '
         'frmLocation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1378, 678)
-        Me.Controls.Add(Me.lblTotalLocations)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.grdLocation)
+        Me.Controls.Add(Me.Guna2Panel5)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmLocation"
         Me.Text = "frmLocation"
         CType(Me.grdLocation, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -356,4 +372,5 @@ Partial Class frmLocation
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents delete As DataGridViewImageColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
 End Class

@@ -23,9 +23,9 @@ Partial Class frmHistory
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.grdHistory = New Bunifu.UI.WinForms.BunifuDataGridView()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -48,7 +48,9 @@ Partial Class frmHistory
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.dtFrom = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.dtTo = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -62,22 +64,22 @@ Partial Class frmHistory
         Me.grdHistory.AllowUserToDeleteRows = False
         Me.grdHistory.AllowUserToResizeColumns = False
         Me.grdHistory.AllowUserToResizeRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.grdHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grdHistory.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.grdHistory.BackgroundColor = System.Drawing.Color.White
         Me.grdHistory.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.grdHistory.ColumnHeadersHeight = 50
         Me.grdHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grdHistory.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column2, Me.Column1, Me.Column10, Me.Column11, Me.Column3, Me.Column5, Me.Column6, Me.Column4, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
@@ -100,20 +102,20 @@ Partial Class frmHistory
         Me.grdHistory.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdHistory.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdHistory.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle9
         Me.grdHistory.EnableHeadersVisualStyles = False
         Me.grdHistory.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdHistory.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdHistory.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdHistory.HeaderForeColor = System.Drawing.Color.White
-        Me.grdHistory.Location = New System.Drawing.Point(24, 95)
+        Me.grdHistory.Location = New System.Drawing.Point(19, 19)
         Me.grdHistory.MultiSelect = False
         Me.grdHistory.Name = "grdHistory"
         Me.grdHistory.ReadOnly = True
@@ -121,7 +123,7 @@ Partial Class frmHistory
         Me.grdHistory.RowHeadersWidth = 50
         Me.grdHistory.RowTemplate.Height = 50
         Me.grdHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdHistory.Size = New System.Drawing.Size(1153, 701)
+        Me.grdHistory.Size = New System.Drawing.Size(1125, 690)
         Me.grdHistory.TabIndex = 3
         Me.grdHistory.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -280,7 +282,7 @@ Partial Class frmHistory
         Me.dtFrom.Font = New System.Drawing.Font("Inter Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dtFrom.ForeColor = System.Drawing.Color.White
         Me.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.dtFrom.Location = New System.Drawing.Point(787, 25)
+        Me.dtFrom.Location = New System.Drawing.Point(789, 22)
         Me.dtFrom.MaxDate = New Date(2099, 12, 31, 0, 0, 0, 0)
         Me.dtFrom.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtFrom.Name = "dtFrom"
@@ -298,13 +300,26 @@ Partial Class frmHistory
         Me.dtTo.Font = New System.Drawing.Font("Inter Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dtTo.ForeColor = System.Drawing.Color.White
         Me.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.dtTo.Location = New System.Drawing.Point(1007, 25)
+        Me.dtTo.Location = New System.Drawing.Point(1009, 22)
         Me.dtTo.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
         Me.dtTo.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.dtTo.Name = "dtTo"
         Me.dtTo.Size = New System.Drawing.Size(170, 48)
         Me.dtTo.TabIndex = 5
         Me.dtTo.Value = New Date(2023, 4, 20, 9, 54, 10, 875)
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.grdHistory)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(17, 79)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(1162, 731)
+        Me.Guna2Panel5.TabIndex = 39
         '
         'frmHistory
         '
@@ -314,11 +329,12 @@ Partial Class frmHistory
         Me.ClientSize = New System.Drawing.Size(1200, 822)
         Me.Controls.Add(Me.dtTo)
         Me.Controls.Add(Me.dtFrom)
-        Me.Controls.Add(Me.grdHistory)
+        Me.Controls.Add(Me.Guna2Panel5)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmHistory"
         Me.Text = "frmHistory"
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -345,4 +361,5 @@ Partial Class frmHistory
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents dtFrom As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents dtTo As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
 End Class

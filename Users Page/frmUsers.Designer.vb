@@ -52,7 +52,9 @@ Partial Class frmUsers
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lblTotalUsers = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.grdUsers, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -70,7 +72,7 @@ Partial Class frmUsers
         Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(23, 24)
+        Me.btnAdd.Location = New System.Drawing.Point(12, 29)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(161, 48)
         Me.btnAdd.TabIndex = 3
@@ -87,7 +89,7 @@ Partial Class frmUsers
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdUsers.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grdUsers.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.grdUsers.BackgroundColor = System.Drawing.Color.White
         Me.grdUsers.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -134,7 +136,7 @@ Partial Class frmUsers
         Me.grdUsers.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdUsers.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdUsers.HeaderForeColor = System.Drawing.Color.White
-        Me.grdUsers.Location = New System.Drawing.Point(23, 90)
+        Me.grdUsers.Location = New System.Drawing.Point(21, 21)
         Me.grdUsers.MultiSelect = False
         Me.grdUsers.Name = "grdUsers"
         Me.grdUsers.ReadOnly = True
@@ -142,7 +144,7 @@ Partial Class frmUsers
         Me.grdUsers.RowHeadersWidth = 50
         Me.grdUsers.RowTemplate.Height = 50
         Me.grdUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdUsers.Size = New System.Drawing.Size(1153, 674)
+        Me.grdUsers.Size = New System.Drawing.Size(1127, 620)
         Me.grdUsers.TabIndex = 2
         Me.grdUsers.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -318,7 +320,7 @@ Partial Class frmUsers
         Me.lblTotalUsers.AutoSize = True
         Me.lblTotalUsers.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblTotalUsers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalUsers.Location = New System.Drawing.Point(93, 783)
+        Me.lblTotalUsers.Location = New System.Drawing.Point(91, 659)
         Me.lblTotalUsers.Name = "lblTotalUsers"
         Me.lblTotalUsers.Size = New System.Drawing.Size(89, 21)
         Me.lblTotalUsers.TabIndex = 37
@@ -329,11 +331,26 @@ Partial Class frmUsers
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(19, 782)
+        Me.Label1.Location = New System.Drawing.Point(17, 658)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 21)
         Me.Label1.TabIndex = 36
         Me.Label1.Text = "Showing:"
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.lblTotalUsers)
+        Me.Guna2Panel5.Controls.Add(Me.Label1)
+        Me.Guna2Panel5.Controls.Add(Me.grdUsers)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(12, 97)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(1169, 703)
+        Me.Guna2Panel5.TabIndex = 39
         '
         'frmUsers
         '
@@ -341,17 +358,16 @@ Partial Class frmUsers
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
-        Me.Controls.Add(Me.lblTotalUsers)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.grdUsers)
+        Me.Controls.Add(Me.Guna2Panel5)
         Me.ForeColor = System.Drawing.Color.Red
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmUsers"
         Me.Text = "frmUsers"
         CType(Me.grdUsers, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -381,4 +397,5 @@ Partial Class frmUsers
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
     Friend WithEvents lblTotalUsers As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
 End Class

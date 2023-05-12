@@ -53,7 +53,9 @@ Partial Class frmFiles
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblTotalFiles = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.grdFiles, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -75,7 +77,7 @@ Partial Class frmFiles
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdFiles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grdFiles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.grdFiles.BackgroundColor = System.Drawing.Color.White
         Me.grdFiles.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdFiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -122,7 +124,7 @@ Partial Class frmFiles
         Me.grdFiles.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.grdFiles.HeaderBgColor = System.Drawing.Color.Empty
         Me.grdFiles.HeaderForeColor = System.Drawing.Color.White
-        Me.grdFiles.Location = New System.Drawing.Point(21, 98)
+        Me.grdFiles.Location = New System.Drawing.Point(22, 20)
         Me.grdFiles.MultiSelect = False
         Me.grdFiles.Name = "grdFiles"
         Me.grdFiles.ReadOnly = True
@@ -130,7 +132,7 @@ Partial Class frmFiles
         Me.grdFiles.RowHeadersWidth = 50
         Me.grdFiles.RowTemplate.Height = 50
         Me.grdFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdFiles.Size = New System.Drawing.Size(1153, 667)
+        Me.grdFiles.Size = New System.Drawing.Size(1130, 632)
         Me.grdFiles.TabIndex = 0
         Me.grdFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -266,7 +268,7 @@ Partial Class frmFiles
         Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(21, 32)
+        Me.btnAdd.Location = New System.Drawing.Point(12, 30)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(151, 48)
         Me.btnAdd.TabIndex = 1
@@ -289,7 +291,7 @@ Partial Class frmFiles
         Me.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSearch.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtSearch.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtSearch.Location = New System.Drawing.Point(835, 27)
+        Me.txtSearch.Location = New System.Drawing.Point(835, 25)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(5)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -312,7 +314,7 @@ Partial Class frmFiles
         Me.cmbSearchType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbSearchType.ItemHeight = 47
         Me.cmbSearchType.Items.AddRange(New Object() {"Name", "Location"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(662, 27)
+        Me.cmbSearchType.Location = New System.Drawing.Point(662, 25)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(154, 53)
         Me.cmbSearchType.StartIndex = 0
@@ -352,7 +354,7 @@ Partial Class frmFiles
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(17, 782)
+        Me.Label1.Location = New System.Drawing.Point(17, 668)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 21)
         Me.Label1.TabIndex = 34
@@ -363,7 +365,7 @@ Partial Class frmFiles
         Me.lblTotalFiles.AutoSize = True
         Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalFiles.Location = New System.Drawing.Point(91, 783)
+        Me.lblTotalFiles.Location = New System.Drawing.Point(91, 669)
         Me.lblTotalFiles.Name = "lblTotalFiles"
         Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
         Me.lblTotalFiles.TabIndex = 35
@@ -374,11 +376,26 @@ Partial Class frmFiles
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(544, 43)
+        Me.Label3.Location = New System.Drawing.Point(544, 41)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(121, 21)
         Me.Label3.TabIndex = 36
         Me.Label3.Text = "Search Type:"
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.grdFiles)
+        Me.Guna2Panel5.Controls.Add(Me.lblTotalFiles)
+        Me.Guna2Panel5.Controls.Add(Me.Label1)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(12, 98)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(1176, 703)
+        Me.Guna2Panel5.TabIndex = 37
         '
         'frmFiles
         '
@@ -387,16 +404,16 @@ Partial Class frmFiles
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1200, 822)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lblTotalFiles)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.grdFiles)
+        Me.Controls.Add(Me.Guna2Panel5)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmFiles"
         Me.Text = "frmFiles"
         CType(Me.grdFiles, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -429,4 +446,5 @@ Partial Class frmFiles
     Friend WithEvents Label1 As Label
     Friend WithEvents lblTotalFiles As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
 End Class
