@@ -303,6 +303,46 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property total_files() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("total-files", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property total_files1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("total-files1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property total_locations() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("total-locations", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property total_transactions() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("total-transactions", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property transaction_checked1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("transaction-checked1", resourceCulture)

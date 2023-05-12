@@ -1,4 +1,5 @@
-﻿Public Class frmMain
+﻿Imports MySql.Data.MySqlClient
+Public Class frmMain
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         chkDatabaseConnection()
@@ -20,8 +21,87 @@
 
     End Sub
 
+    Private Sub procDisplayAllTransactions()
+        datFilio = New DataTable
+        sqlAdapterFilio = New MySqlDataAdapter
+
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procDisplayAllTransactions"
+                .CommandType = CommandType.StoredProcedure
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+            End With
+            If datFilio.Rows.Count > 0 Then
+                grdDTransaction.RowCount = datFilio.Rows.Count
+                row = 0
+                While Not datFilio.Rows.Count - 1 < row
+                    With grdDTransaction
+                        .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
+                        .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
+                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("type").ToString
+
+                    End With
+                    row += 1
+                End While
+
+            Else
+                grdDTransaction.Rows.Clear()
+                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+            End If
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
+
+    Private Function getTotalRecords(ByVal tableName As String) As Integer
+        sqlAdapterFilio = New MySqlDataAdapter
+        datFilio = New DataTable
+        Dim cmdText As String
+
+        If tableName.Equals("transaction") Then
+            cmdText = "SELECT * FROM " & tableName
+        Else
+            cmdText = "SELECT * FROM " & tableName & " WHERE deleted_at IS NULL"
+        End If
+
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = cmdText
+                .CommandType = CommandType.Text
+                .ExecuteNonQuery()
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+                Return datFilio.Rows.Count
+            End With
+
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" + ex.Message)
+        End Try
+    End Function
+
+
+
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         bunifuPagesMain.SetPage(0)
+
+        procDisplayAllTransactions()
+
+        lblTotalFiles.Text = getTotalRecords("file").ToString
+        lblTotalLocations.Text = getTotalRecords("location").ToString
+        lblTotalTransactions.Text = getTotalRecords("transaction").ToString
+
         'With frmBrgyOfficial
         '    .TopLevel = False
         '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)

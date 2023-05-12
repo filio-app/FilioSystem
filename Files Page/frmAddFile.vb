@@ -25,6 +25,9 @@ Public Class frmAddFile
                 .ExecuteNonQuery()
             End With
 
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Add File", txtName.Text)
@@ -53,6 +56,9 @@ Public Class frmAddFile
                 .ExecuteNonQuery()
             End With
 
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
             MessageBox.Show("Record Successfully Updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Edit File", txtName.Text)
@@ -80,6 +86,7 @@ Public Class frmAddFile
         Try
             With command
                 .Parameters.Clear()
+                'TODO: (frmAddFile) add Where clause deleted_at
                 .CommandText = "SELECT * FROM location"
                 .CommandType = CommandType.Text
                 .ExecuteNonQuery()
@@ -97,6 +104,9 @@ Public Class frmAddFile
                     End While
                 End If
             End With
+
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
 
         Catch ex As Exception
             MessageBox.Show("" + ex.Message)
