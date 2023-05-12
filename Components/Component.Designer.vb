@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class DataGridView
+Partial Class Component
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,8 +23,11 @@ Partial Class DataGridView
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Component))
         Me.BunifuToolTip1 = New Bunifu.UI.WinForms.BunifuToolTip(Me.components)
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.EP = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.EP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuToolTip1
@@ -77,17 +80,24 @@ Partial Class DataGridView
         Me.BunifuToolTip1.SetToolTipIcon(Me.Guna2Panel5, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Guna2Panel5, "")
         '
-        'DataGridView
+        'EP
+        '
+        Me.EP.ContainerControl = Me
+        Me.EP.Icon = CType(resources.GetObject("EP.Icon"), System.Drawing.Icon)
+        '
+        'Component
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1801, 857)
         Me.Controls.Add(Me.Guna2Panel5)
-        Me.Name = "DataGridView"
+        Me.Name = "Component"
         Me.Text = "DataGridView"
+        CType(Me.EP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents BunifuToolTip1 As Bunifu.UI.WinForms.BunifuToolTip
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Public WithEvents EP As ErrorProvider
 End Class

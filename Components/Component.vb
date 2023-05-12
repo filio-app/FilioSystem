@@ -1,4 +1,4 @@
-﻿Public Class DataGridView
+﻿Public Class Component
     Private Sub DataGridView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

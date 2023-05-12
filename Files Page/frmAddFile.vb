@@ -11,6 +11,23 @@ Public Class frmAddFile
     End Sub
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
+        'TODO: Add descriptive message
+
+        If txtName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtName, "test")
+            Return
+        ElseIf txtDescription.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtDescription, "test")
+            Return
+        ElseIf cmbLocation.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(cmbLocation, "test")
+            Return
+        Else
+            clearEP()
+        End If
 
 
         Try
@@ -38,6 +55,10 @@ Public Class frmAddFile
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
+
+        ErrorProviderHelper.ClearError(txtName)
+        ErrorProviderHelper.ClearError(txtDescription)
+        ErrorProviderHelper.ClearError(cmbLocation)
 
     End Sub
 

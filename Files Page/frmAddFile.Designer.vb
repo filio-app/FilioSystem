@@ -51,7 +51,7 @@ Partial Class frmAddFile
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(57, 127)
+        Me.Label2.Location = New System.Drawing.Point(41, 127)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 19)
         Me.Label2.TabIndex = 17
@@ -194,7 +194,7 @@ Partial Class frmAddFile
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(57, 237)
+        Me.Label3.Location = New System.Drawing.Point(41, 250)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 19)
         Me.Label3.TabIndex = 26
@@ -205,7 +205,7 @@ Partial Class frmAddFile
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(57, 546)
+        Me.Label4.Location = New System.Drawing.Point(41, 548)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 19)
         Me.Label4.TabIndex = 27
