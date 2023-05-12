@@ -25,6 +25,7 @@ Public Class frmLocation
                     With grdLocation
                         .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("name").ToString
+                        .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("num_of_files").ToString
                     End With
                     row += 1
                 End While
@@ -80,7 +81,7 @@ Public Class frmLocation
 
 
             Try
-                If MessageBox.Show("Are you sure you want to delete the selected record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show("Warning: Deleting this location will also delete all the associated files. There are " & grdLocation.CurrentRow.Cells(6).Value.ToString & " files associated with this location. Do you want to proceed with the deletion?", "Delete Location", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
                     ' Perform the deletion
                     With command
                         .Parameters.Clear()
@@ -88,6 +89,9 @@ Public Class frmLocation
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_id", locationID)
                         .ExecuteNonQuery()
+
+                        frmFiles.Dispose()
+
                         MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
                         procInsertLogEvent("Delete Location", grdLocation.CurrentRow.Cells(2).Value.ToString)

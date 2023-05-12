@@ -25,6 +25,8 @@ Public Class frmAddFile
                 .ExecuteNonQuery()
             End With
 
+            frmSettings.Dispose()
+
             datFilio.Dispose()
             sqlAdapterFilio.Dispose()
 
@@ -56,6 +58,8 @@ Public Class frmAddFile
                 .ExecuteNonQuery()
             End With
 
+            frmSettings.Dispose()
+
             datFilio.Dispose()
             sqlAdapterFilio.Dispose()
 
@@ -86,8 +90,7 @@ Public Class frmAddFile
         Try
             With command
                 .Parameters.Clear()
-                'TODO: (frmAddFile) add Where clause deleted_at
-                .CommandText = "SELECT * FROM location"
+                .CommandText = "SELECT * FROM location WHERE deleted_at IS NULL"
                 .CommandType = CommandType.Text
                 .ExecuteNonQuery()
                 sqlAdapterFilio.SelectCommand = command

@@ -36,6 +36,7 @@ Public Class frmAddLocation
                 .Parameters.AddWithValue("@p_name", txtName.Text)
                 .ExecuteNonQuery()
             End With
+            frmFiles.Dispose()
 
             MessageBox.Show("Record Successfully Updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
