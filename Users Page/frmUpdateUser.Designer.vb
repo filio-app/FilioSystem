@@ -23,7 +23,7 @@ Partial Class frmUpdateUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
+        Dim Animation2 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUpdateUser))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
@@ -36,15 +36,18 @@ Partial Class frmUpdateUser
         Me.panelUserInfo = New System.Windows.Forms.Panel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.panelUserPass = New System.Windows.Forms.Panel()
+        Me.panelBack = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel1.SuspendLayout()
         Me.BunifuPagesUser.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.panelBack.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
         '
-        Me.Guna2Elipse1.BorderRadius = 33
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Guna2Panel1
@@ -101,7 +104,7 @@ Partial Class frmUpdateUser
         Me.btnUpdateUserInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.btnUpdateUserInfo.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnUpdateUserInfo.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnUpdateUserInfo.Location = New System.Drawing.Point(80, 100)
+        Me.btnUpdateUserInfo.Location = New System.Drawing.Point(12, 11)
         Me.btnUpdateUserInfo.Name = "btnUpdateUserInfo"
         Me.btnUpdateUserInfo.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.btnUpdateUserInfo.Size = New System.Drawing.Size(280, 61)
@@ -128,7 +131,7 @@ Partial Class frmUpdateUser
         Me.btnUpdateUserPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.btnUpdateUserPassword.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnUpdateUserPassword.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnUpdateUserPassword.Location = New System.Drawing.Point(402, 100)
+        Me.btnUpdateUserPassword.Location = New System.Drawing.Point(317, 11)
         Me.btnUpdateUserPassword.Name = "btnUpdateUserPassword"
         Me.btnUpdateUserPassword.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.btnUpdateUserPassword.Size = New System.Drawing.Size(280, 61)
@@ -152,22 +155,22 @@ Partial Class frmUpdateUser
         Me.BunifuPagesUser.SelectedIndex = 0
         Me.BunifuPagesUser.Size = New System.Drawing.Size(757, 469)
         Me.BunifuPagesUser.TabIndex = 46
-        Animation1.AnimateOnlyDifferences = False
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.BunifuPagesUser.Transition = Animation1
+        Animation2.AnimateOnlyDifferences = False
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.BunifuPagesUser.Transition = Animation2
         Me.BunifuPagesUser.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom
         '
         'TabPage1
@@ -208,6 +211,21 @@ Partial Class frmUpdateUser
         Me.panelUserPass.Size = New System.Drawing.Size(749, 443)
         Me.panelUserPass.TabIndex = 0
         '
+        'panelBack
+        '
+        Me.panelBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.panelBack.Controls.Add(Me.btnUpdateUserInfo)
+        Me.panelBack.Controls.Add(Me.btnUpdateUserPassword)
+        Me.panelBack.Location = New System.Drawing.Point(74, 79)
+        Me.panelBack.Name = "panelBack"
+        Me.panelBack.Size = New System.Drawing.Size(612, 84)
+        Me.panelBack.TabIndex = 50
+        '
+        'Guna2Elipse2
+        '
+        Me.Guna2Elipse2.BorderRadius = 25
+        Me.Guna2Elipse2.TargetControl = Me.panelBack
+        '
         'frmUpdateUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -215,9 +233,8 @@ Partial Class frmUpdateUser
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(757, 638)
         Me.Controls.Add(Me.BunifuPagesUser)
-        Me.Controls.Add(Me.btnUpdateUserInfo)
-        Me.Controls.Add(Me.btnUpdateUserPassword)
         Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.panelBack)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmUpdateUser"
         Me.Text = "frmUpdateUser"
@@ -226,6 +243,7 @@ Partial Class frmUpdateUser
         Me.BunifuPagesUser.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.panelBack.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -241,4 +259,6 @@ Partial Class frmUpdateUser
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents panelUserInfo As Panel
     Friend WithEvents panelUserPass As Panel
+    Friend WithEvents panelBack As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
 End Class

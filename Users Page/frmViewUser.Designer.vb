@@ -86,6 +86,7 @@ Partial Class frmViewUser
         Me.txtLastName.BorderRadius = 8
         Me.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtLastName.DefaultText = ""
+        Me.txtLastName.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtLastName.Enabled = False
         Me.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLastName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -118,6 +119,7 @@ Partial Class frmViewUser
         Me.txtPhoneNo.BorderRadius = 8
         Me.txtPhoneNo.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPhoneNo.DefaultText = ""
+        Me.txtPhoneNo.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtPhoneNo.Enabled = False
         Me.txtPhoneNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPhoneNo.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -169,6 +171,7 @@ Partial Class frmViewUser
         Me.txtEmailAdd.BorderRadius = 8
         Me.txtEmailAdd.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtEmailAdd.DefaultText = ""
+        Me.txtEmailAdd.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtEmailAdd.Enabled = False
         Me.txtEmailAdd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmailAdd.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -201,6 +204,7 @@ Partial Class frmViewUser
         Me.txtFirstName.BorderRadius = 8
         Me.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtFirstName.DefaultText = ""
+        Me.txtFirstName.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtFirstName.Enabled = False
         Me.txtFirstName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFirstName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)

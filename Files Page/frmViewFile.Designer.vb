@@ -34,8 +34,8 @@ Partial Class frmViewFile
         Me.txtLocation = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtDescription = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.txtName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lbl = New System.Windows.Forms.Label()
         Me.txtDateAdded = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -79,6 +79,7 @@ Partial Class frmViewFile
         Me.cmbStatus.AutoCompleteCustomSource.AddRange(New String() {"Issued"})
         Me.cmbStatus.BackColor = System.Drawing.Color.Transparent
         Me.cmbStatus.BorderRadius = 8
+        Me.cmbStatus.DisabledState.FillColor = System.Drawing.Color.White
         Me.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.Enabled = False
@@ -134,7 +135,7 @@ Partial Class frmViewFile
         Me.txtLocation.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtLocation.DefaultText = ""
         Me.txtLocation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtLocation.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtLocation.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtLocation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtLocation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtLocation.Enabled = False
@@ -158,10 +159,9 @@ Partial Class frmViewFile
         Me.txtDescription.BorderRadius = 8
         Me.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtDescription.DefaultText = ""
-        Me.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtDescription.DisabledState.FillColor = System.Drawing.Color.White
+        Me.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.txtDescription.Enabled = False
         Me.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDescription.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -190,16 +190,27 @@ Partial Class frmViewFile
         Me.Guna2Panel1.Size = New System.Drawing.Size(647, 71)
         Me.Guna2Panel1.TabIndex = 34
         '
+        'Guna2ControlBox1
+        '
+        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox1.BorderRadius = 8
+        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Gainsboro
+        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.Black
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(578, 21)
+        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox1.TabIndex = 17
+        '
         'txtName
         '
         Me.txtName.Animated = True
         Me.txtName.BorderRadius = 8
         Me.txtName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtName.DefaultText = ""
-        Me.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
+        Me.txtName.DisabledState.FillColor = System.Drawing.Color.White
+        Me.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent
         Me.txtName.Enabled = False
         Me.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -214,17 +225,6 @@ Partial Class frmViewFile
         Me.txtName.SelectedText = ""
         Me.txtName.Size = New System.Drawing.Size(557, 55)
         Me.txtName.TabIndex = 31
-        '
-        'Guna2ControlBox1
-        '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.BorderRadius = 8
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Gainsboro
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.Black
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(578, 21)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
-        Me.Guna2ControlBox1.TabIndex = 17
         '
         'lbl
         '
@@ -244,7 +244,7 @@ Partial Class frmViewFile
         Me.txtDateAdded.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtDateAdded.DefaultText = ""
         Me.txtDateAdded.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtDateAdded.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDateAdded.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtDateAdded.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDateAdded.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDateAdded.Enabled = False
@@ -280,7 +280,7 @@ Partial Class frmViewFile
         Me.txtDateModified.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtDateModified.DefaultText = ""
         Me.txtDateModified.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtDateModified.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDateModified.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtDateModified.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDateModified.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDateModified.Enabled = False

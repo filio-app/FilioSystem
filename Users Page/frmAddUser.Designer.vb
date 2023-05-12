@@ -56,7 +56,7 @@ Partial Class frmAddUser
         '
         'Guna2Elipse1
         '
-        Me.Guna2Elipse1.BorderRadius = 33
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Label2

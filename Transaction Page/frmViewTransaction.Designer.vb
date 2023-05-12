@@ -44,6 +44,7 @@ Partial Class frmViewTransaction
         '
         'Guna2Elipse1
         '
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Label6
@@ -64,7 +65,7 @@ Partial Class frmViewTransaction
         Me.txtIssuedBy.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtIssuedBy.DefaultText = ""
         Me.txtIssuedBy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtIssuedBy.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtIssuedBy.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtIssuedBy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtIssuedBy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtIssuedBy.Enabled = False
@@ -100,7 +101,7 @@ Partial Class frmViewTransaction
         Me.txtDate.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtDate.DefaultText = ""
         Me.txtDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDate.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDate.Enabled = False
@@ -134,6 +135,7 @@ Partial Class frmViewTransaction
         Me.cmbType.AutoCompleteCustomSource.AddRange(New String() {"Issued"})
         Me.cmbType.BackColor = System.Drawing.Color.Transparent
         Me.cmbType.BorderRadius = 8
+        Me.cmbType.DisabledState.FillColor = System.Drawing.Color.White
         Me.cmbType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbType.Enabled = False
@@ -189,7 +191,7 @@ Partial Class frmViewTransaction
         Me.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtNotes.DefaultText = ""
         Me.txtNotes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNotes.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtNotes.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtNotes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNotes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNotes.Enabled = False
@@ -215,7 +217,7 @@ Partial Class frmViewTransaction
         Me.txtFileName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtFileName.DefaultText = ""
         Me.txtFileName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtFileName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtFileName.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtFileName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtFileName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtFileName.Enabled = False

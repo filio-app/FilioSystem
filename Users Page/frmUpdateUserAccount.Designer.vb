@@ -44,7 +44,7 @@ Partial Class frmUpdateUserAccount
         '
         'Guna2Elipse1
         '
-        Me.Guna2Elipse1.BorderRadius = 33
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Guna2Elipse3
