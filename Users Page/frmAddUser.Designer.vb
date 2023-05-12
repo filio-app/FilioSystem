@@ -484,10 +484,10 @@ Partial Class frmAddUser
         Me.ClientSize = New System.Drawing.Size(924, 762)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.gBUserAcc)
-        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.gBPersonalInfo)
+        Me.Controls.Add(Me.btnUpdate)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAddUser"
         Me.Text = "frmAddFile"

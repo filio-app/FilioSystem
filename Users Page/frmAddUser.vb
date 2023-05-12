@@ -16,40 +16,47 @@ Public Class frmAddUser
         'isFormLoaded = True
         clearControlsInGroupBox(gBPersonalInfo)
         clearControlsInGroupBox(gBUserAcc)
+
+        clearEP()
+
         'TODO: Change close() to dipose() if possible
 
         Me.Close()
         Me.Dispose()
     End Sub
 
-    '=============================================== Submit & Update ========================================
+    '=============================================== Submit ========================================
 
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Try
 
-            With command
-                .Parameters.Clear()
-                .CommandText = "procUpdateFile"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_id", userID)
-                .Parameters.AddWithValue("@p_name", txtFirstName.Text)
-                '.Parameters.AddWithValue("@p_description", txtDescription.Text)
-                .Parameters.AddWithValue("@p_location", txtConfirmPass.Text)
-                .Parameters.AddWithValue("@p_status", cmbRole.Text)
-                .ExecuteNonQuery()
-            End With
-
-            MessageBox.Show("Record Successfully Updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-    End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        'TODO: Add descriptive message
+        'TODO: validate email and phone no
 
+        If txtFirstName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtFirstName, "test")
+            Return
+        ElseIf txtLastName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtLastName, "test")
+            Return
+        ElseIf txtPhoneNo.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtPhoneNo, "test")
+            Return
+        ElseIf txtEmailAdd.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtEmailAdd, "test")
+            Return
+        ElseIf txtUsername.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtUsername, "test")
+            Return
+        Else
+            clearEP()
+        End If
 
         Try
 

@@ -1,6 +1,28 @@
 ﻿Public Class frmUpdateUserInformation
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdateInfo.Click
 
+        'TODO: Add descriptive message
+        'TODO: validate email and phone no
+
+        If txtFirstName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtFirstName, "test")
+            Return
+        ElseIf txtLastName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtLastName, "test")
+            Return
+        ElseIf txtPhoneNo.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtPhoneNo, "test")
+            Return
+        ElseIf txtEmailAdd.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtEmailAdd, "test")
+            Return
+        Else
+            clearEP()
+        End If
 
         Try
 

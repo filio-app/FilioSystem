@@ -2,10 +2,23 @@
 Public Class frmAddLocation
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         clearControls(Me)
+        clearEP()
         Me.Close()
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+
+        'TODO: Add descriptive message
+
+        If txtName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtName, "test")
+            Return
+        Else
+            clearEP()
+        End If
+
+
         Try
             With command
                 .Parameters.Clear()
@@ -26,6 +39,15 @@ Public Class frmAddLocation
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+
+        If txtName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtName, "test")
+            Return
+        Else
+            clearEP()
+        End If
+
         Try
 
             With command

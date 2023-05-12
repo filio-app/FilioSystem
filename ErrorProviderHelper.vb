@@ -2,9 +2,6 @@
 
 Public Module ErrorProviderHelper
 
-    Public errorProvider As New ErrorProvider()
-
-
 
     Public Sub SetError(ByVal control As Control, ByVal errorMessage As String)
         'Dim imagePath As String = Path.Combine(Application.StartupPath, "Assets\icons\error-provider-icon.ico")

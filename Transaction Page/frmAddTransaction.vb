@@ -1,6 +1,7 @@
 ﻿Public Class frmAddTransaction
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         clearControls(Me)
+        clearEP()
         Me.Close()
     End Sub
 
@@ -19,6 +20,19 @@
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+
+        If txtFile.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtFile, "test")
+            Return
+        ElseIf txtNotes.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtNotes, "test")
+            Return
+        Else
+            clearEP()
+        End If
+
         Try
             With command
                 .Parameters.Clear()
@@ -72,5 +86,11 @@
 
     End Sub
 
+    Private Sub cmbType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbType.SelectedIndexChanged
+        txtFile.Text = ""
+    End Sub
 
+    Private Sub txtFile_TextChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged
+        clearEP()
+    End Sub
 End Class
