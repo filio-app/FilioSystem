@@ -85,7 +85,7 @@
         bunifuPagesMain.SetPage(6)
         With frmCurrentUser
             .TopLevel = False
-            ' TODO: (REMINDER) adding pages directly -> bunifuPagesMain.SelectedTab().Controls.Add(frmCurrentUser)
+
             panelCurrentUser.Controls.Add(frmCurrentUser)
             .BringToFront()
             .Show()

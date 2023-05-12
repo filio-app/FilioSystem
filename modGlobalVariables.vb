@@ -46,6 +46,6 @@ Module ModGlobalVariable
 
     '=================================================='
 
-    'TODO: DONE -- Should reload the history page if there are events
+
 
 End Module

@@ -19,7 +19,7 @@ Public Class frmAddUser
         'TODO: Change close() to dipose() if possible
 
         Me.Close()
-        'Me.Dispose()
+        Me.Dispose()
     End Sub
 
     '=============================================== Submit & Update ========================================

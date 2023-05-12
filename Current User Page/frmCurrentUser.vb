@@ -178,7 +178,7 @@ Public Class frmCurrentUser
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
                 If datFilio.Rows.Count > 0 Then
-                    'TODO: (frmCurrentUser) Add confirmation message + should add users with unique username
+                    'TODO: (frmCurrentUser) Add confirmation message
                     updatePassword(txtUsername.Text, txtNewPass.Text)
                     MessageBox.Show("Password Successfully Updated", "Update Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     btnCancel.PerformClick()
