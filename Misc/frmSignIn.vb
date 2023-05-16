@@ -83,7 +83,7 @@ Public Class frmSignIn
 
                         .btnLogout.Visible = True
                         .btnCurrentUser.Visible = True
-                        .btnCurrentUser.Text = currUsername
+                        .btnCurrentUser.Text = LimitUsernameText(currUsername)
                         .btnDashboard.PerformClick()
 
                     End With

@@ -150,4 +150,15 @@ Module modGlobalProcedures
 
 
 
+    Public Function LimitUsernameText(uname As String) As String
+        Dim maxLength As Integer = 12
+        If uname.Length >= maxLength Then
+            Return uname.Substring(0, maxLength) & "..."
+        End If
+        Return uname
+    End Function
+
+
+
+
 End Module
