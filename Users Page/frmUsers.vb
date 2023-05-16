@@ -132,7 +132,7 @@ Public Class frmUsers
                         .ExecuteNonQuery()
                         MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
-                        procInsertLogEvent("Delete File", grdUsers.CurrentRow.Cells(2).Value.ToString)
+                        procInsertLogEvent("Delete User", grdUsers.CurrentRow.Cells(3).Value.ToString)
 
                     End With
                     ' refresh/reload customer records in data grid view

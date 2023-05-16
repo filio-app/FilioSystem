@@ -18,7 +18,11 @@ Public Class frmSignIn
                 If datFilio.Rows.Count > 0 Then
                     'userName = txtUserName.Text
                     'userType = datBrgy.Rows(0).Item("position").ToString
-                    currUsername = datFilio.Rows(row).Item("username").ToString
+                    currUsername = datFilio.Rows(0).Item("username").ToString
+                    currUserID = datFilio.Rows(0).Item("id").ToString
+                    currRole = datFilio.Rows(0).Item("role_name").ToString
+
+                    procInsertLogEvent("Sign In", txtUsername.Text)
 
                     Me.Close()
 

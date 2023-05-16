@@ -42,6 +42,9 @@
 
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+            'TODO: Should change to username
+            procInsertLogEvent("Edit User Information", txtFirstName.Text)
+
             Me.Close()
             frmUpdateUser.Close()
 

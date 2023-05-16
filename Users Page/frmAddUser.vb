@@ -72,6 +72,8 @@ Public Class frmAddUser
 
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+            procInsertLogEvent("Add User", txtUsername.Text)
+
             Me.Close()
 
 

@@ -53,6 +53,7 @@
 
             MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+            procInsertLogEvent("Add Transaction", txtFile.Text)
 
 
             'procInsertLogEvent("Add File", txtName.Text)

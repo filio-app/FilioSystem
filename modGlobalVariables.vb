@@ -24,6 +24,7 @@ Module ModGlobalVariable
 
     Public currUsername As String
     Public currUserID As Integer = 1 'TODO: get user ID 
+    Public currRole As String
 
     'Public action As String
 

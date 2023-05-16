@@ -8,13 +8,13 @@ Public Class frmMain
 
         'TODO: (frmMain) Remove and Uncomment the following 2 statements for frmSignIn
 
-        btnCurrentUser.Visible = True
-        btnLogout.Visible = True
+        'btnCurrentUser.Visible = True
+        'btnLogout.Visible = True
 
 
         bunifuPagesMain.SetPage(7)
 
-        'displayFormAsModal(Me, frmSignIn)
+        displayFormAsModal(Me, frmSignIn)
 
 
 
@@ -180,6 +180,10 @@ Public Class frmMain
         ' TODO: (frmMain) set other button checked to false
         btnDashboard.Checked = False
 
+        frmCurrentUser.Dispose()
+        frmHistory.Dispose()
+
+        procInsertLogEvent("Sign Out", currUsername)
 
         bunifuPagesMain.SetPage(7)
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FilioSystem", "FilioSystem.vbproj", "{A72B3C3C-633C-4675-B86A-898BF0704E90}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FilioSetup", "..\FilioSetup\FilioSetup.vdproj", "{29F183A1-BB57-408A-A3F0-B3D7C486DB48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{A72B3C3C-633C-4675-B86A-898BF0704E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A72B3C3C-633C-4675-B86A-898BF0704E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A72B3C3C-633C-4675-B86A-898BF0704E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29F183A1-BB57-408A-A3F0-B3D7C486DB48}.Debug|Any CPU.ActiveCfg = Debug
+		{29F183A1-BB57-408A-A3F0-B3D7C486DB48}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
