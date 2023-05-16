@@ -217,7 +217,7 @@ Public Class frmFiles
 
             Else
                 grdFiles.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
             datFilio.Dispose()
