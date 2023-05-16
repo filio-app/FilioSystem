@@ -295,7 +295,7 @@ Partial Class frmFiles
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(5)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtSearch.PlaceholderText = "Search file..."
+        Me.txtSearch.PlaceholderText = "Search..."
         Me.txtSearch.SelectedText = ""
         Me.txtSearch.Size = New System.Drawing.Size(339, 53)
         Me.txtSearch.TabIndex = 31
