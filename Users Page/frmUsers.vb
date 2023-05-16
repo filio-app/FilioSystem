@@ -195,4 +195,53 @@ Public Class frmUsers
         End If
     End Sub
 
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        procAutoDisplayUsersBySearchType(txtSearch.Text)
+    End Sub
+
+    '=========================== Search Functionality
+    Private Sub procAutoDisplayUsersBySearchType(ByVal p_searchText As String)
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procAutoDisplayUsersBySearchType"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_value", p_searchText)
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+                'lblTotalFiles.Text = datFilio.Rows.Count & " Files"
+            End With
+            If datFilio.Rows.Count > 0 Then
+                grdUsers.RowCount = datFilio.Rows.Count
+                'lblTotalFiles.Text = datFilio.Rows.Count & " Files"
+                row = 0
+                While Not datFilio.Rows.Count - 1 < row
+                    With grdUsers
+                        .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
+                        .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("user_id").ToString
+                        .Rows(row).Cells(3).Value = datFilio.Rows(row).Item("username").ToString
+                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("first_name").ToString
+                        .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("last_name").ToString
+                        .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("role_id").ToString
+                        .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("role_name").ToString
+                        .Rows(row).Cells(8).Value = datFilio.Rows(row).Item("phone_no").ToString
+                        .Rows(row).Cells(9).Value = datFilio.Rows(row).Item("email_address").ToString
+                    End With
+                    row += 1
+                End While
+
+            Else
+                grdUsers.Rows.Clear()
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+            End If
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
 End Class
