@@ -23,14 +23,14 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
+        Dim Animation2 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pBLogo = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
@@ -40,7 +40,7 @@ Partial Class frmMain
         Me.btnLogout = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.btnSettings = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblMenu = New System.Windows.Forms.Label()
         Me.btnUsers = New Guna.UI2.WinForms.Guna2Button()
         Me.btnFiles = New Guna.UI2.WinForms.Guna2Button()
         Me.btnDashboard = New Guna.UI2.WinForms.Guna2Button()
@@ -98,7 +98,7 @@ Partial Class frmMain
         Me.hiddenPage = New System.Windows.Forms.TabPage()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,7 +129,7 @@ Partial Class frmMain
         '
         'panelTopLogo
         '
-        Me.panelTopLogo.Controls.Add(Me.PictureBox1)
+        Me.panelTopLogo.Controls.Add(Me.pBLogo)
         Me.panelTopLogo.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.panelTopLogo.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 1, 0)
         Me.panelTopLogo.Dock = System.Windows.Forms.DockStyle.Top
@@ -138,15 +138,16 @@ Partial Class frmMain
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
         '
-        'PictureBox1
+        'pBLogo
         '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.pBLogo.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.pBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pBLogo.Location = New System.Drawing.Point(45, 22)
+        Me.pBLogo.Name = "pBLogo"
+        Me.pBLogo.Size = New System.Drawing.Size(145, 47)
+        Me.pBLogo.TabIndex = 0
+        Me.pBLogo.TabStop = False
+        Me.pBLogo.Visible = False
         '
         'Guna2ControlBox1
         '
@@ -169,7 +170,7 @@ Partial Class frmMain
         Me.panelLeft.Controls.Add(Me.btnLogout)
         Me.panelLeft.Controls.Add(Me.Guna2Separator1)
         Me.panelLeft.Controls.Add(Me.btnSettings)
-        Me.panelLeft.Controls.Add(Me.Label1)
+        Me.panelLeft.Controls.Add(Me.lblMenu)
         Me.panelLeft.Controls.Add(Me.btnUsers)
         Me.panelLeft.Controls.Add(Me.btnFiles)
         Me.panelLeft.Controls.Add(Me.btnDashboard)
@@ -212,6 +213,7 @@ Partial Class frmMain
         Me.btnTransaction.TabIndex = 9
         Me.btnTransaction.Text = "Transactions"
         Me.btnTransaction.TextOffset = New System.Drawing.Point(4, 2)
+        Me.btnTransaction.Visible = False
         '
         'btnHistory
         '
@@ -243,6 +245,7 @@ Partial Class frmMain
         Me.btnHistory.TabIndex = 8
         Me.btnHistory.Text = "History"
         Me.btnHistory.TextOffset = New System.Drawing.Point(-13, 2)
+        Me.btnHistory.Visible = False
         '
         'Guna2Separator2
         '
@@ -355,17 +358,19 @@ Partial Class frmMain
         Me.btnSettings.TabIndex = 3
         Me.btnSettings.Text = "Settings"
         Me.btnSettings.TextOffset = New System.Drawing.Point(-10, 2)
+        Me.btnSettings.Visible = False
         '
-        'Label1
+        'lblMenu
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(41, 117)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 19)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "MENU"
+        Me.lblMenu.AutoSize = True
+        Me.lblMenu.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblMenu.Location = New System.Drawing.Point(41, 117)
+        Me.lblMenu.Name = "lblMenu"
+        Me.lblMenu.Size = New System.Drawing.Size(58, 19)
+        Me.lblMenu.TabIndex = 2
+        Me.lblMenu.Text = "MENU"
+        Me.lblMenu.Visible = False
         '
         'btnUsers
         '
@@ -397,6 +402,7 @@ Partial Class frmMain
         Me.btnUsers.TabIndex = 2
         Me.btnUsers.Text = "Users"
         Me.btnUsers.TextOffset = New System.Drawing.Point(-20, 2)
+        Me.btnUsers.Visible = False
         '
         'btnFiles
         '
@@ -428,6 +434,7 @@ Partial Class frmMain
         Me.btnFiles.TabIndex = 1
         Me.btnFiles.Text = "Files"
         Me.btnFiles.TextOffset = New System.Drawing.Point(-26, 2)
+        Me.btnFiles.Visible = False
         '
         'btnDashboard
         '
@@ -459,6 +466,7 @@ Partial Class frmMain
         Me.btnDashboard.TabIndex = 0
         Me.btnDashboard.Text = "Dashboard"
         Me.btnDashboard.TextOffset = New System.Drawing.Point(3, 2)
+        Me.btnDashboard.Visible = False
         '
         'Guna2DragControl1
         '
@@ -558,22 +566,22 @@ Partial Class frmMain
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.bunifuPagesMain.Transition = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.bunifuPagesMain.Transition = Animation2
         Me.bunifuPagesMain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom
         '
         'dashboard
@@ -622,22 +630,22 @@ Partial Class frmMain
         Me.grdDTransaction.AllowUserToDeleteRows = False
         Me.grdDTransaction.AllowUserToResizeColumns = False
         Me.grdDTransaction.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdDTransaction.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdDTransaction.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.grdDTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdDTransaction.BackgroundColor = System.Drawing.Color.White
         Me.grdDTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdDTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdDTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDTransaction.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDTransaction.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.grdDTransaction.ColumnHeadersHeight = 50
         Me.grdDTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grdDTransaction.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
@@ -660,14 +668,14 @@ Partial Class frmMain
         Me.grdDTransaction.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdDTransaction.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdDTransaction.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdDTransaction.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdDTransaction.DefaultCellStyle = DataGridViewCellStyle6
         Me.grdDTransaction.EnableHeadersVisualStyles = False
         Me.grdDTransaction.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdDTransaction.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
@@ -1112,7 +1120,7 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTopLogo.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
@@ -1153,8 +1161,8 @@ Partial Class frmMain
     Friend WithEvents btnDashboard As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnUsers As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnFiles As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents pBLogo As PictureBox
+    Friend WithEvents lblMenu As Label
     Friend WithEvents btnSettings As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents panelTop As Guna.UI2.WinForms.Guna2Panel

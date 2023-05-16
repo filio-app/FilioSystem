@@ -41,6 +41,46 @@ Public Class frmSignIn
                         '.btnCertificate.Enabled = True
                         '.btnAbout.Enabled = True
 
+                        .pBLogo.Visible = True
+                        .lblMenu.Visible = True
+                        .btnDashboard.Visible = True
+                        .btnFiles.Visible = True
+                        .btnTransaction.Visible = True
+
+
+                        If currRole.Equals("Employee") Then
+                            .btnUsers.Visible = False
+                            .btnHistory.Visible = False
+                            .btnSettings.Visible = False
+
+                            With frmFiles
+                                .btnAdd.Visible = False
+                                .grdFiles.Columns("Edit").Visible = False
+                                .grdFiles.Columns("Delete").Visible = False
+                            End With
+
+                            With frmTransaction
+                                .grdTransaction.Columns("Delete").Visible = False
+                            End With
+
+                        Else
+                            .btnUsers.Visible = True
+                            .btnHistory.Visible = True
+                            .btnSettings.Visible = True
+
+                            With frmFiles
+                                .btnAdd.Visible = True
+                                .grdFiles.Columns("Edit").Visible = True
+                                .grdFiles.Columns("Delete").Visible = True
+                            End With
+
+                            With frmTransaction
+                                .grdTransaction.Columns("Delete").Visible = True
+                            End With
+
+                        End If
+
+
                         .btnLogout.Visible = True
                         .btnCurrentUser.Visible = True
                         .btnCurrentUser.Text = currUsername

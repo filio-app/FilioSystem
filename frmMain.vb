@@ -177,11 +177,26 @@ Public Class frmMain
         btnLogout.Visible = False
         btnCurrentUser.Visible = False
 
+        pBLogo.Visible = False
+        lblMenu.Visible = False
+        btnDashboard.Visible = False
+        btnFiles.Visible = False
+        btnTransaction.Visible = False
+        btnUsers.Visible = False
+        btnHistory.Visible = False
+        btnSettings.Visible = False
+
         ' TODO: (frmMain) set other button checked to false
         btnDashboard.Checked = False
 
+
+
         frmCurrentUser.Dispose()
         frmHistory.Dispose()
+        frmFiles.Dispose()
+        frmSettings.Dispose()
+        frmTransaction.Dispose()
+        frmUsers.Dispose()
 
         procInsertLogEvent("Sign Out", currUsername)
 

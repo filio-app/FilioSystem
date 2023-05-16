@@ -58,7 +58,7 @@ Partial Class frmSignIn
         Me.btnSignIn.Location = New System.Drawing.Point(86, 498)
         Me.btnSignIn.Name = "btnSignIn"
         Me.btnSignIn.Size = New System.Drawing.Size(380, 58)
-        Me.btnSignIn.TabIndex = 8
+        Me.btnSignIn.TabIndex = 2
         Me.btnSignIn.Text = "Sign in"
         '
         'Guna2ControlBox1
@@ -119,7 +119,7 @@ Partial Class frmSignIn
         Me.txtPassword.PlaceholderText = "Password"
         Me.txtPassword.SelectedText = ""
         Me.txtPassword.Size = New System.Drawing.Size(380, 55)
-        Me.txtPassword.TabIndex = 9
+        Me.txtPassword.TabIndex = 1
         '
         'txtUsername
         '
@@ -143,7 +143,7 @@ Partial Class frmSignIn
         Me.txtUsername.PlaceholderText = "Username"
         Me.txtUsername.SelectedText = ""
         Me.txtUsername.Size = New System.Drawing.Size(380, 55)
-        Me.txtUsername.TabIndex = 3
+        Me.txtUsername.TabIndex = 0
         '
         'frmSignIn
         '
