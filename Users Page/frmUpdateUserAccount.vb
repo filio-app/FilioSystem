@@ -118,7 +118,7 @@
             procUpdateUserAccount()
 
 
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Password changed successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Edit User Password", txtUsername.Text)
 

@@ -90,7 +90,7 @@ Public Class frmSignIn
 
 
                 Else
-                    MessageBox.Show("User not found/Invalid Password", "Sign In", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Invalid username or password. Please try again", "Sign In", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtUsername.Clear()
                     txtPassword.Clear()
 

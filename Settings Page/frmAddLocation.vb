@@ -12,7 +12,7 @@ Public Class frmAddLocation
 
         If txtName.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtName, "test")
+            ErrorProviderHelper.SetError(txtName, "Name field is required.")
             Return
         Else
             clearEP()
@@ -28,7 +28,7 @@ Public Class frmAddLocation
                 .ExecuteNonQuery()
             End With
 
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The location has been added", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Add Location", txtName.Text)
 
@@ -60,7 +60,7 @@ Public Class frmAddLocation
             End With
             frmFiles.Dispose()
 
-            MessageBox.Show("Record Successfully Updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The location has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Edit Location", txtName.Text)
 

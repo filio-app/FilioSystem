@@ -23,11 +23,11 @@
 
         If txtFile.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtFile, "test")
+            ErrorProviderHelper.SetError(txtFile, "File field is required.")
             Return
         ElseIf txtNotes.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtNotes, "test")
+            ErrorProviderHelper.SetError(txtNotes, "Notes field is required.")
             Return
         Else
             clearEP()
@@ -51,7 +51,7 @@
                 frmFiles.Dispose()
             End With
 
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The transaction has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Add Transaction", txtFile.Text)
 

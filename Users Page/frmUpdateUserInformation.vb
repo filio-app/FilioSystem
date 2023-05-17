@@ -6,19 +6,19 @@
 
         If txtFirstName.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtFirstName, "test")
+            ErrorProviderHelper.SetError(txtFirstName, "First Name field is required.")
             Return
         ElseIf txtLastName.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtLastName, "test")
+            ErrorProviderHelper.SetError(txtLastName, "Last Name field is required.")
             Return
         ElseIf txtPhoneNo.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtPhoneNo, "test")
+            ErrorProviderHelper.SetError(txtPhoneNo, "Phone no. field is required.")
             Return
         ElseIf txtEmailAdd.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtEmailAdd, "test")
+            ErrorProviderHelper.SetError(txtEmailAdd, "Email Address field is required.")
             Return
         Else
             clearEP()
@@ -40,7 +40,7 @@
                 .ExecuteNonQuery()
             End With
 
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The user has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             'TODO: Should change to username
             procInsertLogEvent("Edit User Information", txtFirstName.Text)

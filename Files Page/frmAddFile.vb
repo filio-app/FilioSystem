@@ -16,15 +16,15 @@ Public Class frmAddFile
 
         If txtName.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtName, "test")
+            ErrorProviderHelper.SetError(txtName, "Name field is required.")
             Return
         ElseIf txtDescription.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtDescription, "test")
+            ErrorProviderHelper.SetError(txtDescription, "Description field is required.")
             Return
         ElseIf cmbLocation.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(cmbLocation, "test")
+            ErrorProviderHelper.SetError(cmbLocation, "Location field is required.")
             Return
         Else
             clearEP()
@@ -48,7 +48,7 @@ Public Class frmAddFile
             datFilio.Dispose()
             sqlAdapterFilio.Dispose()
 
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The file has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Add File", txtName.Text)
 
@@ -70,15 +70,15 @@ Public Class frmAddFile
 
         If txtName.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtName, "test")
+            ErrorProviderHelper.SetError(txtName, "Name field is required.")
             Return
         ElseIf txtDescription.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtDescription, "test")
+            ErrorProviderHelper.SetError(txtDescription, "Description field is required.")
             Return
         ElseIf cmbLocation.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(cmbLocation, "test")
+            ErrorProviderHelper.SetError(cmbLocation, "Location field is required.")
             Return
         Else
             clearEP()
@@ -105,7 +105,7 @@ Public Class frmAddFile
             datFilio.Dispose()
             sqlAdapterFilio.Dispose()
 
-            MessageBox.Show("Record Successfully Updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The file has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Edit File", txtName.Text)
 

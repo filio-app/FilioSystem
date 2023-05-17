@@ -36,23 +36,23 @@ Public Class frmAddUser
 
         If txtFirstName.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtFirstName, "test")
+            ErrorProviderHelper.SetError(txtFirstName, "First Name field is required.")
             Return
         ElseIf txtLastName.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtLastName, "test")
+            ErrorProviderHelper.SetError(txtLastName, "Last Name field is required.")
             Return
         ElseIf txtPhoneNo.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtPhoneNo, "test")
+            ErrorProviderHelper.SetError(txtPhoneNo, "Phone No. field is required.")
             Return
         ElseIf txtEmailAdd.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtEmailAdd, "test")
+            ErrorProviderHelper.SetError(txtEmailAdd, "Email Address field is required.")
             Return
         ElseIf txtUsername.Text = "" Then
             clearEP()
-            ErrorProviderHelper.SetError(txtUsername, "test")
+            ErrorProviderHelper.SetError(txtUsername, "Username field is required.")
             Return
         Else
             clearEP()
@@ -62,7 +62,7 @@ Public Class frmAddUser
 
 
             If Not checkUserNameAvailability() Then
-                MessageBox.Show("Username Already Registered", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("The username is already registered. Please choose a different username.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Exit Sub
             End If
 
@@ -70,7 +70,7 @@ Public Class frmAddUser
 
             procInsertAdminOrEmployee()
 
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The user has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Add User", txtUsername.Text)
 
