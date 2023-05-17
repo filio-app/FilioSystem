@@ -27,7 +27,7 @@ Public Class frmTransaction
                     With grdTransaction
                         .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
-                        .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm tt")
+                        .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
                         .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("type").ToString
                         .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("username").ToString
                         .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("notes").ToString
@@ -115,7 +115,7 @@ Public Class frmTransaction
 
 
 
-                    .txtDate.Text = grdTransaction.CurrentRow.Cells(3).Value.ToString()
+                    .txtDate.Text = DateTime.Parse(grdTransaction.CurrentRow.Cells(3).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
                     .txtIssuedBy.Text = grdTransaction.CurrentRow.Cells(5).Value.ToString()
                 End With
                 displayFormAsModal(frmMain, frmViewTransaction)

@@ -88,7 +88,7 @@ Partial Class frmViewFile
         Me.cmbStatus.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbStatus.ItemHeight = 49
-        Me.cmbStatus.Items.AddRange(New Object() {"Available", "Checked Out"})
+        Me.cmbStatus.Items.AddRange(New Object() {"Available", "Issued"})
         Me.cmbStatus.Location = New System.Drawing.Point(346, 552)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(256, 55)

@@ -162,8 +162,8 @@ Public Class frmFiles
 
                     .cmbStatus.SelectedIndex = idx
 
-                    .txtDateAdded.Text = grdFiles.CurrentRow.Cells(6).Value.ToString()
-                    .txtDateModified.Text = grdFiles.CurrentRow.Cells(7).Value.ToString()
+                    .txtDateAdded.Text = DateTime.Parse(grdFiles.CurrentRow.Cells(6).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
+                    .txtDateModified.Text = DateTime.Parse(grdFiles.CurrentRow.Cells(7).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
                 End With
                 displayFormAsModal(frmMain, frmViewFile)
 
