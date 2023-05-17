@@ -4,12 +4,12 @@ Public Class frmHistory
     Private isFormLoaded As Boolean = False
     Private Sub frmHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-        Dim defaultDate As New DateTime(2023, 3, 20)
-        dtFrom.Value = defaultDate
+        procDisplayAllHistory()
+        'Dim defaultDate As New DateTime(2023, 3, 20)
+        dtFrom.Value = DateTime.Now.AddDays(-5)
         dtTo.Value = DateTime.Now.AddDays(1)
 
-        procDisplayAllHistory()
+
 
     End Sub
 
@@ -51,7 +51,7 @@ Public Class frmHistory
 
             Else
                 grdHistory.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
             datFilio.Dispose()
@@ -111,7 +111,7 @@ Public Class frmHistory
 
             Else
                 grdHistory.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
             datFilio.Dispose()
