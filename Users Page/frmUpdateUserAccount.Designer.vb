@@ -121,7 +121,7 @@ Partial Class frmUpdateUserAccount
         Me.txtConfirmPass.PlaceholderText = "Please fill in"
         Me.txtConfirmPass.SelectedText = ""
         Me.txtConfirmPass.Size = New System.Drawing.Size(308, 55)
-        Me.txtConfirmPass.TabIndex = 32
+        Me.txtConfirmPass.TabIndex = 2
         '
         'txtPass
         '
@@ -145,7 +145,7 @@ Partial Class frmUpdateUserAccount
         Me.txtPass.PlaceholderText = "Please fill in"
         Me.txtPass.SelectedText = ""
         Me.txtPass.Size = New System.Drawing.Size(308, 55)
-        Me.txtPass.TabIndex = 21
+        Me.txtPass.TabIndex = 1
         '
         'Label4
         '
@@ -192,7 +192,7 @@ Partial Class frmUpdateUserAccount
         Me.txtUsername.PlaceholderText = "Please fill in"
         Me.txtUsername.SelectedText = ""
         Me.txtUsername.Size = New System.Drawing.Size(308, 55)
-        Me.txtUsername.TabIndex = 30
+        Me.txtUsername.TabIndex = 0
         '
         'Label7
         '
@@ -223,7 +223,7 @@ Partial Class frmUpdateUserAccount
         Me.cmbRole.Name = "cmbRole"
         Me.cmbRole.Size = New System.Drawing.Size(308, 55)
         Me.cmbRole.StartIndex = 0
-        Me.cmbRole.TabIndex = 29
+        Me.cmbRole.TabIndex = 3
         '
         'Label5
         '
@@ -251,7 +251,7 @@ Partial Class frmUpdateUserAccount
         Me.btnUpdate.Location = New System.Drawing.Point(426, 394)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(302, 56)
-        Me.btnUpdate.TabIndex = 47
+        Me.btnUpdate.TabIndex = 4
         Me.btnUpdate.Text = "Update"
         '
         'frmUpdateUserAccount

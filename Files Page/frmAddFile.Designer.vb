@@ -82,7 +82,7 @@ Partial Class frmAddFile
         Me.btnSubmit.Location = New System.Drawing.Point(346, 685)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(256, 56)
-        Me.btnSubmit.TabIndex = 14
+        Me.btnSubmit.TabIndex = 4
         Me.btnSubmit.Text = "Submit"
         '
         'txtName
@@ -107,7 +107,7 @@ Partial Class frmAddFile
         Me.txtName.PlaceholderText = "Please fill in"
         Me.txtName.SelectedText = ""
         Me.txtName.Size = New System.Drawing.Size(557, 55)
-        Me.txtName.TabIndex = 13
+        Me.txtName.TabIndex = 0
         '
         'Guna2Panel1
         '
@@ -137,7 +137,7 @@ Partial Class frmAddFile
         Me.btnCancel.Location = New System.Drawing.Point(45, 685)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(256, 56)
-        Me.btnCancel.TabIndex = 19
+        Me.btnCancel.TabIndex = 6
         Me.btnCancel.Text = "Cancel"
         '
         'txtDescription
@@ -163,7 +163,7 @@ Partial Class frmAddFile
         Me.txtDescription.PlaceholderText = "Please fill in"
         Me.txtDescription.SelectedText = ""
         Me.txtDescription.Size = New System.Drawing.Size(557, 244)
-        Me.txtDescription.TabIndex = 20
+        Me.txtDescription.TabIndex = 1
         '
         'txtLocation
         '
@@ -239,7 +239,7 @@ Partial Class frmAddFile
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(256, 55)
         Me.cmbStatus.StartIndex = 0
-        Me.cmbStatus.TabIndex = 29
+        Me.cmbStatus.TabIndex = 3
         '
         'btnUpdate
         '
@@ -255,7 +255,7 @@ Partial Class frmAddFile
         Me.btnUpdate.Location = New System.Drawing.Point(346, 685)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(256, 56)
-        Me.btnUpdate.TabIndex = 30
+        Me.btnUpdate.TabIndex = 5
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.Visible = False
         '
@@ -275,7 +275,7 @@ Partial Class frmAddFile
         Me.cmbLocation.Location = New System.Drawing.Point(45, 570)
         Me.cmbLocation.Name = "cmbLocation"
         Me.cmbLocation.Size = New System.Drawing.Size(256, 55)
-        Me.cmbLocation.TabIndex = 31
+        Me.cmbLocation.TabIndex = 2
         '
         'frmAddFile
         '

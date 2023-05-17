@@ -80,7 +80,7 @@ Partial Class frmAddLocation
         Me.btnUpdate.Location = New System.Drawing.Point(341, 224)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(256, 56)
-        Me.btnUpdate.TabIndex = 42
+        Me.btnUpdate.TabIndex = 2
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.Visible = False
         '
@@ -101,7 +101,7 @@ Partial Class frmAddLocation
         Me.btnCancel.Location = New System.Drawing.Point(40, 224)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(256, 56)
-        Me.btnCancel.TabIndex = 35
+        Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Cancel"
         '
         'Guna2Panel1
@@ -129,7 +129,7 @@ Partial Class frmAddLocation
         Me.btnSubmit.Location = New System.Drawing.Point(341, 224)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(256, 56)
-        Me.btnSubmit.TabIndex = 32
+        Me.btnSubmit.TabIndex = 1
         Me.btnSubmit.Text = "Submit"
         '
         'txtName
@@ -154,7 +154,7 @@ Partial Class frmAddLocation
         Me.txtName.PlaceholderText = "Please fill in"
         Me.txtName.SelectedText = ""
         Me.txtName.Size = New System.Drawing.Size(557, 55)
-        Me.txtName.TabIndex = 31
+        Me.txtName.TabIndex = 0
         '
         'frmAddLocation
         '

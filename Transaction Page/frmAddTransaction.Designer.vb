@@ -94,7 +94,7 @@ Partial Class frmAddTransaction
         Me.cmbType.Location = New System.Drawing.Point(45, 225)
         Me.cmbType.Name = "cmbType"
         Me.cmbType.Size = New System.Drawing.Size(433, 55)
-        Me.cmbType.StartIndex = 0
+        Me.cmbType.StartIndex = 1
         Me.cmbType.TabIndex = 41
         '
         'Label5
@@ -178,7 +178,7 @@ Partial Class frmAddTransaction
         Me.txtNotes.PlaceholderText = "Please fill in"
         Me.txtNotes.SelectedText = ""
         Me.txtNotes.Size = New System.Drawing.Size(433, 244)
-        Me.txtNotes.TabIndex = 36
+        Me.txtNotes.TabIndex = 2
         '
         'btnCancel
         '
@@ -197,7 +197,7 @@ Partial Class frmAddTransaction
         Me.btnCancel.Location = New System.Drawing.Point(45, 613)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(190, 56)
-        Me.btnCancel.TabIndex = 35
+        Me.btnCancel.TabIndex = 4
         Me.btnCancel.Text = "Cancel"
         '
         'Guna2Panel1
@@ -225,7 +225,7 @@ Partial Class frmAddTransaction
         Me.btnSubmit.Location = New System.Drawing.Point(288, 613)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(190, 56)
-        Me.btnSubmit.TabIndex = 32
+        Me.btnSubmit.TabIndex = 3
         Me.btnSubmit.Text = "Submit"
         '
         'Guna2Button1
@@ -246,7 +246,7 @@ Partial Class frmAddTransaction
         Me.Guna2Button1.Location = New System.Drawing.Point(425, 127)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(43, 38)
-        Me.Guna2Button1.TabIndex = 43
+        Me.Guna2Button1.TabIndex = 0
         '
         'frmAddTransaction
         '
