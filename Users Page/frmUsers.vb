@@ -39,7 +39,8 @@ Public Class frmUsers
 
             Else
                 grdUsers.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No records found.", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
 
             End If
             datFilio.Dispose()
@@ -130,7 +131,7 @@ Public Class frmUsers
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_id", userID)
                         .ExecuteNonQuery()
-                        MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("The user has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
                         procInsertLogEvent("Delete User", grdUsers.CurrentRow.Cells(3).Value.ToString)
 

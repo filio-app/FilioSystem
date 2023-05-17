@@ -32,7 +32,7 @@ Public Class frmLocation
 
             Else
                 grdLocation.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No records found.", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
             datFilio.Dispose()
@@ -92,7 +92,7 @@ Public Class frmLocation
 
                         frmFiles.Dispose()
 
-                        MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("The location has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
                         procInsertLogEvent("Delete Location", grdLocation.CurrentRow.Cells(2).Value.ToString)
 

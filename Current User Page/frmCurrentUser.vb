@@ -180,11 +180,11 @@ Public Class frmCurrentUser
                 If datFilio.Rows.Count > 0 Then
                     'TODO: (frmCurrentUser) Add confirmation message
                     updatePassword(txtUsername.Text, txtNewPass.Text)
-                    MessageBox.Show("Password Successfully Updated", "Update Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Password changed successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     procInsertLogEvent("Edit User Password", txtUsername.Text)
                     btnCancel.PerformClick()
                 Else
-                    MessageBox.Show("Username and Current password doesn't Match!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("The username and current password do not match.", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
             End With
 
