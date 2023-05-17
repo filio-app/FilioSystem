@@ -158,7 +158,7 @@ Partial Class frmCurrentUser
         Me.txtConfirmNewPass.Location = New System.Drawing.Point(204, 287)
         Me.txtConfirmNewPass.Margin = New System.Windows.Forms.Padding(5)
         Me.txtConfirmNewPass.Name = "txtConfirmNewPass"
-        Me.txtConfirmNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtConfirmNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtConfirmNewPass.PlaceholderText = ""
         Me.txtConfirmNewPass.SelectedText = ""
         Me.txtConfirmNewPass.Size = New System.Drawing.Size(359, 41)
@@ -194,7 +194,7 @@ Partial Class frmCurrentUser
         Me.txtNewPass.Location = New System.Drawing.Point(204, 211)
         Me.txtNewPass.Margin = New System.Windows.Forms.Padding(5)
         Me.txtNewPass.Name = "txtNewPass"
-        Me.txtNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNewPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtNewPass.PlaceholderText = ""
         Me.txtNewPass.SelectedText = ""
         Me.txtNewPass.Size = New System.Drawing.Size(359, 41)
@@ -230,7 +230,7 @@ Partial Class frmCurrentUser
         Me.txtCurrentPass.Location = New System.Drawing.Point(204, 135)
         Me.txtCurrentPass.Margin = New System.Windows.Forms.Padding(5)
         Me.txtCurrentPass.Name = "txtCurrentPass"
-        Me.txtCurrentPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCurrentPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtCurrentPass.PlaceholderText = ""
         Me.txtCurrentPass.SelectedText = ""
         Me.txtCurrentPass.Size = New System.Drawing.Size(359, 41)
