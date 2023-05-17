@@ -22,7 +22,7 @@ Public Class frmSignIn
                     currUserID = datFilio.Rows(0).Item("id").ToString
                     currRole = datFilio.Rows(0).Item("role_name").ToString
 
-                    procInsertLogEvent("Sign In", txtUsername.Text)
+                    procInsertLogEvent("Sign In", "Filio")
 
                     Me.Close()
 

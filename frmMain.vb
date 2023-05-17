@@ -198,7 +198,7 @@ Public Class frmMain
         frmTransaction.Dispose()
         frmUsers.Dispose()
 
-        procInsertLogEvent("Sign Out", currUsername)
+        procInsertLogEvent("Sign Out", "Filio")
 
         bunifuPagesMain.SetPage(7)
 
