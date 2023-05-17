@@ -109,5 +109,17 @@ Public Class frmSignIn
         Application.Exit()
     End Sub
 
+    Private Sub txtUsername_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsername.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True ' Prevent the "Enter" key from adding a new line in the textbox
+            btnSignIn.PerformClick() ' Trigger the click event of the sign-in button
+        End If
+    End Sub
 
+    Private Sub txtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True ' Prevent the "Enter" key from adding a new line in the textbox
+            btnSignIn.PerformClick() ' Trigger the click event of the sign-in button
+        End If
+    End Sub
 End Class
