@@ -268,7 +268,7 @@ Partial Class frmFiles
         Me.btnAdd.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAdd.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnAdd.ForeColor = System.Drawing.Color.White
-        Me.btnAdd.Location = New System.Drawing.Point(12, 30)
+        Me.btnAdd.Location = New System.Drawing.Point(34, 30)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(151, 48)
         Me.btnAdd.TabIndex = 1
@@ -291,7 +291,7 @@ Partial Class frmFiles
         Me.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSearch.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtSearch.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtSearch.Location = New System.Drawing.Point(835, 25)
+        Me.txtSearch.Location = New System.Drawing.Point(825, 25)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(5)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -314,7 +314,7 @@ Partial Class frmFiles
         Me.cmbSearchType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbSearchType.ItemHeight = 47
         Me.cmbSearchType.Items.AddRange(New Object() {"Name", "Location"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(662, 25)
+        Me.cmbSearchType.Location = New System.Drawing.Point(652, 25)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(154, 53)
         Me.cmbSearchType.StartIndex = 0
@@ -376,7 +376,7 @@ Partial Class frmFiles
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(544, 41)
+        Me.Label3.Location = New System.Drawing.Point(534, 41)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(121, 21)
         Me.Label3.TabIndex = 36

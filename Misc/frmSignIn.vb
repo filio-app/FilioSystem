@@ -74,9 +74,9 @@ Public Class frmSignIn
                                 .grdFiles.Columns("Delete").Visible = True
                             End With
 
-                            With frmTransaction
-                                .grdTransaction.Columns("Delete").Visible = True
-                            End With
+                            'With frmTransaction
+                            '    .grdTransaction.Columns("Delete").Visible = True
+                            'End With
 
                         End If
 
