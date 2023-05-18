@@ -94,9 +94,9 @@ Partial Class frmUpdateUserAccount
         Me.lblPassStr.ForeColor = System.Drawing.Color.Red
         Me.lblPassStr.Location = New System.Drawing.Point(365, 154)
         Me.lblPassStr.Name = "lblPassStr"
-        Me.lblPassStr.Size = New System.Drawing.Size(347, 17)
+        Me.lblPassStr.Size = New System.Drawing.Size(303, 38)
         Me.lblPassStr.TabIndex = 82
-        Me.lblPassStr.Text = "Password must be 8+ characters & vbCrLf & with letters and numbers"
+        Me.lblPassStr.Text = "Password must be 8+ characters with letters and numbers"
         Me.lblPassStr.Visible = False
         '
         'txtConfirmPass

@@ -4,6 +4,9 @@
     Private isStrongPass As Boolean = False
     Private Sub frmChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         isFormLoaded = False
+        lblPassStr.Text = "Password must be 8+ characters" & Environment.NewLine & "with letters and numbers"
+
+
     End Sub
 
 
