@@ -128,14 +128,14 @@ Module modGlobalProcedures
 
     End Sub
 
-    Public Sub BackupDatabase(ByVal databaseName As String, ByVal backupPath As String)
+    Public Sub BackupDatabaseOld(ByVal databaseName As String, ByVal backupPath As String)
         Try
             Dim fileName As String = String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", databaseName, DateTime.Now)
             Dim filePath As String = Path.Combine(backupPath, fileName)
 
             Using process As New Process()
                 process.StartInfo.FileName = "mysqldump.exe"
-                process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} {3} > ""{4}""", "root", "password", "localhost", databaseName, filePath)
+                process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} {3} > ""{4}""", "root", "filio", "localhost", databaseName, filePath)
                 process.StartInfo.UseShellExecute = False
                 process.StartInfo.RedirectStandardOutput = True
                 process.Start()
@@ -147,6 +147,46 @@ Module modGlobalProcedures
         End Try
     End Sub
 
+    Public Sub BackupDatabaseNew(ByVal databaseName As String, ByVal backupPath As String)
+        Try
+            Dim fileName As String = String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", databaseName, DateTime.Now)
+            Dim filePath As String = Path.Combine(backupPath, fileName)
+
+            Using process As New Process()
+                process.StartInfo.FileName = "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe"
+                process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} --protocol=tcp --port=3306 --default-auth=filio {3} > ""{4}""", "root", "password", "localhost", databaseName, filePath)
+                process.StartInfo.UseShellExecute = False
+                process.StartInfo.RedirectStandardOutput = True
+                process.Start()
+                process.WaitForExit()
+                MessageBox.Show("Database backup created successfully!")
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error creating database backup: " & ex.Message)
+        End Try
+    End Sub
+
+    Public Sub BackupDatabase()
+        Dim backupPath As String = "C:\Filio Database Backup\Automated\" & String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", "filio_system", DateTime.Now) ' Set the backup file path
+
+        Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
+
+        Try
+            Using con As New MySqlConnection(connectionString)
+                con.Open()
+
+                Using cmd As New MySqlCommand()
+                    cmd.Connection = con
+
+                    Dim mb As MySqlBackup = New MySqlBackup(cmd)
+                    mb.ExportToFile(backupPath)
+                    'MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Backup operation failed: " & ex.Message)
+        End Try
+    End Sub
 
 
 

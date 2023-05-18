@@ -62,7 +62,7 @@ Partial Class frmSettings
         Me.btnBackup.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnBackup.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnBackup.ForeColor = System.Drawing.Color.White
-        Me.btnBackup.Location = New System.Drawing.Point(469, 236)
+        Me.btnBackup.Location = New System.Drawing.Point(497, 236)
         Me.btnBackup.Name = "btnBackup"
         Me.btnBackup.Size = New System.Drawing.Size(160, 54)
         Me.btnBackup.TabIndex = 2
@@ -73,7 +73,7 @@ Partial Class frmSettings
         '
         Me.btnRestore.Animated = True
         Me.btnRestore.BorderRadius = 8
-        Me.btnRestore.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.database_export_custom
+        Me.btnRestore.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.backup_restore_custom
         Me.btnRestore.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.btnRestore.CustomImages.ImageSize = New System.Drawing.Size(30, 30)
         Me.btnRestore.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -83,7 +83,7 @@ Partial Class frmSettings
         Me.btnRestore.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnRestore.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnRestore.ForeColor = System.Drawing.Color.White
-        Me.btnRestore.Location = New System.Drawing.Point(725, 236)
+        Me.btnRestore.Location = New System.Drawing.Point(700, 236)
         Me.btnRestore.Name = "btnRestore"
         Me.btnRestore.Size = New System.Drawing.Size(160, 54)
         Me.btnRestore.TabIndex = 3
@@ -102,10 +102,10 @@ Partial Class frmSettings
         Me.BunifuPagesSettings.Multiline = True
         Me.BunifuPagesSettings.Name = "BunifuPagesSettings"
         Me.BunifuPagesSettings.Padding = New System.Drawing.Point(0, 0)
-        Me.BunifuPagesSettings.Page = Me.TabPage2
-        Me.BunifuPagesSettings.PageIndex = 0
-        Me.BunifuPagesSettings.PageName = "TabPage2"
-        Me.BunifuPagesSettings.PageTitle = "Location"
+        Me.BunifuPagesSettings.Page = Me.TabPage3
+        Me.BunifuPagesSettings.PageIndex = 1
+        Me.BunifuPagesSettings.PageName = "TabPage3"
+        Me.BunifuPagesSettings.PageTitle = "Backup and Restore"
         Me.BunifuPagesSettings.SelectedIndex = 0
         Me.BunifuPagesSettings.Size = New System.Drawing.Size(1392, 711)
         Me.BunifuPagesSettings.TabIndex = 4

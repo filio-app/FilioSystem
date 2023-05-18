@@ -17,7 +17,7 @@ Public Class frmMain
         displayFormAsModal(Me, frmSignIn)
 
 
-
+        BackupDatabase()
 
     End Sub
 
