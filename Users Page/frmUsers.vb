@@ -121,15 +121,17 @@ Public Class frmUsers
 
         If colName = "delete" Then
 
+            'TODO: Test Delete functionality
 
             Try
                 If MessageBox.Show("Are you sure you want to delete the selected record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     ' Perform the deletion
                     With command
                         .Parameters.Clear()
-                        .CommandText = "procDeleteFile-"
+                        .CommandText = "procDeleteUser"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", userID)
+                        .Parameters.AddWithValue("@p_id", currUserID)
+                        .Parameters.AddWithValue("@p_id", currRole)
                         .ExecuteNonQuery()
                         MessageBox.Show("The user has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
