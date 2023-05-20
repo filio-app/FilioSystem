@@ -17,7 +17,8 @@ Public Class frmMain
         displayFormAsModal(Me, frmSignIn)
 
 
-        BackupDatabase()
+        'BackupDatabase()
+        'procInsertLogEvent("Weekly Backup", "Database")
 
     End Sub
 
@@ -205,5 +206,8 @@ Public Class frmMain
         displayFormAsModal(Me, frmSignIn)
     End Sub
 
-
+    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
+        procInsertLogEvent("Sign Out", "Filio")
+        'TODO: Application.exit() -> Sign Out Event
+    End Sub
 End Class

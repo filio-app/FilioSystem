@@ -48,6 +48,7 @@ Public Class frmSettings
 
                         Dim mb As MySqlBackup = New MySqlBackup(cmd)
                         mb.ExportToFile(backup.FileName)
+                        procInsertLogEvent("Backup", "Database")
                         MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End Using
                 End Using
@@ -181,6 +182,7 @@ Public Class frmSettings
 
                         Dim mb As MySqlBackup = New MySqlBackup(cmd)
                         mb.ImportFromFile(backupFile)
+                        procInsertLogEvent("Restore", "Database")
                         MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End Using
                 End Using
