@@ -14,6 +14,7 @@
             .Owner = Me
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
+            .Dispose()
         End With
 
 
