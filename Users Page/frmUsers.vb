@@ -130,8 +130,8 @@ Public Class frmUsers
                         .Parameters.Clear()
                         .CommandText = "procDeleteUser"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", CInt(grdUsers.CurrentRow.Cells(1).Value))
-                        .Parameters.AddWithValue("@p_role_id", CInt(grdUsers.CurrentRow.Cells(6).Value))
+                        .Parameters.AddWithValue("@p_user_id", CInt(grdUsers.CurrentRow.Cells(2).Value.ToString))
+                        .Parameters.AddWithValue("@p_role_id", CInt(grdUsers.CurrentRow.Cells(6).Value.ToString))
                         .ExecuteNonQuery()
                         MessageBox.Show("The user has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
