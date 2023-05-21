@@ -23,9 +23,9 @@ Partial Class frmHistory
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.grdHistory = New Bunifu.UI.WinForms.BunifuDataGridView()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,6 +53,8 @@ Partial Class frmHistory
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,22 +71,22 @@ Partial Class frmHistory
         Me.grdHistory.AllowUserToDeleteRows = False
         Me.grdHistory.AllowUserToResizeColumns = False
         Me.grdHistory.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdHistory.BackgroundColor = System.Drawing.Color.White
         Me.grdHistory.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdHistory.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.grdHistory.ColumnHeadersHeight = 50
         Me.grdHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grdHistory.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column2, Me.Column1, Me.Column10, Me.Column11, Me.Column3, Me.Column5, Me.Column6, Me.Column4, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
@@ -107,14 +109,14 @@ Partial Class frmHistory
         Me.grdHistory.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdHistory.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdHistory.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdHistory.DefaultCellStyle = DataGridViewCellStyle3
         Me.grdHistory.EnableHeadersVisualStyles = False
         Me.grdHistory.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdHistory.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
@@ -128,7 +130,7 @@ Partial Class frmHistory
         Me.grdHistory.RowHeadersWidth = 50
         Me.grdHistory.RowTemplate.Height = 50
         Me.grdHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdHistory.Size = New System.Drawing.Size(1125, 690)
+        Me.grdHistory.Size = New System.Drawing.Size(1125, 664)
         Me.grdHistory.TabIndex = 3
         Me.grdHistory.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -319,6 +321,8 @@ Partial Class frmHistory
         Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
         Me.Guna2Panel5.BorderRadius = 20
         Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.lblTotalFiles)
+        Me.Guna2Panel5.Controls.Add(Me.Label1)
         Me.Guna2Panel5.Controls.Add(Me.grdHistory)
         Me.Guna2Panel5.FillColor = System.Drawing.Color.White
         Me.Guna2Panel5.Location = New System.Drawing.Point(17, 79)
@@ -366,6 +370,28 @@ Partial Class frmHistory
         Me.PictureBox1.TabIndex = 40
         Me.PictureBox1.TabStop = False
         '
+        'lblTotalFiles
+        '
+        Me.lblTotalFiles.AutoSize = True
+        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalFiles.Location = New System.Drawing.Point(89, 700)
+        Me.lblTotalFiles.Name = "lblTotalFiles"
+        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
+        Me.lblTotalFiles.TabIndex = 37
+        Me.lblTotalFiles.Text = "60 Files"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(15, 699)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "Showing:"
+        '
         'frmHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -381,6 +407,7 @@ Partial Class frmHistory
         Me.Text = "frmHistory"
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -413,4 +440,6 @@ Partial Class frmHistory
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
+    Friend WithEvents lblTotalFiles As Label
+    Friend WithEvents Label1 As Label
 End Class

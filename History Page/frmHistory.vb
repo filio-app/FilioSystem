@@ -28,6 +28,7 @@ Public Class frmHistory
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
+                'lblTotalFiles.Text = datFilio.Rows.Count & " Results"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdHistory.RowCount = datFilio.Rows.Count
@@ -88,6 +89,7 @@ Public Class frmHistory
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
+                lblTotalFiles.Text = datFilio.Rows.Count & " Results"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdHistory.RowCount = datFilio.Rows.Count
