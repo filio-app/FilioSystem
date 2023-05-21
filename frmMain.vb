@@ -200,14 +200,17 @@ Public Class frmMain
         frmUsers.Dispose()
 
         procInsertLogEvent("Sign Out", "Filio")
+        isLoggedIn = False
 
         bunifuPagesMain.SetPage(7)
 
         displayFormAsModal(Me, frmSignIn)
     End Sub
 
-    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
-        procInsertLogEvent("Sign Out", "Filio")
-        'TODO: Application.exit() -> Sign Out Event
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If isLoggedIn Then
+            procInsertLogEvent("Sign Out", "Filio")
+        End If
     End Sub
 End Class

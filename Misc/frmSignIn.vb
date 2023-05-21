@@ -23,6 +23,7 @@ Public Class frmSignIn
                     currRole = datFilio.Rows(0).Item("role_name").ToString
 
                     procInsertLogEvent("Sign In", "Filio")
+                    isLoggedIn = True
 
                     Me.Close()
 
@@ -106,6 +107,7 @@ Public Class frmSignIn
     End Sub
 
     Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
+        Application.DoEvents()
         Application.Exit()
     End Sub
 

@@ -22,6 +22,7 @@ Module ModGlobalVariable
     Public userID As Integer
     Public locationID As Integer 'For updating location
 
+    Public isLoggedIn As String = False
     Public currUsername As String
     Public currUserID As Integer = 1 'TODO: get user ID 
     Public currRole As String
