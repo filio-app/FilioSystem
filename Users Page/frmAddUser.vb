@@ -6,6 +6,10 @@ Public Class frmAddUser
     Private isStrongPass As Boolean = False
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        clearControlsInGroupBox(gBPersonalInfo)
+        clearControlsInGroupBox(gBUserAcc)
+
         lblPassStr.Height = 40
         lblPassStr.Text = "Password must be 8+ characters with letters and" & vbCrLf & "numbers"
         isFormLoaded = False
@@ -14,15 +18,15 @@ Public Class frmAddUser
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         'TODO: opening the frmAddUser trigger textChangedEvent
         'isFormLoaded = True
-        clearControlsInGroupBox(gBPersonalInfo)
-        clearControlsInGroupBox(gBUserAcc)
+        'clearControlsInGroupBox(gBPersonalInfo)
+        'clearControlsInGroupBox(gBUserAcc)
 
         clearEP()
 
         'TODO: Change close() to dipose() if possible
 
         Me.Close()
-        Me.Dispose()
+        'Me.Dispose()
     End Sub
 
     '=============================================== Submit ========================================

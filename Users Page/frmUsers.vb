@@ -63,6 +63,7 @@ Public Class frmUsers
             End With
 
             displayFormAsModal(frmMain, frmAddUser)
+            frmAddUser.Dispose()
             procDisplayAllUsers()
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
