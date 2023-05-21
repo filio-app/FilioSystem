@@ -117,7 +117,7 @@ Public Class frmFiles
 
 
             Try
-                If MessageBox.Show("Are you sure you want to delete the selected record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show("Are you sure you want to delete the selected file?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     ' Perform the deletion
                     With command
                         .Parameters.Clear()

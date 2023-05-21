@@ -125,7 +125,7 @@ Public Class frmUsers
             'TODO: Test Delete functionality
 
             Try
-                If MessageBox.Show("Are you sure you want to delete the selected record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show("Are you sure you want to delete the selected user?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     ' Perform the deletion
                     With command
                         .Parameters.Clear()
