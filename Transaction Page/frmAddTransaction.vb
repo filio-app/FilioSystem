@@ -32,36 +32,37 @@
         Else
             clearEP()
         End If
+        If MessageBox.Show("Are you sure you want to add...", "Confirm Add...", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            Try
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "procInsertTransaction"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_user_id", currUserID)
+                    .Parameters.AddWithValue("@p_file_id", tempFileID)
+                    '.Parameters.AddWithValue("@date", txtLocation.Text)
+                    .Parameters.AddWithValue("@p_type", cmbType.Text)
+                    .Parameters.AddWithValue("@p_notes", txtNotes.Text)
+                    .ExecuteNonQuery()
 
-        Try
-            With command
-                .Parameters.Clear()
-                .CommandText = "procInsertTransaction"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_user_id", currUserID)
-                .Parameters.AddWithValue("@p_file_id", tempFileID)
-                '.Parameters.AddWithValue("@date", txtLocation.Text)
-                .Parameters.AddWithValue("@p_type", cmbType.Text)
-                .Parameters.AddWithValue("@p_notes", txtNotes.Text)
-                .ExecuteNonQuery()
+                    'UPDATE File to Issued or Available
+                    procUpdateFileStatus(cmbType.Text)
 
-                'UPDATE File to Issued or Available
-                procUpdateFileStatus(cmbType.Text)
+                    frmFiles.Dispose()
+                End With
 
-                frmFiles.Dispose()
-            End With
+                MessageBox.Show("The transaction has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            MessageBox.Show("The transaction has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            procInsertLogEvent("Add Transaction", txtFile.Text)
+                procInsertLogEvent("Add Transaction", txtFile.Text)
 
 
-            'procInsertLogEvent("Add File", txtName.Text)
+                'procInsertLogEvent("Add File", txtName.Text)
 
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
+                Me.Close()
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub procUpdateFileStatus(ByVal type As String)
