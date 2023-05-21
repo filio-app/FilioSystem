@@ -50,7 +50,6 @@ Partial Class frmCurrentUser
         '
         Me.panelChangePass.BackColor = System.Drawing.Color.White
         Me.panelChangePass.Controls.Add(Me.lblPassStr)
-        Me.panelChangePass.Controls.Add(Me.btnUpdate)
         Me.panelChangePass.Controls.Add(Me.btnEdit)
         Me.panelChangePass.Controls.Add(Me.lblPassErr)
         Me.panelChangePass.Controls.Add(Me.Label3)
@@ -62,10 +61,11 @@ Partial Class frmCurrentUser
         Me.panelChangePass.Controls.Add(Me.Label16)
         Me.panelChangePass.Controls.Add(Me.txtUsername)
         Me.panelChangePass.Controls.Add(Me.btnCancel)
+        Me.panelChangePass.Controls.Add(Me.btnUpdate)
         Me.panelChangePass.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.panelChangePass.Location = New System.Drawing.Point(295, 193)
+        Me.panelChangePass.Location = New System.Drawing.Point(295, 196)
         Me.panelChangePass.Name = "panelChangePass"
-        Me.panelChangePass.Size = New System.Drawing.Size(610, 435)
+        Me.panelChangePass.Size = New System.Drawing.Size(610, 440)
         Me.panelChangePass.TabIndex = 0
         '
         'lblPassStr
@@ -92,7 +92,7 @@ Partial Class frmCurrentUser
         Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Inter SemiBold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(341, 379)
+        Me.btnUpdate.Location = New System.Drawing.Point(341, 377)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(95, 41)
         Me.btnUpdate.TabIndex = 79
@@ -110,11 +110,11 @@ Partial Class frmCurrentUser
         Me.btnEdit.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnEdit.Font = New System.Drawing.Font("Inter SemiBold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(468, 379)
+        Me.btnEdit.Location = New System.Drawing.Point(382, 377)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(95, 41)
+        Me.btnEdit.Size = New System.Drawing.Size(181, 41)
         Me.btnEdit.TabIndex = 78
-        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.Text = "Change password"
         '
         'lblPassErr
         '
@@ -283,7 +283,7 @@ Partial Class frmCurrentUser
         Me.btnCancel.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnCancel.Font = New System.Drawing.Font("Inter SemiBold", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(468, 379)
+        Me.btnCancel.Location = New System.Drawing.Point(468, 377)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(95, 41)
         Me.btnCancel.TabIndex = 80
