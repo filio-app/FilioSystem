@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 
 Public Class frmAddUser
 
@@ -29,6 +30,20 @@ Public Class frmAddUser
         'Me.Dispose()
     End Sub
 
+    '============================= REGEX ============================
+
+    Function IsValidEmail(email As String) As Boolean
+        Dim pattern As String = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+        Dim regex As Regex = New Regex(pattern)
+        Return regex.IsMatch(email)
+    End Function
+
+    Function IsValidPhoneNumber(phoneNumber As String) As Boolean
+        Dim pattern As String = "^(09|\+639)\d{9}$"
+        Dim regex As Regex = New Regex(pattern)
+        Return regex.IsMatch(phoneNumber)
+    End Function
+
     '=============================================== Submit ========================================
 
 
@@ -50,9 +65,17 @@ Public Class frmAddUser
             clearEP()
             ErrorProviderHelper.SetError(txtPhoneNo, "Phone No. field is required.")
             Return
+        ElseIf Not IsValidPhoneNumber(txtPhoneNo.Text) Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtPhoneNo, "Invalid phone number.")
+            Return
         ElseIf txtEmailAdd.Text = "" Then
             clearEP()
             ErrorProviderHelper.SetError(txtEmailAdd, "Email Address field is required.")
+            Return
+        ElseIf Not IsValidEmail(txtEmailAdd.Text) Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtEmailAdd, "Invalid email address.")
             Return
         ElseIf txtUsername.Text = "" Then
             clearEP()
