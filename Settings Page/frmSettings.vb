@@ -163,33 +163,38 @@ Public Class frmSettings
     End Sub
 
     Private Sub btnRestore_Click(sender As Object, e As EventArgs) Handles btnRestore.Click
-        Dim openFileDialog As New OpenFileDialog()
-        openFileDialog.InitialDirectory = "C:\Filio Database Backup\"
-        openFileDialog.Title = "Select Database Backup File"
-        openFileDialog.Filter = "SQL Files (*.sql)|*.sql|All files (*.*)|*.*"
-        openFileDialog.RestoreDirectory = True
 
-        If openFileDialog.ShowDialog() = DialogResult.OK Then
-            Dim backupFile As String = openFileDialog.FileName
+        If MessageBox.Show("Before restoring the database, make sure you have a backup. Are you sure you want to proceed with the restore?", "Confirm Restore", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
-            Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
+            Dim openFileDialog As New OpenFileDialog()
+            openFileDialog.InitialDirectory = "C:\Filio Database Backup\"
+            openFileDialog.Title = "Select Database Backup File"
+            openFileDialog.Filter = "SQL Files (*.sql)|*.sql|All files (*.*)|*.*"
+            openFileDialog.RestoreDirectory = True
 
-            Try
-                Using con As New MySqlConnection(connectionString)
-                    con.Open()
 
-                    Using cmd As New MySqlCommand()
-                        cmd.Connection = con
+            If openFileDialog.ShowDialog() = DialogResult.OK Then
+                Dim backupFile As String = openFileDialog.FileName
 
-                        Dim mb As MySqlBackup = New MySqlBackup(cmd)
-                        mb.ImportFromFile(backupFile)
-                        procInsertLogEvent("Restore", "Database")
-                        MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
+
+                Try
+                    Using con As New MySqlConnection(connectionString)
+                        con.Open()
+
+                        Using cmd As New MySqlCommand()
+                            cmd.Connection = con
+
+                            Dim mb As MySqlBackup = New MySqlBackup(cmd)
+                            mb.ImportFromFile(backupFile)
+                            procInsertLogEvent("Restore", "Database")
+                            MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        End Using
                     End Using
-                End Using
-            Catch ex As Exception
-                MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+                Catch ex As Exception
+                    MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End If
         End If
     End Sub
 
