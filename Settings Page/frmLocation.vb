@@ -82,21 +82,32 @@ Public Class frmLocation
 
             Try
                 If MessageBox.Show("Warning: Deleting this location will also delete all the associated files. There are " & grdLocation.CurrentRow.Cells(6).Value.ToString & " files associated with this location. Do you want to proceed with the deletion?", "Delete Location", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-                    ' Perform the deletion
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "procDeleteLocation"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", locationID)
-                        .ExecuteNonQuery()
 
-                        frmFiles.Dispose()
+                    Dim userInput As String = InputBox("Please enter 'CONFIRM' in capital letters to delete the record:", "Confirm Deletion")
 
-                        MessageBox.Show("The location has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    If userInput.Trim() = "CONFIRM" Then
+                        ' Perform the deletion
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "procDeleteLocation"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_id", locationID)
+                            .ExecuteNonQuery()
 
-                        procInsertLogEvent("Delete Location", grdLocation.CurrentRow.Cells(2).Value.ToString)
+                            frmFiles.Dispose()
 
-                    End With
+                            MessageBox.Show("The location has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                            procInsertLogEvent("Delete Location", grdLocation.CurrentRow.Cells(2).Value.ToString)
+
+                        End With
+                    Else
+                        ' Cancel deletion
+                        MessageBox.Show("Deletion canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+
+
+
                     ' refresh/reload customer records in data grid view
                     procDisplayAllLocations()
                 End If
