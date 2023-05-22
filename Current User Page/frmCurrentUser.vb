@@ -71,6 +71,8 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = False
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Green
                 txtConfirmNewPass.BorderColor = Color.Green
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = True
             ElseIf Not isStrongPass And txtNewPass.Text <> txtConfirmNewPass.Text Then
                 ' show two err
@@ -78,11 +80,18 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = True
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
                 btnUpdate.Enabled = False
             ElseIf txtNewPass.Text <> txtConfirmNewPass.Text And isStrongPass Then
                 ' show not match err
                 lblPassErr.Visible = True
                 lblPassStr.Visible = False
+
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
+
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
                 btnUpdate.Enabled = False
@@ -90,8 +99,12 @@ Public Class frmCurrentUser
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
-                txtConfirmNewPass.BorderColor = Color.Red
+
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Green
+                txtConfirmNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = False
             End If
 
@@ -130,6 +143,8 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = False
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Green
                 txtConfirmNewPass.BorderColor = Color.Green
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = True
             ElseIf Not isStrongPass And txtNewPass.Text <> txtConfirmNewPass.Text Then
                 ' show two err
@@ -137,11 +152,18 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = True
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
                 btnUpdate.Enabled = False
             ElseIf txtNewPass.Text <> txtConfirmNewPass.Text And isStrongPass Then
                 ' show not match err
                 lblPassErr.Visible = True
                 lblPassStr.Visible = False
+
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
+
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
                 btnUpdate.Enabled = False
@@ -149,10 +171,16 @@ Public Class frmCurrentUser
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
-                txtConfirmNewPass.BorderColor = Color.Red
+
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Green
+                txtConfirmNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = False
             End If
+
+
 
 
 

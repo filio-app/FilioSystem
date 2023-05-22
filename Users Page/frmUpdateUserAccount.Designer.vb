@@ -154,9 +154,9 @@ Partial Class frmUpdateUserAccount
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(364, 70)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(83, 19)
+        Me.Label4.Size = New System.Drawing.Size(122, 19)
         Me.Label4.TabIndex = 27
-        Me.Label4.Text = "Password"
+        Me.Label4.Text = "New Password"
         '
         'Label8
         '

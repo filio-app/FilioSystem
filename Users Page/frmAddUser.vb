@@ -192,6 +192,9 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Green
                 txtConfirmPass.BorderColor = Color.Green
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = True
                 btnSubmit.Enabled = True
             ElseIf Not isStrongPass And txtPass.Text <> txtConfirmPass.Text Then
@@ -200,6 +203,9 @@ Public Class frmAddUser
                 lblPassErr.Visible = True
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
@@ -210,14 +216,20 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
             ElseIf Not isStrongPass And txtPass.Text = txtConfirmPass.Text Then
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmPass.FocusedState.BorderColor = Color.Red
-                txtConfirmPass.BorderColor = Color.Red
+                txtConfirmPass.FocusedState.BorderColor = Color.Green
+                txtConfirmPass.BorderColor = Color.Green
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
@@ -245,6 +257,9 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Green
                 txtConfirmPass.BorderColor = Color.Green
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = True
                 btnSubmit.Enabled = True
             ElseIf Not isStrongPass And txtPass.Text <> txtConfirmPass.Text Then
@@ -253,6 +268,9 @@ Public Class frmAddUser
                 lblPassErr.Visible = True
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
@@ -263,19 +281,24 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
             ElseIf Not isStrongPass And txtPass.Text = txtConfirmPass.Text Then
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmPass.FocusedState.BorderColor = Color.Red
-                txtConfirmPass.BorderColor = Color.Red
+                txtConfirmPass.FocusedState.BorderColor = Color.Green
+                txtConfirmPass.BorderColor = Color.Green
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
             End If
-
 
 
         End If
