@@ -61,6 +61,7 @@ Public Class frmFiles
 
             displayFormAsModal(frmMain, frmAddFile)
             procDisplayAllFiles()
+            txtSearch.Clear()
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
@@ -101,6 +102,8 @@ Public Class frmFiles
                 End With
                 displayFormAsModal(frmMain, frmAddFile)
                 procDisplayAllFiles()
+                procAutoDisplayFilesBySearchType(cmbSearchType.Text, txtSearch.Text)
+                'txtSearch.Clear()
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
             End Try
@@ -132,6 +135,7 @@ Public Class frmFiles
                     End With
                     ' refresh/reload customer records in data grid view
                     procDisplayAllFiles()
+                    txtSearch.Clear()
                 End If
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)

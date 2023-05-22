@@ -65,6 +65,7 @@ Public Class frmUsers
             displayFormAsModal(frmMain, frmAddUser)
             frmAddUser.Dispose()
             procDisplayAllUsers()
+            txtSearch.Clear()
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
@@ -107,6 +108,7 @@ Public Class frmUsers
                 displayFormAsModal(frmMain, frmUpdateUser)
                 frmUpdateUser.Close()
                 procDisplayAllUsers()
+                procAutoDisplayUsersBySearchType(txtSearch.Text)
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
             End Try
@@ -141,6 +143,7 @@ Public Class frmUsers
                     End With
                     ' refresh/reload customer records in data grid view
                     procDisplayAllUsers()
+                    txtSearch.Clear()
                 End If
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)

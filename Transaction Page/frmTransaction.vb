@@ -53,6 +53,7 @@ Public Class frmTransaction
         clearControls(frmAddTransaction)
         displayFormAsModal(frmMain, frmAddTransaction)
         procDisplayAllTransactions()
+        txtSearch.Clear()
     End Sub
 
     Private Sub grdTransaction_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdTransaction.CellContentClick

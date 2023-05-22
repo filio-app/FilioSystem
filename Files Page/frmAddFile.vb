@@ -47,7 +47,6 @@ Public Class frmAddFile
 
             datFilio.Dispose()
             sqlAdapterFilio.Dispose()
-
             MessageBox.Show("The file has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             procInsertLogEvent("Add File", txtName.Text)
