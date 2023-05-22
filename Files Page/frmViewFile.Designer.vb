@@ -57,7 +57,7 @@ Partial Class frmViewFile
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(41, 109)
+        Me.Label2.Location = New System.Drawing.Point(40, 109)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 19)
         Me.Label2.TabIndex = 33
@@ -89,7 +89,7 @@ Partial Class frmViewFile
         Me.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbStatus.ItemHeight = 49
         Me.cmbStatus.Items.AddRange(New Object() {"Available", "Issued"})
-        Me.cmbStatus.Location = New System.Drawing.Point(346, 552)
+        Me.cmbStatus.Location = New System.Drawing.Point(345, 552)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(256, 55)
         Me.cmbStatus.StartIndex = 0
@@ -100,7 +100,7 @@ Partial Class frmViewFile
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(342, 530)
+        Me.Label5.Location = New System.Drawing.Point(341, 530)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(57, 19)
         Me.Label5.TabIndex = 40
@@ -111,7 +111,7 @@ Partial Class frmViewFile
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(41, 528)
+        Me.Label4.Location = New System.Drawing.Point(40, 528)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 19)
         Me.Label4.TabIndex = 39
@@ -122,7 +122,7 @@ Partial Class frmViewFile
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(41, 223)
+        Me.Label3.Location = New System.Drawing.Point(40, 223)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 19)
         Me.Label3.TabIndex = 38
@@ -144,7 +144,7 @@ Partial Class frmViewFile
         Me.txtLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLocation.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtLocation.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtLocation.Location = New System.Drawing.Point(45, 552)
+        Me.txtLocation.Location = New System.Drawing.Point(44, 552)
         Me.txtLocation.Margin = New System.Windows.Forms.Padding(5)
         Me.txtLocation.Name = "txtLocation"
         Me.txtLocation.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -168,7 +168,7 @@ Partial Class frmViewFile
         Me.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDescription.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtDescription.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtDescription.Location = New System.Drawing.Point(45, 247)
+        Me.txtDescription.Location = New System.Drawing.Point(44, 247)
         Me.txtDescription.Margin = New System.Windows.Forms.Padding(5)
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
@@ -217,7 +217,7 @@ Partial Class frmViewFile
         Me.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtName.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtName.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtName.Location = New System.Drawing.Point(45, 133)
+        Me.txtName.Location = New System.Drawing.Point(44, 133)
         Me.txtName.Margin = New System.Windows.Forms.Padding(5)
         Me.txtName.Name = "txtName"
         Me.txtName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -231,7 +231,7 @@ Partial Class frmViewFile
         Me.lbl.AutoSize = True
         Me.lbl.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.lbl.Location = New System.Drawing.Point(41, 647)
+        Me.lbl.Location = New System.Drawing.Point(40, 647)
         Me.lbl.Name = "lbl"
         Me.lbl.Size = New System.Drawing.Size(100, 19)
         Me.lbl.TabIndex = 43
@@ -253,7 +253,7 @@ Partial Class frmViewFile
         Me.txtDateAdded.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDateAdded.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtDateAdded.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtDateAdded.Location = New System.Drawing.Point(45, 671)
+        Me.txtDateAdded.Location = New System.Drawing.Point(44, 671)
         Me.txtDateAdded.Margin = New System.Windows.Forms.Padding(5)
         Me.txtDateAdded.Name = "txtDateAdded"
         Me.txtDateAdded.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -267,7 +267,7 @@ Partial Class frmViewFile
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(342, 647)
+        Me.Label6.Location = New System.Drawing.Point(341, 647)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(117, 19)
         Me.Label6.TabIndex = 45
@@ -289,7 +289,7 @@ Partial Class frmViewFile
         Me.txtDateModified.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDateModified.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtDateModified.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtDateModified.Location = New System.Drawing.Point(346, 671)
+        Me.txtDateModified.Location = New System.Drawing.Point(345, 671)
         Me.txtDateModified.Margin = New System.Windows.Forms.Padding(5)
         Me.txtDateModified.Name = "txtDateModified"
         Me.txtDateModified.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
