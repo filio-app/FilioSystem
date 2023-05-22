@@ -6,7 +6,7 @@ Public Class frmHistory
 
         procDisplayAllHistory()
         'Dim defaultDate As New DateTime(2023, 3, 20)
-        dtFrom.Value = DateTime.Now.AddDays(-5)
+        dtFrom.Value = DateTime.Now.AddDays(-2)
         dtTo.Value = DateTime.Now.AddDays(1)
 
 
