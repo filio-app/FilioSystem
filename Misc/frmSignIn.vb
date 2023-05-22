@@ -91,7 +91,7 @@ Public Class frmSignIn
 
 
                 Else
-                    MessageBox.Show("Invalid username or password. Please try again", "Sign In", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Invalid username or password. Please try again with valid credentials.", "Sign In Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtUsername.Clear()
                     txtPassword.Clear()
 
