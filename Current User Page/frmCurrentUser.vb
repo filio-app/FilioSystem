@@ -184,7 +184,7 @@ Public Class frmCurrentUser
                     procInsertLogEvent("Edit User Password", txtUsername.Text)
                     btnCancel.PerformClick()
                 Else
-                    MessageBox.Show("The username and current password do not match.", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("The username and current password do not match. Please verify your credentials and try again.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
             End With
 
