@@ -83,7 +83,7 @@ Public Class frmLocation
             Try
                 If MessageBox.Show("Warning: Deleting this location will also delete all the associated files. There are " & grdLocation.CurrentRow.Cells(6).Value.ToString & " files associated with this location. Do you want to proceed with the deletion?", "Delete Location", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
 
-                    Dim userInput As String = InputBox("Please enter 'CONFIRM' in capital letters to delete the record:", "Confirm Deletion")
+                    Dim userInput As String = InputBox("Please enter 'CONFIRM' in capital letters to delete the location:", "Confirm Deletion")
 
                     If userInput.Trim() = "CONFIRM" Then
                         ' Perform the deletion
