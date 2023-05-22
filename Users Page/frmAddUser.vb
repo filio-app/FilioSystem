@@ -30,19 +30,8 @@ Public Class frmAddUser
         'Me.Dispose()
     End Sub
 
-    '============================= REGEX ============================
 
-    Function IsValidEmail(email As String) As Boolean
-        Dim pattern As String = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
-        Dim regex As Regex = New Regex(pattern)
-        Return regex.IsMatch(email)
-    End Function
 
-    Function IsValidPhoneNumber(phoneNumber As String) As Boolean
-        Dim pattern As String = "^(09|\+639)\d{9}$"
-        Dim regex As Regex = New Regex(pattern)
-        Return regex.IsMatch(phoneNumber)
-    End Function
 
     '=============================================== Submit ========================================
 
@@ -85,29 +74,32 @@ Public Class frmAddUser
             clearEP()
         End If
 
-        Try
+        If MessageBox.Show("Do you want to add the user?", "Add User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
+            Try
 
 
-            If Not checkUserNameAvailability() Then
-                MessageBox.Show("The username is already registered. Please choose a different username.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Exit Sub
-            End If
+                If Not checkUserNameAvailability() Then
+                    MessageBox.Show("The username is not available. Please choose a different username.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Exit Sub
+                End If
 
-            procInsertUser()
+                procInsertUser()
 
-            procInsertAdminOrEmployee()
+                procInsertAdminOrEmployee()
 
-            MessageBox.Show("The user has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("The user has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            procInsertLogEvent("Add User", txtUsername.Text)
+                procInsertLogEvent("Add User", txtUsername.Text)
 
-            Me.Close()
+                Me.Close()
 
 
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
 
+        End If
 
     End Sub
 

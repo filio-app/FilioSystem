@@ -33,7 +33,7 @@
         Else
             clearEP()
         End If
-        If MessageBox.Show("Are you sure you want to add...", "Confirm Add...", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+        If MessageBox.Show("Do you want to proceed with adding the transaction?", "Add Transaction", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             Try
                 With command
                     .Parameters.Clear()

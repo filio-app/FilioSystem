@@ -47,26 +47,27 @@ Public Class frmAddLocation
         Else
             clearEP()
         End If
+        If MessageBox.Show("Are you sure you want to update the location?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            Try
 
-        Try
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "procUpdateLocation"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_id", locationID)
+                    .Parameters.AddWithValue("@p_name", txtName.Text)
+                    .ExecuteNonQuery()
+                End With
+                frmFiles.Dispose()
 
-            With command
-                .Parameters.Clear()
-                .CommandText = "procUpdateLocation"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_id", locationID)
-                .Parameters.AddWithValue("@p_name", txtName.Text)
-                .ExecuteNonQuery()
-            End With
-            frmFiles.Dispose()
+                MessageBox.Show("The location has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            MessageBox.Show("The location has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                procInsertLogEvent("Edit Location", txtName.Text)
 
-            procInsertLogEvent("Edit Location", txtName.Text)
-
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
+                Me.Close()
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
+        End If
     End Sub
 End Class

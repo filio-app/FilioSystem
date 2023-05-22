@@ -85,34 +85,36 @@ Public Class frmAddFile
         End If
 
 
+        If MessageBox.Show("Are you sure you want to update the file?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            Try
 
-        Try
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "procUpdateFile"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_id", userID)
+                    .Parameters.AddWithValue("@p_name", txtName.Text)
+                    .Parameters.AddWithValue("@p_description", txtDescription.Text)
+                    .Parameters.AddWithValue("@p_location_id", selectedId)
+                    .Parameters.AddWithValue("@p_status", cmbStatus.Text)
+                    .ExecuteNonQuery()
+                End With
 
-            With command
-                .Parameters.Clear()
-                .CommandText = "procUpdateFile"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_id", userID)
-                .Parameters.AddWithValue("@p_name", txtName.Text)
-                .Parameters.AddWithValue("@p_description", txtDescription.Text)
-                .Parameters.AddWithValue("@p_location_id", selectedId)
-                .Parameters.AddWithValue("@p_status", cmbStatus.Text)
-                .ExecuteNonQuery()
-            End With
+                frmSettings.Dispose()
 
-            frmSettings.Dispose()
+                datFilio.Dispose()
+                sqlAdapterFilio.Dispose()
 
-            datFilio.Dispose()
-            sqlAdapterFilio.Dispose()
+                MessageBox.Show("The file has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            MessageBox.Show("The file has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                procInsertLogEvent("Edit File", txtName.Text)
 
-            procInsertLogEvent("Edit File", txtName.Text)
+                Me.Close()
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
 
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
+        End If
     End Sub
 
     Private Sub frmAddFile_Load(sender As Object, e As EventArgs) Handles MyBase.Load

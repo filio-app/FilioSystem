@@ -178,6 +178,18 @@ Module modGlobalProcedures
         Return uname
     End Function
 
+    Public Function IsValidEmail(email As String) As Boolean
+        Dim pattern As String = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+        Dim regex As Regex = New Regex(pattern)
+        Return regex.IsMatch(email)
+    End Function
+
+    Public Function IsValidPhoneNumber(phoneNumber As String) As Boolean
+        Dim pattern As String = "^(09|\+639)\d{9}$"
+        Dim regex As Regex = New Regex(pattern)
+        Return regex.IsMatch(phoneNumber)
+    End Function
+
 
 
 
