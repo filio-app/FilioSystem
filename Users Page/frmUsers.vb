@@ -214,11 +214,11 @@ Public Class frmUsers
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
-                'lblTotalFiles.Text = datFilio.Rows.Count & " Files"
+                lblTotalUsers.Text = datFilio.Rows.Count & " Users"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdUsers.RowCount = datFilio.Rows.Count
-                'lblTotalFiles.Text = datFilio.Rows.Count & " Files"
+                'lblTotalUsers.Text = datFilio.Rows.Count & " Users"
                 row = 0
                 While Not datFilio.Rows.Count - 1 < row
                     With grdUsers

@@ -148,7 +148,7 @@ Public Class frmTransaction
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
-                'lblTotalFiles.Text = datFilio.Rows.Count & " Files"
+                lblTotalTransactions.Text = datFilio.Rows.Count & " Transactions"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdTransaction.RowCount = datFilio.Rows.Count
