@@ -35,7 +35,7 @@ Public Class frmFiles
                     End With
                     row += 1
                 End While
-
+                grdFiles.Rows(0).Selected = True
             Else
                 grdFiles.Rows.Clear()
                 MessageBox.Show("No records found.", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -102,7 +102,13 @@ Public Class frmFiles
                 End With
                 displayFormAsModal(frmMain, frmAddFile)
                 procDisplayAllFiles()
-                procAutoDisplayFilesBySearchType(cmbSearchType.Text, txtSearch.Text)
+
+                If txtSearch.Text.Length > 0 Then
+                    procAutoDisplayFilesBySearchType(cmbSearchType.Text, txtSearch.Text)
+                End If
+
+                clearControls(frmAddFile)
+                clearEP()
                 'txtSearch.Clear()
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)

@@ -6,8 +6,7 @@ Public Class frmAddFile
     Dim selectedId As Integer
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        clearControls(Me)
-        clearEP()
+
         Me.Close()
     End Sub
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
@@ -108,6 +107,8 @@ Public Class frmAddFile
 
                 procInsertLogEvent("Edit File", txtName.Text)
 
+                frmFiles.txtSearch.Clear()
+
                 Me.Close()
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
@@ -117,6 +118,9 @@ Public Class frmAddFile
     End Sub
 
     Private Sub frmAddFile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+
         cmbLocation.Items.Clear()
         locationTable.Clear()
 
