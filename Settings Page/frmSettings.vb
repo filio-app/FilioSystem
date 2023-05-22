@@ -164,6 +164,7 @@ Public Class frmSettings
 
     Private Sub btnRestore_Click(sender As Object, e As EventArgs) Handles btnRestore.Click
         Dim openFileDialog As New OpenFileDialog()
+        openFileDialog.InitialDirectory = "C:\Filio Database Backup\"
         openFileDialog.Title = "Select Database Backup File"
         openFileDialog.Filter = "SQL Files (*.sql)|*.sql|All files (*.*)|*.*"
         openFileDialog.RestoreDirectory = True
@@ -208,5 +209,9 @@ Public Class frmSettings
 
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnLocation.PerformClick()
+    End Sub
+
+    Private Sub panelBackupAndRestore_Paint(sender As Object, e As PaintEventArgs) Handles panelBackupAndRestore.Paint
+
     End Sub
 End Class

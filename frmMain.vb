@@ -1,5 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmMain
+
+    Private backupPerformed As Boolean = False
+
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         chkDatabaseConnection()
@@ -15,12 +18,72 @@ Public Class frmMain
         bunifuPagesMain.SetPage(7)
 
         displayFormAsModal(Me, frmSignIn)
-
-
         'BackupDatabase()
-        'procInsertLogEvent("Weekly Backup", "Database")
+        CheckLastDayOfWeek()
+
 
     End Sub
+
+
+    Private Sub CheckLastDayOfWeek()
+        Dim currentDate As DateTime = DateTime.Now
+        Dim lastDayOfWeek As DateTime = GetLastDayOfWeek(currentDate)
+
+        ' Check if weekly backup has already been performed within the current week
+        Dim backupPerformed As Boolean = IsWeeklyBackupPerformed(lastDayOfWeek)
+
+        If currentDate.Date = lastDayOfWeek.Date AndAlso Not backupPerformed Then
+            BackupDatabase()
+        End If
+    End Sub
+
+    Private Function GetLastDayOfWeek(ByVal currentDate As DateTime) As DateTime
+        Dim lastDayOfWeek As DateTime = currentDate.AddDays(6 - currentDate.DayOfWeek)
+        Return lastDayOfWeek
+    End Function
+
+    Private Function IsWeeklyBackupPerformed(ByVal lastDayOfWeek As DateTime) As Boolean
+        Dim firstDayOfWeek As DateTime = lastDayOfWeek.AddDays(-6).Date
+        Dim backupPerformed As Boolean = False
+
+
+        datFilio = New DataTable
+        sqlAdapterFilio = New MySqlDataAdapter
+
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procSearchWeeklyBackup"
+                .Parameters.AddWithValue("@p_start_date", firstDayOfWeek)
+                .Parameters.AddWithValue("@p_end_date", lastDayOfWeek)
+                .CommandType = CommandType.StoredProcedure
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+                If datFilio.Rows.Count > 0 Then
+
+                    backupPerformed = True
+
+                Else
+
+                    backupPerformed = False
+
+                End If
+
+            End With
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" + ex.Message)
+        End Try
+
+
+        Return backupPerformed
+    End Function
+
+
+    'DASHBOARD
 
     Private Sub procDisplayAllTransactions()
         datFilio = New DataTable
@@ -207,6 +270,28 @@ Public Class frmMain
         displayFormAsModal(Me, frmSignIn)
     End Sub
 
+    Private Sub BackupDatabase()
+        Dim backupPath As String = "C:\Filio Database Backup\Automated\" & String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", "filio", DateTime.Now) ' Set the backup file path
+
+        Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
+
+        Try
+            Using con As New MySqlConnection(connectionString)
+                con.Open()
+
+                Using cmd As New MySqlCommand()
+                    cmd.Connection = con
+
+                    Dim mb As MySqlBackup = New MySqlBackup(cmd)
+                    mb.ExportToFile(backupPath)
+                    procInsertLogEvent("Weekly Backup", "Database")
+                    'MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Backup operation failed: " & ex.Message)
+        End Try
+    End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If isLoggedIn Then

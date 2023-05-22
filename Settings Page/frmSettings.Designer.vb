@@ -62,7 +62,7 @@ Partial Class frmSettings
         Me.btnBackup.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnBackup.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnBackup.ForeColor = System.Drawing.Color.White
-        Me.btnBackup.Location = New System.Drawing.Point(497, 236)
+        Me.btnBackup.Location = New System.Drawing.Point(511, 236)
         Me.btnBackup.Name = "btnBackup"
         Me.btnBackup.Size = New System.Drawing.Size(160, 54)
         Me.btnBackup.TabIndex = 2
@@ -83,7 +83,7 @@ Partial Class frmSettings
         Me.btnRestore.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnRestore.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.btnRestore.ForeColor = System.Drawing.Color.White
-        Me.btnRestore.Location = New System.Drawing.Point(700, 236)
+        Me.btnRestore.Location = New System.Drawing.Point(714, 236)
         Me.btnRestore.Name = "btnRestore"
         Me.btnRestore.Size = New System.Drawing.Size(160, 54)
         Me.btnRestore.TabIndex = 3
