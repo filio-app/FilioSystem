@@ -1,11 +1,1 @@
 ﻿
-#
-Transaction - Issue or Return
-File - Available or Issued
-
-
-# Date Format
-
-NOW() function in MySQL
-
-.Rows(row).Cells(9).Value = DateTime.Parse(datFilio.Rows(row).Item("timestamp")).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")

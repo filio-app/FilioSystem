@@ -51,7 +51,7 @@ Public Class frmFilesBrowse
             sqlAdapterFilio.Dispose()
 
         Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
+            'MessageBox.Show("" & ex.Message)
         End Try
 
     End Sub

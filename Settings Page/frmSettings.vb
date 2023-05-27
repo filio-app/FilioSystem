@@ -178,22 +178,33 @@ Public Class frmSettings
 
                 Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
 
-                Try
-                    Using con As New MySqlConnection(connectionString)
-                        con.Open()
+                Dim userInput As String = InputBox("To restore the database, please enter 'CONFIRM' in capital letters:", "Confirm Database Restore")
 
-                        Using cmd As New MySqlCommand()
-                            cmd.Connection = con
+                If userInput.Trim() = "CONFIRM" Then
+                    ' Perform the restore
+                    Try
+                        Using con As New MySqlConnection(connectionString)
+                            con.Open()
 
-                            Dim mb As MySqlBackup = New MySqlBackup(cmd)
-                            mb.ImportFromFile(backupFile)
-                            procInsertLogEvent("Restore", "Database")
-                            MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Using cmd As New MySqlCommand()
+                                cmd.Connection = con
+
+                                Dim mb As MySqlBackup = New MySqlBackup(cmd)
+                                mb.ImportFromFile(backupFile)
+                                procInsertLogEvent("Restore", "Database")
+                                MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            End Using
                         End Using
-                    End Using
-                Catch ex As Exception
-                    MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End Try
+                    Catch ex As Exception
+                        MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+
+                Else
+                    ' Cancel deletion
+                    MessageBox.Show("Database Restore canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+
+
             End If
         End If
     End Sub

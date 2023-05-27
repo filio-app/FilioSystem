@@ -89,7 +89,7 @@ Public Class frmSignIn
 
                     End With
 
-
+                    Me.Dispose()
                 Else
                     MessageBox.Show("Invalid username or password. Please try again with valid credentials.", "Sign In Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtUsername.Clear()
@@ -123,5 +123,9 @@ Public Class frmSignIn
             e.SuppressKeyPress = True ' Prevent the "Enter" key from adding a new line in the textbox
             btnSignIn.PerformClick() ' Trigger the click event of the sign-in button
         End If
+    End Sub
+
+    Private Sub frmSignIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtUsername.Focus()
     End Sub
 End Class
