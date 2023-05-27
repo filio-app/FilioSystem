@@ -43,7 +43,7 @@ Public Class frmFilesBrowse
                 End While
             Else
                 grdFiles.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
 
             filteredDatFilio.Dispose()
@@ -51,7 +51,7 @@ Public Class frmFilesBrowse
             sqlAdapterFilio.Dispose()
 
         Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
+            'MessageBox.Show("" & ex.Message)
         End Try
 
     End Sub
@@ -107,8 +107,8 @@ Public Class frmFilesBrowse
                     row += 1
                 End While
             Else
-                grdFiles.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'grdFiles.Rows.Clear()
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
 
 
@@ -117,13 +117,14 @@ Public Class frmFilesBrowse
             sqlAdapterFilio.Dispose()
 
         Catch ex As Exception
-            MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            grdFiles.Rows.Clear()
+            'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
 
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub txtSearchNew_TextChanged(sender As Object, e As EventArgs) Handles txtSearchNew.TextChanged
@@ -138,4 +139,6 @@ Public Class frmFilesBrowse
         End With
         Me.Close()
     End Sub
+
+
 End Class

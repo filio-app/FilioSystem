@@ -20,9 +20,12 @@ Module ModGlobalVariable
     ' For Data Grid View
     Public colName As String
     Public userID As Integer
+    Public locationID As Integer 'For updating location
 
+    Public isLoggedIn As String = False
     Public currUsername As String
     Public currUserID As Integer = 1 'TODO: get user ID 
+    Public currRole As String
 
     'Public action As String
 
@@ -36,11 +39,15 @@ Module ModGlobalVariable
     ' For updating user information
     Public tempRole As String
 
+    'For Selecting purok name in view and update
+    Public locationName As String
 
+    'For adding and editing a location we use hashtable to get the id
+    Public locationTable As New Hashtable()
 
 
     '=================================================='
 
-    'TODO: DONE -- Should reload the history page if there are events
+
 
 End Module

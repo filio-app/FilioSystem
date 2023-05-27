@@ -1,4 +1,8 @@
-﻿Public Class frmMain
+﻿Imports MySql.Data.MySqlClient
+Public Class frmMain
+
+    Private backupPerformed As Boolean = False
+
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         chkDatabaseConnection()
@@ -7,21 +11,161 @@
 
         'TODO: (frmMain) Remove and Uncomment the following 2 statements for frmSignIn
 
-        btnCurrentUser.Visible = True
-        btnLogout.Visible = True
+        'btnCurrentUser.Visible = True
+        'btnLogout.Visible = True
 
 
         bunifuPagesMain.SetPage(7)
 
-        'displayFormAsModal(Me, frmSignIn)
-
-
+        displayFormAsModal(Me, frmSignIn)
+        'BackupDatabase()
+        CheckLastDayOfWeek()
 
 
     End Sub
 
+
+    Private Sub CheckLastDayOfWeek()
+        Dim currentDate As DateTime = DateTime.Now
+        Dim lastDayOfWeek As DateTime = GetLastDayOfWeek(currentDate)
+
+        ' Check if weekly backup has already been performed within the current week
+        Dim backupPerformed As Boolean = IsWeeklyBackupPerformed(lastDayOfWeek)
+
+        If currentDate.Date = lastDayOfWeek.Date AndAlso Not backupPerformed Then
+            BackupDatabase()
+        End If
+    End Sub
+
+    Private Function GetLastDayOfWeek(ByVal currentDate As DateTime) As DateTime
+        Dim lastDayOfWeek As DateTime = currentDate.AddDays(6 - currentDate.DayOfWeek)
+        Return lastDayOfWeek
+    End Function
+
+    Private Function IsWeeklyBackupPerformed(ByVal lastDayOfWeek As DateTime) As Boolean
+        Dim firstDayOfWeek As DateTime = lastDayOfWeek.AddDays(-6).Date
+        Dim backupPerformed As Boolean = False
+
+
+        datFilio = New DataTable
+        sqlAdapterFilio = New MySqlDataAdapter
+
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procSearchWeeklyBackup"
+                .Parameters.AddWithValue("@p_start_date", firstDayOfWeek)
+                .Parameters.AddWithValue("@p_end_date", lastDayOfWeek)
+                .CommandType = CommandType.StoredProcedure
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+                If datFilio.Rows.Count > 0 Then
+
+                    backupPerformed = True
+
+                Else
+
+                    backupPerformed = False
+
+                End If
+
+            End With
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" + ex.Message)
+        End Try
+
+
+        Return backupPerformed
+    End Function
+
+
+    'DASHBOARD
+
+    Private Sub procDisplayAllTransactions()
+        datFilio = New DataTable
+        sqlAdapterFilio = New MySqlDataAdapter
+
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procDisplayAllTransactions"
+                .CommandType = CommandType.StoredProcedure
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+            End With
+            If datFilio.Rows.Count > 0 Then
+                grdDTransaction.RowCount = datFilio.Rows.Count
+                row = 0
+                While Not datFilio.Rows.Count - 1 < row
+                    With grdDTransaction
+                        .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
+                        .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
+                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("type").ToString
+
+                    End With
+                    row += 1
+                End While
+
+            Else
+                grdDTransaction.Rows.Clear()
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+            End If
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
+
+    Private Function getTotalRecords(ByVal tableName As String) As Integer
+        sqlAdapterFilio = New MySqlDataAdapter
+        datFilio = New DataTable
+        Dim cmdText As String
+
+        If tableName.Equals("transaction") Then
+            cmdText = "SELECT * FROM " & tableName
+        Else
+            cmdText = "SELECT * FROM " & tableName & " WHERE deleted_at IS NULL"
+        End If
+
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = cmdText
+                .CommandType = CommandType.Text
+                .ExecuteNonQuery()
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+                Return datFilio.Rows.Count
+            End With
+
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" + ex.Message)
+        End Try
+    End Function
+
+
+
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         bunifuPagesMain.SetPage(0)
+
+        procDisplayAllTransactions()
+
+        lblTotalFiles.Text = getTotalRecords("file").ToString
+        lblTotalLocations.Text = getTotalRecords("location").ToString
+        lblTotalTransactions.Text = getTotalRecords("transaction").ToString
+
         'With frmBrgyOfficial
         '    .TopLevel = False
         '    pnlBrgyOfficial.Controls.Add(frmBrgyOfficial)
@@ -85,7 +229,7 @@
         bunifuPagesMain.SetPage(6)
         With frmCurrentUser
             .TopLevel = False
-            ' TODO: (REMINDER) adding pages directly -> bunifuPagesMain.SelectedTab().Controls.Add(frmCurrentUser)
+
             panelCurrentUser.Controls.Add(frmCurrentUser)
             .BringToFront()
             .Show()
@@ -97,14 +241,61 @@
         btnLogout.Visible = False
         btnCurrentUser.Visible = False
 
+        pBLogo.Visible = False
+        lblMenu.Visible = False
+        btnDashboard.Visible = False
+        btnFiles.Visible = False
+        btnTransaction.Visible = False
+        btnUsers.Visible = False
+        btnHistory.Visible = False
+        btnSettings.Visible = False
+
         ' TODO: (frmMain) set other button checked to false
         btnDashboard.Checked = False
 
+
+
+        frmCurrentUser.Dispose()
+        frmHistory.Dispose()
+        frmFiles.Dispose()
+        frmSettings.Dispose()
+        frmTransaction.Dispose()
+        frmUsers.Dispose()
+
+        procInsertLogEvent("Sign Out", "Filio")
+        isLoggedIn = False
 
         bunifuPagesMain.SetPage(7)
 
         displayFormAsModal(Me, frmSignIn)
     End Sub
 
+    Private Sub BackupDatabase()
+        Dim backupPath As String = "C:\Filio Database Backup\Automated\" & String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", "filio", DateTime.Now) ' Set the backup file path
 
+        Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
+
+        Try
+            Using con As New MySqlConnection(connectionString)
+                con.Open()
+
+                Using cmd As New MySqlCommand()
+                    cmd.Connection = con
+
+                    Dim mb As MySqlBackup = New MySqlBackup(cmd)
+                    mb.ExportToFile(backupPath)
+                    procInsertLogEvent("Weekly Backup", "Database")
+                    'MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Backup operation failed: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If isLoggedIn Then
+            procInsertLogEvent("Sign Out", "Filio")
+        End If
+    End Sub
 End Class

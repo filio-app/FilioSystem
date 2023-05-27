@@ -56,7 +56,7 @@ Partial Class frmAddUser
         '
         'Guna2Elipse1
         '
-        Me.Guna2Elipse1.BorderRadius = 33
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Label2
@@ -96,7 +96,7 @@ Partial Class frmAddUser
         Me.btnSubmit.Location = New System.Drawing.Point(635, 681)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(256, 56)
-        Me.btnSubmit.TabIndex = 14
+        Me.btnSubmit.TabIndex = 8
         Me.btnSubmit.Text = "Submit"
         '
         'txtFirstName
@@ -121,7 +121,7 @@ Partial Class frmAddUser
         Me.txtFirstName.PlaceholderText = "Please fill in"
         Me.txtFirstName.SelectedText = ""
         Me.txtFirstName.Size = New System.Drawing.Size(322, 55)
-        Me.txtFirstName.TabIndex = 13
+        Me.txtFirstName.TabIndex = 0
         '
         'Guna2Panel1
         '
@@ -151,7 +151,7 @@ Partial Class frmAddUser
         Me.btnCancel.Location = New System.Drawing.Point(334, 681)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(256, 56)
-        Me.btnCancel.TabIndex = 19
+        Me.btnCancel.TabIndex = 9
         Me.btnCancel.Text = "Cancel"
         '
         'txtConfirmPass
@@ -176,7 +176,7 @@ Partial Class frmAddUser
         Me.txtConfirmPass.PlaceholderText = "Please fill in"
         Me.txtConfirmPass.SelectedText = ""
         Me.txtConfirmPass.Size = New System.Drawing.Size(344, 55)
-        Me.txtConfirmPass.TabIndex = 21
+        Me.txtConfirmPass.TabIndex = 6
         '
         'Label4
         '
@@ -217,7 +217,7 @@ Partial Class frmAddUser
         Me.cmbRole.Name = "cmbRole"
         Me.cmbRole.Size = New System.Drawing.Size(344, 55)
         Me.cmbRole.StartIndex = 0
-        Me.cmbRole.TabIndex = 29
+        Me.cmbRole.TabIndex = 7
         '
         'btnUpdate
         '
@@ -279,7 +279,7 @@ Partial Class frmAddUser
         Me.txtEmailAdd.PlaceholderText = "Please fill in"
         Me.txtEmailAdd.SelectedText = ""
         Me.txtEmailAdd.Size = New System.Drawing.Size(322, 55)
-        Me.txtEmailAdd.TabIndex = 34
+        Me.txtEmailAdd.TabIndex = 3
         '
         'Label6
         '
@@ -314,7 +314,7 @@ Partial Class frmAddUser
         Me.txtPhoneNo.PlaceholderText = "Please fill in"
         Me.txtPhoneNo.SelectedText = ""
         Me.txtPhoneNo.Size = New System.Drawing.Size(322, 55)
-        Me.txtPhoneNo.TabIndex = 32
+        Me.txtPhoneNo.TabIndex = 2
         '
         'Label3
         '
@@ -349,7 +349,7 @@ Partial Class frmAddUser
         Me.txtLastName.PlaceholderText = "Please fill in"
         Me.txtLastName.SelectedText = ""
         Me.txtLastName.Size = New System.Drawing.Size(322, 55)
-        Me.txtLastName.TabIndex = 30
+        Me.txtLastName.TabIndex = 1
         '
         'Label1
         '
@@ -428,7 +428,7 @@ Partial Class frmAddUser
         Me.txtPass.PlaceholderText = "Please fill in"
         Me.txtPass.SelectedText = ""
         Me.txtPass.Size = New System.Drawing.Size(344, 55)
-        Me.txtPass.TabIndex = 32
+        Me.txtPass.TabIndex = 5
         '
         'Label8
         '
@@ -463,7 +463,7 @@ Partial Class frmAddUser
         Me.txtUsername.PlaceholderText = "Please fill in"
         Me.txtUsername.SelectedText = ""
         Me.txtUsername.Size = New System.Drawing.Size(344, 55)
-        Me.txtUsername.TabIndex = 30
+        Me.txtUsername.TabIndex = 4
         '
         'Label7
         '
@@ -484,10 +484,10 @@ Partial Class frmAddUser
         Me.ClientSize = New System.Drawing.Size(924, 762)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.gBUserAcc)
-        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.gBPersonalInfo)
+        Me.Controls.Add(Me.btnUpdate)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAddUser"
         Me.Text = "frmAddFile"

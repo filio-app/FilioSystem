@@ -41,7 +41,7 @@ Partial Class frmUpdateUserInformation
         '
         'Guna2Elipse1
         '
-        Me.Guna2Elipse1.BorderRadius = 33
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Guna2Elipse2
@@ -66,7 +66,7 @@ Partial Class frmUpdateUserInformation
         Me.txtPhoneNo.PlaceholderText = "Please fill in"
         Me.txtPhoneNo.SelectedText = ""
         Me.txtPhoneNo.Size = New System.Drawing.Size(302, 55)
-        Me.txtPhoneNo.TabIndex = 32
+        Me.txtPhoneNo.TabIndex = 2
         '
         'Label3
         '
@@ -97,7 +97,7 @@ Partial Class frmUpdateUserInformation
         Me.txtLastName.PlaceholderText = "Please fill in"
         Me.txtLastName.SelectedText = ""
         Me.txtLastName.Size = New System.Drawing.Size(302, 55)
-        Me.txtLastName.TabIndex = 30
+        Me.txtLastName.TabIndex = 1
         '
         'Label1
         '
@@ -147,7 +147,7 @@ Partial Class frmUpdateUserInformation
         Me.txtEmailAdd.PlaceholderText = "Please fill in"
         Me.txtEmailAdd.SelectedText = ""
         Me.txtEmailAdd.Size = New System.Drawing.Size(302, 55)
-        Me.txtEmailAdd.TabIndex = 34
+        Me.txtEmailAdd.TabIndex = 3
         '
         'Label6
         '
@@ -178,7 +178,7 @@ Partial Class frmUpdateUserInformation
         Me.txtFirstName.PlaceholderText = "Please fill in"
         Me.txtFirstName.SelectedText = ""
         Me.txtFirstName.Size = New System.Drawing.Size(302, 55)
-        Me.txtFirstName.TabIndex = 13
+        Me.txtFirstName.TabIndex = 0
         '
         'Label2
         '
@@ -209,7 +209,7 @@ Partial Class frmUpdateUserInformation
         Me.btnUpdateInfo.Location = New System.Drawing.Point(432, 385)
         Me.btnUpdateInfo.Name = "btnUpdateInfo"
         Me.btnUpdateInfo.Size = New System.Drawing.Size(302, 56)
-        Me.btnUpdateInfo.TabIndex = 41
+        Me.btnUpdateInfo.TabIndex = 4
         Me.btnUpdateInfo.Text = "Update"
         '
         'frmUpdateUserInformation

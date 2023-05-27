@@ -128,24 +128,67 @@ Module modGlobalProcedures
 
     End Sub
 
-    Public Sub BackupDatabase(ByVal databaseName As String, ByVal backupPath As String)
-        Try
-            Dim fileName As String = String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", databaseName, DateTime.Now)
-            Dim filePath As String = Path.Combine(backupPath, fileName)
+    'Public Sub BackupDatabaseOld(ByVal databaseName As String, ByVal backupPath As String)
+    '    Try
+    '        Dim fileName As String = String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", databaseName, DateTime.Now)
+    '        Dim filePath As String = Path.Combine(backupPath, fileName)
 
-            Using process As New Process()
-                process.StartInfo.FileName = "mysqldump.exe"
-                process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} {3} > ""{4}""", "root", "password", "localhost", databaseName, filePath)
-                process.StartInfo.UseShellExecute = False
-                process.StartInfo.RedirectStandardOutput = True
-                process.Start()
-                process.WaitForExit()
-                MessageBox.Show("Database backup created successfully!")
-            End Using
-        Catch ex As Exception
-            MessageBox.Show("Error creating database backup: " & ex.Message)
-        End Try
-    End Sub
+    '        Using process As New Process()
+    '            process.StartInfo.FileName = "mysqldump.exe"
+    '            process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} {3} > ""{4}""", "root", "filio", "localhost", databaseName, filePath)
+    '            process.StartInfo.UseShellExecute = False
+    '            process.StartInfo.RedirectStandardOutput = True
+    '            process.Start()
+    '            process.WaitForExit()
+    '            MessageBox.Show("Database backup created successfully!")
+    '        End Using
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error creating database backup: " & ex.Message)
+    '    End Try
+    'End Sub
+
+    'Public Sub BackupDatabaseNew(ByVal databaseName As String, ByVal backupPath As String)
+    '    Try
+    '        Dim fileName As String = String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", databaseName, DateTime.Now)
+    '        Dim filePath As String = Path.Combine(backupPath, fileName)
+
+    '        Using process As New Process()
+    '            process.StartInfo.FileName = "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe"
+    '            process.StartInfo.Arguments = String.Format("-u {0} -p{1} -h {2} --protocol=tcp --port=3306 --default-auth=filio {3} > ""{4}""", "root", "password", "localhost", databaseName, filePath)
+    '            process.StartInfo.UseShellExecute = False
+    '            process.StartInfo.RedirectStandardOutput = True
+    '            process.Start()
+    '            process.WaitForExit()
+    '            MessageBox.Show("Database backup created successfully!")
+    '        End Using
+    '    Catch ex As Exception
+    '        MessageBox.Show("Error creating database backup: " & ex.Message)
+    '    End Try
+    'End Sub
+
+
+
+
+
+    Public Function LimitUsernameText(uname As String) As String
+        Dim maxLength As Integer = 12
+        If uname.Length >= maxLength Then
+            Return uname.Substring(0, maxLength) & "..."
+        End If
+        Return uname
+    End Function
+
+    Public Function IsValidEmail(email As String) As Boolean
+        Dim pattern As String = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+        Dim regex As Regex = New Regex(pattern)
+        Return regex.IsMatch(email)
+    End Function
+
+    Public Function IsValidPhoneNumber(phoneNumber As String) As Boolean
+        Dim pattern As String = "^(09|\+639)\d{9}$"
+        Dim regex As Regex = New Regex(pattern)
+        Return regex.IsMatch(phoneNumber)
+    End Function
 
 
 

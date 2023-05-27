@@ -218,10 +218,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\DataGridView.Designer.vb">
-      <DependentUpon>DataGridView.vb</DependentUpon>
+    <Compile Include="Components\Component.Designer.vb">
+      <DependentUpon>Component.vb</DependentUpon>
     </Compile>
-    <Compile Include="Components\DataGridView.vb">
+    <Compile Include="Components\Component.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Current User Page\frmCurrentUser.Designer.vb">
@@ -281,6 +281,7 @@
     </Compile>
     <Compile Include="modGlobalProcedures.vb" />
     <Compile Include="modGlobalVariables.vb" />
+    <Compile Include="ErrorProviderHelper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -296,6 +297,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings Page\frmAddLocation.Designer.vb">
+      <DependentUpon>frmAddLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Page\frmAddLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings Page\frmLocation.Designer.vb">
+      <DependentUpon>frmLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Page\frmLocation.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings Page\frmSettings.Designer.vb">
       <DependentUpon>frmSettings.vb</DependentUpon>
@@ -359,8 +372,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Components\DataGridView.resx">
-      <DependentUpon>DataGridView.vb</DependentUpon>
+    <EmbeddedResource Include="Components\Component.resx">
+      <DependentUpon>Component.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Current User Page\frmCurrentUser.resx">
       <DependentUpon>frmCurrentUser.vb</DependentUpon>
@@ -395,6 +408,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Page\frmAddLocation.resx">
+      <DependentUpon>frmAddLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Page\frmLocation.resx">
+      <DependentUpon>frmLocation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings Page\frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>

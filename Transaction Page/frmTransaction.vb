@@ -17,8 +17,8 @@ Public Class frmTransaction
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
-                'TODO: (frmFiles) Add total files as labels
-                'lblTotal.Text = "Total Records : " & datHotel.Rows.Count
+
+                lblTotalTransactions.Text = datFilio.Rows.Count & " Transactions"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdTransaction.RowCount = datFilio.Rows.Count
@@ -38,7 +38,7 @@ Public Class frmTransaction
 
             Else
                 grdTransaction.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No records found.", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
             datFilio.Dispose()
@@ -53,6 +53,7 @@ Public Class frmTransaction
         clearControls(frmAddTransaction)
         displayFormAsModal(frmMain, frmAddTransaction)
         procDisplayAllTransactions()
+        txtSearch.Clear()
     End Sub
 
     Private Sub grdTransaction_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdTransaction.CellContentClick
@@ -77,7 +78,7 @@ Public Class frmTransaction
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_id", userID)
                         .ExecuteNonQuery()
-                        MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("The file has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
                         procInsertLogEvent("Delete File", grdTransaction.CurrentRow.Cells(2).Value.ToString)
 
@@ -115,7 +116,7 @@ Public Class frmTransaction
 
 
 
-                    .txtDate.Text = grdTransaction.CurrentRow.Cells(3).Value.ToString()
+                    .txtDate.Text = DateTime.Parse(grdTransaction.CurrentRow.Cells(3).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
                     .txtIssuedBy.Text = grdTransaction.CurrentRow.Cells(5).Value.ToString()
                 End With
                 displayFormAsModal(frmMain, frmViewTransaction)
@@ -131,6 +132,54 @@ Public Class frmTransaction
             '    btnSearch.PerformClick()
             'End If
         End If
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        procAutoDisplayTransactionsBySearchType(txtSearch.Text)
+    End Sub
+
+    '=========================== Search Functionality
+    Private Sub procAutoDisplayTransactionsBySearchType(ByVal p_searchText As String)
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procAutoDisplayTransactionsBySearchType"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_value", p_searchText)
+                sqlAdapterFilio.SelectCommand = command
+                datFilio.Clear()
+                sqlAdapterFilio.Fill(datFilio)
+                lblTotalTransactions.Text = datFilio.Rows.Count & " Transactions"
+            End With
+            If datFilio.Rows.Count > 0 Then
+                grdTransaction.RowCount = datFilio.Rows.Count
+                'lblTotalFiles.Text = datFilio.Rows.Count & " Files"
+                row = 0
+                While Not datFilio.Rows.Count - 1 < row
+                    With grdTransaction
+                        .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
+                        .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
+                        .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm tt")
+                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("type").ToString
+                        .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("username").ToString
+                        .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("notes").ToString
+
+                    End With
+                    row += 1
+                End While
+
+            Else
+                grdTransaction.Rows.Clear()
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+            End If
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
     End Sub
 
 End Class

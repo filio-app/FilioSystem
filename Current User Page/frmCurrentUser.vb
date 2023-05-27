@@ -71,6 +71,8 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = False
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Green
                 txtConfirmNewPass.BorderColor = Color.Green
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = True
             ElseIf Not isStrongPass And txtNewPass.Text <> txtConfirmNewPass.Text Then
                 ' show two err
@@ -78,11 +80,18 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = True
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
                 btnUpdate.Enabled = False
             ElseIf txtNewPass.Text <> txtConfirmNewPass.Text And isStrongPass Then
                 ' show not match err
                 lblPassErr.Visible = True
                 lblPassStr.Visible = False
+
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
+
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
                 btnUpdate.Enabled = False
@@ -90,8 +99,12 @@ Public Class frmCurrentUser
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
-                txtConfirmNewPass.BorderColor = Color.Red
+
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Green
+                txtConfirmNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = False
             End If
 
@@ -130,6 +143,8 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = False
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Green
                 txtConfirmNewPass.BorderColor = Color.Green
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = True
             ElseIf Not isStrongPass And txtNewPass.Text <> txtConfirmNewPass.Text Then
                 ' show two err
@@ -137,11 +152,18 @@ Public Class frmCurrentUser
                 lblPassErr.Visible = True
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
                 btnUpdate.Enabled = False
             ElseIf txtNewPass.Text <> txtConfirmNewPass.Text And isStrongPass Then
                 ' show not match err
                 lblPassErr.Visible = True
                 lblPassStr.Visible = False
+
+                txtNewPass.FocusedState.BorderColor = Color.Green
+                txtNewPass.BorderColor = Color.Green
+
                 txtConfirmNewPass.FocusedState.BorderColor = Color.Red
                 txtConfirmNewPass.BorderColor = Color.Red
                 btnUpdate.Enabled = False
@@ -149,10 +171,16 @@ Public Class frmCurrentUser
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmNewPass.FocusedState.BorderColor = Color.Red
-                txtConfirmNewPass.BorderColor = Color.Red
+
+                txtNewPass.FocusedState.BorderColor = Color.Red
+                txtNewPass.BorderColor = Color.Red
+
+                txtConfirmNewPass.FocusedState.BorderColor = Color.Green
+                txtConfirmNewPass.BorderColor = Color.Green
                 btnUpdate.Enabled = False
             End If
+
+
 
 
 
@@ -178,12 +206,13 @@ Public Class frmCurrentUser
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
                 If datFilio.Rows.Count > 0 Then
-                    'TODO: (frmCurrentUser) Add confirmation message + should add users with unique username
+                    'TODO: (frmCurrentUser) Add confirmation message
                     updatePassword(txtUsername.Text, txtNewPass.Text)
-                    MessageBox.Show("Password Successfully Updated", "Update Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Password changed successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    procInsertLogEvent("Edit User Password", txtUsername.Text)
                     btnCancel.PerformClick()
                 Else
-                    MessageBox.Show("Username and Current password doesn't Match!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("The username and current password do not match. Please verify your credentials and try again.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
             End With
 

@@ -44,7 +44,7 @@ Partial Class frmUpdateUserAccount
         '
         'Guna2Elipse1
         '
-        Me.Guna2Elipse1.BorderRadius = 33
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Guna2Elipse3
@@ -94,9 +94,9 @@ Partial Class frmUpdateUserAccount
         Me.lblPassStr.ForeColor = System.Drawing.Color.Red
         Me.lblPassStr.Location = New System.Drawing.Point(365, 154)
         Me.lblPassStr.Name = "lblPassStr"
-        Me.lblPassStr.Size = New System.Drawing.Size(347, 17)
+        Me.lblPassStr.Size = New System.Drawing.Size(303, 38)
         Me.lblPassStr.TabIndex = 82
-        Me.lblPassStr.Text = "Password must be 8+ characters & vbCrLf & with letters and numbers"
+        Me.lblPassStr.Text = "Password must be 8+ characters with letters and numbers"
         Me.lblPassStr.Visible = False
         '
         'txtConfirmPass
@@ -121,7 +121,7 @@ Partial Class frmUpdateUserAccount
         Me.txtConfirmPass.PlaceholderText = "Please fill in"
         Me.txtConfirmPass.SelectedText = ""
         Me.txtConfirmPass.Size = New System.Drawing.Size(308, 55)
-        Me.txtConfirmPass.TabIndex = 32
+        Me.txtConfirmPass.TabIndex = 2
         '
         'txtPass
         '
@@ -145,7 +145,7 @@ Partial Class frmUpdateUserAccount
         Me.txtPass.PlaceholderText = "Please fill in"
         Me.txtPass.SelectedText = ""
         Me.txtPass.Size = New System.Drawing.Size(308, 55)
-        Me.txtPass.TabIndex = 21
+        Me.txtPass.TabIndex = 1
         '
         'Label4
         '
@@ -154,9 +154,9 @@ Partial Class frmUpdateUserAccount
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(364, 70)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(83, 19)
+        Me.Label4.Size = New System.Drawing.Size(122, 19)
         Me.Label4.TabIndex = 27
-        Me.Label4.Text = "Password"
+        Me.Label4.Text = "New Password"
         '
         'Label8
         '
@@ -192,7 +192,7 @@ Partial Class frmUpdateUserAccount
         Me.txtUsername.PlaceholderText = "Please fill in"
         Me.txtUsername.SelectedText = ""
         Me.txtUsername.Size = New System.Drawing.Size(308, 55)
-        Me.txtUsername.TabIndex = 30
+        Me.txtUsername.TabIndex = 0
         '
         'Label7
         '
@@ -223,7 +223,7 @@ Partial Class frmUpdateUserAccount
         Me.cmbRole.Name = "cmbRole"
         Me.cmbRole.Size = New System.Drawing.Size(308, 55)
         Me.cmbRole.StartIndex = 0
-        Me.cmbRole.TabIndex = 29
+        Me.cmbRole.TabIndex = 3
         '
         'Label5
         '
@@ -251,7 +251,7 @@ Partial Class frmUpdateUserAccount
         Me.btnUpdate.Location = New System.Drawing.Point(426, 394)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(302, 56)
-        Me.btnUpdate.TabIndex = 47
+        Me.btnUpdate.TabIndex = 4
         Me.btnUpdate.Text = "Update"
         '
         'frmUpdateUserAccount

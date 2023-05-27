@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmSignIn
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmSignIn
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class frmSignIn
         Me.btnSignIn.Location = New System.Drawing.Point(86, 498)
         Me.btnSignIn.Name = "btnSignIn"
         Me.btnSignIn.Size = New System.Drawing.Size(380, 58)
-        Me.btnSignIn.TabIndex = 8
+        Me.btnSignIn.TabIndex = 2
         Me.btnSignIn.Text = "Sign in"
         '
         'Guna2ControlBox1
@@ -119,7 +119,7 @@ Partial Class frmSignIn
         Me.txtPassword.PlaceholderText = "Password"
         Me.txtPassword.SelectedText = ""
         Me.txtPassword.Size = New System.Drawing.Size(380, 55)
-        Me.txtPassword.TabIndex = 9
+        Me.txtPassword.TabIndex = 1
         '
         'txtUsername
         '
@@ -143,7 +143,7 @@ Partial Class frmSignIn
         Me.txtUsername.PlaceholderText = "Username"
         Me.txtUsername.SelectedText = ""
         Me.txtUsername.Size = New System.Drawing.Size(380, 55)
-        Me.txtUsername.TabIndex = 3
+        Me.txtUsername.TabIndex = 0
         '
         'frmSignIn
         '

@@ -18,8 +18,7 @@ Public Class frmFiles
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
-                'TODO: (frmFiles) Add total files as labels
-                'lblTotal.Text = "Total Records : " & datHotel.Rows.Count
+                lblTotalFiles.Text = datFilio.Rows.Count & " Files"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdFiles.RowCount = datFilio.Rows.Count
@@ -36,10 +35,10 @@ Public Class frmFiles
                     End With
                     row += 1
                 End While
-
+                grdFiles.Rows(0).Selected = True
             Else
                 grdFiles.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("No records found.", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
             datFilio.Dispose()
@@ -62,6 +61,7 @@ Public Class frmFiles
 
             displayFormAsModal(frmMain, frmAddFile)
             procDisplayAllFiles()
+            txtSearch.Clear()
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
@@ -87,6 +87,7 @@ Public Class frmFiles
                     .txtName.Text = grdFiles.CurrentRow.Cells(2).Value.ToString()
                     .txtDescription.Text = grdFiles.CurrentRow.Cells(3).Value.ToString()
                     .txtLocation.Text = grdFiles.CurrentRow.Cells(4).Value.ToString()
+                    locationName = grdFiles.CurrentRow.Cells(4).Value.ToString()
 
                     Dim idx As Integer
 
@@ -101,6 +102,14 @@ Public Class frmFiles
                 End With
                 displayFormAsModal(frmMain, frmAddFile)
                 procDisplayAllFiles()
+
+                If txtSearch.Text.Length > 0 Then
+                    procAutoDisplayFilesBySearchType(cmbSearchType.Text, txtSearch.Text)
+                End If
+
+                clearControls(frmAddFile)
+                clearEP()
+                'txtSearch.Clear()
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
             End Try
@@ -117,7 +126,7 @@ Public Class frmFiles
 
 
             Try
-                If MessageBox.Show("Are you sure you want to delete the selected record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show("Are you sure you want to delete the selected file?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     ' Perform the deletion
                     With command
                         .Parameters.Clear()
@@ -125,13 +134,14 @@ Public Class frmFiles
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_id", userID)
                         .ExecuteNonQuery()
-                        MessageBox.Show("Record Successfully Deleted!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        MessageBox.Show("The file has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
                         procInsertLogEvent("Delete File", grdFiles.CurrentRow.Cells(2).Value.ToString)
 
                     End With
                     ' refresh/reload customer records in data grid view
                     procDisplayAllFiles()
+                    txtSearch.Clear()
                 End If
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
@@ -162,8 +172,8 @@ Public Class frmFiles
 
                     .cmbStatus.SelectedIndex = idx
 
-                    .txtDateAdded.Text = grdFiles.CurrentRow.Cells(6).Value.ToString()
-                    .txtDateModified.Text = grdFiles.CurrentRow.Cells(7).Value.ToString()
+                    .txtDateAdded.Text = DateTime.Parse(grdFiles.CurrentRow.Cells(6).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
+                    .txtDateModified.Text = DateTime.Parse(grdFiles.CurrentRow.Cells(7).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
                 End With
                 displayFormAsModal(frmMain, frmViewFile)
 
@@ -196,9 +206,11 @@ Public Class frmFiles
                 sqlAdapterFilio.SelectCommand = command
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
+                lblTotalFiles.Text = datFilio.Rows.Count & " Files"
             End With
             If datFilio.Rows.Count > 0 Then
                 grdFiles.RowCount = datFilio.Rows.Count
+                lblTotalFiles.Text = datFilio.Rows.Count & " Files"
                 row = 0
                 While Not datFilio.Rows.Count - 1 < row
                     With grdFiles
@@ -215,7 +227,7 @@ Public Class frmFiles
 
             Else
                 grdFiles.Rows.Clear()
-                MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
             datFilio.Dispose()

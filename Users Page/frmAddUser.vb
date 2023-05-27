@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Text.RegularExpressions
+Imports MySql.Data.MySqlClient
 
 Public Class frmAddUser
 
@@ -6,6 +7,10 @@ Public Class frmAddUser
     Private isStrongPass As Boolean = False
 
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        clearControlsInGroupBox(gBPersonalInfo)
+        clearControlsInGroupBox(gBUserAcc)
+
         lblPassStr.Height = 40
         lblPassStr.Text = "Password must be 8+ characters with letters and" & vbCrLf & "numbers"
         isFormLoaded = False
@@ -14,64 +19,87 @@ Public Class frmAddUser
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         'TODO: opening the frmAddUser trigger textChangedEvent
         'isFormLoaded = True
-        clearControlsInGroupBox(gBPersonalInfo)
-        clearControlsInGroupBox(gBUserAcc)
+        'clearControlsInGroupBox(gBPersonalInfo)
+        'clearControlsInGroupBox(gBUserAcc)
+
+        clearEP()
+
         'TODO: Change close() to dipose() if possible
 
         Me.Close()
         'Me.Dispose()
     End Sub
 
-    '=============================================== Submit & Update ========================================
 
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Try
 
-            With command
-                .Parameters.Clear()
-                .CommandText = "procUpdateFile"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_id", userID)
-                .Parameters.AddWithValue("@p_name", txtFirstName.Text)
-                '.Parameters.AddWithValue("@p_description", txtDescription.Text)
-                .Parameters.AddWithValue("@p_location", txtConfirmPass.Text)
-                .Parameters.AddWithValue("@p_status", cmbRole.Text)
-                .ExecuteNonQuery()
-            End With
+    '=============================================== Submit ========================================
 
-            MessageBox.Show("Record Successfully Updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-    End Sub
+
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        'TODO: Add descriptive message
+        'TODO: validate email and phone no
+
+        If txtFirstName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtFirstName, "First Name field is required.")
+            Return
+        ElseIf txtLastName.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtLastName, "Last Name field is required.")
+            Return
+        ElseIf txtPhoneNo.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtPhoneNo, "Phone No. field is required.")
+            Return
+        ElseIf Not IsValidPhoneNumber(txtPhoneNo.Text) Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtPhoneNo, "Invalid phone number.")
+            Return
+        ElseIf txtEmailAdd.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtEmailAdd, "Email Address field is required.")
+            Return
+        ElseIf Not IsValidEmail(txtEmailAdd.Text) Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtEmailAdd, "Invalid email address.")
+            Return
+        ElseIf txtUsername.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtUsername, "Username field is required.")
+            Return
+        Else
+            clearEP()
+        End If
+
+        If MessageBox.Show("Do you want to add the user?", "Add User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
+            Try
 
 
-        Try
+                If Not checkUserNameAvailability() Then
+                    MessageBox.Show("The username is not available. Please choose a different username.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Exit Sub
+                End If
+
+                procInsertUser()
+
+                procInsertAdminOrEmployee()
+
+                MessageBox.Show("The user has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                procInsertLogEvent("Add User", txtUsername.Text)
+
+                Me.Close()
 
 
-            If Not checkUserNameAvailability() Then
-                MessageBox.Show("Username Already Registered", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Exit Sub
-            End If
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
 
-            procInsertUser()
-
-            procInsertAdminOrEmployee()
-
-            MessageBox.Show("Record Successfully Save", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            Me.Close()
-
-
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-
+        End If
 
     End Sub
 
@@ -164,6 +192,9 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Green
                 txtConfirmPass.BorderColor = Color.Green
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = True
                 btnSubmit.Enabled = True
             ElseIf Not isStrongPass And txtPass.Text <> txtConfirmPass.Text Then
@@ -172,6 +203,9 @@ Public Class frmAddUser
                 lblPassErr.Visible = True
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
@@ -182,14 +216,20 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
             ElseIf Not isStrongPass And txtPass.Text = txtConfirmPass.Text Then
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmPass.FocusedState.BorderColor = Color.Red
-                txtConfirmPass.BorderColor = Color.Red
+                txtConfirmPass.FocusedState.BorderColor = Color.Green
+                txtConfirmPass.BorderColor = Color.Green
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
@@ -217,6 +257,9 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Green
                 txtConfirmPass.BorderColor = Color.Green
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = True
                 btnSubmit.Enabled = True
             ElseIf Not isStrongPass And txtPass.Text <> txtConfirmPass.Text Then
@@ -225,6 +268,9 @@ Public Class frmAddUser
                 lblPassErr.Visible = True
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
@@ -235,19 +281,24 @@ Public Class frmAddUser
                 txtConfirmPass.FocusedState.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
 
+                txtPass.FocusedState.BorderColor = Color.Green
+                txtPass.BorderColor = Color.Green
+
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
             ElseIf Not isStrongPass And txtPass.Text = txtConfirmPass.Text Then
                 'show pass str er
                 lblPassErr.Visible = False
                 lblPassStr.Visible = True
-                txtConfirmPass.FocusedState.BorderColor = Color.Red
-                txtConfirmPass.BorderColor = Color.Red
+                txtConfirmPass.FocusedState.BorderColor = Color.Green
+                txtConfirmPass.BorderColor = Color.Green
+
+                txtPass.FocusedState.BorderColor = Color.Red
+                txtPass.BorderColor = Color.Red
 
                 btnUpdate.Enabled = False
                 btnSubmit.Enabled = False
             End If
-
 
 
         End If

@@ -25,8 +25,12 @@ Partial Class frmMain
         Me.components = New System.ComponentModel.Container()
         Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pBLogo = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
@@ -36,7 +40,7 @@ Partial Class frmMain
         Me.btnLogout = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.btnSettings = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblMenu = New System.Windows.Forms.Label()
         Me.btnUsers = New Guna.UI2.WinForms.Guna2Button()
         Me.btnFiles = New Guna.UI2.WinForms.Guna2Button()
         Me.btnDashboard = New Guna.UI2.WinForms.Guna2Button()
@@ -44,12 +48,40 @@ Partial Class frmMain
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.bunifuPagesMain = New Bunifu.UI.WinForms.BunifuPages()
         Me.dashboard = New System.Windows.Forms.TabPage()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.grdDTransaction = New Bunifu.UI.WinForms.BunifuDataGridView()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lblTotalLocations = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lblTotalTransactions = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.files = New System.Windows.Forms.TabPage()
         Me.panelFiles = New System.Windows.Forms.Panel()
         Me.transaction = New System.Windows.Forms.TabPage()
@@ -59,20 +91,28 @@ Partial Class frmMain
         Me.history = New System.Windows.Forms.TabPage()
         Me.panelHistory = New System.Windows.Forms.Panel()
         Me.settings = New System.Windows.Forms.TabPage()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.panelSettings = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.currentUser = New System.Windows.Forms.TabPage()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo.SuspendLayout()
+        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
+        Me.Guna2Panel5.SuspendLayout()
+        CType(Me.grdDTransaction, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel4.SuspendLayout()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel3.SuspendLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel2.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.files.SuspendLayout()
         Me.transaction.SuspendLayout()
         Me.users.SuspendLayout()
@@ -80,8 +120,6 @@ Partial Class frmMain
         Me.settings.SuspendLayout()
         Me.panelSettings.SuspendLayout()
         Me.currentUser.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -91,7 +129,7 @@ Partial Class frmMain
         '
         'panelTopLogo
         '
-        Me.panelTopLogo.Controls.Add(Me.PictureBox1)
+        Me.panelTopLogo.Controls.Add(Me.pBLogo)
         Me.panelTopLogo.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.panelTopLogo.CustomBorderThickness = New System.Windows.Forms.Padding(0, 0, 1, 0)
         Me.panelTopLogo.Dock = System.Windows.Forms.DockStyle.Top
@@ -99,6 +137,17 @@ Partial Class frmMain
         Me.panelTopLogo.Name = "panelTopLogo"
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
+        '
+        'pBLogo
+        '
+        Me.pBLogo.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.pBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pBLogo.Location = New System.Drawing.Point(45, 22)
+        Me.pBLogo.Name = "pBLogo"
+        Me.pBLogo.Size = New System.Drawing.Size(145, 47)
+        Me.pBLogo.TabIndex = 0
+        Me.pBLogo.TabStop = False
+        Me.pBLogo.Visible = False
         '
         'Guna2ControlBox1
         '
@@ -121,7 +170,7 @@ Partial Class frmMain
         Me.panelLeft.Controls.Add(Me.btnLogout)
         Me.panelLeft.Controls.Add(Me.Guna2Separator1)
         Me.panelLeft.Controls.Add(Me.btnSettings)
-        Me.panelLeft.Controls.Add(Me.Label1)
+        Me.panelLeft.Controls.Add(Me.lblMenu)
         Me.panelLeft.Controls.Add(Me.btnUsers)
         Me.panelLeft.Controls.Add(Me.btnFiles)
         Me.panelLeft.Controls.Add(Me.btnDashboard)
@@ -162,8 +211,9 @@ Partial Class frmMain
         Me.btnTransaction.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.btnTransaction.Size = New System.Drawing.Size(254, 61)
         Me.btnTransaction.TabIndex = 9
-        Me.btnTransaction.Text = "Transaction"
-        Me.btnTransaction.TextOffset = New System.Drawing.Point(4, 2)
+        Me.btnTransaction.Text = "Transactions"
+        Me.btnTransaction.TextOffset = New System.Drawing.Point(12, 2)
+        Me.btnTransaction.Visible = False
         '
         'btnHistory
         '
@@ -194,7 +244,8 @@ Partial Class frmMain
         Me.btnHistory.Size = New System.Drawing.Size(254, 61)
         Me.btnHistory.TabIndex = 8
         Me.btnHistory.Text = "History"
-        Me.btnHistory.TextOffset = New System.Drawing.Point(-13, 2)
+        Me.btnHistory.TextOffset = New System.Drawing.Point(-15, 2)
+        Me.btnHistory.Visible = False
         '
         'Guna2Separator2
         '
@@ -208,6 +259,7 @@ Partial Class frmMain
         'btnCurrentUser
         '
         Me.btnCurrentUser.Animated = True
+        Me.btnCurrentUser.BackColor = System.Drawing.Color.Transparent
         Me.btnCurrentUser.BorderRadius = 8
         Me.btnCurrentUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         Me.btnCurrentUser.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
@@ -233,8 +285,10 @@ Partial Class frmMain
         Me.btnCurrentUser.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.btnCurrentUser.Size = New System.Drawing.Size(254, 61)
         Me.btnCurrentUser.TabIndex = 6
-        Me.btnCurrentUser.Text = "test12"
-        Me.btnCurrentUser.TextOffset = New System.Drawing.Point(-26, 2)
+        Me.btnCurrentUser.Text = "1234567890"
+        Me.btnCurrentUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnCurrentUser.TextOffset = New System.Drawing.Point(60, 1)
+        Me.btnCurrentUser.UseTransparentBackground = True
         Me.btnCurrentUser.Visible = False
         '
         'btnLogout
@@ -265,7 +319,7 @@ Partial Class frmMain
         Me.btnLogout.Size = New System.Drawing.Size(254, 61)
         Me.btnLogout.TabIndex = 5
         Me.btnLogout.Text = "Logout"
-        Me.btnLogout.TextOffset = New System.Drawing.Point(-22, 2)
+        Me.btnLogout.TextOffset = New System.Drawing.Point(-17, 2)
         Me.btnLogout.Visible = False
         '
         'Guna2Separator1
@@ -307,17 +361,19 @@ Partial Class frmMain
         Me.btnSettings.TabIndex = 3
         Me.btnSettings.Text = "Settings"
         Me.btnSettings.TextOffset = New System.Drawing.Point(-10, 2)
+        Me.btnSettings.Visible = False
         '
-        'Label1
+        'lblMenu
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(41, 117)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 19)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "MENU"
+        Me.lblMenu.AutoSize = True
+        Me.lblMenu.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblMenu.Location = New System.Drawing.Point(41, 117)
+        Me.lblMenu.Name = "lblMenu"
+        Me.lblMenu.Size = New System.Drawing.Size(58, 19)
+        Me.lblMenu.TabIndex = 2
+        Me.lblMenu.Text = "MENU"
+        Me.lblMenu.Visible = False
         '
         'btnUsers
         '
@@ -348,7 +404,8 @@ Partial Class frmMain
         Me.btnUsers.Size = New System.Drawing.Size(254, 61)
         Me.btnUsers.TabIndex = 2
         Me.btnUsers.Text = "Users"
-        Me.btnUsers.TextOffset = New System.Drawing.Point(-20, 2)
+        Me.btnUsers.TextOffset = New System.Drawing.Point(-22, 2)
+        Me.btnUsers.Visible = False
         '
         'btnFiles
         '
@@ -379,7 +436,8 @@ Partial Class frmMain
         Me.btnFiles.Size = New System.Drawing.Size(254, 61)
         Me.btnFiles.TabIndex = 1
         Me.btnFiles.Text = "Files"
-        Me.btnFiles.TextOffset = New System.Drawing.Point(-26, 2)
+        Me.btnFiles.TextOffset = New System.Drawing.Point(-28, 2)
+        Me.btnFiles.Visible = False
         '
         'btnDashboard
         '
@@ -410,7 +468,8 @@ Partial Class frmMain
         Me.btnDashboard.Size = New System.Drawing.Size(254, 61)
         Me.btnDashboard.TabIndex = 0
         Me.btnDashboard.Text = "Dashboard"
-        Me.btnDashboard.TextOffset = New System.Drawing.Point(3, 2)
+        Me.btnDashboard.TextOffset = New System.Drawing.Point(2, 2)
+        Me.btnDashboard.Visible = False
         '
         'Guna2DragControl1
         '
@@ -455,6 +514,16 @@ Partial Class frmMain
         Me.Guna2Panel1.Size = New System.Drawing.Size(1400, 34)
         Me.Guna2Panel1.TabIndex = 4
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -493,10 +562,10 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.settings
-        Me.bunifuPagesMain.PageIndex = 5
-        Me.bunifuPagesMain.PageName = "settings"
-        Me.bunifuPagesMain.PageTitle = "settings"
+        Me.bunifuPagesMain.Page = Me.dashboard
+        Me.bunifuPagesMain.PageIndex = 0
+        Me.bunifuPagesMain.PageName = "dashboard"
+        Me.bunifuPagesMain.PageTitle = "dashboard"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
@@ -520,9 +589,11 @@ Partial Class frmMain
         '
         'dashboard
         '
-        Me.dashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.dashboard.Controls.Add(Me.Label8)
-        Me.dashboard.Controls.Add(Me.Panel1)
+        Me.dashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.dashboard.Controls.Add(Me.Guna2Panel5)
+        Me.dashboard.Controls.Add(Me.Guna2Panel4)
+        Me.dashboard.Controls.Add(Me.Guna2Panel3)
+        Me.dashboard.Controls.Add(Me.Guna2Panel2)
         Me.dashboard.Location = New System.Drawing.Point(4, 4)
         Me.dashboard.Name = "dashboard"
         Me.dashboard.Padding = New System.Windows.Forms.Padding(3)
@@ -530,23 +601,364 @@ Partial Class frmMain
         Me.dashboard.TabIndex = 0
         Me.dashboard.Text = "dashboard"
         '
-        'Label8
+        'Guna2Panel5
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label8.Location = New System.Drawing.Point(52, 39)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(124, 26)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "dashboard"
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.Label5)
+        Me.Guna2Panel5.Controls.Add(Me.grdDTransaction)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(40, 228)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(1316, 619)
+        Me.Guna2Panel5.TabIndex = 3
         '
-        'Panel1
+        'Label5
         '
-        Me.Panel1.Location = New System.Drawing.Point(596, 379)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 100)
-        Me.Panel1.TabIndex = 1
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Inter", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(25, 19)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(246, 29)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Latest Transactions"
+        '
+        'grdDTransaction
+        '
+        Me.grdDTransaction.AllowCustomTheming = True
+        Me.grdDTransaction.AllowUserToAddRows = False
+        Me.grdDTransaction.AllowUserToDeleteRows = False
+        Me.grdDTransaction.AllowUserToResizeColumns = False
+        Me.grdDTransaction.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdDTransaction.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.grdDTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.grdDTransaction.BackgroundColor = System.Drawing.Color.White
+        Me.grdDTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.grdDTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.grdDTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDTransaction.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.grdDTransaction.ColumnHeadersHeight = 50
+        Me.grdDTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.grdDTransaction.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
+        Me.grdDTransaction.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.AlternatingRowsStyle.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.grdDTransaction.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.BackColor = System.Drawing.Color.White
+        Me.grdDTransaction.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.HeaderStyle.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.grdDTransaction.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.grdDTransaction.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.grdDTransaction.CurrentTheme.Name = Nothing
+        Me.grdDTransaction.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.grdDTransaction.CurrentTheme.RowsStyle.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.grdDTransaction.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdDTransaction.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdDTransaction.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdDTransaction.DefaultCellStyle = DataGridViewCellStyle3
+        Me.grdDTransaction.EnableHeadersVisualStyles = False
+        Me.grdDTransaction.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdDTransaction.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.grdDTransaction.HeaderBgColor = System.Drawing.Color.Empty
+        Me.grdDTransaction.HeaderForeColor = System.Drawing.Color.White
+        Me.grdDTransaction.Location = New System.Drawing.Point(30, 68)
+        Me.grdDTransaction.MultiSelect = False
+        Me.grdDTransaction.Name = "grdDTransaction"
+        Me.grdDTransaction.ReadOnly = True
+        Me.grdDTransaction.RowHeadersVisible = False
+        Me.grdDTransaction.RowHeadersWidth = 50
+        Me.grdDTransaction.RowTemplate.Height = 50
+        Me.grdDTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.grdDTransaction.Size = New System.Drawing.Size(1256, 536)
+        Me.grdDTransaction.TabIndex = 4
+        Me.grdDTransaction.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column8.FillWeight = 21.39038!
+        Me.Column8.HeaderText = ""
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 10
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "id"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Visible = False
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 127.9676!
+        Me.Column1.HeaderText = "File Name"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.FillWeight = 127.9676!
+        Me.Column3.HeaderText = "Date"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.FillWeight = 127.9676!
+        Me.Column4.HeaderText = "Type"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Username"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Notes"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column9
+        '
+        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column9.HeaderText = ""
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Visible = False
+        Me.Column9.Width = 10
+        '
+        'view
+        '
+        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.view.FillWeight = 101.398!
+        Me.view.HeaderText = ""
+        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.view.Name = "view"
+        Me.view.ReadOnly = True
+        Me.view.Visible = False
+        Me.view.Width = 25
+        '
+        'Column15
+        '
+        Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column15.FillWeight = 101.398!
+        Me.Column15.HeaderText = "Column15"
+        Me.Column15.Name = "Column15"
+        Me.Column15.ReadOnly = True
+        Me.Column15.Visible = False
+        Me.Column15.Width = 10
+        '
+        'edit
+        '
+        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.edit.FillWeight = 137.0792!
+        Me.edit.HeaderText = ""
+        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Visible = False
+        Me.edit.Width = 25
+        '
+        'Column14
+        '
+        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column14.FillWeight = 54.83167!
+        Me.Column14.HeaderText = "Column14"
+        Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
+        Me.Column14.Visible = False
+        Me.Column14.Width = 10
+        '
+        'delete
+        '
+        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.delete.HeaderText = ""
+        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.delete.Name = "delete"
+        Me.delete.ReadOnly = True
+        Me.delete.Visible = False
+        Me.delete.Width = 25
+        '
+        'Column13
+        '
+        Me.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column13.HeaderText = ""
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        Me.Column13.Width = 10
+        '
+        'Guna2Panel4
+        '
+        Me.Guna2Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel4.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel4.BorderRadius = 25
+        Me.Guna2Panel4.BorderThickness = 1
+        Me.Guna2Panel4.Controls.Add(Me.Guna2PictureBox3)
+        Me.Guna2Panel4.Controls.Add(Me.lblTotalLocations)
+        Me.Guna2Panel4.Controls.Add(Me.Label9)
+        Me.Guna2Panel4.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel4.Location = New System.Drawing.Point(948, 39)
+        Me.Guna2Panel4.Name = "Guna2Panel4"
+        Me.Guna2Panel4.Size = New System.Drawing.Size(408, 140)
+        Me.Guna2Panel4.TabIndex = 3
+        '
+        'Guna2PictureBox3
+        '
+        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = Global.FilioSystem.My.Resources.Resources.total_locations
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(39, 27)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(105, 86)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox3.TabIndex = 1
+        Me.Guna2PictureBox3.TabStop = False
+        '
+        'lblTotalLocations
+        '
+        Me.lblTotalLocations.AutoSize = True
+        Me.lblTotalLocations.Font = New System.Drawing.Font("Inter SemiBold", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalLocations.Location = New System.Drawing.Point(183, 68)
+        Me.lblTotalLocations.Name = "lblTotalLocations"
+        Me.lblTotalLocations.Size = New System.Drawing.Size(58, 42)
+        Me.lblTotalLocations.TabIndex = 1
+        Me.lblTotalLocations.Text = "31"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Inter Medium", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(186, 42)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(153, 24)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Total Locations"
+        '
+        'Guna2Panel3
+        '
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel3.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel3.BorderRadius = 25
+        Me.Guna2Panel3.BorderThickness = 1
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox2)
+        Me.Guna2Panel3.Controls.Add(Me.lblTotalTransactions)
+        Me.Guna2Panel3.Controls.Add(Me.Label7)
+        Me.Guna2Panel3.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Location = New System.Drawing.Point(494, 39)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.Size = New System.Drawing.Size(408, 140)
+        Me.Guna2Panel3.TabIndex = 2
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.FilioSystem.My.Resources.Resources.total_transactions
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(39, 27)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(105, 86)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox2.TabIndex = 1
+        Me.Guna2PictureBox2.TabStop = False
+        '
+        'lblTotalTransactions
+        '
+        Me.lblTotalTransactions.AutoSize = True
+        Me.lblTotalTransactions.Font = New System.Drawing.Font("Inter SemiBold", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalTransactions.Location = New System.Drawing.Point(183, 68)
+        Me.lblTotalTransactions.Name = "lblTotalTransactions"
+        Me.lblTotalTransactions.Size = New System.Drawing.Size(58, 42)
+        Me.lblTotalTransactions.TabIndex = 1
+        Me.lblTotalTransactions.Text = "31"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Inter Medium", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(186, 42)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(184, 24)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Total Transactions"
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel2.BorderRadius = 25
+        Me.Guna2Panel2.BorderThickness = 1
+        Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox1)
+        Me.Guna2Panel2.Controls.Add(Me.lblTotalFiles)
+        Me.Guna2Panel2.Controls.Add(Me.Label3)
+        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Location = New System.Drawing.Point(40, 39)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.Size = New System.Drawing.Size(408, 140)
+        Me.Guna2Panel2.TabIndex = 0
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = Global.FilioSystem.My.Resources.Resources.total_files1
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(38, 27)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(105, 86)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 1
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'lblTotalFiles
+        '
+        Me.lblTotalFiles.AutoSize = True
+        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalFiles.Location = New System.Drawing.Point(183, 68)
+        Me.lblTotalFiles.Name = "lblTotalFiles"
+        Me.lblTotalFiles.Size = New System.Drawing.Size(58, 42)
+        Me.lblTotalFiles.TabIndex = 1
+        Me.lblTotalFiles.Text = "31"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Inter Medium", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(124, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(186, 42)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 24)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Total Files"
         '
         'files
         '
@@ -565,7 +977,7 @@ Partial Class frmMain
         Me.panelFiles.Location = New System.Drawing.Point(3, 3)
         Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
         Me.panelFiles.Name = "panelFiles"
-        Me.panelFiles.Size = New System.Drawing.Size(1386, 853)
+        Me.panelFiles.Size = New System.Drawing.Size(1386, 852)
         Me.panelFiles.TabIndex = 0
         '
         'transaction
@@ -584,7 +996,7 @@ Partial Class frmMain
         Me.panelTransaction.Location = New System.Drawing.Point(0, 0)
         Me.panelTransaction.Margin = New System.Windows.Forms.Padding(0)
         Me.panelTransaction.Name = "panelTransaction"
-        Me.panelTransaction.Size = New System.Drawing.Size(1392, 859)
+        Me.panelTransaction.Size = New System.Drawing.Size(1392, 858)
         Me.panelTransaction.TabIndex = 2
         '
         'users
@@ -604,7 +1016,7 @@ Partial Class frmMain
         Me.panelUsers.Location = New System.Drawing.Point(3, 3)
         Me.panelUsers.Margin = New System.Windows.Forms.Padding(0)
         Me.panelUsers.Name = "panelUsers"
-        Me.panelUsers.Size = New System.Drawing.Size(1386, 853)
+        Me.panelUsers.Size = New System.Drawing.Size(1386, 852)
         Me.panelUsers.TabIndex = 1
         '
         'history
@@ -629,13 +1041,24 @@ Partial Class frmMain
         '
         'settings
         '
-        Me.settings.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.settings.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.settings.Controls.Add(Me.panelSettings)
         Me.settings.Location = New System.Drawing.Point(4, 4)
         Me.settings.Name = "settings"
         Me.settings.Size = New System.Drawing.Size(1392, 858)
         Me.settings.TabIndex = 4
         Me.settings.Text = "settings"
+        '
+        'panelSettings
+        '
+        Me.panelSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
+        Me.panelSettings.Controls.Add(Me.Label4)
+        Me.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelSettings.Location = New System.Drawing.Point(0, 0)
+        Me.panelSettings.Margin = New System.Windows.Forms.Padding(10)
+        Me.panelSettings.Name = "panelSettings"
+        Me.panelSettings.Size = New System.Drawing.Size(1392, 858)
+        Me.panelSettings.TabIndex = 1
         '
         'Label4
         '
@@ -647,20 +1070,9 @@ Partial Class frmMain
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "settings"
         '
-        'panelSettings
-        '
-        Me.panelSettings.Controls.Add(Me.Label4)
-        Me.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelSettings.Location = New System.Drawing.Point(0, 0)
-        Me.panelSettings.Margin = New System.Windows.Forms.Padding(0)
-        Me.panelSettings.Name = "panelSettings"
-        Me.panelSettings.Size = New System.Drawing.Size(1392, 858)
-        Me.panelSettings.TabIndex = 1
-        '
         'currentUser
         '
         Me.currentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.currentUser.Controls.Add(Me.Label3)
         Me.currentUser.Controls.Add(Me.panelCurrentUser)
         Me.currentUser.Location = New System.Drawing.Point(4, 4)
         Me.currentUser.Name = "currentUser"
@@ -668,18 +1080,9 @@ Partial Class frmMain
         Me.currentUser.TabIndex = 5
         Me.currentUser.Text = "currentUser"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label3.Location = New System.Drawing.Point(44, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 26)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "currentUser"
-        '
         'panelCurrentUser
         '
+        Me.panelCurrentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.panelCurrentUser.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
@@ -696,25 +1099,9 @@ Partial Class frmMain
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
         '
-        'PictureBox2
+        'Guna2Elipse2
         '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(145, 47)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.Guna2Elipse2.TargetControl = Me.grdDTransaction
         '
         'frmMain
         '
@@ -730,19 +1117,33 @@ Partial Class frmMain
         Me.Controls.Add(Me.panelTop)
         Me.Font = New System.Drawing.Font("Inter", 8.25!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.panelTopLogo.ResumeLayout(False)
+        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
         Me.dashboard.ResumeLayout(False)
-        Me.dashboard.PerformLayout()
+        Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
+        CType(Me.grdDTransaction, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel4.ResumeLayout(False)
+        Me.Guna2Panel4.PerformLayout()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel3.ResumeLayout(False)
+        Me.Guna2Panel3.PerformLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.files.ResumeLayout(False)
         Me.transaction.ResumeLayout(False)
         Me.users.ResumeLayout(False)
@@ -751,9 +1152,6 @@ Partial Class frmMain
         Me.panelSettings.ResumeLayout(False)
         Me.panelSettings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
-        Me.currentUser.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -766,8 +1164,8 @@ Partial Class frmMain
     Friend WithEvents btnDashboard As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnUsers As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnFiles As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents pBLogo As PictureBox
+    Friend WithEvents lblMenu As Label
     Friend WithEvents btnSettings As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents panelTop As Guna.UI2.WinForms.Guna2Panel
@@ -788,16 +1186,43 @@ Partial Class frmMain
     Friend WithEvents settings As TabPage
     Friend WithEvents currentUser As TabPage
     Friend WithEvents panelFiles As Panel
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents panelUsers As Panel
     Friend WithEvents panelHistory As Panel
     Friend WithEvents panelSettings As Panel
     Friend WithEvents panelCurrentUser As Panel
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents btnTransaction As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents transaction As TabPage
     Friend WithEvents hiddenPage As TabPage
     Friend WithEvents panelTransaction As Panel
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lblTotalFiles As Label
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents lblTotalLocations As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents lblTotalTransactions As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents grdDTransaction As Bunifu.UI.WinForms.BunifuDataGridView
+    Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents view As DataGridViewImageColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents edit As DataGridViewImageColumn
+    Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents delete As DataGridViewImageColumn
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
 End Class

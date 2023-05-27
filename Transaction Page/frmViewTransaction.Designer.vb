@@ -44,6 +44,7 @@ Partial Class frmViewTransaction
         '
         'Guna2Elipse1
         '
+        Me.Guna2Elipse1.BorderRadius = 40
         Me.Guna2Elipse1.TargetControl = Me
         '
         'Label6
@@ -51,7 +52,7 @@ Partial Class frmViewTransaction
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(353, 253)
+        Me.Label6.Location = New System.Drawing.Point(343, 236)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(81, 19)
         Me.Label6.TabIndex = 58
@@ -64,7 +65,7 @@ Partial Class frmViewTransaction
         Me.txtIssuedBy.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtIssuedBy.DefaultText = ""
         Me.txtIssuedBy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtIssuedBy.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtIssuedBy.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtIssuedBy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtIssuedBy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtIssuedBy.Enabled = False
@@ -73,7 +74,7 @@ Partial Class frmViewTransaction
         Me.txtIssuedBy.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtIssuedBy.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtIssuedBy.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtIssuedBy.Location = New System.Drawing.Point(357, 277)
+        Me.txtIssuedBy.Location = New System.Drawing.Point(347, 260)
         Me.txtIssuedBy.Margin = New System.Windows.Forms.Padding(5)
         Me.txtIssuedBy.Name = "txtIssuedBy"
         Me.txtIssuedBy.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -87,7 +88,7 @@ Partial Class frmViewTransaction
         Me.lbl.AutoSize = True
         Me.lbl.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.lbl.Location = New System.Drawing.Point(41, 253)
+        Me.lbl.Location = New System.Drawing.Point(31, 236)
         Me.lbl.Name = "lbl"
         Me.lbl.Size = New System.Drawing.Size(45, 19)
         Me.lbl.TabIndex = 56
@@ -100,7 +101,7 @@ Partial Class frmViewTransaction
         Me.txtDate.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtDate.DefaultText = ""
         Me.txtDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtDate.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDate.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDate.Enabled = False
@@ -109,7 +110,7 @@ Partial Class frmViewTransaction
         Me.txtDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDate.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtDate.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtDate.Location = New System.Drawing.Point(45, 277)
+        Me.txtDate.Location = New System.Drawing.Point(35, 260)
         Me.txtDate.Margin = New System.Windows.Forms.Padding(5)
         Me.txtDate.Name = "txtDate"
         Me.txtDate.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -123,7 +124,7 @@ Partial Class frmViewTransaction
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(41, 132)
+        Me.Label2.Location = New System.Drawing.Point(31, 115)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(81, 19)
         Me.Label2.TabIndex = 47
@@ -134,6 +135,7 @@ Partial Class frmViewTransaction
         Me.cmbType.AutoCompleteCustomSource.AddRange(New String() {"Issued"})
         Me.cmbType.BackColor = System.Drawing.Color.Transparent
         Me.cmbType.BorderRadius = 8
+        Me.cmbType.DisabledState.FillColor = System.Drawing.Color.White
         Me.cmbType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbType.Enabled = False
@@ -143,7 +145,7 @@ Partial Class frmViewTransaction
         Me.cmbType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbType.ItemHeight = 49
         Me.cmbType.Items.AddRange(New Object() {"Issue", "Return"})
-        Me.cmbType.Location = New System.Drawing.Point(445, 156)
+        Me.cmbType.Location = New System.Drawing.Point(435, 139)
         Me.cmbType.Name = "cmbType"
         Me.cmbType.Size = New System.Drawing.Size(168, 55)
         Me.cmbType.StartIndex = 0
@@ -154,7 +156,7 @@ Partial Class frmViewTransaction
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(441, 134)
+        Me.Label5.Location = New System.Drawing.Point(431, 117)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 19)
         Me.Label5.TabIndex = 53
@@ -165,7 +167,7 @@ Partial Class frmViewTransaction
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(41, 369)
+        Me.Label3.Location = New System.Drawing.Point(31, 352)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(54, 19)
         Me.Label3.TabIndex = 51
@@ -189,7 +191,7 @@ Partial Class frmViewTransaction
         Me.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtNotes.DefaultText = ""
         Me.txtNotes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNotes.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtNotes.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtNotes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNotes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNotes.Enabled = False
@@ -198,7 +200,7 @@ Partial Class frmViewTransaction
         Me.txtNotes.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNotes.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtNotes.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtNotes.Location = New System.Drawing.Point(45, 393)
+        Me.txtNotes.Location = New System.Drawing.Point(35, 376)
         Me.txtNotes.Margin = New System.Windows.Forms.Padding(5)
         Me.txtNotes.Multiline = True
         Me.txtNotes.Name = "txtNotes"
@@ -215,7 +217,7 @@ Partial Class frmViewTransaction
         Me.txtFileName.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtFileName.DefaultText = ""
         Me.txtFileName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtFileName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtFileName.DisabledState.FillColor = System.Drawing.Color.White
         Me.txtFileName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtFileName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtFileName.Enabled = False
@@ -224,7 +226,7 @@ Partial Class frmViewTransaction
         Me.txtFileName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFileName.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtFileName.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtFileName.Location = New System.Drawing.Point(45, 156)
+        Me.txtFileName.Location = New System.Drawing.Point(35, 139)
         Me.txtFileName.Margin = New System.Windows.Forms.Padding(5)
         Me.txtFileName.Name = "txtFileName"
         Me.txtFileName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
