@@ -128,22 +128,31 @@ Public Class frmUsers
 
             Try
                 If MessageBox.Show("Are you sure you want to delete the selected user?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    ' Perform the deletion
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "procDeleteUser"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_user_id", CInt(grdUsers.CurrentRow.Cells(2).Value.ToString))
-                        .Parameters.AddWithValue("@p_role_id", CInt(grdUsers.CurrentRow.Cells(6).Value.ToString))
-                        .ExecuteNonQuery()
-                        MessageBox.Show("The user has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
-                        procInsertLogEvent("Delete User", grdUsers.CurrentRow.Cells(3).Value.ToString)
+                    Dim userInput As String = InputBox("Please enter 'CONFIRM' in capital letters to delete the user:", "Confirm Deletion")
 
-                    End With
-                    ' refresh/reload customer records in data grid view
-                    procDisplayAllUsers()
-                    txtSearch.Clear()
+                    If userInput.Trim() = "CONFIRM" Then
+
+                        ' Perform the deletion
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "procDeleteUser"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_user_id", CInt(grdUsers.CurrentRow.Cells(2).Value.ToString))
+                            .Parameters.AddWithValue("@p_role_id", CInt(grdUsers.CurrentRow.Cells(6).Value.ToString))
+                            .ExecuteNonQuery()
+                            MessageBox.Show("The user has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                            procInsertLogEvent("Delete User", grdUsers.CurrentRow.Cells(3).Value.ToString)
+
+                        End With
+                        ' refresh/reload customer records in data grid view
+                        procDisplayAllUsers()
+                        txtSearch.Clear()
+                    Else
+                        ' Cancel deletion
+                        MessageBox.Show("Deletion canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
                 End If
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
