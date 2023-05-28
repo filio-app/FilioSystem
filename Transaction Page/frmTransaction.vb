@@ -28,9 +28,13 @@ Public Class frmTransaction
                         .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
                         .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
-                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("type").ToString
+                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("status").ToString
                         .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("username").ToString
                         .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("notes").ToString
+                        .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("type").ToString
+                        .Rows(row).Cells(8).Value = datFilio.Rows(row).Item("borrower_name").ToString
+                        .Rows(row).Cells(9).Value = datFilio.Rows(row).Item("returner_name").ToString
+                        .Rows(row).Cells(10).Value = datFilio.Rows(row).Item("department").ToString
 
                     End With
                     row += 1
@@ -74,7 +78,7 @@ Public Class frmTransaction
                     ' Perform the deletion
                     With command
                         .Parameters.Clear()
-                        .CommandText = "procDeleteTransaction"
+                        .CommandText = "-procDeleteTransaction"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_id", userID)
                         .ExecuteNonQuery()
@@ -106,10 +110,14 @@ Public Class frmTransaction
 
                     Dim idx As Integer
 
-                    If grdTransaction.CurrentRow.Cells(4).Value.ToString().Equals("Issue") Then
+                    If grdTransaction.CurrentRow.Cells(7).Value.ToString().Equals("Issue") Then
                         idx = 0
+                        .lblBRName.Text = "Borrower's Name"
+                        .txtBRName.Text = grdTransaction.CurrentRow.Cells(8).Value.ToString()
                     Else
                         idx = 1
+                        .lblBRName.Text = "Returner's Name"
+                        .txtBRName.Text = grdTransaction.CurrentRow.Cells(9).Value.ToString()
                     End If
 
                     .cmbType.SelectedIndex = idx
@@ -118,6 +126,12 @@ Public Class frmTransaction
 
                     .txtDate.Text = DateTime.Parse(grdTransaction.CurrentRow.Cells(3).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
                     .txtIssuedBy.Text = grdTransaction.CurrentRow.Cells(5).Value.ToString()
+
+
+
+
+                    .txtDepartment.Text = grdTransaction.CurrentRow.Cells(10).Value.ToString()
+
                 End With
                 displayFormAsModal(frmMain, frmViewTransaction)
 
@@ -160,9 +174,13 @@ Public Class frmTransaction
                         .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
                         .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm tt")
-                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("type").ToString
+                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("status").ToString
                         .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("username").ToString
                         .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("notes").ToString
+                        .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("type").ToString
+                        .Rows(row).Cells(8).Value = datFilio.Rows(row).Item("borrower_name").ToString
+                        .Rows(row).Cells(9).Value = datFilio.Rows(row).Item("returner_name").ToString
+                        .Rows(row).Cells(10).Value = datFilio.Rows(row).Item("department").ToString
 
                     End With
                     row += 1
