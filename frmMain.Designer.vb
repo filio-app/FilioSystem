@@ -1121,7 +1121,7 @@ Partial Class frmMain
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Main"
+        Me.Text = "Filio"
         Me.panelTopLogo.ResumeLayout(False)
         CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
