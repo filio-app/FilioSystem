@@ -105,7 +105,12 @@ Public Class frmMain
                     With grdDTransaction
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
                         .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
-                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("type").ToString
+
+                        If datFilio.Rows(row).Item("type").ToString.Equals("Issue") Then
+                            .Rows(row).Cells(4).Value = "Issued"
+                        Else
+                            .Rows(row).Cells(4).Value = "Returned"
+                        End If
 
                     End With
                     row += 1
