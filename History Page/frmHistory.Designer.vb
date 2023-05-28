@@ -28,6 +28,16 @@ Partial Class frmHistory
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.grdHistory = New Bunifu.UI.WinForms.BunifuDataGridView()
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.dtFrom = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.dtTo = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,16 +55,6 @@ Partial Class frmHistory
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.dtFrom = New Guna.UI2.WinForms.Guna2DateTimePicker()
-        Me.dtTo = New Guna.UI2.WinForms.Guna2DateTimePicker()
-        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblTotalFiles = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -134,6 +134,124 @@ Partial Class frmHistory
         Me.grdHistory.TabIndex = 3
         Me.grdHistory.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
+        'Guna2Elipse2
+        '
+        Me.Guna2Elipse2.BorderRadius = 7
+        Me.Guna2Elipse2.TargetControl = Me.grdHistory
+        '
+        'dtFrom
+        '
+        Me.dtFrom.Animated = True
+        Me.dtFrom.BackColor = System.Drawing.Color.Transparent
+        Me.dtFrom.BorderRadius = 8
+        Me.dtFrom.Checked = True
+        Me.dtFrom.FillColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.dtFrom.Font = New System.Drawing.Font("Inter Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.dtFrom.ForeColor = System.Drawing.Color.White
+        Me.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.dtFrom.Location = New System.Drawing.Point(706, 24)
+        Me.dtFrom.MaxDate = New Date(2099, 12, 31, 0, 0, 0, 0)
+        Me.dtFrom.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.dtFrom.Name = "dtFrom"
+        Me.dtFrom.Size = New System.Drawing.Size(201, 48)
+        Me.dtFrom.TabIndex = 4
+        Me.dtFrom.Value = New Date(2023, 4, 20, 9, 54, 10, 875)
+        '
+        'dtTo
+        '
+        Me.dtTo.Animated = True
+        Me.dtTo.BackColor = System.Drawing.Color.Transparent
+        Me.dtTo.BorderRadius = 8
+        Me.dtTo.Checked = True
+        Me.dtTo.FillColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.dtTo.Font = New System.Drawing.Font("Inter Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.dtTo.ForeColor = System.Drawing.Color.White
+        Me.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.dtTo.Location = New System.Drawing.Point(960, 24)
+        Me.dtTo.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
+        Me.dtTo.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.dtTo.Name = "dtTo"
+        Me.dtTo.Size = New System.Drawing.Size(201, 48)
+        Me.dtTo.TabIndex = 5
+        Me.dtTo.Value = New Date(2023, 4, 20, 9, 54, 10, 875)
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel5.BorderRadius = 20
+        Me.Guna2Panel5.BorderThickness = 1
+        Me.Guna2Panel5.Controls.Add(Me.lblTotalFiles)
+        Me.Guna2Panel5.Controls.Add(Me.Label1)
+        Me.Guna2Panel5.Controls.Add(Me.grdHistory)
+        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Location = New System.Drawing.Point(17, 79)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(1162, 731)
+        Me.Guna2Panel5.TabIndex = 39
+        '
+        'lblTotalFiles
+        '
+        Me.lblTotalFiles.AutoSize = True
+        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalFiles.Location = New System.Drawing.Point(89, 700)
+        Me.lblTotalFiles.Name = "lblTotalFiles"
+        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
+        Me.lblTotalFiles.TabIndex = 37
+        Me.lblTotalFiles.Text = "60 Files"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(15, 699)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "Showing:"
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn1.FillWeight = 101.398!
+        Me.DataGridViewImageColumn1.HeaderText = ""
+        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Visible = False
+        Me.DataGridViewImageColumn1.Width = 25
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
+        Me.DataGridViewImageColumn2.HeaderText = ""
+        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.Visible = False
+        Me.DataGridViewImageColumn2.Width = 25
+        '
+        'DataGridViewImageColumn3
+        '
+        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn3.HeaderText = ""
+        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.Visible = False
+        Me.DataGridViewImageColumn3.Width = 25
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.FilioSystem.My.Resources.Resources.arrow_left_thin_custom
+        Me.PictureBox1.Location = New System.Drawing.Point(908, 28)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(51, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
         'Column8
         '
         Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -194,7 +312,7 @@ Partial Class frmHistory
         '
         'Column6
         '
-        Me.Column6.HeaderText = "Target"
+        Me.Column6.HeaderText = "Subject"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
         '
@@ -274,124 +392,6 @@ Partial Class frmHistory
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 10
         '
-        'Guna2Elipse2
-        '
-        Me.Guna2Elipse2.BorderRadius = 7
-        Me.Guna2Elipse2.TargetControl = Me.grdHistory
-        '
-        'dtFrom
-        '
-        Me.dtFrom.Animated = True
-        Me.dtFrom.BackColor = System.Drawing.Color.Transparent
-        Me.dtFrom.BorderRadius = 8
-        Me.dtFrom.Checked = True
-        Me.dtFrom.FillColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.dtFrom.Font = New System.Drawing.Font("Inter Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.dtFrom.ForeColor = System.Drawing.Color.White
-        Me.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.dtFrom.Location = New System.Drawing.Point(706, 24)
-        Me.dtFrom.MaxDate = New Date(2099, 12, 31, 0, 0, 0, 0)
-        Me.dtFrom.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.dtFrom.Name = "dtFrom"
-        Me.dtFrom.Size = New System.Drawing.Size(201, 48)
-        Me.dtFrom.TabIndex = 4
-        Me.dtFrom.Value = New Date(2023, 4, 20, 9, 54, 10, 875)
-        '
-        'dtTo
-        '
-        Me.dtTo.Animated = True
-        Me.dtTo.BackColor = System.Drawing.Color.Transparent
-        Me.dtTo.BorderRadius = 8
-        Me.dtTo.Checked = True
-        Me.dtTo.FillColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.dtTo.Font = New System.Drawing.Font("Inter Medium", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.dtTo.ForeColor = System.Drawing.Color.White
-        Me.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.dtTo.Location = New System.Drawing.Point(960, 24)
-        Me.dtTo.MaxDate = New Date(2030, 12, 31, 0, 0, 0, 0)
-        Me.dtTo.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.dtTo.Name = "dtTo"
-        Me.dtTo.Size = New System.Drawing.Size(201, 48)
-        Me.dtTo.TabIndex = 5
-        Me.dtTo.Value = New Date(2023, 4, 20, 9, 54, 10, 875)
-        '
-        'Guna2Panel5
-        '
-        Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel5.BorderColor = System.Drawing.Color.White
-        Me.Guna2Panel5.BorderRadius = 20
-        Me.Guna2Panel5.BorderThickness = 1
-        Me.Guna2Panel5.Controls.Add(Me.lblTotalFiles)
-        Me.Guna2Panel5.Controls.Add(Me.Label1)
-        Me.Guna2Panel5.Controls.Add(Me.grdHistory)
-        Me.Guna2Panel5.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel5.Location = New System.Drawing.Point(17, 79)
-        Me.Guna2Panel5.Name = "Guna2Panel5"
-        Me.Guna2Panel5.Size = New System.Drawing.Size(1162, 731)
-        Me.Guna2Panel5.TabIndex = 39
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn1.FillWeight = 101.398!
-        Me.DataGridViewImageColumn1.HeaderText = ""
-        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Visible = False
-        Me.DataGridViewImageColumn1.Width = 25
-        '
-        'DataGridViewImageColumn2
-        '
-        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
-        Me.DataGridViewImageColumn2.HeaderText = ""
-        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        Me.DataGridViewImageColumn2.Visible = False
-        Me.DataGridViewImageColumn2.Width = 25
-        '
-        'DataGridViewImageColumn3
-        '
-        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn3.HeaderText = ""
-        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
-        Me.DataGridViewImageColumn3.Visible = False
-        Me.DataGridViewImageColumn3.Width = 25
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.FilioSystem.My.Resources.Resources.arrow_left_thin_custom
-        Me.PictureBox1.Location = New System.Drawing.Point(908, 28)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(51, 41)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 40
-        Me.PictureBox1.TabStop = False
-        '
-        'lblTotalFiles
-        '
-        Me.lblTotalFiles.AutoSize = True
-        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalFiles.Location = New System.Drawing.Point(89, 700)
-        Me.lblTotalFiles.Name = "lblTotalFiles"
-        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
-        Me.lblTotalFiles.TabIndex = 37
-        Me.lblTotalFiles.Text = "60 Files"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(15, 699)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
-        Me.Label1.TabIndex = 36
-        Me.Label1.Text = "Showing:"
-        '
         'frmHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -416,6 +416,15 @@ Partial Class frmHistory
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents grdHistory As Bunifu.UI.WinForms.BunifuDataGridView
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents dtFrom As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents dtTo As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
+    Friend WithEvents lblTotalFiles As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -433,13 +442,4 @@ Partial Class frmHistory
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents delete As DataGridViewImageColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents dtFrom As Guna.UI2.WinForms.Guna2DateTimePicker
-    Friend WithEvents dtTo As Guna.UI2.WinForms.Guna2DateTimePicker
-    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
-    Friend WithEvents lblTotalFiles As Label
-    Friend WithEvents Label1 As Label
 End Class

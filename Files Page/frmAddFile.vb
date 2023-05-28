@@ -48,7 +48,7 @@ Public Class frmAddFile
             sqlAdapterFilio.Dispose()
             MessageBox.Show("The file has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            procInsertLogEvent("Add File", txtName.Text)
+            procInsertLogEvent("Added File", "File: " & txtName.Text)
 
             Me.Close()
         Catch ex As Exception
@@ -105,7 +105,7 @@ Public Class frmAddFile
 
                 MessageBox.Show("The file has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                procInsertLogEvent("Edit File", txtName.Text)
+                procInsertLogEvent("Updated File", "File: " & txtName.Text)
 
                 frmFiles.txtSearch.Clear()
 

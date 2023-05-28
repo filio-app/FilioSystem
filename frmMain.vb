@@ -262,7 +262,7 @@ Public Class frmMain
         frmTransaction.Dispose()
         frmUsers.Dispose()
 
-        procInsertLogEvent("Sign Out", "Filio")
+        procInsertLogEvent("Signed Out", "System")
         isLoggedIn = False
 
         bunifuPagesMain.SetPage(7)
@@ -284,7 +284,7 @@ Public Class frmMain
 
                     Dim mb As MySqlBackup = New MySqlBackup(cmd)
                     mb.ExportToFile(backupPath)
-                    procInsertLogEvent("Weekly Backup", "Database")
+                    procInsertLogEvent("Automatic Backup", "Database Weekly Backup")
                     'MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End Using
             End Using
@@ -295,7 +295,7 @@ Public Class frmMain
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If isLoggedIn Then
-            procInsertLogEvent("Sign Out", "Filio")
+            procInsertLogEvent("Signed Out", "System")
         End If
     End Sub
 End Class

@@ -90,7 +90,7 @@ Public Class frmAddUser
 
                 MessageBox.Show("The user has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                procInsertLogEvent("Add User", txtUsername.Text)
+                procInsertLogEvent("Added User", "User: " & txtUsername.Text)
 
                 Me.Close()
 

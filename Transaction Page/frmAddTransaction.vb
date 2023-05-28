@@ -67,8 +67,12 @@
                 End With
 
                 MessageBox.Show("The transaction has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If (cmbType.Text.Equals("Issue")) Then
+                    procInsertLogEvent("Issued", "File: " & txtFile.Text)
+                Else
+                    procInsertLogEvent("Returned", "File: " & txtFile.Text)
+                End If
 
-                procInsertLogEvent("Add Transaction", txtFile.Text)
 
 
                 'procInsertLogEvent("Add File", txtName.Text)

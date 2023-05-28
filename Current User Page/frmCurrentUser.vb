@@ -209,7 +209,7 @@ Public Class frmCurrentUser
                     'TODO: (frmCurrentUser) Add confirmation message
                     updatePassword(txtUsername.Text, txtNewPass.Text)
                     MessageBox.Show("Password changed successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    procInsertLogEvent("Edit User Password", txtUsername.Text)
+                    procInsertLogEvent("Changed User Password", "User: " & txtUsername.Text)
                     btnCancel.PerformClick()
                 Else
                     MessageBox.Show("The username and current password do not match. Please verify your credentials and try again.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Information)

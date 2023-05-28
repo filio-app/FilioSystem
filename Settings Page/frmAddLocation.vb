@@ -30,7 +30,7 @@ Public Class frmAddLocation
 
             MessageBox.Show("The location has been added", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            procInsertLogEvent("Add Location", txtName.Text)
+            procInsertLogEvent("Added Location", "Location: " & txtName.Text)
 
             Me.Close()
         Catch ex As Exception
@@ -62,7 +62,7 @@ Public Class frmAddLocation
 
                 MessageBox.Show("The location has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                procInsertLogEvent("Edit Location", txtName.Text)
+                procInsertLogEvent("Updated Location", "Location: " & txtName.Text)
 
                 Me.Close()
             Catch ex As Exception

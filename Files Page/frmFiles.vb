@@ -140,8 +140,7 @@ Public Class frmFiles
                             .ExecuteNonQuery()
                             MessageBox.Show("The file has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
-                            procInsertLogEvent("Delete File", grdFiles.CurrentRow.Cells(2).Value.ToString)
-
+                            procInsertLogEvent("Deleted File", "File: " & grdFiles.CurrentRow.Cells(2).Value.ToString)
                         End With
                         ' refresh/reload customer records in data grid view
                         procDisplayAllFiles()

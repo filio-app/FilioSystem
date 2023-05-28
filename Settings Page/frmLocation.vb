@@ -98,8 +98,7 @@ Public Class frmLocation
 
                             MessageBox.Show("The location has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
-                            procInsertLogEvent("Delete Location", grdLocation.CurrentRow.Cells(2).Value.ToString)
-
+                            procInsertLogEvent("Deleted Location", "Location: " & grdLocation.CurrentRow.Cells(2).Value.ToString)
                         End With
                     Else
                         ' Cancel deletion
