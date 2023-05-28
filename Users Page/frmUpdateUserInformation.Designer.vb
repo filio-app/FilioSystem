@@ -59,7 +59,7 @@ Partial Class frmUpdateUserInformation
         Me.txtPhoneNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPhoneNo.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPhoneNo.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtPhoneNo.Location = New System.Drawing.Point(383, 94)
+        Me.txtPhoneNo.Location = New System.Drawing.Point(376, 94)
         Me.txtPhoneNo.Margin = New System.Windows.Forms.Padding(5)
         Me.txtPhoneNo.Name = "txtPhoneNo"
         Me.txtPhoneNo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -73,7 +73,7 @@ Partial Class frmUpdateUserInformation
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(379, 70)
+        Me.Label3.Location = New System.Drawing.Point(372, 70)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 19)
         Me.Label3.TabIndex = 33
@@ -90,7 +90,7 @@ Partial Class frmUpdateUserInformation
         Me.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLastName.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtLastName.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtLastName.Location = New System.Drawing.Point(36, 218)
+        Me.txtLastName.Location = New System.Drawing.Point(29, 218)
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(5)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -104,7 +104,7 @@ Partial Class frmUpdateUserInformation
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(32, 194)
+        Me.Label1.Location = New System.Drawing.Point(25, 194)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(90, 19)
         Me.Label1.TabIndex = 31
@@ -140,7 +140,7 @@ Partial Class frmUpdateUserInformation
         Me.txtEmailAdd.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmailAdd.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtEmailAdd.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtEmailAdd.Location = New System.Drawing.Point(383, 218)
+        Me.txtEmailAdd.Location = New System.Drawing.Point(376, 218)
         Me.txtEmailAdd.Margin = New System.Windows.Forms.Padding(5)
         Me.txtEmailAdd.Name = "txtEmailAdd"
         Me.txtEmailAdd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -154,7 +154,7 @@ Partial Class frmUpdateUserInformation
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(379, 196)
+        Me.Label6.Location = New System.Drawing.Point(372, 196)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(117, 19)
         Me.Label6.TabIndex = 35
@@ -171,7 +171,7 @@ Partial Class frmUpdateUserInformation
         Me.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFirstName.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtFirstName.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtFirstName.Location = New System.Drawing.Point(36, 94)
+        Me.txtFirstName.Location = New System.Drawing.Point(29, 94)
         Me.txtFirstName.Margin = New System.Windows.Forms.Padding(5)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -185,7 +185,7 @@ Partial Class frmUpdateUserInformation
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(32, 70)
+        Me.Label2.Location = New System.Drawing.Point(25, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(91, 19)
         Me.Label2.TabIndex = 17
