@@ -312,6 +312,8 @@ Partial Class frmHistory
         '
         'Column6
         '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.FillWeight = 200.0!
         Me.Column6.HeaderText = "Subject"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
