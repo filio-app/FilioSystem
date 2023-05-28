@@ -41,7 +41,7 @@ Public Class frmTransaction
                         .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("type").ToString
                         .Rows(row).Cells(8).Value = datFilio.Rows(row).Item("borrower_name").ToString
                         .Rows(row).Cells(9).Value = datFilio.Rows(row).Item("returner_name").ToString
-                        .Rows(row).Cells(10).Value = datFilio.Rows(row).Item("department").ToString
+                        .Rows(row).Cells(11).Value = datFilio.Rows(row).Item("department").ToString
 
                         If datFilio.Rows(row).Item("borrower_name").ToString.Equals("NA") Then
                             combinedName = datFilio.Rows(row).Item("returner_name").ToString
@@ -49,7 +49,7 @@ Public Class frmTransaction
                             combinedName = datFilio.Rows(row).Item("borrower_name").ToString
                         End If
 
-                        .Rows(row).Cells(11).Value = combinedName
+                        .Rows(row).Cells(10).Value = combinedName
 
                     End With
                     row += 1
@@ -145,7 +145,7 @@ Public Class frmTransaction
 
 
 
-                    .txtDepartment.Text = grdTransaction.CurrentRow.Cells(10).Value.ToString()
+                    .txtDepartment.Text = grdTransaction.CurrentRow.Cells(11).Value.ToString()
 
                 End With
                 displayFormAsModal(frmMain, frmViewTransaction)
@@ -186,16 +186,31 @@ Public Class frmTransaction
                 row = 0
                 While Not datFilio.Rows.Count - 1 < row
                     With grdTransaction
+
+                        Dim combinedName As String
+
                         .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
                         .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm tt")
-                        .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("status").ToString
+                        If datFilio.Rows(row).Item("type").ToString.Equals("Issue") Then
+                            .Rows(row).Cells(4).Value = "Issued"
+                        Else
+                            .Rows(row).Cells(4).Value = "Returned"
+                        End If
                         .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("username").ToString
                         .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("notes").ToString
                         .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("type").ToString
                         .Rows(row).Cells(8).Value = datFilio.Rows(row).Item("borrower_name").ToString
                         .Rows(row).Cells(9).Value = datFilio.Rows(row).Item("returner_name").ToString
-                        .Rows(row).Cells(10).Value = datFilio.Rows(row).Item("department").ToString
+                        .Rows(row).Cells(11).Value = datFilio.Rows(row).Item("department").ToString
+
+                        If datFilio.Rows(row).Item("borrower_name").ToString.Equals("NA") Then
+                            combinedName = datFilio.Rows(row).Item("returner_name").ToString
+                        Else
+                            combinedName = datFilio.Rows(row).Item("borrower_name").ToString
+                        End If
+
+                        .Rows(row).Cells(10).Value = combinedName
 
                     End With
                     row += 1

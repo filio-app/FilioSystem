@@ -47,8 +47,8 @@ Partial Class frmTransaction
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.view = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -89,7 +89,7 @@ Partial Class frmTransaction
         Me.grdTransaction.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.grdTransaction.ColumnHeadersHeight = 50
         Me.grdTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.grdTransaction.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column12, Me.Column2, Me.Column10, Me.Column11, Me.Column16, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
+        Me.grdTransaction.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column12, Me.Column2, Me.Column10, Me.Column16, Me.Column11, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
         Me.grdTransaction.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdTransaction.CurrentTheme.AlternatingRowsStyle.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.grdTransaction.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
@@ -320,18 +320,17 @@ Partial Class frmTransaction
         Me.Column10.ReadOnly = True
         Me.Column10.Visible = False
         '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Department"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        Me.Column11.Visible = False
-        '
         'Column16
         '
         Me.Column16.HeaderText = "Borrower/Returner"
         Me.Column16.Name = "Column16"
         Me.Column16.ReadOnly = True
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Department"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
         '
         'Column9
         '
@@ -440,8 +439,8 @@ Partial Class frmTransaction
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents view As DataGridViewImageColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn

@@ -95,7 +95,7 @@ Partial Class frmAddTransaction
         Me.cmbType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbType.ItemHeight = 49
         Me.cmbType.Items.AddRange(New Object() {"Issue", "Return"})
-        Me.cmbType.Location = New System.Drawing.Point(45, 216)
+        Me.cmbType.Location = New System.Drawing.Point(45, 116)
         Me.cmbType.Name = "cmbType"
         Me.cmbType.Size = New System.Drawing.Size(433, 55)
         Me.cmbType.StartIndex = 1
@@ -106,7 +106,7 @@ Partial Class frmAddTransaction
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(41, 194)
+        Me.Label5.Location = New System.Drawing.Point(41, 94)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 19)
         Me.Label5.TabIndex = 40
@@ -117,7 +117,7 @@ Partial Class frmAddTransaction
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(41, 88)
+        Me.Label4.Location = New System.Drawing.Point(41, 192)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(35, 19)
         Me.Label4.TabIndex = 39
@@ -150,7 +150,7 @@ Partial Class frmAddTransaction
         Me.txtFile.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFile.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtFile.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtFile.Location = New System.Drawing.Point(45, 112)
+        Me.txtFile.Location = New System.Drawing.Point(45, 216)
         Me.txtFile.Margin = New System.Windows.Forms.Padding(5)
         Me.txtFile.Name = "txtFile"
         Me.txtFile.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -247,7 +247,7 @@ Partial Class frmAddTransaction
         Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(425, 120)
+        Me.Guna2Button1.Location = New System.Drawing.Point(425, 224)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(43, 38)
         Me.Guna2Button1.TabIndex = 0
