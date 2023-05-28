@@ -24,10 +24,13 @@ Public Class frmTransaction
                 grdTransaction.RowCount = datFilio.Rows.Count
                 row = 0
                 While Not datFilio.Rows.Count - 1 < row
+
+                    Dim combinedName As String
+
                     With grdTransaction
                         .Rows(row).Cells(1).Value = datFilio.Rows(row).Item("id").ToString
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
-                        .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
+                        .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm tt")
                         .Rows(row).Cells(4).Value = datFilio.Rows(row).Item("status").ToString
                         .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("username").ToString
                         .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("notes").ToString
@@ -35,6 +38,14 @@ Public Class frmTransaction
                         .Rows(row).Cells(8).Value = datFilio.Rows(row).Item("borrower_name").ToString
                         .Rows(row).Cells(9).Value = datFilio.Rows(row).Item("returner_name").ToString
                         .Rows(row).Cells(10).Value = datFilio.Rows(row).Item("department").ToString
+
+                        If datFilio.Rows(row).Item("borrower_name").ToString <> "NA" Then
+                            combinedName = datFilio.Rows(row).Item("returner_name").ToString
+                        Else
+                            combinedName = datFilio.Rows(row).Item("borrower_name").ToString
+                        End If
+
+                        .Rows(row).Cells(11).Value = combinedName
 
                     End With
                     row += 1
@@ -123,7 +134,7 @@ Public Class frmTransaction
                     .cmbType.SelectedIndex = idx
 
 
-
+                    .txtStatus.Text = grdTransaction.CurrentRow.Cells(4).Value.ToString()
                     .txtDate.Text = DateTime.Parse(grdTransaction.CurrentRow.Cells(3).Value.ToString()).ToString("dddd, MMMM dd, yyyy")
                     .txtIssuedBy.Text = grdTransaction.CurrentRow.Cells(5).Value.ToString()
 
