@@ -276,7 +276,7 @@ Partial Class frmAddUser
         Me.txtEmailAdd.Margin = New System.Windows.Forms.Padding(5)
         Me.txtEmailAdd.Name = "txtEmailAdd"
         Me.txtEmailAdd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtEmailAdd.PlaceholderText = "Please fill in"
+        Me.txtEmailAdd.PlaceholderText = "e.g. johndoe@gmail.com"
         Me.txtEmailAdd.SelectedText = ""
         Me.txtEmailAdd.Size = New System.Drawing.Size(322, 55)
         Me.txtEmailAdd.TabIndex = 3
@@ -311,7 +311,7 @@ Partial Class frmAddUser
         Me.txtPhoneNo.Margin = New System.Windows.Forms.Padding(5)
         Me.txtPhoneNo.Name = "txtPhoneNo"
         Me.txtPhoneNo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtPhoneNo.PlaceholderText = "Please fill in"
+        Me.txtPhoneNo.PlaceholderText = "e.g. 09362962989"
         Me.txtPhoneNo.SelectedText = ""
         Me.txtPhoneNo.Size = New System.Drawing.Size(322, 55)
         Me.txtPhoneNo.TabIndex = 2
