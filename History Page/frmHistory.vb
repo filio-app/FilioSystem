@@ -9,7 +9,6 @@ Public Class frmHistory
         dtFrom.Value = DateTime.Now.AddDays(-2)
         dtTo.Value = DateTime.Now.AddDays(1)
 
-        grdHistory.Rows(0).Cells(0).Style.WrapMode = DataGridViewTriState.False
 
 
 
