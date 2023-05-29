@@ -98,10 +98,17 @@ Public Class frmMain
                 datFilio.Clear()
                 sqlAdapterFilio.Fill(datFilio)
             End With
+            Dim count As Integer = 0
             If datFilio.Rows.Count > 0 Then
                 grdDTransaction.RowCount = datFilio.Rows.Count
+
+
                 row = 0
                 While Not datFilio.Rows.Count - 1 < row
+                    'Showing only 30 latest transactions
+                    If count = 30 Then
+                        Exit While
+                    End If
                     With grdDTransaction
                         .Rows(row).Cells(2).Value = datFilio.Rows(row).Item("file_name").ToString
                         .Rows(row).Cells(3).Value = DateTime.Parse(datFilio.Rows(row).Item("date").ToString()).ToString("dddd, MMMM dd, yyyy h:mm:ss tt")
@@ -114,10 +121,12 @@ Public Class frmMain
 
                     End With
                     row += 1
-                End While
+                        count += 1
 
-            Else
-                grdDTransaction.Rows.Clear()
+                    End While
+
+                Else
+                    grdDTransaction.Rows.Clear()
                 'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If
