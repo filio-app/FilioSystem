@@ -128,20 +128,27 @@ Public Class frmFiles
             Try
                 If MessageBox.Show("Are you sure you want to delete the selected file?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     ' Perform the deletion
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "procDeleteFile"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", userID)
-                        .ExecuteNonQuery()
-                        MessageBox.Show("The file has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
-                        procInsertLogEvent("Delete File", grdFiles.CurrentRow.Cells(2).Value.ToString)
+                    Dim userInput As String = InputBox("Please enter 'CONFIRM' in capital letters to delete the file:", "Confirm Deletion")
 
-                    End With
-                    ' refresh/reload customer records in data grid view
-                    procDisplayAllFiles()
-                    txtSearch.Clear()
+                    If userInput.Trim() = "CONFIRM" Then
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "procDeleteFile"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_id", userID)
+                            .ExecuteNonQuery()
+                            MessageBox.Show("The file has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                            procInsertLogEvent("Deleted File", "File: " & grdFiles.CurrentRow.Cells(2).Value.ToString)
+                        End With
+                        ' refresh/reload customer records in data grid view
+                        procDisplayAllFiles()
+                        txtSearch.Clear()
+                    Else
+                        ' Cancel deletion
+                        MessageBox.Show("Deletion canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
                 End If
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)

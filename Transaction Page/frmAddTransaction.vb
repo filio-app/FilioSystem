@@ -26,6 +26,18 @@
             clearEP()
             ErrorProviderHelper.SetError(txtFile, "File field is required.")
             Return
+        ElseIf txtBRName.Text = "" Then
+            clearEP()
+            If (cmbType.Text.Equals("Issue")) Then
+                ErrorProviderHelper.SetError(txtBRName, "Borrower's name field is required.")
+            Else
+                ErrorProviderHelper.SetError(txtBRName, "Returner's name field is required.")
+            End If
+            Return
+        ElseIf txtDepartment.Text = "" Then
+            clearEP()
+            ErrorProviderHelper.SetError(txtDepartment, "Department field is required.")
+            Return
         ElseIf txtNotes.Text = "" Then
             clearEP()
             ErrorProviderHelper.SetError(txtNotes, "Notes field is required.")
@@ -44,6 +56,8 @@
                     '.Parameters.AddWithValue("@date", txtLocation.Text)
                     .Parameters.AddWithValue("@p_type", cmbType.Text)
                     .Parameters.AddWithValue("@p_notes", txtNotes.Text)
+                    .Parameters.AddWithValue("@p_BRName", txtBRName.Text)
+                    .Parameters.AddWithValue("@p_department", txtDepartment.Text)
                     .ExecuteNonQuery()
 
                     'UPDATE File to Issued or Available
@@ -53,8 +67,12 @@
                 End With
 
                 MessageBox.Show("The transaction has been added.", "Add Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If (cmbType.Text.Equals("Issue")) Then
+                    procInsertLogEvent("Issued File", "File: " & txtFile.Text)
+                Else
+                    procInsertLogEvent("Returned File", "File: " & txtFile.Text)
+                End If
 
-                procInsertLogEvent("Add Transaction", txtFile.Text)
 
 
                 'procInsertLogEvent("Add File", txtName.Text)
@@ -91,6 +109,11 @@
 
     Private Sub cmbType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbType.SelectedIndexChanged
         txtFile.Text = ""
+        If cmbType.Text.Equals("Issue") Then
+            lblBRName.Text = "Borrower's Name"
+        Else
+            lblBRName.Text = "Returner's Name"
+        End If
     End Sub
 
     Private Sub txtFile_TextChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged

@@ -28,6 +28,7 @@ Partial Class frmMain
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
         Me.pBLogo = New System.Windows.Forms.PictureBox()
@@ -56,20 +57,6 @@ Partial Class frmMain
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.grdDTransaction = New Bunifu.UI.WinForms.BunifuDataGridView()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblTotalLocations = New System.Windows.Forms.Label()
@@ -97,6 +84,20 @@ Partial Class frmMain
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panelTopLogo.SuspendLayout()
         CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
@@ -690,131 +691,14 @@ Partial Class frmMain
         Me.grdDTransaction.ReadOnly = True
         Me.grdDTransaction.RowHeadersVisible = False
         Me.grdDTransaction.RowHeadersWidth = 50
-        Me.grdDTransaction.RowTemplate.Height = 50
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDTransaction.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.grdDTransaction.RowTemplate.DefaultCellStyle.Padding = New System.Windows.Forms.Padding(0, 3, 0, 3)
+        Me.grdDTransaction.RowTemplate.Height = 60
         Me.grdDTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdDTransaction.Size = New System.Drawing.Size(1256, 536)
         Me.grdDTransaction.TabIndex = 4
         Me.grdDTransaction.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
-        '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column8.FillWeight = 21.39038!
-        Me.Column8.HeaderText = ""
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 10
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "id"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Visible = False
-        '
-        'Column1
-        '
-        Me.Column1.FillWeight = 127.9676!
-        Me.Column1.HeaderText = "File Name"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.FillWeight = 127.9676!
-        Me.Column3.HeaderText = "Date"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.FillWeight = 127.9676!
-        Me.Column4.HeaderText = "Type"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Username"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Notes"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column9
-        '
-        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column9.HeaderText = ""
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Visible = False
-        Me.Column9.Width = 10
-        '
-        'view
-        '
-        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.view.FillWeight = 101.398!
-        Me.view.HeaderText = ""
-        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.view.Name = "view"
-        Me.view.ReadOnly = True
-        Me.view.Visible = False
-        Me.view.Width = 25
-        '
-        'Column15
-        '
-        Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column15.FillWeight = 101.398!
-        Me.Column15.HeaderText = "Column15"
-        Me.Column15.Name = "Column15"
-        Me.Column15.ReadOnly = True
-        Me.Column15.Visible = False
-        Me.Column15.Width = 10
-        '
-        'edit
-        '
-        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.edit.FillWeight = 137.0792!
-        Me.edit.HeaderText = ""
-        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.edit.Name = "edit"
-        Me.edit.ReadOnly = True
-        Me.edit.Visible = False
-        Me.edit.Width = 25
-        '
-        'Column14
-        '
-        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column14.FillWeight = 54.83167!
-        Me.Column14.HeaderText = "Column14"
-        Me.Column14.Name = "Column14"
-        Me.Column14.ReadOnly = True
-        Me.Column14.Visible = False
-        Me.Column14.Width = 10
-        '
-        'delete
-        '
-        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.delete.HeaderText = ""
-        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.delete.Name = "delete"
-        Me.delete.ReadOnly = True
-        Me.delete.Visible = False
-        Me.delete.Width = 25
-        '
-        'Column13
-        '
-        Me.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column13.HeaderText = ""
-        Me.Column13.Name = "Column13"
-        Me.Column13.ReadOnly = True
-        Me.Column13.Width = 10
         '
         'Guna2Panel4
         '
@@ -1103,6 +987,128 @@ Partial Class frmMain
         '
         Me.Guna2Elipse2.TargetControl = Me.grdDTransaction
         '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column8.FillWeight = 21.39038!
+        Me.Column8.HeaderText = ""
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 10
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "id"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Visible = False
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 127.9676!
+        Me.Column1.HeaderText = "File Name"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.FillWeight = 127.9676!
+        Me.Column3.HeaderText = "Date"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column4.FillWeight = 127.9676!
+        Me.Column4.HeaderText = "Status"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 200
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Username"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Notes"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column9
+        '
+        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column9.HeaderText = ""
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Visible = False
+        Me.Column9.Width = 10
+        '
+        'view
+        '
+        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.view.FillWeight = 101.398!
+        Me.view.HeaderText = ""
+        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.view.Name = "view"
+        Me.view.ReadOnly = True
+        Me.view.Visible = False
+        Me.view.Width = 25
+        '
+        'Column15
+        '
+        Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column15.FillWeight = 101.398!
+        Me.Column15.HeaderText = "Column15"
+        Me.Column15.Name = "Column15"
+        Me.Column15.ReadOnly = True
+        Me.Column15.Visible = False
+        Me.Column15.Width = 10
+        '
+        'edit
+        '
+        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.edit.FillWeight = 137.0792!
+        Me.edit.HeaderText = ""
+        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Visible = False
+        Me.edit.Width = 25
+        '
+        'Column14
+        '
+        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column14.FillWeight = 54.83167!
+        Me.Column14.HeaderText = "Column14"
+        Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
+        Me.Column14.Visible = False
+        Me.Column14.Width = 10
+        '
+        'delete
+        '
+        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.delete.HeaderText = ""
+        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.delete.Name = "delete"
+        Me.delete.ReadOnly = True
+        Me.delete.Visible = False
+        Me.delete.Width = 25
+        '
+        'Column13
+        '
+        Me.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column13.HeaderText = ""
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        Me.Column13.Width = 10
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
@@ -1121,7 +1127,7 @@ Partial Class frmMain
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Main"
+        Me.Text = "Filio"
         Me.panelTopLogo.ResumeLayout(False)
         CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)

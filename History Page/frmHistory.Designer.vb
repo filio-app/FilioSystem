@@ -26,6 +26,7 @@ Partial Class frmHistory
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.grdHistory = New Bunifu.UI.WinForms.BunifuDataGridView()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,12 +50,12 @@ Partial Class frmHistory
         Me.dtFrom = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.dtTo = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lblTotalFiles = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.grdHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,8 +128,11 @@ Partial Class frmHistory
         Me.grdHistory.Name = "grdHistory"
         Me.grdHistory.ReadOnly = True
         Me.grdHistory.RowHeadersVisible = False
-        Me.grdHistory.RowHeadersWidth = 50
-        Me.grdHistory.RowTemplate.Height = 50
+        Me.grdHistory.RowHeadersWidth = 60
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdHistory.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.grdHistory.RowTemplate.DefaultCellStyle.Padding = New System.Windows.Forms.Padding(2)
+        Me.grdHistory.RowTemplate.Height = 65
         Me.grdHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdHistory.Size = New System.Drawing.Size(1125, 664)
         Me.grdHistory.TabIndex = 3
@@ -194,16 +198,20 @@ Partial Class frmHistory
         '
         'Column6
         '
-        Me.Column6.HeaderText = "Target"
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.FillWeight = 200.0!
+        Me.Column6.HeaderText = "Subject"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
         '
         'Column4
         '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.Column4.FillWeight = 127.9676!
         Me.Column4.HeaderText = "Time"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
+        Me.Column4.Width = 370
         '
         'Column9
         '
@@ -330,6 +338,28 @@ Partial Class frmHistory
         Me.Guna2Panel5.Size = New System.Drawing.Size(1162, 731)
         Me.Guna2Panel5.TabIndex = 39
         '
+        'lblTotalFiles
+        '
+        Me.lblTotalFiles.AutoSize = True
+        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalFiles.Location = New System.Drawing.Point(89, 700)
+        Me.lblTotalFiles.Name = "lblTotalFiles"
+        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
+        Me.lblTotalFiles.TabIndex = 37
+        Me.lblTotalFiles.Text = "60 Files"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(15, 699)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "Showing:"
+        '
         'DataGridViewImageColumn1
         '
         Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -370,28 +400,6 @@ Partial Class frmHistory
         Me.PictureBox1.TabIndex = 40
         Me.PictureBox1.TabStop = False
         '
-        'lblTotalFiles
-        '
-        Me.lblTotalFiles.AutoSize = True
-        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalFiles.Location = New System.Drawing.Point(89, 700)
-        Me.lblTotalFiles.Name = "lblTotalFiles"
-        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
-        Me.lblTotalFiles.TabIndex = 37
-        Me.lblTotalFiles.Text = "60 Files"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(15, 699)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
-        Me.Label1.TabIndex = 36
-        Me.Label1.Text = "Showing:"
-        '
         'frmHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -416,6 +424,15 @@ Partial Class frmHistory
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents grdHistory As Bunifu.UI.WinForms.BunifuDataGridView
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents dtFrom As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents dtTo As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
+    Friend WithEvents lblTotalFiles As Label
+    Friend WithEvents Label1 As Label
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -433,13 +450,4 @@ Partial Class frmHistory
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
     Friend WithEvents delete As DataGridViewImageColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents dtFrom As Guna.UI2.WinForms.Guna2DateTimePicker
-    Friend WithEvents dtTo As Guna.UI2.WinForms.Guna2DateTimePicker
-    Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
-    Friend WithEvents lblTotalFiles As Label
-    Friend WithEvents Label1 As Label
 End Class

@@ -147,7 +147,7 @@
 
             MessageBox.Show("Password changed successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            procInsertLogEvent("Edit User Password", txtUsername.Text)
+            procInsertLogEvent("Changed User Password", "User: " & txtUsername.Text)
 
             Me.Close()
             frmUpdateUser.Close()

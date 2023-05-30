@@ -53,7 +53,7 @@
                 MessageBox.Show("The user has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 'TODO: Should change to username
-                procInsertLogEvent("Edit User Information", txtFirstName.Text)
+                procInsertLogEvent("Updated User Information", "User: " & txtFirstName.Text & " " & txtLastName.Text)
 
                 Me.Close()
                 frmUpdateUser.Close()

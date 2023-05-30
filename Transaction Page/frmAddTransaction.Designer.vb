@@ -37,6 +37,10 @@ Partial Class frmAddTransaction
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnSubmit = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.lblBRName = New System.Windows.Forms.Label()
+        Me.txtBRName = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtDepartment = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,7 +75,7 @@ Partial Class frmAddTransaction
         Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(288, 613)
+        Me.btnUpdate.Location = New System.Drawing.Point(288, 804)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(190, 56)
         Me.btnUpdate.TabIndex = 42
@@ -91,7 +95,7 @@ Partial Class frmAddTransaction
         Me.cmbType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbType.ItemHeight = 49
         Me.cmbType.Items.AddRange(New Object() {"Issue", "Return"})
-        Me.cmbType.Location = New System.Drawing.Point(45, 225)
+        Me.cmbType.Location = New System.Drawing.Point(45, 116)
         Me.cmbType.Name = "cmbType"
         Me.cmbType.Size = New System.Drawing.Size(433, 55)
         Me.cmbType.StartIndex = 1
@@ -102,7 +106,7 @@ Partial Class frmAddTransaction
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(41, 203)
+        Me.Label5.Location = New System.Drawing.Point(41, 94)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 19)
         Me.Label5.TabIndex = 40
@@ -113,7 +117,7 @@ Partial Class frmAddTransaction
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(41, 95)
+        Me.Label4.Location = New System.Drawing.Point(41, 192)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(35, 19)
         Me.Label4.TabIndex = 39
@@ -124,7 +128,7 @@ Partial Class frmAddTransaction
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(41, 307)
+        Me.Label3.Location = New System.Drawing.Point(41, 503)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(54, 19)
         Me.Label3.TabIndex = 38
@@ -146,7 +150,7 @@ Partial Class frmAddTransaction
         Me.txtFile.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFile.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtFile.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtFile.Location = New System.Drawing.Point(45, 119)
+        Me.txtFile.Location = New System.Drawing.Point(45, 216)
         Me.txtFile.Margin = New System.Windows.Forms.Padding(5)
         Me.txtFile.Name = "txtFile"
         Me.txtFile.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -170,7 +174,7 @@ Partial Class frmAddTransaction
         Me.txtNotes.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNotes.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtNotes.IconLeftSize = New System.Drawing.Size(28, 28)
-        Me.txtNotes.Location = New System.Drawing.Point(45, 331)
+        Me.txtNotes.Location = New System.Drawing.Point(45, 527)
         Me.txtNotes.Margin = New System.Windows.Forms.Padding(5)
         Me.txtNotes.Multiline = True
         Me.txtNotes.Name = "txtNotes"
@@ -194,7 +198,7 @@ Partial Class frmAddTransaction
         Me.btnCancel.FillColor = System.Drawing.Color.White
         Me.btnCancel.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.btnCancel.Location = New System.Drawing.Point(45, 613)
+        Me.btnCancel.Location = New System.Drawing.Point(45, 804)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(190, 56)
         Me.btnCancel.TabIndex = 4
@@ -208,7 +212,7 @@ Partial Class frmAddTransaction
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(531, 71)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(530, 71)
         Me.Guna2Panel1.TabIndex = 34
         '
         'btnSubmit
@@ -222,7 +226,7 @@ Partial Class frmAddTransaction
         Me.btnSubmit.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnSubmit.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
         Me.btnSubmit.ForeColor = System.Drawing.Color.White
-        Me.btnSubmit.Location = New System.Drawing.Point(288, 613)
+        Me.btnSubmit.Location = New System.Drawing.Point(288, 804)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(190, 56)
         Me.btnSubmit.TabIndex = 3
@@ -243,17 +247,91 @@ Partial Class frmAddTransaction
         Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(425, 127)
+        Me.Guna2Button1.Location = New System.Drawing.Point(425, 224)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(43, 38)
         Me.Guna2Button1.TabIndex = 0
+        '
+        'lblBRName
+        '
+        Me.lblBRName.AutoSize = True
+        Me.lblBRName.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblBRName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.lblBRName.Location = New System.Drawing.Point(41, 296)
+        Me.lblBRName.Name = "lblBRName"
+        Me.lblBRName.Size = New System.Drawing.Size(140, 19)
+        Me.lblBRName.TabIndex = 45
+        Me.lblBRName.Text = "Borrower's Name"
+        '
+        'txtBRName
+        '
+        Me.txtBRName.Animated = True
+        Me.txtBRName.BorderRadius = 8
+        Me.txtBRName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtBRName.DefaultText = ""
+        Me.txtBRName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtBRName.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtBRName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtBRName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtBRName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtBRName.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtBRName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtBRName.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtBRName.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtBRName.Location = New System.Drawing.Point(45, 320)
+        Me.txtBRName.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtBRName.Name = "txtBRName"
+        Me.txtBRName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtBRName.PlaceholderText = "Search..."
+        Me.txtBRName.SelectedText = ""
+        Me.txtBRName.Size = New System.Drawing.Size(433, 55)
+        Me.txtBRName.TabIndex = 44
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Inter", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(41, 400)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(100, 19)
+        Me.Label2.TabIndex = 47
+        Me.Label2.Text = "Department"
+        '
+        'txtDepartment
+        '
+        Me.txtDepartment.Animated = True
+        Me.txtDepartment.BorderRadius = 8
+        Me.txtDepartment.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtDepartment.DefaultText = ""
+        Me.txtDepartment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtDepartment.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDepartment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDepartment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDepartment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtDepartment.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtDepartment.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtDepartment.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.txtDepartment.IconLeftSize = New System.Drawing.Size(28, 28)
+        Me.txtDepartment.Location = New System.Drawing.Point(45, 424)
+        Me.txtDepartment.Margin = New System.Windows.Forms.Padding(5)
+        Me.txtDepartment.Name = "txtDepartment"
+        Me.txtDepartment.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtDepartment.PlaceholderText = "Search..."
+        Me.txtDepartment.SelectedText = ""
+        Me.txtDepartment.Size = New System.Drawing.Size(433, 55)
+        Me.txtDepartment.TabIndex = 46
         '
         'frmAddTransaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(531, 697)
+        Me.ClientSize = New System.Drawing.Size(530, 882)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtDepartment)
+        Me.Controls.Add(Me.lblBRName)
+        Me.Controls.Add(Me.txtBRName)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.cmbType)
         Me.Controls.Add(Me.Label5)
@@ -289,4 +367,8 @@ Partial Class frmAddTransaction
     Friend WithEvents btnSubmit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents lblBRName As Label
+    Friend WithEvents txtBRName As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtDepartment As Guna.UI2.WinForms.Guna2TextBox
 End Class
