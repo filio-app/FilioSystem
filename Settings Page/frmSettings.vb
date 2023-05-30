@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 Imports MySql.Data.MySqlClient.MySqlBackup
 Public Class frmSettings
 
@@ -182,6 +183,14 @@ Public Class frmSettings
 
                 If userInput.Trim() = "CONFIRM" Then
                     ' Perform the restore
+
+                    Dim sqlContent As String = File.ReadAllText(backupFile)
+
+                    '' Exclude the history table from the SQL script
+                    'sqlContent = sqlContent.Replace("DROP TABLE IF EXISTS `history_log`;", "")
+                    'sqlContent = sqlContent.Replace("CREATE TABLE `history_log`", "")
+                    'sqlContent = sqlContent.Replace("INSERT INTO `history_log`", "")
+
                     Try
                         Using con As New MySqlConnection(connectionString)
                             con.Open()
