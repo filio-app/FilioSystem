@@ -167,6 +167,7 @@ Public Class frmMain
         Catch ex As Exception
             MessageBox.Show("" + ex.Message)
         End Try
+        Return 0
     End Function
 
 
@@ -243,11 +244,22 @@ Public Class frmMain
         bunifuPagesMain.SetPage(6)
         With frmCurrentUser
             .TopLevel = False
-
             panelCurrentUser.Controls.Add(frmCurrentUser)
             .BringToFront()
             .Show()
         End With
+    End Sub
+
+
+    Private Sub btnArchive_Click(sender As Object, e As EventArgs) Handles btnArchive.Click
+        bunifuPagesMain.SetPage(8)
+        '   With frmCurrentUser
+        '       .TopLevel = False
+        '   panelCurrentUser.Controls.Add(frmCurrentUser)
+        '   .BringToFront()
+        '   .Show()
+        '   End With
+
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -263,6 +275,7 @@ Public Class frmMain
         btnUsers.Visible = False
         btnHistory.Visible = False
         btnSettings.Visible = False
+        btnArchive.Visible = False
 
         ' TODO: (frmMain) set other button checked to false
         btnDashboard.Checked = False
@@ -312,4 +325,5 @@ Public Class frmMain
             procInsertLogEvent("Signed Out", "System")
         End If
     End Sub
+
 End Class

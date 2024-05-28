@@ -47,6 +47,7 @@ Public Class frmSignIn
                         .btnDashboard.Visible = True
                         .btnFiles.Visible = True
                         .btnTransaction.Visible = True
+                        .btnArchive.Visible = True
 
 
                         If currRole.Equals("Employee") Then
