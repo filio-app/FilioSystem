@@ -121,12 +121,12 @@ Public Class frmMain
 
                     End With
                     row += 1
-                        count += 1
+                    count += 1
 
-                    End While
+                End While
 
-                Else
-                    grdDTransaction.Rows.Clear()
+            Else
+                grdDTransaction.Rows.Clear()
                 'MessageBox.Show("NO Record Found!", "Record Status", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End If

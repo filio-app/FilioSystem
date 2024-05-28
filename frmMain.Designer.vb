@@ -57,6 +57,20 @@ Partial Class frmMain
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.grdDTransaction = New Bunifu.UI.WinForms.BunifuDataGridView()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblTotalLocations = New System.Windows.Forms.Label()
@@ -84,20 +98,6 @@ Partial Class frmMain
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.panelTopLogo.SuspendLayout()
         CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
@@ -598,7 +598,7 @@ Partial Class frmMain
         Me.dashboard.Location = New System.Drawing.Point(4, 4)
         Me.dashboard.Name = "dashboard"
         Me.dashboard.Padding = New System.Windows.Forms.Padding(3)
-        Me.dashboard.Size = New System.Drawing.Size(1392, 858)
+        Me.dashboard.Size = New System.Drawing.Size(1392, 855)
         Me.dashboard.TabIndex = 0
         Me.dashboard.Text = "dashboard"
         '
@@ -623,7 +623,7 @@ Partial Class frmMain
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(25, 19)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(246, 29)
+        Me.Label5.Size = New System.Drawing.Size(260, 30)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Latest Transactions"
         '
@@ -699,6 +699,142 @@ Partial Class frmMain
         Me.grdDTransaction.Size = New System.Drawing.Size(1256, 536)
         Me.grdDTransaction.TabIndex = 4
         Me.grdDTransaction.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column8.FillWeight = 21.39038!
+        Me.Column8.HeaderText = ""
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 10
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "id"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Visible = False
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 127.9676!
+        Me.Column1.HeaderText = "File Name"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.FillWeight = 127.9676!
+        Me.Column3.HeaderText = "Date"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column4.FillWeight = 127.9676!
+        Me.Column4.HeaderText = "Status"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 200
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Username"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Notes"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column9
+        '
+        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column9.HeaderText = ""
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Visible = False
+        Me.Column9.Width = 10
+        '
+        'view
+        '
+        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.view.FillWeight = 101.398!
+        Me.view.HeaderText = ""
+        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.view.MinimumWidth = 6
+        Me.view.Name = "view"
+        Me.view.ReadOnly = True
+        Me.view.Visible = False
+        Me.view.Width = 25
+        '
+        'Column15
+        '
+        Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column15.FillWeight = 101.398!
+        Me.Column15.HeaderText = "Column15"
+        Me.Column15.MinimumWidth = 6
+        Me.Column15.Name = "Column15"
+        Me.Column15.ReadOnly = True
+        Me.Column15.Visible = False
+        Me.Column15.Width = 10
+        '
+        'edit
+        '
+        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.edit.FillWeight = 137.0792!
+        Me.edit.HeaderText = ""
+        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.edit.MinimumWidth = 6
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Visible = False
+        Me.edit.Width = 25
+        '
+        'Column14
+        '
+        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column14.FillWeight = 54.83167!
+        Me.Column14.HeaderText = "Column14"
+        Me.Column14.MinimumWidth = 6
+        Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
+        Me.Column14.Visible = False
+        Me.Column14.Width = 10
+        '
+        'delete
+        '
+        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.delete.HeaderText = ""
+        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.delete.MinimumWidth = 6
+        Me.delete.Name = "delete"
+        Me.delete.ReadOnly = True
+        Me.delete.Visible = False
+        Me.delete.Width = 25
+        '
+        'Column13
+        '
+        Me.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column13.HeaderText = ""
+        Me.Column13.MinimumWidth = 6
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        Me.Column13.Width = 10
         '
         'Guna2Panel4
         '
@@ -851,7 +987,7 @@ Partial Class frmMain
         Me.files.Location = New System.Drawing.Point(4, 4)
         Me.files.Name = "files"
         Me.files.Padding = New System.Windows.Forms.Padding(3)
-        Me.files.Size = New System.Drawing.Size(1392, 858)
+        Me.files.Size = New System.Drawing.Size(1392, 855)
         Me.files.TabIndex = 1
         Me.files.Text = "files"
         '
@@ -861,7 +997,7 @@ Partial Class frmMain
         Me.panelFiles.Location = New System.Drawing.Point(3, 3)
         Me.panelFiles.Margin = New System.Windows.Forms.Padding(0)
         Me.panelFiles.Name = "panelFiles"
-        Me.panelFiles.Size = New System.Drawing.Size(1386, 852)
+        Me.panelFiles.Size = New System.Drawing.Size(1386, 849)
         Me.panelFiles.TabIndex = 0
         '
         'transaction
@@ -870,7 +1006,7 @@ Partial Class frmMain
         Me.transaction.Controls.Add(Me.panelTransaction)
         Me.transaction.Location = New System.Drawing.Point(4, 4)
         Me.transaction.Name = "transaction"
-        Me.transaction.Size = New System.Drawing.Size(1392, 858)
+        Me.transaction.Size = New System.Drawing.Size(1392, 855)
         Me.transaction.TabIndex = 6
         Me.transaction.Text = "transaction"
         '
@@ -880,7 +1016,7 @@ Partial Class frmMain
         Me.panelTransaction.Location = New System.Drawing.Point(0, 0)
         Me.panelTransaction.Margin = New System.Windows.Forms.Padding(0)
         Me.panelTransaction.Name = "panelTransaction"
-        Me.panelTransaction.Size = New System.Drawing.Size(1392, 858)
+        Me.panelTransaction.Size = New System.Drawing.Size(1392, 855)
         Me.panelTransaction.TabIndex = 2
         '
         'users
@@ -890,7 +1026,7 @@ Partial Class frmMain
         Me.users.Location = New System.Drawing.Point(4, 4)
         Me.users.Name = "users"
         Me.users.Padding = New System.Windows.Forms.Padding(3)
-        Me.users.Size = New System.Drawing.Size(1392, 858)
+        Me.users.Size = New System.Drawing.Size(1392, 855)
         Me.users.TabIndex = 3
         Me.users.Text = "users"
         '
@@ -900,7 +1036,7 @@ Partial Class frmMain
         Me.panelUsers.Location = New System.Drawing.Point(3, 3)
         Me.panelUsers.Margin = New System.Windows.Forms.Padding(0)
         Me.panelUsers.Name = "panelUsers"
-        Me.panelUsers.Size = New System.Drawing.Size(1386, 852)
+        Me.panelUsers.Size = New System.Drawing.Size(1386, 849)
         Me.panelUsers.TabIndex = 1
         '
         'history
@@ -910,7 +1046,7 @@ Partial Class frmMain
         Me.history.Location = New System.Drawing.Point(4, 4)
         Me.history.Name = "history"
         Me.history.Padding = New System.Windows.Forms.Padding(3)
-        Me.history.Size = New System.Drawing.Size(1392, 858)
+        Me.history.Size = New System.Drawing.Size(1392, 855)
         Me.history.TabIndex = 2
         Me.history.Text = "history"
         '
@@ -920,7 +1056,7 @@ Partial Class frmMain
         Me.panelHistory.Location = New System.Drawing.Point(3, 3)
         Me.panelHistory.Margin = New System.Windows.Forms.Padding(0)
         Me.panelHistory.Name = "panelHistory"
-        Me.panelHistory.Size = New System.Drawing.Size(1386, 852)
+        Me.panelHistory.Size = New System.Drawing.Size(1386, 849)
         Me.panelHistory.TabIndex = 1
         '
         'settings
@@ -929,7 +1065,7 @@ Partial Class frmMain
         Me.settings.Controls.Add(Me.panelSettings)
         Me.settings.Location = New System.Drawing.Point(4, 4)
         Me.settings.Name = "settings"
-        Me.settings.Size = New System.Drawing.Size(1392, 858)
+        Me.settings.Size = New System.Drawing.Size(1392, 855)
         Me.settings.TabIndex = 4
         Me.settings.Text = "settings"
         '
@@ -941,7 +1077,7 @@ Partial Class frmMain
         Me.panelSettings.Location = New System.Drawing.Point(0, 0)
         Me.panelSettings.Margin = New System.Windows.Forms.Padding(10)
         Me.panelSettings.Name = "panelSettings"
-        Me.panelSettings.Size = New System.Drawing.Size(1392, 858)
+        Me.panelSettings.Size = New System.Drawing.Size(1392, 855)
         Me.panelSettings.TabIndex = 1
         '
         'Label4
@@ -950,7 +1086,7 @@ Partial Class frmMain
         Me.Label4.Font = New System.Drawing.Font("Inter", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Label4.Location = New System.Drawing.Point(284, 225)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 26)
+        Me.Label4.Size = New System.Drawing.Size(97, 28)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "settings"
         '
@@ -960,7 +1096,7 @@ Partial Class frmMain
         Me.currentUser.Controls.Add(Me.panelCurrentUser)
         Me.currentUser.Location = New System.Drawing.Point(4, 4)
         Me.currentUser.Name = "currentUser"
-        Me.currentUser.Size = New System.Drawing.Size(1392, 858)
+        Me.currentUser.Size = New System.Drawing.Size(1392, 855)
         Me.currentUser.TabIndex = 5
         Me.currentUser.Text = "currentUser"
         '
@@ -971,7 +1107,7 @@ Partial Class frmMain
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
         Me.panelCurrentUser.Name = "panelCurrentUser"
-        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 858)
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 855)
         Me.panelCurrentUser.TabIndex = 1
         '
         'hiddenPage
@@ -979,7 +1115,7 @@ Partial Class frmMain
         Me.hiddenPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.hiddenPage.Location = New System.Drawing.Point(4, 4)
         Me.hiddenPage.Name = "hiddenPage"
-        Me.hiddenPage.Size = New System.Drawing.Size(1392, 858)
+        Me.hiddenPage.Size = New System.Drawing.Size(1392, 855)
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
         '
@@ -987,131 +1123,9 @@ Partial Class frmMain
         '
         Me.Guna2Elipse2.TargetControl = Me.grdDTransaction
         '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column8.FillWeight = 21.39038!
-        Me.Column8.HeaderText = ""
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 10
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "id"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Visible = False
-        '
-        'Column1
-        '
-        Me.Column1.FillWeight = 127.9676!
-        Me.Column1.HeaderText = "File Name"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.FillWeight = 127.9676!
-        Me.Column3.HeaderText = "Date"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column4.FillWeight = 127.9676!
-        Me.Column4.HeaderText = "Status"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 200
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Username"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Notes"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column9
-        '
-        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column9.HeaderText = ""
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Visible = False
-        Me.Column9.Width = 10
-        '
-        'view
-        '
-        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.view.FillWeight = 101.398!
-        Me.view.HeaderText = ""
-        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.view.Name = "view"
-        Me.view.ReadOnly = True
-        Me.view.Visible = False
-        Me.view.Width = 25
-        '
-        'Column15
-        '
-        Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column15.FillWeight = 101.398!
-        Me.Column15.HeaderText = "Column15"
-        Me.Column15.Name = "Column15"
-        Me.Column15.ReadOnly = True
-        Me.Column15.Visible = False
-        Me.Column15.Width = 10
-        '
-        'edit
-        '
-        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.edit.FillWeight = 137.0792!
-        Me.edit.HeaderText = ""
-        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.edit.Name = "edit"
-        Me.edit.ReadOnly = True
-        Me.edit.Visible = False
-        Me.edit.Width = 25
-        '
-        'Column14
-        '
-        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column14.FillWeight = 54.83167!
-        Me.Column14.HeaderText = "Column14"
-        Me.Column14.Name = "Column14"
-        Me.Column14.ReadOnly = True
-        Me.Column14.Visible = False
-        Me.Column14.Width = 10
-        '
-        'delete
-        '
-        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.delete.HeaderText = ""
-        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.delete.Name = "delete"
-        Me.delete.ReadOnly = True
-        Me.delete.Visible = False
-        Me.delete.Width = 25
-        '
-        'Column13
-        '
-        Me.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column13.HeaderText = ""
-        Me.Column13.Name = "Column13"
-        Me.Column13.ReadOnly = True
-        Me.Column13.Width = 10
-        '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1700, 956)

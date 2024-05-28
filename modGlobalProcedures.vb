@@ -1,24 +1,30 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
 Imports MySql.Data.MySqlClient
+Imports DotNetEnv
 
 Module modGlobalProcedures
 
     Public Function fncConnectToDatabse() As Boolean
+        'Load environment variables from the .env file
+        Env.TraversePath().Load()
+
+        'Access the environment variables
+        Dim host As String = Env.GetString("DB_HOST")
+        Dim dbName As String = Env.GetString("DB_NAME")
+        Dim user As String = Env.GetString("DB_USER")
+        Dim pass As String = Env.GetString("DB_PASS")
+        Dim port As String = Env.GetInt("DB_PORT")
+
 
         Try
-            serverName = "localhost"
-            dbName = "filio_system"
-            dbUserName = "filio_user"
-            dbPassword = "filio"
-            port = "3306"
 
             If conFilioSys.State = ConnectionState.Closed Then
                 conFilioSys = New MySqlConnection
-                strConnectionString = "SERVER=" & serverName & ";" _
+                strConnectionString = "SERVER=" & host & ";" _
                                   & "DATABASE=" & dbName & ";" _
-                                  & "USERNAME=" & dbUserName & ";" _
-                                  & "PASSWORD=" & dbPassword & ";" _
+                                  & "USERNAME=" & user & ";" _
+                                  & "PASSWORD=" & pass & ";" _
                                   & "PORT=" & port
 
                 conFilioSys.ConnectionString = strConnectionString
