@@ -9,7 +9,7 @@ Module modGlobalProcedures
         Try
             serverName = "localhost"
             dbName = "filio_system"
-            dbUserName = "root"
+            dbUserName = "filio_user"
             dbPassword = "filio"
             port = "3306"
 
