@@ -31,7 +31,7 @@ Public Class frmArchive
                         .Rows(row).Cells(5).Value = datFilio.Rows(row).Item("status").ToString
                         .Rows(row).Cells(6).Value = datFilio.Rows(row).Item("date_added").ToString
                         .Rows(row).Cells(7).Value = datFilio.Rows(row).Item("date_modified").ToString
-                        .Rows(row).Cells(8).Value = DateTime.Parse(datFilio.Rows(row).Item("deleted_at")).ToString("dddd, MMMM dd, yyyy")
+                        .Rows(row).Cells(8).Value = DateTime.Parse(datFilio.Rows(row).Item("deleted_at")).ToString("f")
                     End With
                     row += 1
                 End While
@@ -117,6 +117,7 @@ Public Class frmArchive
                         End With
                         ' refresh/reload customer records in data grid view
                         procDisplayArchivedFiles()
+                        frmFiles.Dispose()
                     Else
                         ' Cancel deletion
                         MessageBox.Show("Restoration canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -132,4 +133,5 @@ Public Class frmArchive
 
 
     End Sub
+
 End Class

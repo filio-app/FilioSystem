@@ -144,6 +144,7 @@ Public Class frmFiles
                         End With
                         ' refresh/reload customer records in data grid view
                         procDisplayAllFiles()
+                        frmArchive.Dispose()
                         txtSearch.Clear()
                     Else
                         ' Cancel deletion

@@ -615,6 +615,8 @@
     <Content Include="Assets\app-version.png" />
     <Content Include="Assets\dashboard-checked.png" />
     <Content Include="Assets\dashboard-default.png" />
+    <None Include="Assets\file-undo-custom.png" />
+    <None Include="Assets\file-undo-custom %281%29.png" />
     <Content Include="Assets\filio-logo.png" />
     <Content Include="Assets\folder-checked.png" />
     <Content Include="Assets\folder-checked1.png" />
@@ -628,6 +630,10 @@
     <Content Include="Assets\home-default.png" />
     <Content Include="Assets\logout-checked.png" />
     <Content Include="Assets\logout-default.png" />
+    <None Include="Assets\restore.png" />
+    <None Include="Assets\restore-1.png" />
+    <None Include="Assets\restore-2.png" />
+    <None Include="Assets\restore-3.png" />
     <Content Include="Assets\settings-checked.png" />
     <Content Include="Assets\settings-default.png" />
     <Content Include="Assets\transaction-checked.png" />
