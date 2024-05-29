@@ -23,17 +23,17 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelTopLogo = New Guna.UI2.WinForms.Guna2Panel()
-        Me.pBLogo = New System.Windows.Forms.PictureBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.panelLeft = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnArchive = New Guna.UI2.WinForms.Guna2Button()
         Me.btnTransaction = New Guna.UI2.WinForms.Guna2Button()
         Me.btnHistory = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator2 = New Guna.UI2.WinForms.Guna2Separator()
@@ -49,7 +49,6 @@ Partial Class frmMain
         Me.panelTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.bunifuPagesMain = New Bunifu.UI.WinForms.BunifuPages()
@@ -65,22 +64,16 @@ Partial Class frmMain
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblTotalLocations = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblTotalTransactions = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblTotalFiles = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.files = New System.Windows.Forms.TabPage()
@@ -97,25 +90,31 @@ Partial Class frmMain
         Me.currentUser = New System.Windows.Forms.TabPage()
         Me.panelCurrentUser = New System.Windows.Forms.Panel()
         Me.hiddenPage = New System.Windows.Forms.TabPage()
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.btnArchive = New Guna.UI2.WinForms.Guna2Button()
         Me.archivePage = New System.Windows.Forms.TabPage()
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.panelArchive = New System.Windows.Forms.Panel()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.view = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.pBLogo = New System.Windows.Forms.PictureBox()
         Me.panelTopLogo.SuspendLayout()
-        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLeft.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelMain.SuspendLayout()
         Me.bunifuPagesMain.SuspendLayout()
         Me.dashboard.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.grdDTransaction, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel4.SuspendLayout()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.files.SuspendLayout()
         Me.transaction.SuspendLayout()
         Me.users.SuspendLayout()
@@ -123,6 +122,12 @@ Partial Class frmMain
         Me.settings.SuspendLayout()
         Me.panelSettings.SuspendLayout()
         Me.currentUser.SuspendLayout()
+        Me.archivePage.SuspendLayout()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -140,17 +145,6 @@ Partial Class frmMain
         Me.panelTopLogo.Name = "panelTopLogo"
         Me.panelTopLogo.Size = New System.Drawing.Size(300, 91)
         Me.panelTopLogo.TabIndex = 2
-        '
-        'pBLogo
-        '
-        Me.pBLogo.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
-        Me.pBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pBLogo.Location = New System.Drawing.Point(45, 22)
-        Me.pBLogo.Name = "pBLogo"
-        Me.pBLogo.Size = New System.Drawing.Size(145, 47)
-        Me.pBLogo.TabIndex = 0
-        Me.pBLogo.TabStop = False
-        Me.pBLogo.Visible = False
         '
         'Guna2ControlBox1
         '
@@ -186,6 +180,38 @@ Partial Class frmMain
         Me.panelLeft.Name = "panelLeft"
         Me.panelLeft.Size = New System.Drawing.Size(300, 919)
         Me.panelLeft.TabIndex = 1
+        '
+        'btnArchive
+        '
+        Me.btnArchive.Animated = True
+        Me.btnArchive.BorderRadius = 8
+        Me.btnArchive.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.btnArchive.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnArchive.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnArchive.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnArchive.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.settings_checked1
+        Me.btnArchive.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.settings_checked1
+        Me.btnArchive.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.settings_default1
+        Me.btnArchive.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnArchive.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.btnArchive.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
+        Me.btnArchive.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnArchive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnArchive.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnArchive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnArchive.FillColor = System.Drawing.Color.Transparent
+        Me.btnArchive.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnArchive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.btnArchive.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnArchive.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnArchive.Location = New System.Drawing.Point(23, 558)
+        Me.btnArchive.Name = "btnArchive"
+        Me.btnArchive.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.btnArchive.Size = New System.Drawing.Size(254, 61)
+        Me.btnArchive.TabIndex = 10
+        Me.btnArchive.Text = "Archive"
+        Me.btnArchive.TextOffset = New System.Drawing.Point(-10, 2)
+        Me.btnArchive.Visible = False
         '
         'btnTransaction
         '
@@ -518,16 +544,6 @@ Partial Class frmMain
         Me.Guna2Panel1.Size = New System.Drawing.Size(1400, 34)
         Me.Guna2Panel1.TabIndex = 4
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -567,29 +583,29 @@ Partial Class frmMain
         Me.bunifuPagesMain.Multiline = True
         Me.bunifuPagesMain.Name = "bunifuPagesMain"
         Me.bunifuPagesMain.Padding = New System.Drawing.Point(0, 0)
-        Me.bunifuPagesMain.Page = Me.dashboard
-        Me.bunifuPagesMain.PageIndex = 0
-        Me.bunifuPagesMain.PageName = "dashboard"
-        Me.bunifuPagesMain.PageTitle = "dashboard"
+        Me.bunifuPagesMain.Page = Me.archivePage
+        Me.bunifuPagesMain.PageIndex = 8
+        Me.bunifuPagesMain.PageName = "archivePage"
+        Me.bunifuPagesMain.PageTitle = "Archive"
         Me.bunifuPagesMain.SelectedIndex = 0
         Me.bunifuPagesMain.Size = New System.Drawing.Size(1400, 885)
         Me.bunifuPagesMain.TabIndex = 0
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.bunifuPagesMain.Transition = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.bunifuPagesMain.Transition = Animation1
         Me.bunifuPagesMain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom
         '
         'dashboard
@@ -638,22 +654,22 @@ Partial Class frmMain
         Me.grdDTransaction.AllowUserToDeleteRows = False
         Me.grdDTransaction.AllowUserToResizeColumns = False
         Me.grdDTransaction.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdDTransaction.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdDTransaction.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grdDTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdDTransaction.BackgroundColor = System.Drawing.Color.White
         Me.grdDTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdDTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdDTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDTransaction.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDTransaction.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.grdDTransaction.ColumnHeadersHeight = 50
         Me.grdDTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grdDTransaction.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
@@ -676,14 +692,14 @@ Partial Class frmMain
         Me.grdDTransaction.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdDTransaction.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdDTransaction.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdDTransaction.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdDTransaction.DefaultCellStyle = DataGridViewCellStyle3
         Me.grdDTransaction.EnableHeadersVisualStyles = False
         Me.grdDTransaction.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdDTransaction.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
@@ -695,8 +711,8 @@ Partial Class frmMain
         Me.grdDTransaction.ReadOnly = True
         Me.grdDTransaction.RowHeadersVisible = False
         Me.grdDTransaction.RowHeadersWidth = 50
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdDTransaction.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdDTransaction.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.grdDTransaction.RowTemplate.DefaultCellStyle.Padding = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.grdDTransaction.RowTemplate.Height = 60
         Me.grdDTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -774,18 +790,6 @@ Partial Class frmMain
         Me.Column9.Visible = False
         Me.Column9.Width = 10
         '
-        'view
-        '
-        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.view.FillWeight = 101.398!
-        Me.view.HeaderText = ""
-        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.view.MinimumWidth = 6
-        Me.view.Name = "view"
-        Me.view.ReadOnly = True
-        Me.view.Visible = False
-        Me.view.Width = 25
-        '
         'Column15
         '
         Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -797,18 +801,6 @@ Partial Class frmMain
         Me.Column15.Visible = False
         Me.Column15.Width = 10
         '
-        'edit
-        '
-        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.edit.FillWeight = 137.0792!
-        Me.edit.HeaderText = ""
-        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.edit.MinimumWidth = 6
-        Me.edit.Name = "edit"
-        Me.edit.ReadOnly = True
-        Me.edit.Visible = False
-        Me.edit.Width = 25
-        '
         'Column14
         '
         Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -819,17 +811,6 @@ Partial Class frmMain
         Me.Column14.ReadOnly = True
         Me.Column14.Visible = False
         Me.Column14.Width = 10
-        '
-        'delete
-        '
-        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.delete.HeaderText = ""
-        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.delete.MinimumWidth = 6
-        Me.delete.Name = "delete"
-        Me.delete.ReadOnly = True
-        Me.delete.Visible = False
-        Me.delete.Width = 25
         '
         'Column13
         '
@@ -854,18 +835,6 @@ Partial Class frmMain
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.Size = New System.Drawing.Size(408, 140)
         Me.Guna2Panel4.TabIndex = 3
-        '
-        'Guna2PictureBox3
-        '
-        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox3.Image = Global.FilioSystem.My.Resources.Resources.total_locations
-        Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(39, 27)
-        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Me.Guna2PictureBox3.Size = New System.Drawing.Size(105, 86)
-        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox3.TabIndex = 1
-        Me.Guna2PictureBox3.TabStop = False
         '
         'lblTotalLocations
         '
@@ -903,18 +872,6 @@ Partial Class frmMain
         Me.Guna2Panel3.Size = New System.Drawing.Size(408, 140)
         Me.Guna2Panel3.TabIndex = 2
         '
-        'Guna2PictureBox2
-        '
-        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.Image = Global.FilioSystem.My.Resources.Resources.total_transactions
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(39, 27)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(105, 86)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox2.TabIndex = 1
-        Me.Guna2PictureBox2.TabStop = False
-        '
         'lblTotalTransactions
         '
         Me.lblTotalTransactions.AutoSize = True
@@ -950,18 +907,6 @@ Partial Class frmMain
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(408, 140)
         Me.Guna2Panel2.TabIndex = 0
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = Global.FilioSystem.My.Resources.Resources.total_files1
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(38, 27)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(105, 86)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 1
-        Me.Guna2PictureBox1.TabStop = False
         '
         'lblTotalFiles
         '
@@ -1020,7 +965,7 @@ Partial Class frmMain
         Me.panelTransaction.Location = New System.Drawing.Point(0, 0)
         Me.panelTransaction.Margin = New System.Windows.Forms.Padding(0)
         Me.panelTransaction.Name = "panelTransaction"
-        Me.panelTransaction.Size = New System.Drawing.Size(1392, 855)
+        Me.panelTransaction.Size = New System.Drawing.Size(1392, 856)
         Me.panelTransaction.TabIndex = 2
         '
         'users
@@ -1040,7 +985,7 @@ Partial Class frmMain
         Me.panelUsers.Location = New System.Drawing.Point(3, 3)
         Me.panelUsers.Margin = New System.Windows.Forms.Padding(0)
         Me.panelUsers.Name = "panelUsers"
-        Me.panelUsers.Size = New System.Drawing.Size(1386, 849)
+        Me.panelUsers.Size = New System.Drawing.Size(1386, 850)
         Me.panelUsers.TabIndex = 1
         '
         'history
@@ -1060,7 +1005,7 @@ Partial Class frmMain
         Me.panelHistory.Location = New System.Drawing.Point(3, 3)
         Me.panelHistory.Margin = New System.Windows.Forms.Padding(0)
         Me.panelHistory.Name = "panelHistory"
-        Me.panelHistory.Size = New System.Drawing.Size(1386, 849)
+        Me.panelHistory.Size = New System.Drawing.Size(1386, 850)
         Me.panelHistory.TabIndex = 1
         '
         'settings
@@ -1081,7 +1026,7 @@ Partial Class frmMain
         Me.panelSettings.Location = New System.Drawing.Point(0, 0)
         Me.panelSettings.Margin = New System.Windows.Forms.Padding(10)
         Me.panelSettings.Name = "panelSettings"
-        Me.panelSettings.Size = New System.Drawing.Size(1392, 855)
+        Me.panelSettings.Size = New System.Drawing.Size(1392, 856)
         Me.panelSettings.TabIndex = 1
         '
         'Label4
@@ -1111,7 +1056,7 @@ Partial Class frmMain
         Me.panelCurrentUser.Location = New System.Drawing.Point(0, 0)
         Me.panelCurrentUser.Margin = New System.Windows.Forms.Padding(0)
         Me.panelCurrentUser.Name = "panelCurrentUser"
-        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 855)
+        Me.panelCurrentUser.Size = New System.Drawing.Size(1392, 856)
         Me.panelCurrentUser.TabIndex = 1
         '
         'hiddenPage
@@ -1123,50 +1068,155 @@ Partial Class frmMain
         Me.hiddenPage.TabIndex = 7
         Me.hiddenPage.Text = "hiddenPage"
         '
-        'Guna2Elipse2
-        '
-        Me.Guna2Elipse2.TargetControl = Me.grdDTransaction
-        '
-        'btnArchive
-        '
-        Me.btnArchive.Animated = True
-        Me.btnArchive.BorderRadius = 8
-        Me.btnArchive.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.btnArchive.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.btnArchive.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnArchive.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnArchive.CustomImages.CheckedImage = Global.FilioSystem.My.Resources.Resources.settings_checked1
-        Me.btnArchive.CustomImages.HoveredImage = Global.FilioSystem.My.Resources.Resources.settings_checked1
-        Me.btnArchive.CustomImages.Image = Global.FilioSystem.My.Resources.Resources.settings_default1
-        Me.btnArchive.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnArchive.CustomImages.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.btnArchive.CustomImages.ImageSize = New System.Drawing.Size(35, 35)
-        Me.btnArchive.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnArchive.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnArchive.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnArchive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnArchive.FillColor = System.Drawing.Color.Transparent
-        Me.btnArchive.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.btnArchive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.btnArchive.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.btnArchive.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnArchive.Location = New System.Drawing.Point(23, 558)
-        Me.btnArchive.Name = "btnArchive"
-        Me.btnArchive.PressedColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.btnArchive.Size = New System.Drawing.Size(254, 61)
-        Me.btnArchive.TabIndex = 10
-        Me.btnArchive.Text = "Archive"
-        Me.btnArchive.TextOffset = New System.Drawing.Point(-10, 2)
-        Me.btnArchive.Visible = False
-        '
         'archivePage
         '
+        Me.archivePage.Controls.Add(Me.panelArchive)
         Me.archivePage.Location = New System.Drawing.Point(4, 4)
         Me.archivePage.Name = "archivePage"
         Me.archivePage.Size = New System.Drawing.Size(1392, 855)
         Me.archivePage.TabIndex = 8
         Me.archivePage.Text = "Archive"
         Me.archivePage.UseVisualStyleBackColor = True
+        '
+        'Guna2Elipse2
+        '
+        Me.Guna2Elipse2.TargetControl = Me.grdDTransaction
+        '
+        'panelArchive
+        '
+        Me.panelArchive.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelArchive.Location = New System.Drawing.Point(0, 0)
+        Me.panelArchive.Margin = New System.Windows.Forms.Padding(0)
+        Me.panelArchive.Name = "panelArchive"
+        Me.panelArchive.Size = New System.Drawing.Size(1392, 855)
+        Me.panelArchive.TabIndex = 0
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn1.FillWeight = 101.398!
+        Me.DataGridViewImageColumn1.HeaderText = ""
+        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.DataGridViewImageColumn1.MinimumWidth = 6
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        Me.DataGridViewImageColumn1.Visible = False
+        Me.DataGridViewImageColumn1.Width = 25
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
+        Me.DataGridViewImageColumn2.HeaderText = ""
+        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.DataGridViewImageColumn2.MinimumWidth = 6
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.ReadOnly = True
+        Me.DataGridViewImageColumn2.Visible = False
+        Me.DataGridViewImageColumn2.Width = 25
+        '
+        'DataGridViewImageColumn3
+        '
+        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn3.HeaderText = ""
+        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.DataGridViewImageColumn3.MinimumWidth = 6
+        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.ReadOnly = True
+        Me.DataGridViewImageColumn3.Visible = False
+        Me.DataGridViewImageColumn3.Width = 25
+        '
+        'view
+        '
+        Me.view.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.view.FillWeight = 101.398!
+        Me.view.HeaderText = ""
+        Me.view.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.view.MinimumWidth = 6
+        Me.view.Name = "view"
+        Me.view.ReadOnly = True
+        Me.view.Visible = False
+        Me.view.Width = 25
+        '
+        'edit
+        '
+        Me.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.edit.FillWeight = 137.0792!
+        Me.edit.HeaderText = ""
+        Me.edit.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.edit.MinimumWidth = 6
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Visible = False
+        Me.edit.Width = 25
+        '
+        'delete
+        '
+        Me.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.delete.HeaderText = ""
+        Me.delete.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.delete.MinimumWidth = 6
+        Me.delete.Name = "delete"
+        Me.delete.ReadOnly = True
+        Me.delete.Visible = False
+        Me.delete.Width = 25
+        '
+        'Guna2PictureBox3
+        '
+        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = Global.FilioSystem.My.Resources.Resources.total_locations
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(39, 27)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(105, 86)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox3.TabIndex = 1
+        Me.Guna2PictureBox3.TabStop = False
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.FilioSystem.My.Resources.Resources.total_transactions
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(39, 27)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(105, 86)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox2.TabIndex = 1
+        Me.Guna2PictureBox2.TabStop = False
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = Global.FilioSystem.My.Resources.Resources.total_files1
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(38, 27)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(105, 86)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 1
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FilioSystem.My.Resources.Resources.app_version1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Location = New System.Drawing.Point(1291, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 30)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'pBLogo
+        '
+        Me.pBLogo.BackgroundImage = Global.FilioSystem.My.Resources.Resources.filio_logo1
+        Me.pBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pBLogo.Location = New System.Drawing.Point(45, 22)
+        Me.pBLogo.Name = "pBLogo"
+        Me.pBLogo.Size = New System.Drawing.Size(145, 47)
+        Me.pBLogo.TabIndex = 0
+        Me.pBLogo.TabStop = False
+        Me.pBLogo.Visible = False
         '
         'frmMain
         '
@@ -1188,12 +1238,10 @@ Partial Class frmMain
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Filio"
         Me.panelTopLogo.ResumeLayout(False)
-        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelLeft.ResumeLayout(False)
         Me.panelLeft.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelMain.ResumeLayout(False)
         Me.bunifuPagesMain.ResumeLayout(False)
         Me.dashboard.ResumeLayout(False)
@@ -1202,13 +1250,10 @@ Partial Class frmMain
         CType(Me.grdDTransaction, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel4.ResumeLayout(False)
         Me.Guna2Panel4.PerformLayout()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.files.ResumeLayout(False)
         Me.transaction.ResumeLayout(False)
         Me.users.ResumeLayout(False)
@@ -1217,6 +1262,12 @@ Partial Class frmMain
         Me.panelSettings.ResumeLayout(False)
         Me.panelSettings.PerformLayout()
         Me.currentUser.ResumeLayout(False)
+        Me.archivePage.ResumeLayout(False)
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1292,4 +1343,8 @@ Partial Class frmMain
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents btnArchive As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents archivePage As TabPage
+    Friend WithEvents panelArchive As Panel
+    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewImageColumn3 As DataGridViewImageColumn
 End Class

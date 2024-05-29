@@ -253,12 +253,12 @@ Public Class frmMain
 
     Private Sub btnArchive_Click(sender As Object, e As EventArgs) Handles btnArchive.Click
         bunifuPagesMain.SetPage(8)
-        '   With frmCurrentUser
-        '       .TopLevel = False
-        '   panelCurrentUser.Controls.Add(frmCurrentUser)
-        '   .BringToFront()
-        '   .Show()
-        '   End With
+        With frmArchive
+            .TopLevel = False
+            panelArchive.Controls.Add(frmArchive)
+            .BringToFront()
+            .Show()
+        End With
 
     End Sub
 
