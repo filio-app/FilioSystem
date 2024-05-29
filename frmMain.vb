@@ -288,6 +288,7 @@ Public Class frmMain
         frmSettings.Dispose()
         frmTransaction.Dispose()
         frmUsers.Dispose()
+        frmArchive.Dispose()
 
         procInsertLogEvent("Signed Out", "System")
         isLoggedIn = False

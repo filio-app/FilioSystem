@@ -90,7 +90,7 @@ Public Class frmAddFile
                     .Parameters.Clear()
                     .CommandText = "procUpdateFile"
                     .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_id", userID)
+                    .Parameters.AddWithValue("@p_id", fileId)
                     .Parameters.AddWithValue("@p_name", txtName.Text)
                     .Parameters.AddWithValue("@p_description", txtDescription.Text)
                     .Parameters.AddWithValue("@p_location_id", selectedId)

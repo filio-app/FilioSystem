@@ -41,7 +41,7 @@
                     .Parameters.Clear()
                     .CommandText = "procUpdateUserInformation"
                     .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_id", userID)
+                    .Parameters.AddWithValue("@p_id", fileId)
                     .Parameters.AddWithValue("@p_first_name", txtFirstName.Text)
                     .Parameters.AddWithValue("@p_last_name", txtLastName.Text)
                     .Parameters.AddWithValue("@p_phone_no", txtPhoneNo.Text)

@@ -73,7 +73,7 @@ Public Class frmUsers
 
     Private Sub grdUsers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdUsers.CellContentClick
         colName = grdUsers.Columns(e.ColumnIndex).Name
-        userID = CInt(grdUsers.CurrentRow.Cells(1).Value.ToString)
+        fileId = CInt(grdUsers.CurrentRow.Cells(1).Value.ToString)
         tempRole = grdUsers.CurrentRow.Cells(7).Value.ToString
 
 

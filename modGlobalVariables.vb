@@ -19,7 +19,7 @@ Module ModGlobalVariable
 
     ' For Data Grid View
     Public colName As String
-    Public userID As Integer
+    Public fileId As Integer
     Public locationID As Integer 'For updating location
 
     Public isLoggedIn As String = False

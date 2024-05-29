@@ -77,7 +77,7 @@ Public Class frmTransaction
 
     Private Sub grdTransaction_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdTransaction.CellContentClick
         colName = grdTransaction.Columns(e.ColumnIndex).Name
-        userID = CInt(grdTransaction.CurrentRow.Cells(1).Value.ToString)
+        fileId = CInt(grdTransaction.CurrentRow.Cells(1).Value.ToString)
 
 
 
@@ -95,7 +95,7 @@ Public Class frmTransaction
                         .Parameters.Clear()
                         .CommandText = "-procDeleteTransaction"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_id", userID)
+                        .Parameters.AddWithValue("@p_id", fileId)
                         .ExecuteNonQuery()
                         MessageBox.Show("The file has been deleted.", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
