@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
 Imports MySql.Data.MySqlClient.MySqlBackup
+Imports DotNetEnv
 Public Class frmSettings
 
     Private Sub btnBackup_Click(sender As Object, e As EventArgs) Handles btnBackup.Click
@@ -27,38 +28,56 @@ Public Class frmSettings
 
         'BackupDatabase()
 
-        Try
-            Dim backup As New SaveFileDialog
+        Env.TraversePath().Load()
 
-            backup.InitialDirectory = "C:\Filio Database Backup\"
-            backup.Title = "Database Backup"
-            backup.CheckFileExists = False
-            backup.CheckPathExists = False
-            backup.DefaultExt = "sql"
-            backup.Filter = "sql files (*.sql)|*.sql|All files (*.*)|*.*"
-            backup.RestoreDirectory = True
+        'Access the environment variables
+        Dim host As String = Env.GetString("DB_HOST")
+        Dim dbName As String = Env.GetString("DB_NAME")
+        Dim user As String = Env.GetString("DB_USER")
+        Dim pass As String = Env.GetString("DB_PASS")
+        Dim port As String = Env.GetInt("DB_PORT")
 
-            Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
 
-            If backup.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Using con As New MySqlConnection(connectionString)
-                    con.Open()
+        PerformBackupDatabase()
 
-                    Using cmd As New MySqlCommand()
-                        cmd.Connection = con
 
-                        Dim mb As MySqlBackup = New MySqlBackup(cmd)
-                        mb.ExportToFile(backup.FileName)
-                        MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        procInsertLogEvent("Manual Backup", "Database Backup")
-                    End Using
-                End Using
-            Else
-                Exit Sub
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Backup operation failed: " & ex.Message)
-        End Try
+
+        'Try
+        '    Dim backup As New SaveFileDialog
+
+        '    backup.InitialDirectory = "C:\Filio Database Backup\"
+        '    backup.Title = "Database Backup"
+        '    backup.CheckFileExists = False
+        '    backup.CheckPathExists = False
+        '    backup.DefaultExt = "sql"
+        '    backup.Filter = "sql files (*.sql)|*.sql|All files (*.*)|*.*"
+        '    backup.RestoreDirectory = True
+
+        '    Dim connectionString As String = "SERVER=" & host & ";" _
+        '                          & "DATABASE=" & dbName & ";" _
+        '                          & "USERNAME=" & user & ";" _
+        '                          & "PASSWORD=" & pass & ";" _
+        '                          & "PORT=" & port
+
+        '    If backup.ShowDialog = Windows.Forms.DialogResult.OK Then
+        '        Using con As New MySqlConnection(connectionString)
+        '            con.Open()
+
+        '            Using cmd As New MySqlCommand()
+        '                cmd.Connection = con
+
+        '                Dim mb As MySqlBackup = New MySqlBackup(cmd)
+        '                mb.ExportToFile(backup.FileName)
+        '                MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '                procInsertLogEvent("Manual Backup", "Database Backup")
+        '            End Using
+        '        End Using
+        '    Else
+        '        Exit Sub
+        '    End If
+        'Catch ex As Exception
+        '    MessageBox.Show("Backup operation failed: " & ex.Message)
+        'End Try
 
 
 
@@ -141,6 +160,53 @@ Public Class frmSettings
     End Sub
 
 
+    Private Sub PerformBackupDatabase()
+        Dim backupPath As String = BackupDirectory & String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", "\filio", DateTime.Now) ' Set the backup file path
+
+        Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=LojaLeonard129025;PORT=3306"
+
+        Try
+            Using con As New MySqlConnection(connectionString)
+                con.Open()
+
+                Using cmd As New MySqlCommand()
+                    cmd.Connection = con
+
+                    Dim mb As New MySqlBackup(cmd)
+                    mb.ExportToFile(backupPath)
+
+                    InsertBackupRecord("USER_INPUT", backupPath)
+
+                    procInsertLogEvent("Manual Backup", "Database Backup")
+                    MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Backup operation failed: " & ex.Message)
+        End Try
+
+    End Sub
+
+    Public Sub InsertBackupRecord(backupName As String, filePath As String)
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procInsertBackupRecord"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_backup_name", backupName)
+                .Parameters.AddWithValue("@p_file_path", filePath)
+                .ExecuteNonQuery()
+            End With
+
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+
     Private Sub BackupDatabase()
         Dim dbName As String = "filio_system"
         Dim backupFile As String = "C:\Users\lojal\OneDrive\Documents\Filio Backup\file.sql"
@@ -163,59 +229,64 @@ Public Class frmSettings
         End Try
     End Sub
 
+
     Private Sub btnRestore_Click(sender As Object, e As EventArgs) Handles btnRestore.Click
+        displayFormAsModal(frmMain, frmBackupList)
 
-        If MessageBox.Show("Before restoring the database, make sure you have a backup. Are you sure you want to proceed with the restore?", "Confirm Restore", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-
-            Dim openFileDialog As New OpenFileDialog()
-            openFileDialog.InitialDirectory = "C:\Filio Database Backup\"
-            openFileDialog.Title = "Select Database Backup File"
-            openFileDialog.Filter = "SQL Files (*.sql)|*.sql|All files (*.*)|*.*"
-            openFileDialog.RestoreDirectory = True
+        'Dim files As List(Of String) = GetBackupFiles()
 
 
-            If openFileDialog.ShowDialog() = DialogResult.OK Then
-                Dim backupFile As String = openFileDialog.FileName
+        'If MessageBox.Show("Before restoring the database, make sure you have a backup. Are you sure you want to proceed with the restore?", "Confirm Restore", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
-                Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
-
-                Dim userInput As String = InputBox("To restore the database, please enter 'CONFIRM' in capital letters:", "Confirm Database Restore")
-
-                If userInput.Trim() = "CONFIRM" Then
-                    ' Perform the restore
-
-                    Dim sqlContent As String = File.ReadAllText(backupFile)
-
-                    '' Exclude the history table from the SQL script
-                    'sqlContent = sqlContent.Replace("DROP TABLE IF EXISTS `history_log`;", "")
-                    'sqlContent = sqlContent.Replace("CREATE TABLE `history_log`", "")
-                    'sqlContent = sqlContent.Replace("INSERT INTO `history_log`", "")
-
-                    Try
-                        Using con As New MySqlConnection(connectionString)
-                            con.Open()
-
-                            Using cmd As New MySqlCommand()
-                                cmd.Connection = con
-
-                                Dim mb As MySqlBackup = New MySqlBackup(cmd)
-                                mb.ImportFromFile(backupFile)
-                                procInsertLogEvent("Restore", "Database Restore")
-                                MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            End Using
-                        End Using
-                    Catch ex As Exception
-                        MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
-
-                Else
-                    ' Cancel deletion
-                    MessageBox.Show("Database Restore canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                End If
+        '    Dim openFileDialog As New OpenFileDialog()
+        '    openFileDialog.InitialDirectory = "C:\Filio Database Backup\"
+        '    openFileDialog.Title = "Select Database Backup File"
+        '    openFileDialog.Filter = "SQL Files (*.sql)|*.sql|All files (*.*)|*.*"
+        '    openFileDialog.RestoreDirectory = True
 
 
-            End If
-        End If
+        '    If openFileDialog.ShowDialog() = DialogResult.OK Then
+        '        Dim backupFile As String = openFileDialog.FileName
+
+        '        Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
+
+        '        Dim userInput As String = InputBox("To restore the database, please enter 'CONFIRM' in capital letters:", "Confirm Database Restore")
+
+        '        If userInput.Trim() = "CONFIRM" Then
+        '            ' Perform the restore
+
+        '            Dim sqlContent As String = File.ReadAllText(backupFile)
+
+        '            '' Exclude the history table from the SQL script
+        '            'sqlContent = sqlContent.Replace("DROP TABLE IF EXISTS `history_log`;", "")
+        '            'sqlContent = sqlContent.Replace("CREATE TABLE `history_log`", "")
+        '            'sqlContent = sqlContent.Replace("INSERT INTO `history_log`", "")
+
+        '            Try
+        '                Using con As New MySqlConnection(connectionString)
+        '                    con.Open()
+
+        '                    Using cmd As New MySqlCommand()
+        '                        cmd.Connection = con
+
+        '                        Dim mb As MySqlBackup = New MySqlBackup(cmd)
+        '                        mb.ImportFromFile(backupFile)
+        '                        procInsertLogEvent("Restore", "Database Restore")
+        '                        MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '                    End Using
+        '                End Using
+        '            Catch ex As Exception
+        '                MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '            End Try
+
+        '        Else
+        '            ' Cancel deletion
+        '            MessageBox.Show("Database Restore canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '        End If
+
+
+        '    End If
+        'End If
     End Sub
 
     Private Sub btnBackupAndRestore_Click(sender As Object, e As EventArgs) Handles btnBackupAndRestore.Click

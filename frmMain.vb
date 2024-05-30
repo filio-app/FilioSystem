@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 Public Class frmMain
 
     Private backupPerformed As Boolean = False
@@ -21,8 +22,19 @@ Public Class frmMain
         'BackupDatabase()
         CheckLastDayOfWeek()
 
+        EnsureBackupDirectoryExists()
+
+
 
     End Sub
+
+    Private Sub EnsureBackupDirectoryExists()
+        If Not Directory.Exists(BackupDirectory) Then
+            Directory.CreateDirectory(BackupDirectory)
+        End If
+    End Sub
+
+
 
 
     Private Sub CheckLastDayOfWeek()

@@ -452,6 +452,12 @@
     <Compile Include="Settings Page\frmAddLocation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Settings Page\frmBackupList.Designer.vb">
+      <DependentUpon>frmBackupList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings Page\frmBackupList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Settings Page\frmLocation.Designer.vb">
       <DependentUpon>frmLocation.vb</DependentUpon>
     </Compile>
@@ -562,6 +568,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings Page\frmAddLocation.resx">
       <DependentUpon>frmAddLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings Page\frmBackupList.resx">
+      <DependentUpon>frmBackupList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings Page\frmLocation.resx">
       <DependentUpon>frmLocation.vb</DependentUpon>

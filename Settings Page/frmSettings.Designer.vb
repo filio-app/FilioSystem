@@ -23,7 +23,7 @@ Partial Class frmSettings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
+        Dim Animation2 As Utilities.BunifuPages.BunifuAnimatorNS.Animation = New Utilities.BunifuPages.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSettings))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.btnBackup = New Guna.UI2.WinForms.Guna2Button()
@@ -38,6 +38,7 @@ Partial Class frmSettings
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.panelBack = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.BunifuPagesSettings.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -109,22 +110,22 @@ Partial Class frmSettings
         Me.BunifuPagesSettings.SelectedIndex = 0
         Me.BunifuPagesSettings.Size = New System.Drawing.Size(1392, 711)
         Me.BunifuPagesSettings.TabIndex = 4
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.BunifuPagesSettings.Transition = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.BunifuPagesSettings.Transition = Animation2
         Me.BunifuPagesSettings.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.HorizSlide
         '
         'TabPage2
@@ -134,7 +135,7 @@ Partial Class frmSettings
         Me.TabPage2.Location = New System.Drawing.Point(4, 4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1384, 684)
+        Me.TabPage2.Size = New System.Drawing.Size(1384, 681)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Location"
         '
@@ -145,7 +146,7 @@ Partial Class frmSettings
         Me.panelLocation.Location = New System.Drawing.Point(3, 3)
         Me.panelLocation.Margin = New System.Windows.Forms.Padding(0)
         Me.panelLocation.Name = "panelLocation"
-        Me.panelLocation.Size = New System.Drawing.Size(1378, 678)
+        Me.panelLocation.Size = New System.Drawing.Size(1378, 675)
         Me.panelLocation.TabIndex = 0
         '
         'TabPage3
@@ -154,7 +155,7 @@ Partial Class frmSettings
         Me.TabPage3.Location = New System.Drawing.Point(4, 4)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(0)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1384, 684)
+        Me.TabPage3.Size = New System.Drawing.Size(1384, 681)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Backup and Restore"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -168,13 +169,13 @@ Partial Class frmSettings
         Me.panelBackupAndRestore.Location = New System.Drawing.Point(0, 0)
         Me.panelBackupAndRestore.Margin = New System.Windows.Forms.Padding(0)
         Me.panelBackupAndRestore.Name = "panelBackupAndRestore"
-        Me.panelBackupAndRestore.Size = New System.Drawing.Size(1384, 684)
+        Me.panelBackupAndRestore.Size = New System.Drawing.Size(1384, 681)
         Me.panelBackupAndRestore.TabIndex = 0
         '
         'btnLocation
         '
         Me.btnLocation.Animated = True
-        Me.btnLocation.BorderRadius = 12
+        Me.btnLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.btnLocation.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         Me.btnLocation.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnLocation.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
@@ -201,7 +202,6 @@ Partial Class frmSettings
         'btnBackupAndRestore
         '
         Me.btnBackupAndRestore.Animated = True
-        Me.btnBackupAndRestore.BorderRadius = 12
         Me.btnBackupAndRestore.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
         Me.btnBackupAndRestore.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.btnBackupAndRestore.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(235, Byte), Integer))
@@ -225,6 +225,10 @@ Partial Class frmSettings
         Me.btnBackupAndRestore.TabIndex = 48
         Me.btnBackupAndRestore.Text = "Backup && Restore"
         '
+        'Guna2Elipse2
+        '
+        Me.Guna2Elipse2.TargetControl = Me.btnLocation
+        '
         'panelBack
         '
         Me.panelBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -238,9 +242,13 @@ Partial Class frmSettings
         Me.Guna2Elipse3.BorderRadius = 25
         Me.Guna2Elipse3.TargetControl = Me.panelBack
         '
+        'Guna2Elipse4
+        '
+        Me.Guna2Elipse4.TargetControl = Me.btnBackupAndRestore
+        '
         'frmSettings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(251, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1392, 858)
@@ -275,4 +283,5 @@ Partial Class frmSettings
     Friend WithEvents panelLocation As Panel
     Friend WithEvents panelBack As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Guna2Elipse4 As Guna.UI2.WinForms.Guna2Elipse
 End Class

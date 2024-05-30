@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 Module ModGlobalVariable
     'global variable
 
@@ -45,8 +46,9 @@ Module ModGlobalVariable
     'For adding and editing a location we use hashtable to get the id
     Public locationTable As New Hashtable()
 
+    Public ReadOnly BackupDirectory As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Filio", "Backups")
 
-    '=================================================='
+
 
 
 

@@ -1,5 +1,4 @@
-﻿Imports System.IO
-Imports System.Text.RegularExpressions
+﻿Imports System.Text.RegularExpressions
 Imports MySql.Data.MySqlClient
 Imports DotNetEnv
 
@@ -195,6 +194,7 @@ Module modGlobalProcedures
         Dim regex As Regex = New Regex(pattern)
         Return regex.IsMatch(phoneNumber)
     End Function
+
 
 
 
