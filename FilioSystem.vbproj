@@ -378,6 +378,7 @@
     <Compile Include="Current User Page\frmCurrentUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EncryptionUtility.vb" />
     <Compile Include="Files Page\frmAddFile.Designer.vb">
       <DependentUpon>frmAddFile.vb</DependentUpon>
     </Compile>

@@ -109,8 +109,6 @@ Public Class frmBackupList
                             Dim mb As New MySqlBackup(cmd)
                             mb.ImportFromFile(backupPath)
 
-                            procInsertLogEvent("Restore", "Database Restore")
-                            MessageBox.Show("The database has been successfully restored.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         End Using
                     End Using
                 Catch ex As Exception
@@ -128,12 +126,32 @@ Public Class frmBackupList
     End Sub
 
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
-        Dim backupPath As String = grdBackupList.CurrentRow.Cells(3).Value.ToString
-        procRestoreDatabase(backupPath)
 
-        frmFiles.Dispose()
-        frmLocation.Dispose()
-        frmArchive.Dispose()
-        Me.Dispose()
+        Dim encryptedFilePath As String = grdBackupList.CurrentRow.Cells(3).Value.ToString & ".enc"
+        Dim decryptedFilePath As String = Path.ChangeExtension(encryptedFilePath, Nothing)
+
+
+        Try
+            ' Decrypt the backup file
+            EncryptionUtility.DecryptFile(encryptedFilePath, decryptedFilePath)
+
+            ' Restore the database
+            'RestoreDatabase(decryptedFilePath)
+            procRestoreDatabase(decryptedFilePath)
+
+            frmFiles.Dispose()
+            frmLocation.Dispose()
+            frmArchive.Dispose()
+            Me.Dispose()
+
+            ' Delete the decrypted file after restoration
+            File.Delete(decryptedFilePath)
+
+            procInsertLogEvent("Restore", "Database Restore")
+            MessageBox.Show("Database restored successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 End Class

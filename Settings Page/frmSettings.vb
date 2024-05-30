@@ -240,6 +240,7 @@ Public Class frmSettings
         Dim backupPath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Filio", "Backups")
         Dim fileName As String = $"backup_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.sql"
         Dim fullPath As String = Path.Combine(backupPath, fileName)
+        Dim encryptedFullPath As String = Path.Combine(backupPath, fileName & ".enc")
 
         ' Ensure backup directory exists
         If Not Directory.Exists(backupPath) Then
@@ -273,6 +274,10 @@ Public Class frmSettings
 
             procInsertLogEvent("Manual Backup", "Database Backup")
         End Using
+
+        EncryptionUtility.EncryptFile(fullPath, encryptedFullPath)
+        File.Delete(fullPath) ' Delete the unencrypted file
+
 
         MessageBox.Show("Backup completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub

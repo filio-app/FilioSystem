@@ -1,1 +1,36 @@
-﻿
+﻿0. secure authentication (password strength, password hashing, etc.)
+0. check username uniqueness
+
+
+1. env file
+	- DONE using dotenv package and creating .env file to store environment variables
+	- TODO: Look into how to use environment variables in the code
+
+
+
+2. archive functionality
+	- list of deleted files that can be restored another tab?
+	- also location of the files??
+
+	1. setup design and controls DONE
+	2. add functionality DONE
+		1. retrieve archived files DONE
+		2. restore archived files DONE
+	3. refresh archive page when there is a deleted file DONE
+	4. Show only the archive files for the last 30 days DONE
+	5. only the admin could access the archive page DONE
+
+3. bug - backup and restore functionality
+	1. backup file is not being restored properly DONE
+	2. provide an intuitive user interface for the both functionalities DONE
+	3. Backup should only backup the files, locations, and transaction??? How about history and Users
+	4. Include the automated backup
+	5. backup file list should be  sorted by date? only last 10 latest backup files?
+
+4. shouldn't show admin user in the user list or can't delete
+
+
+Design Issues
+1. searchbox border - files, transaction, users,
+2. spacing history
+3. history nav button border blue

@@ -423,4 +423,7 @@ Public Class frmMain
         End If
     End Sub
 
+    Private Sub panelArchive_Paint(sender As Object, e As PaintEventArgs) Handles panelArchive.Paint
+
+    End Sub
 End Class
