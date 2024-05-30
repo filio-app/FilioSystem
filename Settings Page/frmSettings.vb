@@ -255,8 +255,6 @@ Public Class frmSettings
             InsertBackupRecord("USER_INPUT", fullPath)
 
             procInsertLogEvent("Manual Backup", "Database Backup")
-            MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End Using
 
         MessageBox.Show("Backup completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)

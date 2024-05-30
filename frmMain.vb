@@ -45,7 +45,19 @@ Public Class frmMain
         Dim backupPerformed As Boolean = IsWeeklyBackupPerformed(lastDayOfWeek)
 
         If currentDate.Date = lastDayOfWeek.Date AndAlso Not backupPerformed Then
-            BackupDatabase()
+            Try
+                '' full backup
+                BackupDatabase()
+
+                '' files and locations backup
+                Dim selectedTables As New List(Of String) From {"file", "location"}
+                BackupSelectedTables(selectedTables)
+                'PerformBackupDatabase()
+            Catch ex As Exception
+                MessageBox.Show($"An error occurred during backup: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+
+
         End If
     End Sub
 
@@ -310,8 +322,13 @@ Public Class frmMain
         displayFormAsModal(Me, frmSignIn)
     End Sub
 
+
+
+    '' FULL BACKUP
+
     Private Sub BackupDatabase()
-        Dim backupPath As String = "C:\Filio Database Backup\Automated\" & String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", "filio", DateTime.Now) ' Set the backup file path
+        'Dim backupPath As String = "C:\Filio Database Backup\Automated\"
+        Dim backupPath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Filio", "FullBackups") & String.Format("{0}-{1:yyyy-MM-dd-HH-mm-ss}.sql", "filio", DateTime.Now)
 
         Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
 
@@ -324,7 +341,6 @@ Public Class frmMain
 
                     Dim mb As MySqlBackup = New MySqlBackup(cmd)
                     mb.ExportToFile(backupPath)
-                    procInsertLogEvent("Automatic Backup", "Database Weekly Backup")
                     'MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End Using
             End Using
@@ -332,6 +348,74 @@ Public Class frmMain
             MessageBox.Show("Backup operation failed: " & ex.Message)
         End Try
     End Sub
+
+
+    '' FILES AND LOCATIONS BACKUP
+
+    Public Sub InsertBackupRecord(backupName As String, filePath As String)
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "procInsertBackupRecord"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_backup_name", backupName)
+                .Parameters.AddWithValue("@p_file_path", filePath)
+                .ExecuteNonQuery()
+            End With
+
+            datFilio.Dispose()
+            sqlAdapterFilio.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+
+    Private Sub BackupSelectedTables(selectedTables As List(Of String))
+        Dim server As String = "localhost"
+        Dim database As String = "filio_system"
+        Dim user As String = "root"
+        Dim password As String = "LojaLeonard129025"
+        Dim backupPath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Filio", "Backups")
+        Dim fileName As String = $"backup_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.sql"
+        Dim fullPath As String = Path.Combine(backupPath, fileName)
+
+        ' Ensure backup directory exists
+        If Not Directory.Exists(backupPath) Then
+            Directory.CreateDirectory(backupPath)
+        End If
+
+        ' Join selected tables into a single string separated by spaces
+        Dim tables As String = String.Join(" ", selectedTables)
+
+        ' Create the mysqldump command
+        Dim command As String = $"mysqldump --host={server} --user={user} --password={password} --routines {database} {tables} > ""{fullPath}"""
+
+        ' Execute the command
+        Using process As New Process()
+            process.StartInfo.FileName = "cmd.exe"
+            process.StartInfo.Arguments = $"/c {command}"
+            process.StartInfo.UseShellExecute = False
+            process.StartInfo.RedirectStandardOutput = True
+            process.StartInfo.RedirectStandardError = True
+            process.Start()
+
+            Dim output As String = process.StandardOutput.ReadToEnd()
+            Dim errorOutput As String = process.StandardError.ReadToEnd()
+            process.WaitForExit()
+
+            If process.ExitCode <> 0 Then
+                Throw New Exception($"Backup failed with the following error: {errorOutput}")
+            End If
+
+            InsertBackupRecord("Weekly Backup", fullPath)
+            procInsertLogEvent("Automatic Backup", "Database Weekly Backup")
+        End Using
+
+    End Sub
+
+
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If isLoggedIn Then
