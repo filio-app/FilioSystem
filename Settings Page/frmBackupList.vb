@@ -89,7 +89,7 @@ Public Class frmBackupList
 
             Dim userInput As String = InputBox("To restore the database, please enter 'CONFIRM' in capital letters:", "Confirm Database Restore")
 
-                If userInput.Trim() = "CONFIRM" Then
+            If userInput.Trim() = "CONFIRM" Then
                 ' Perform the restore
 
                 'Dim sqlContent As String = File.ReadAllText(tempBackupPath)
@@ -100,35 +100,40 @@ Public Class frmBackupList
                 'sqlContent = sqlContent.Replace("INSERT INTO `history_log`", "")
 
                 Try
-                        Using con As New MySqlConnection(connectionString)
-                            con.Open()
+                    Using con As New MySqlConnection(connectionString)
+                        con.Open()
 
-                            Using cmd As New MySqlCommand()
+                        Using cmd As New MySqlCommand()
                             cmd.Connection = con
 
                             Dim mb As New MySqlBackup(cmd)
                             mb.ImportFromFile(backupPath)
 
                             procInsertLogEvent("Restore", "Database Restore")
-                            MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            End Using
+                            MessageBox.Show("The database has been successfully restored.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         End Using
-                    Catch ex As Exception
-                        MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
+                    End Using
+                Catch ex As Exception
+                    MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
 
-                Else
-                    ' Cancel deletion
-                    MessageBox.Show("Database Restore canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                End If
-
-
-                'End If
+            Else
+                ' Cancel deletion
+                MessageBox.Show("Database Restore canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
+
+
+            'End If
+        End If
     End Sub
 
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
         Dim backupPath As String = grdBackupList.CurrentRow.Cells(3).Value.ToString
         procRestoreDatabase(backupPath)
+
+        frmFiles.Dispose()
+        frmLocation.Dispose()
+        frmArchive.Dispose()
+        Me.Dispose()
     End Sub
 End Class

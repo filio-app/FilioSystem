@@ -59,6 +59,7 @@ Public Class frmAddLocation
                     .ExecuteNonQuery()
                 End With
                 frmFiles.Dispose()
+                frmArchive.Dispose()
 
                 MessageBox.Show("The location has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
