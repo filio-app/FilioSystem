@@ -54,6 +54,7 @@ Public Class frmSignIn
                             .btnUsers.Visible = False
                             .btnHistory.Visible = False
                             .btnSettings.Visible = False
+                            .btnArchive.Visible = False
 
                             With frmFiles
                                 .btnAdd.Visible = False
