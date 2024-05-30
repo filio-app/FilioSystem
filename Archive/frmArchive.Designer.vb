@@ -22,18 +22,12 @@ Partial Class frmArchive
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.grdArchivedFiles = New Bunifu.UI.WinForms.BunifuDataGridView()
-        Me.lblTotalFiles = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblHeader = New System.Windows.Forms.Label()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,6 +44,12 @@ Partial Class frmArchive
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblTotalFiles = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblHeader = New System.Windows.Forms.Label()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.grdArchivedFiles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,22 +77,22 @@ Partial Class frmArchive
         Me.grdArchivedFiles.AllowUserToDeleteRows = False
         Me.grdArchivedFiles.AllowUserToResizeColumns = False
         Me.grdArchivedFiles.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdArchivedFiles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdArchivedFiles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         Me.grdArchivedFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grdArchivedFiles.BackgroundColor = System.Drawing.Color.White
         Me.grdArchivedFiles.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.grdArchivedFiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.grdArchivedFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdArchivedFiles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdArchivedFiles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.grdArchivedFiles.ColumnHeadersHeight = 50
         Me.grdArchivedFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grdArchivedFiles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column10, Me.Column9, Me.view, Me.Column15, Me.restore, Me.Column14, Me.delete, Me.Column13})
@@ -115,14 +115,14 @@ Partial Class frmArchive
         Me.grdArchivedFiles.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdArchivedFiles.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.grdArchivedFiles.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdArchivedFiles.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grdArchivedFiles.DefaultCellStyle = DataGridViewCellStyle11
         Me.grdArchivedFiles.EnableHeadersVisualStyles = False
         Me.grdArchivedFiles.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.grdArchivedFiles.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
@@ -135,82 +135,13 @@ Partial Class frmArchive
         Me.grdArchivedFiles.ReadOnly = True
         Me.grdArchivedFiles.RowHeadersVisible = False
         Me.grdArchivedFiles.RowHeadersWidth = 50
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdArchivedFiles.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grdArchivedFiles.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.grdArchivedFiles.RowTemplate.Height = 60
         Me.grdArchivedFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdArchivedFiles.Size = New System.Drawing.Size(1507, 791)
         Me.grdArchivedFiles.TabIndex = 0
         Me.grdArchivedFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
-        '
-        'lblTotalFiles
-        '
-        Me.lblTotalFiles.AutoSize = True
-        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.lblTotalFiles.Location = New System.Drawing.Point(121, 836)
-        Me.lblTotalFiles.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblTotalFiles.Name = "lblTotalFiles"
-        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
-        Me.lblTotalFiles.TabIndex = 35
-        Me.lblTotalFiles.Text = "60 Files"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(23, 835)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
-        Me.Label1.TabIndex = 34
-        Me.Label1.Text = "Showing:"
-        '
-        'lblHeader
-        '
-        Me.lblHeader.AutoSize = True
-        Me.lblHeader.Font = New System.Drawing.Font("Inter", 28.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblHeader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.lblHeader.Location = New System.Drawing.Point(39, 32)
-        Me.lblHeader.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Size = New System.Drawing.Size(209, 34)
-        Me.lblHeader.TabIndex = 37
-        Me.lblHeader.Text = "Archived Files "
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn1.FillWeight = 101.398!
-        Me.DataGridViewImageColumn1.HeaderText = ""
-        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view_3
-        Me.DataGridViewImageColumn1.MinimumWidth = 6
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.ReadOnly = True
-        Me.DataGridViewImageColumn1.Width = 25
-        '
-        'DataGridViewImageColumn2
-        '
-        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
-        Me.DataGridViewImageColumn2.HeaderText = ""
-        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit_2
-        Me.DataGridViewImageColumn2.MinimumWidth = 6
-        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        Me.DataGridViewImageColumn2.ReadOnly = True
-        Me.DataGridViewImageColumn2.Width = 25
-        '
-        'DataGridViewImageColumn3
-        '
-        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewImageColumn3.HeaderText = ""
-        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete_2
-        Me.DataGridViewImageColumn3.MinimumWidth = 6
-        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
-        Me.DataGridViewImageColumn3.ReadOnly = True
-        Me.DataGridViewImageColumn3.Visible = False
-        Me.DataGridViewImageColumn3.Width = 25
         '
         'Column8
         '
@@ -361,6 +292,75 @@ Partial Class frmArchive
         Me.Column13.ReadOnly = True
         Me.Column13.Visible = False
         Me.Column13.Width = 10
+        '
+        'lblTotalFiles
+        '
+        Me.lblTotalFiles.AutoSize = True
+        Me.lblTotalFiles.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblTotalFiles.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.lblTotalFiles.Location = New System.Drawing.Point(121, 832)
+        Me.lblTotalFiles.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTotalFiles.Name = "lblTotalFiles"
+        Me.lblTotalFiles.Size = New System.Drawing.Size(80, 21)
+        Me.lblTotalFiles.TabIndex = 35
+        Me.lblTotalFiles.Text = "60 Files"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(23, 831)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "Showing:"
+        '
+        'lblHeader
+        '
+        Me.lblHeader.AutoSize = True
+        Me.lblHeader.Font = New System.Drawing.Font("Inter SemiBold", 17.0!, System.Drawing.FontStyle.Bold)
+        Me.lblHeader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(147, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblHeader.Location = New System.Drawing.Point(40, 34)
+        Me.lblHeader.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblHeader.Name = "lblHeader"
+        Me.lblHeader.Size = New System.Drawing.Size(459, 35)
+        Me.lblHeader.TabIndex = 37
+        Me.lblHeader.Text = "Recent Archives (Past 30 Days)"
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn1.FillWeight = 101.398!
+        Me.DataGridViewImageColumn1.HeaderText = ""
+        Me.DataGridViewImageColumn1.Image = Global.FilioSystem.My.Resources.Resources.view_3
+        Me.DataGridViewImageColumn1.MinimumWidth = 6
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        Me.DataGridViewImageColumn1.Width = 25
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn2.FillWeight = 137.0792!
+        Me.DataGridViewImageColumn2.HeaderText = ""
+        Me.DataGridViewImageColumn2.Image = Global.FilioSystem.My.Resources.Resources.edit_2
+        Me.DataGridViewImageColumn2.MinimumWidth = 6
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.ReadOnly = True
+        Me.DataGridViewImageColumn2.Width = 25
+        '
+        'DataGridViewImageColumn3
+        '
+        Me.DataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewImageColumn3.HeaderText = ""
+        Me.DataGridViewImageColumn3.Image = Global.FilioSystem.My.Resources.Resources.delete_2
+        Me.DataGridViewImageColumn3.MinimumWidth = 6
+        Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.ReadOnly = True
+        Me.DataGridViewImageColumn3.Visible = False
+        Me.DataGridViewImageColumn3.Width = 25
         '
         'frmArchive
         '
