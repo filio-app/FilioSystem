@@ -41,12 +41,27 @@ Public Class frmSettings
 
         Dim selectedTables As New List(Of String) From {"file", "location"}
 
-        Try
-            BackupSelectedTables(selectedTables)
-            'PerformBackupDatabase()
-        Catch ex As Exception
-            MessageBox.Show($"An error occurred during backup: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+
+        ' Prompt the user for the backup name
+        Dim backupName As String = InputBox("Enter the name for the backup:", "Backup Name")
+
+        ' Check if the user provided a name
+        If String.IsNullOrWhiteSpace(backupName) Then
+            MessageBox.Show("Backup name cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Ask for confirmation
+        Dim result As DialogResult = MessageBox.Show($"Do you want to create a backup named '{backupName}'?", "Confirm Backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            ' Proceed with the backup
+            Try
+                BackupSelectedTables(selectedTables, backupName)
+            Catch ex As Exception
+                MessageBox.Show($"An error occurred during backup: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+
 
 
 
@@ -215,7 +230,9 @@ Public Class frmSettings
     End Sub
 
 
-    Private Sub BackupSelectedTables(selectedTables As List(Of String))
+    Private Sub BackupSelectedTables(selectedTables As List(Of String), backupName As String)
+
+
         Dim server As String = "localhost"
         Dim database As String = "filio_system"
         Dim user As String = "root"
@@ -252,7 +269,7 @@ Public Class frmSettings
                 Throw New Exception($"Backup failed with the following error: {errorOutput}")
             End If
 
-            InsertBackupRecord("USER_INPUT", fullPath)
+            InsertBackupRecord(backupName, fullPath)
 
             procInsertLogEvent("Manual Backup", "Database Backup")
         End Using
