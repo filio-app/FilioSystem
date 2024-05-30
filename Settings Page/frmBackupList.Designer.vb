@@ -27,11 +27,7 @@ Partial Class frmBackupList
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.grdFiles = New Bunifu.UI.WinForms.BunifuDataGridView()
-        Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnSelect = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.grdBackupList = New Bunifu.UI.WinForms.BunifuDataGridView()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,28 +43,32 @@ Partial Class frmBackupList
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.delete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.grdFiles, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSelect = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        CType(Me.grdBackupList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.TargetControl = Me
         '
-        'grdFiles
+        'grdBackupList
         '
-        Me.grdFiles.AllowCustomTheming = True
-        Me.grdFiles.AllowUserToAddRows = False
-        Me.grdFiles.AllowUserToDeleteRows = False
-        Me.grdFiles.AllowUserToResizeColumns = False
-        Me.grdFiles.AllowUserToResizeRows = False
+        Me.grdBackupList.AllowCustomTheming = True
+        Me.grdBackupList.AllowUserToAddRows = False
+        Me.grdBackupList.AllowUserToDeleteRows = False
+        Me.grdBackupList.AllowUserToResizeColumns = False
+        Me.grdBackupList.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdFiles.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.grdFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grdFiles.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.grdFiles.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.grdFiles.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.grdFiles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.grdBackupList.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.grdBackupList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.grdBackupList.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.grdBackupList.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.grdBackupList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.grdBackupList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -76,29 +76,29 @@ Partial Class frmBackupList
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grdFiles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.grdFiles.ColumnHeadersHeight = 50
-        Me.grdFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.grdFiles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
-        Me.grdFiles.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.grdFiles.CurrentTheme.AlternatingRowsStyle.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.grdFiles.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdFiles.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.grdFiles.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdFiles.CurrentTheme.BackColor = System.Drawing.Color.White
-        Me.grdFiles.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.grdFiles.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.grdFiles.CurrentTheme.HeaderStyle.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.grdFiles.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.grdFiles.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.grdFiles.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White
-        Me.grdFiles.CurrentTheme.Name = Nothing
-        Me.grdFiles.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.grdFiles.CurrentTheme.RowsStyle.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.grdFiles.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdFiles.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.grdFiles.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.grdFiles.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.grdBackupList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.grdBackupList.ColumnHeadersHeight = 50
+        Me.grdBackupList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.grdBackupList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column9, Me.view, Me.Column15, Me.edit, Me.Column14, Me.delete, Me.Column13})
+        Me.grdBackupList.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.AlternatingRowsStyle.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.grdBackupList.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.BackColor = System.Drawing.Color.White
+        Me.grdBackupList.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.HeaderStyle.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.grdBackupList.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.grdBackupList.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.grdBackupList.CurrentTheme.Name = Nothing
+        Me.grdBackupList.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.grdBackupList.CurrentTheme.RowsStyle.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.grdBackupList.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdBackupList.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.grdBackupList.Cursor = System.Windows.Forms.Cursors.Hand
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Inter SemiBold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -106,78 +106,24 @@ Partial Class frmBackupList
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grdFiles.DefaultCellStyle = DataGridViewCellStyle3
-        Me.grdFiles.EnableHeadersVisualStyles = False
-        Me.grdFiles.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.grdFiles.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.grdFiles.HeaderBgColor = System.Drawing.Color.Empty
-        Me.grdFiles.HeaderForeColor = System.Drawing.Color.White
-        Me.grdFiles.Location = New System.Drawing.Point(44, 84)
-        Me.grdFiles.Margin = New System.Windows.Forms.Padding(4)
-        Me.grdFiles.MultiSelect = False
-        Me.grdFiles.Name = "grdFiles"
-        Me.grdFiles.ReadOnly = True
-        Me.grdFiles.RowHeadersVisible = False
-        Me.grdFiles.RowHeadersWidth = 50
-        Me.grdFiles.RowTemplate.Height = 50
-        Me.grdFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grdFiles.Size = New System.Drawing.Size(1147, 654)
-        Me.grdFiles.TabIndex = 49
-        Me.grdFiles.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
-        '
-        'btnCancel
-        '
-        Me.btnCancel.Animated = True
-        Me.btnCancel.BorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(239, Byte), Integer))
-        Me.btnCancel.BorderRadius = 8
-        Me.btnCancel.BorderThickness = 1
-        Me.btnCancel.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(239, Byte), Integer))
-        Me.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnCancel.FillColor = System.Drawing.Color.White
-        Me.btnCancel.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.btnCancel.Location = New System.Drawing.Point(613, 766)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(253, 69)
-        Me.btnCancel.TabIndex = 48
-        Me.btnCancel.Text = "Cancel"
-        '
-        'btnSelect
-        '
-        Me.btnSelect.Animated = True
-        Me.btnSelect.BorderRadius = 8
-        Me.btnSelect.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnSelect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnSelect.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnSelect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnSelect.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnSelect.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.btnSelect.ForeColor = System.Drawing.Color.White
-        Me.btnSelect.Location = New System.Drawing.Point(937, 766)
-        Me.btnSelect.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSelect.Name = "btnSelect"
-        Me.btnSelect.Size = New System.Drawing.Size(253, 69)
-        Me.btnSelect.TabIndex = 47
-        Me.btnSelect.Text = "Select"
-        '
-        'Guna2Elipse2
-        '
-        Me.Guna2Elipse2.BorderRadius = 8
-        Me.Guna2Elipse2.TargetControl = Me.grdFiles
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(38, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(161, 32)
-        Me.Label1.TabIndex = 50
-        Me.Label1.Text = "Backup List"
+        Me.grdBackupList.DefaultCellStyle = DataGridViewCellStyle3
+        Me.grdBackupList.EnableHeadersVisualStyles = False
+        Me.grdBackupList.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.grdBackupList.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.grdBackupList.HeaderBgColor = System.Drawing.Color.Empty
+        Me.grdBackupList.HeaderForeColor = System.Drawing.Color.White
+        Me.grdBackupList.Location = New System.Drawing.Point(44, 84)
+        Me.grdBackupList.Margin = New System.Windows.Forms.Padding(4)
+        Me.grdBackupList.MultiSelect = False
+        Me.grdBackupList.Name = "grdBackupList"
+        Me.grdBackupList.ReadOnly = True
+        Me.grdBackupList.RowHeadersVisible = False
+        Me.grdBackupList.RowHeadersWidth = 50
+        Me.grdBackupList.RowTemplate.Height = 50
+        Me.grdBackupList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.grdBackupList.Size = New System.Drawing.Size(1147, 654)
+        Me.grdBackupList.TabIndex = 49
+        Me.grdBackupList.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
         'Column8
         '
@@ -322,6 +268,60 @@ Partial Class frmBackupList
         Me.Column13.Visible = False
         Me.Column13.Width = 10
         '
+        'btnCancel
+        '
+        Me.btnCancel.Animated = True
+        Me.btnCancel.BorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.btnCancel.BorderRadius = 8
+        Me.btnCancel.BorderThickness = 1
+        Me.btnCancel.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnCancel.FillColor = System.Drawing.Color.White
+        Me.btnCancel.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.btnCancel.Location = New System.Drawing.Point(613, 766)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(253, 69)
+        Me.btnCancel.TabIndex = 48
+        Me.btnCancel.Text = "Cancel"
+        '
+        'btnSelect
+        '
+        Me.btnSelect.Animated = True
+        Me.btnSelect.BorderRadius = 8
+        Me.btnSelect.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSelect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSelect.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSelect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSelect.FillColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnSelect.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.btnSelect.ForeColor = System.Drawing.Color.White
+        Me.btnSelect.Location = New System.Drawing.Point(937, 766)
+        Me.btnSelect.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSelect.Name = "btnSelect"
+        Me.btnSelect.Size = New System.Drawing.Size(253, 69)
+        Me.btnSelect.TabIndex = 47
+        Me.btnSelect.Text = "Select"
+        '
+        'Guna2Elipse2
+        '
+        Me.Guna2Elipse2.BorderRadius = 8
+        Me.Guna2Elipse2.TargetControl = Me.grdBackupList
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(38, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(161, 32)
+        Me.Label1.TabIndex = 50
+        Me.Label1.Text = "Backup List"
+        '
         'frmBackupList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -329,21 +329,21 @@ Partial Class frmBackupList
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1242, 862)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.grdFiles)
+        Me.Controls.Add(Me.grdBackupList)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSelect)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmBackupList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmBackupList"
-        CType(Me.grdFiles, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdBackupList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents grdFiles As Bunifu.UI.WinForms.BunifuDataGridView
+    Friend WithEvents grdBackupList As Bunifu.UI.WinForms.BunifuDataGridView
     Friend WithEvents btnCancel As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnSelect As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse

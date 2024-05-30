@@ -38,7 +38,15 @@ Public Class frmSettings
         Dim port As String = Env.GetInt("DB_PORT")
 
 
-        PerformBackupDatabase()
+
+        Dim selectedTables As New List(Of String) From {"file", "location"}
+
+        Try
+            BackupSelectedTables(selectedTables)
+            'PerformBackupDatabase()
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred during backup: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
 
 
@@ -207,12 +215,61 @@ Public Class frmSettings
     End Sub
 
 
+    Private Sub BackupSelectedTables(selectedTables As List(Of String))
+        Dim server As String = "localhost"
+        Dim database As String = "filio_system"
+        Dim user As String = "root"
+        Dim password As String = "LojaLeonard129025"
+        Dim backupPath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Filio", "Backups")
+        Dim fileName As String = $"backup_{DateTime.Now.ToString("yyyyMMdd_HHmmss")}.sql"
+        Dim fullPath As String = Path.Combine(backupPath, fileName)
+
+        ' Ensure backup directory exists
+        If Not Directory.Exists(backupPath) Then
+            Directory.CreateDirectory(backupPath)
+        End If
+
+        ' Join selected tables into a single string separated by spaces
+        Dim tables As String = String.Join(" ", selectedTables)
+
+        ' Create the mysqldump command
+        Dim command As String = $"mysqldump --host={server} --user={user} --password={password} --routines {database} {tables} > ""{fullPath}"""
+
+        ' Execute the command
+        Using process As New Process()
+            process.StartInfo.FileName = "cmd.exe"
+            process.StartInfo.Arguments = $"/c {command}"
+            process.StartInfo.UseShellExecute = False
+            process.StartInfo.RedirectStandardOutput = True
+            process.StartInfo.RedirectStandardError = True
+            process.Start()
+
+            Dim output As String = process.StandardOutput.ReadToEnd()
+            Dim errorOutput As String = process.StandardError.ReadToEnd()
+            process.WaitForExit()
+
+            If process.ExitCode <> 0 Then
+                Throw New Exception($"Backup failed with the following error: {errorOutput}")
+            End If
+
+            InsertBackupRecord("USER_INPUT", fullPath)
+
+            procInsertLogEvent("Manual Backup", "Database Backup")
+            MessageBox.Show("Database backup created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        End Using
+
+        MessageBox.Show("Backup completed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+
+
     Private Sub BackupDatabase()
         Dim dbName As String = "filio_system"
-        Dim backupFile As String = "C:\Users\lojal\OneDrive\Documents\Filio Backup\file.sql"
+        Dim backupFile As String = "C:\Users\leonard\AppData\Roaming\Filio\Backups\file.sql"
         Dim mysqldumpPath As String = "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe"
         Dim mysqlUsername As String = "root"
-        Dim mysqlPassword As String = "filio"
+        Dim mysqlPassword As String = "LojaLeonard129025"
 
         Dim processInfo As New ProcessStartInfo()
         processInfo.FileName = mysqldumpPath
@@ -232,61 +289,6 @@ Public Class frmSettings
 
     Private Sub btnRestore_Click(sender As Object, e As EventArgs) Handles btnRestore.Click
         displayFormAsModal(frmMain, frmBackupList)
-
-        'Dim files As List(Of String) = GetBackupFiles()
-
-
-        'If MessageBox.Show("Before restoring the database, make sure you have a backup. Are you sure you want to proceed with the restore?", "Confirm Restore", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-
-        '    Dim openFileDialog As New OpenFileDialog()
-        '    openFileDialog.InitialDirectory = "C:\Filio Database Backup\"
-        '    openFileDialog.Title = "Select Database Backup File"
-        '    openFileDialog.Filter = "SQL Files (*.sql)|*.sql|All files (*.*)|*.*"
-        '    openFileDialog.RestoreDirectory = True
-
-
-        '    If openFileDialog.ShowDialog() = DialogResult.OK Then
-        '        Dim backupFile As String = openFileDialog.FileName
-
-        '        Dim connectionString As String = "SERVER=localhost;DATABASE=filio_system;USERNAME=root;PASSWORD=filio;PORT=3306"
-
-        '        Dim userInput As String = InputBox("To restore the database, please enter 'CONFIRM' in capital letters:", "Confirm Database Restore")
-
-        '        If userInput.Trim() = "CONFIRM" Then
-        '            ' Perform the restore
-
-        '            Dim sqlContent As String = File.ReadAllText(backupFile)
-
-        '            '' Exclude the history table from the SQL script
-        '            'sqlContent = sqlContent.Replace("DROP TABLE IF EXISTS `history_log`;", "")
-        '            'sqlContent = sqlContent.Replace("CREATE TABLE `history_log`", "")
-        '            'sqlContent = sqlContent.Replace("INSERT INTO `history_log`", "")
-
-        '            Try
-        '                Using con As New MySqlConnection(connectionString)
-        '                    con.Open()
-
-        '                    Using cmd As New MySqlCommand()
-        '                        cmd.Connection = con
-
-        '                        Dim mb As MySqlBackup = New MySqlBackup(cmd)
-        '                        mb.ImportFromFile(backupFile)
-        '                        procInsertLogEvent("Restore", "Database Restore")
-        '                        MessageBox.Show("The database has been successfully restored. Please restart the application to apply the changes.", "Restore Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '                    End Using
-        '                End Using
-        '            Catch ex As Exception
-        '                MessageBox.Show("Database restore failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '            End Try
-
-        '        Else
-        '            ' Cancel deletion
-        '            MessageBox.Show("Database Restore canceled.", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '        End If
-
-
-        '    End If
-        'End If
     End Sub
 
     Private Sub btnBackupAndRestore_Click(sender As Object, e As EventArgs) Handles btnBackupAndRestore.Click
